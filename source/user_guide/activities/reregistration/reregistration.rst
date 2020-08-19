@@ -31,3 +31,4 @@ Essa consolidação se dá quando todas as alterações de Cadastro (atualizaç�
    :maxdepth: 3
    :caption: Tópicos Relacionados:
 
+   reregistration_cadastro
