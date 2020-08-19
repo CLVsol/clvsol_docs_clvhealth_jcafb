@@ -8,4 +8,5 @@ Documentação do *CLVhealth-JCAFB-2021*
    :maxdepth: 2
    :caption: Conteúdo:
 
+   user_guide/index
    this_documentation/index
