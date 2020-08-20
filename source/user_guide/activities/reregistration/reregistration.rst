@@ -17,18 +17,20 @@
 **Cadastramento/Recadastramento**
 =================================
 
-O Processo de **Cadastramento/Recadastramento** é a base das atividades de planejamento e preparação, que antecedem todas as atividades da :bi:`JCAFB`.
+O Processo de **Cadastramento/Recadastramento** é a base do planejamento e preparação, que antecedem todas as atividades da :bi:`JCAFB`.
 
-Este Processo baseia-se no **Cadastramento/Recadastramento de Pessoas** concomitantemente ao **Cadastramento/Recadastramento de Endereços**, quando estes pertencerem à comunidade atendida pela :bi:`JCAFB`.
+Este Processo baseia-se no **Cadastramento/Recadastramento** de todas as Pessoas atendidas, concomitantemente ao **Cadastramento/Recadastramento** dos respectivos Endereços, quando estes estiverem localizados na comunidade atendida pela :bi:`JCAFB`.
 
-O cadastramento/recadastramento é realizado no **Cadastro Auxiliar** (:bi:`Person (Aux)` e :bi:`Address (Aux)`).
+Esse cadastramento/recadastramento é realizado inicialmente no **Cadastro Auxiliar** (:bi:`Person (Aux)` e :bi:`Address (Aux)`).
 
 Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados no **Cadastro Principal** (:bi:`Person`, :bi:`Family` e :bi:`Address`).
  
-Essa consolidação se dá quando todas as alterações de Cadastro (atualizações de dados e/ou inclusões de Pessoas ou Endereços) são transferidas do **Cadastro Auxiliar** para o **Cadastro Principal**.
+Essa consolidação se dá quando todas as alterações de Cadastro (atualizações de dados e/ou inclusões de Pessoas e/ou Endereços) são transferidas do **Cadastro Auxiliar** para o **Cadastro Principal**.
 
 .. toctree::
    :maxdepth: 3
    :caption: Tópicos Relacionados:
 
    reregistration_cadastro
+   reregistration_workflow
+   reregistration_procedure
