@@ -10,13 +10,13 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Criação/Atualização do Cadastro Auxiliar (Pessoa já cadastrada)
+.. index:: Criação do Cadastro Auxiliar (Pessoa já cadastrada)
 
-=======================================================================
-Criação/Atualização do **Cadastro Auxiliar** (**Pessoa já cadastrada**)
-=======================================================================
+===========================================================
+Criação do **Cadastro Auxiliar** (**Pessoa já cadastrada**)
+===========================================================
 
-O processo de criação/atualização do **Cadastro Auxiliar** associado a uma Pessoa **já cadastrada** é utilizado quando a Pessoa tiver sido declarada como **já cadastrada**.
+O processo de criação do **Cadastro Auxiliar** associado a uma Pessoa **já cadastrada** é utilizado quando a Pessoa tiver sido declarada como **já cadastrada**.
 
 Este processo é, basicamente, a atualização das informações em uma cópia do **Cadastro** atual associado à Pessoa. 
 

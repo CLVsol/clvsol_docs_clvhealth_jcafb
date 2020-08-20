@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consoliação do Cadastro Auxiliar
+.. index:: Consolidação do Cadastro Auxiliar
 
-=====================================================
-:red:`(Revisar)` Consoliação do **Cadastro Auxiliar**
-=====================================================
+======================================================
+:red:`(Revisar)` Consolidação do **Cadastro Auxiliar**
+======================================================
 
 .. toctree::
    :maxdepth: 2
