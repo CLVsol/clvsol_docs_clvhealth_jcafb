@@ -30,5 +30,5 @@ Criação/Atualização do **Cadastro Auxiliar**
    :maxdepth: 2
    :caption: Tópicos Relacionados:
 
-.. reregistration_workflow_020_010
-.. reregistration_workflow_020_020
+   reregistration_workflow_020_010
+   reregistration_workflow_020_020
