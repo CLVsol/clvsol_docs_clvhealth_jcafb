@@ -12,9 +12,9 @@
 
 .. index:: Procura por um Endereço em Addresses (Procedimento)
 
-==========================================
-Procura por um Endereço em :bi:`Addresses`
-==========================================
+=========================================================
+Procura por um Endereço em :bi:`Addresses` (Procedimento)
+=========================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_060`".
 

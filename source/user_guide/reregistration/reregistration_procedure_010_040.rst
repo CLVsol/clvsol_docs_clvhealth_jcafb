@@ -12,9 +12,9 @@
 
 .. index:: Procura por uma Família em Families (Procedimento)
 
-=========================================
-Procura por uma Família em :bi:`Families`
-=========================================
+========================================================
+Procura por uma Família em :bi:`Families` (Procedimento)
+========================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_040`".
 

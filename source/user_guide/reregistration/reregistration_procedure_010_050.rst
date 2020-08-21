@@ -12,9 +12,9 @@
 
 .. index:: Procura por um Endereço em Contatos (Procedimento)
 
-=======================================
-Procura por um Endereço em **Contatos**
-=======================================
+======================================================
+Procura por um Endereço em **Contatos** (Procedimento)
+======================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_050`".
 

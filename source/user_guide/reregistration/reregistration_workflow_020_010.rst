@@ -44,7 +44,7 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades 
    :maxdepth: 1
    :caption: Tópicos Relacionados:
 
-.. reregistration_workflow_020_010_010
+   reregistration_workflow_020_010_010
 .. reregistration_workflow_020_010_020
 .. reregistration_workflow_020_010_030
 .. reregistration_workflow_020_010_040
