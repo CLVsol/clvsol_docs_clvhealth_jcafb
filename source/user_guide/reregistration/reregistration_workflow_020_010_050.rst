@@ -59,7 +59,7 @@ Relacionamento entre os registros dos Cadastros
 
     * :bi:`Person (Aux)`:
 
-        * *Address* » **vazio**
+        * *Address* » :bi:`Address` :green:`(antigo)`
         * *Address (Aux)* » :bi:`Address (Aux)`
         * :green:`(Opcional)` *Family* » :bi:`Family`
         * *Related Person* » :bi:`Person`

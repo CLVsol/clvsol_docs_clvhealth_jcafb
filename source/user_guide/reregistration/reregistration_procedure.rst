@@ -20,6 +20,8 @@
    :maxdepth: 3
    :caption: Tópicos Relacionados:
 
+   reregistration_procedure_cadastro_aux_setup
+
    reregistration_procedure_010
 
    reregistration_procedure_020

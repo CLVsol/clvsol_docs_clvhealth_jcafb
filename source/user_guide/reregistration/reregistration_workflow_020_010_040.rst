@@ -60,11 +60,11 @@ Relacionamento entre os registros dos Cadastros
 
     * :bi:`Person (Aux)`:
 
-        * *Address* » :bi:`Address` :green:`(novo)`
+        * *Address* » :bi:`Address` :green:`(antigo)`
         * *Address (Aux)* » :bi:`Address (Aux)`
         * :green:`(Opcional)` *Family* » :bi:`Family`
         * *Related Person* » :bi:`Person`
-        * *Contact Information* = Dados de Endereço de :bi:`Address` :green:`(novo)`
+        * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
         * Outros Dados = Outros Dados de :bi:`Person`
 
 Fluxo de Trabalho (*Workflow*)
