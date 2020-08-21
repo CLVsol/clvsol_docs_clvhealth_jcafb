@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura por um Endereço em Addresses (Procedimento)
+.. index:: Procura por um Endereço em Addresses (Procedimentos)
 
-===========================================================
-Procura por um **Endereço** em **Addresses** (Procedimento)
-===========================================================
+============================================================
+Procura por um **Endereço** em **Addresses** (Procedimentos)
+============================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_060`".
 

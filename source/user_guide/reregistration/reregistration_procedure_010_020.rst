@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura por uma Pessoa em Persons (Procedimento)
+.. index:: Procura por uma Pessoa em Persons (Procedimentos)
 
-========================================================
-Procura por uma **Pessoa** em **Persons** (Procedimento)
-========================================================
+=========================================================
+Procura por uma **Pessoa** em **Persons** (Procedimentos)
+=========================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_020`".
 

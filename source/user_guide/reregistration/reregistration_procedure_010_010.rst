@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura por uma Pessoa em Contatos (Procedimento)
+.. index:: Procura por uma Pessoa em Contatos (Procedimentos)
 
-=========================================================
-Procura por uma **Pessoa** em **Contatos** (Procedimento)
-=========================================================
+==========================================================
+Procura por uma **Pessoa** em **Contatos** (Procedimentos)
+==========================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_010`".
 

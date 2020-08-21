@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Criação individualizada do Cadastro Auxiliar (Pessoa já cadastrada)
+.. index:: A Pessoa já cadastrada continua a residir no Endereço já cadastrado
 
-==================================================================
-A **Pessoa já cadastrada** reside em um **Endereço já cadastrado**
-==================================================================
+===========================================================================
+A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado**
+===========================================================================
 
     Caso **exista uma Família** associada à Pessoa, o registro *Person (Aux)* será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 

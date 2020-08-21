@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa não cadastrada reside em um Endereço não cadastrado (Procedimento)
+.. index:: A Pessoa não cadastrada reside em um Endereço não cadastrado (Procedimentos)
 
-===================================================================================
-A **Pessoa não cadastrada** reside em um **Endereço não cadastrado** (Procedimento)
-===================================================================================
+====================================================================================
+A **Pessoa não cadastrada** reside em um **Endereço não cadastrado** (Procedimentos)
+====================================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_020_020`".
 
