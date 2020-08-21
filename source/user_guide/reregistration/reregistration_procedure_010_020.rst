@@ -12,9 +12,9 @@
 
 .. index:: Procura por uma Pessoa em Persons (Procedimento)
 
-======================================================
-Procura por uma Pessoa em :bi:`Persons` (Procedimento)
-======================================================
+========================================================
+Procura por uma **Pessoa** em **Persons** (Procedimento)
+========================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_020`".
 

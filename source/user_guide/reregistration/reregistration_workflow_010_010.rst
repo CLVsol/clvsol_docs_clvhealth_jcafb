@@ -12,9 +12,9 @@
 
 .. index:: Procura por uma Pessoa em Contatos
 
-======================================
-Procura por uma Pessoa em **Contatos**
-======================================
+==========================================
+Procura por uma **Pessoa** em **Contatos**
+==========================================
 
     Este é o método de pesquisa mais abrangente, possibilitando a identificação simultânea de todos os registros associados à Pessoa.
 

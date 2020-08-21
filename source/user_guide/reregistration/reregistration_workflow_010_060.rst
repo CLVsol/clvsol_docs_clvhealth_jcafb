@@ -12,9 +12,9 @@
 
 .. index:: Procura por um Endereço em Addresses
 
-==========================================
-Procura por um Endereço em :bi:`Addresses`
-==========================================
+============================================
+Procura por um **Endereço** em **Addresses**
+============================================
 
     Este é o método de pesquisa mais restrito, possibilitando a identificação somente do registro :bi:`Address` associado ao Endereço.
 

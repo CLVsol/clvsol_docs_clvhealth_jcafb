@@ -12,9 +12,9 @@
 
 .. index:: Procura por uma Família em Families
 
-=========================================
-Procura por uma Família em :bi:`Families`
-=========================================
+===========================================
+Procura por uma **Família** em **Families**
+===========================================
 
     A procura por uma Família utilizando a *view* :bi:`Families` pode ser realizada tanto a partir do **Nome** da mesma (situação em que é incerta a existência de registro associado à Família), quanto a partir do **Código** da mesma (situação em que é certa a existência de registro associado à Família.
 

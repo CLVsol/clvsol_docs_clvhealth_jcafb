@@ -12,9 +12,9 @@
 
 .. index:: Procura por uma Pessoa em Contatos (Procedimento)
 
-=====================================================
-Procura por uma Pessoa em **Contatos** (Procedimento)
-=====================================================
+=========================================================
+Procura por uma **Pessoa** em **Contatos** (Procedimento)
+=========================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_010`".
 

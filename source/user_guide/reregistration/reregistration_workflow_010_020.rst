@@ -12,9 +12,9 @@
 
 .. index:: Procura por uma Pessoa em Persons
 
-=======================================
-Procura por uma Pessoa em :bi:`Persons`
-=======================================
+=========================================
+Procura por uma **Pessoa** em **Persons**
+=========================================
 
     Este é o método de pesquisa mais restrito, possibilitando a identificação somente do registro :bi:`Person` associado à Pessoa.
 

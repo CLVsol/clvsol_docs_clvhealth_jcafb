@@ -12,9 +12,9 @@
 
 .. index:: Procura por um Endereço em Contatos
 
-=======================================
-Procura por um Endereço em **Contatos**
-=======================================
+===========================================
+Procura por um **Endereço** em **Contatos**
+===========================================
 
     Este é o método de pesquisa mais abrangente, possibilitando a identificação simultânea de todos os registros associados ao Endereço.
 

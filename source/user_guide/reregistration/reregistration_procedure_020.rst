@@ -21,6 +21,11 @@ Criação do **Cadastro Auxiliar** (Procedures)
    :caption: Tópicos Relacionados:
 
    reregistration_procedure_020_010_010
+
+   reregistration_procedure_020_020_010
+   reregistration_procedure_020_020_020
+   reregistration_procedure_020_020_030
+
 .. reregistration_procedure_020_010_020
 .. reregistration_procedure_020_010_030
 .. reregistration_procedure_020_010_040
@@ -29,7 +34,3 @@ Criação do **Cadastro Auxiliar** (Procedures)
 .. reregistration_procedure_020_010_070
 .. reregistration_procedure_020_010_080
 .. reregistration_procedure_020_010_090
-
-.. reregistration_procedure_020_020_010
-.. reregistration_procedure_020_020_020
-.. reregistration_procedure_020_020_030

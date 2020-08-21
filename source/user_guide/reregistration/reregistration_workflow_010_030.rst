@@ -12,9 +12,9 @@
 
 .. index:: Procura por uma Família em Contatos
 
-=======================================
-Procura por uma Família em **Contatos**
-=======================================
+===========================================
+Procura por uma **Família** em **Contatos**
+===========================================
 
     A procura por uma Família utilizando a *view* **Contatos** pode ser realizada tanto a partir do **Nome** da mesma (situação em que é incerta a existência de registro(s) associado(s) à Família), quanto a partir do **Código** da mesma (situação em que é certa a existência de registro(s) associado(s) à Família.
 
