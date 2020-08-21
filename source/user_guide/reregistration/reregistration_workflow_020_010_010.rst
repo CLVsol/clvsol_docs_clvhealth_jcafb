@@ -12,9 +12,9 @@
 
 .. index:: Criação individualizada do Cadastro Auxiliar (Pessoa já cadastrada)
 
-===========================================================================
-Criação individualizada do **Cadastro Auxiliar** (**Pessoa já cadastrada**)
-===========================================================================
+==================================================================
+A **Pessoa já cadastrada** reside em um **Endereço já cadastrado**
+==================================================================
 
     Caso **exista uma Família** associada à Pessoa, o registro *Person (Aux)* será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 

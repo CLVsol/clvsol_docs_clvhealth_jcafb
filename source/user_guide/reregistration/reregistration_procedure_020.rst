@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar (Procedures)
+.. index:: Criação do Cadastro Auxiliar (Procedimentos)
 
-=============================================
-Criação do **Cadastro Auxiliar** (Procedures)
-=============================================
+================================================
+Criação do **Cadastro Auxiliar** (Procedimentos)
+================================================
 
 .. toctree::
    :maxdepth: 2

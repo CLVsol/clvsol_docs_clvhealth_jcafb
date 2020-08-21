@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Criação individualizada do Cadastro Auxiliar (Pessoa já cadastrada) (Procedimento)
+.. index:: Criação individualizada do Cadastro Auxiliar (Pessoa já cadastrada) (Procedimentos)
 
-==========================================================================================
-Criação individualizada do **Cadastro Auxiliar** (**Pessoa já cadastrada**) (Procedimento)
-==========================================================================================
+==================================================================================
+A **Pessoa já cadastrada** reside em um **Endereço já cadastrado** (Procedimentos)
+==================================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_010`".
 
