@@ -28,7 +28,7 @@ Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados no **C
 Essa consolidação se dá quando todas as alterações de Cadastro (atualizações de dados e/ou inclusões de Pessoas e/ou Endereços) são transferidas do **Cadastro Auxiliar** para o **Cadastro Principal**.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
    :caption: Tópicos Relacionados:
 
    reregistration_cadastro

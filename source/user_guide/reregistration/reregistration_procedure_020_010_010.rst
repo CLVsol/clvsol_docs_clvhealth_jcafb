@@ -16,9 +16,6 @@ Criação individualizada do **Cadastro Auxiliar** (**Pessoa já cadastrada**) (
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_010`".
 
-Procedimentos
--------------
-
     #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos procedimentos:
 
         * :doc:`reregistration_procedure_010_010`

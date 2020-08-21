@@ -17,26 +17,9 @@
 ====================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Tópicos Relacionados:
 
-   reregistration_procedure_010_010
-   reregistration_procedure_010_020
-   reregistration_procedure_010_030
-   reregistration_procedure_010_040
-   reregistration_procedure_010_050
-   reregistration_procedure_010_060
+   reregistration_procedure_010
 
-   reregistration_procedure_020_010_010
-.. reregistration_procedure_020_010_020
-.. reregistration_procedure_020_010_030
-.. reregistration_procedure_020_010_040
-.. reregistration_procedure_020_010_050
-.. reregistration_procedure_020_010_060
-.. reregistration_procedure_020_010_070
-.. reregistration_procedure_020_010_080
-.. reregistration_procedure_020_010_090
-
-.. reregistration_procedure_020_020_010
-.. reregistration_procedure_020_020_020
-.. reregistration_procedure_020_020_030
+   reregistration_procedure_020
