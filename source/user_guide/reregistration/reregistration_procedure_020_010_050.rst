@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa já cadastrada mudou-se para um Endereço não cadastrado (Procedimentos)
+.. index:: A Pessoa já cadastrada mudou-se para um Endereço não cadastrado (Procedimento)
 
-=======================================================================================
-A **Pessoa já cadastrada** mudou-se para um **Endereço não cadastrado** (Procedimentos)
-=======================================================================================
+======================================================================================
+A **Pessoa já cadastrada** mudou-se para um **Endereço não cadastrado** (Procedimento)
+======================================================================================
 
     Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 

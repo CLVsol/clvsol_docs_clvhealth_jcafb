@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa não cadastrada reside em um Endereço fora da comunidade atendida pela JCAFB (Procedimentos)
+.. index:: A Pessoa não cadastrada reside em um Endereço fora da comunidade atendida pela JCAFB (Procedimento)
 
-============================================================================================================
-A **Pessoa não cadastrada** reside em um **Endereço fora da comunidade** atendida pela JCAFB (Procedimentos)
-============================================================================================================
+===========================================================================================================
+A **Pessoa não cadastrada** reside em um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
+===========================================================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_020_030`".
 

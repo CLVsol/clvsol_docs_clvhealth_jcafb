@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa já cadastrada continua a residir no Endereço já cadastrado (Procedimentos)
+.. index:: A Pessoa já cadastrada continua a residir no Endereço já cadastrado (Procedimento)
 
-===========================================================================================
-A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado** (Procedimentos)
-===========================================================================================
+==========================================================================================
+A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado** (Procedimento)
+==========================================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_010`".
 

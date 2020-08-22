@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura por uma Família em Contatos (Procedimentos)
+.. index:: Procura por uma Família em Contatos (Procedimento)
 
-===========================================================
-Procura por uma **Família** em **Contatos** (Procedimentos)
-===========================================================
+==========================================================
+Procura por uma **Família** em **Contatos** (Procedimento)
+==========================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_030`".
 
