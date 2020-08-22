@@ -22,7 +22,7 @@ Procura por um **Endereço** em **Addresses**
 
     Em geral é mais conveniente usar o método ":doc:`reregistration_workflow_010_050`" que é mais abrangente, e permite a identificação simultânea de todos os registros associados ao Endereço.
 
-    A procura por um Endereço em :bi:`Addresses` é feita utilizando o procedimento ":doc:`reregistration_procedure_010_060`".
+    A procura por um Endereço em :bi:`Addresses` é feita utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_010_060`".
 
 .. toctree::
    :maxdepth: 2

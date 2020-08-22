@@ -10,13 +10,15 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Excluir todas os Endereços do Cadastro Address (Aux) (Procedimento)
+.. index:: Excluir todas as Pessoas do Cadastro Person (Aux) (Procedimento)
 
-===================================================================
-Excluir todas os Endereços do Cadastro Address (Aux) (Procedimento)
-===================================================================
+================================================================
+Excluir todas as Pessoas do Cadastro Person (Aux) (Procedimento)
+================================================================
 
-    #. Excluir todos os Endereços do Cadastro :bi:`Address (Aux)`:
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_cadastro_aux_setup`".
+
+    #. Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)`:
 
         #. Acessar a *view* **Contatos**:
 
@@ -24,15 +26,15 @@ Excluir todas os Endereços do Cadastro Address (Aux) (Procedimento)
 
                 * **Contatos** » **Contatos**
 
-        #. Ativar o filtro **Agrupar por** :bi:`Address Type`
+        #. Ativar o filtro **Agrupar por** :bi:`Person Type`
 
-        #. Selecionar todas os :bi:`Addresses (Aux)`
+        #. Selecionar todas as :bi:`Persons (Aux)`
 
         #. Exercutar a Ação **Excluir**:
 
-                #. Utilize o botão :bi:`Ok` para executar a Ação.
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-    #. Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:'Address (Aux)`:
+    #. Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:'Person (Aux)`:
 
         #. Acessar a *view* :bi:`Verification Outcomes`:
 
@@ -42,7 +44,7 @@ Excluir todas os Endereços do Cadastro Address (Aux) (Procedimento)
 
         #. Ativar o filtro **Agrupar por** :bi:'Model Name`
 
-        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.address_aux**"
+        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.person_aux**"
 
         #. Exercutar a Ação **Excluir**:
 

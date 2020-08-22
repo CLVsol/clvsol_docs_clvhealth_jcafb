@@ -16,7 +16,7 @@
 Procura por uma **Pessoa** em **Persons** (Procedimento)
 ========================================================
 
-    * *Workflow*: ":doc:`reregistration_workflow_010_020`".
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_workflow_010_020`".
 
     #. Procurar pela Pessoa na *view* :bi:`Persons`:
 

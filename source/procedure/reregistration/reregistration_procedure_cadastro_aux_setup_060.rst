@@ -16,6 +16,8 @@
 Remover a Fase de todos os Endereços (Aux) (Procedimento)
 =========================================================
 
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_cadastro_aux_setup`".
+
     #. Executar a Ação :bi:`Address (Aux) Mass Edit` para todos os Endereços (Aux):
 
         #. Acessar a *view* :bi:`Addresses (Aux)`:

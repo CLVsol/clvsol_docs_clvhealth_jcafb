@@ -20,7 +20,7 @@ Procura por uma **Pessoa** em **Contatos**
 
     A procura por uma Pessoa utilizando a *view* **Contatos** pode ser realizada tanto a partir do **Nome** da mesma (situação em que é incerta a existência de registro(s) associado(s) à Pessoa), quanto a partir do **Código** da mesma (situação em que é certa a existência de registro(s) associado(s) à Pessoa.
 
-    A procura por uma Pessoa em **Contatos** é feita utilizando o procedimento ":doc:`reregistration_procedure_010_010`".
+    A procura por uma Pessoa em **Contatos** é feita utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_010_010`".
 
 .. toctree::
    :maxdepth: 2

@@ -9,4 +9,5 @@
    :caption: Conteúdo:
 
    user_guide/index
+   procedure/index
    this_documentation/index

@@ -16,7 +16,7 @@
 A **Pessoa não cadastrada** reside em um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
 ===========================================================================================================
 
-    * *Workflow*: ":doc:`reregistration_workflow_020_020_030`".
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_workflow_020_020_030`".
 
     #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o procedimento:
 

@@ -16,6 +16,8 @@
 Associar todas os Endereços a um Endereço (Aux) (Procedimento)
 ==============================================================
 
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_cadastro_aux_setup`".
+
     #. Executar a Ação :bi:`Address Associate to Address (Aux)` para todos os Endereços:
 
         #. Acessar a *view* :bi:`Addresses`:

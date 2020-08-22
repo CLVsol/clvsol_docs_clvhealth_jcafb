@@ -20,17 +20,17 @@ De forma a agilizar o Processo de  **Cadastramento/Recadastramento** de todas as
 
 Essa preparação se constitui pela execução das seguintes ações:
 
-    #. Excluir todos os registros :bi:`Person (Aux)` executando ":doc:`reregistration_procedure_cadastro_aux_setup_010`".
+    #. Excluir todos os registros :bi:`Person (Aux)` executando ":doc:`/procedure/reregistration/reregistration_procedure_cadastro_aux_setup_010`".
 
-    #. Excluir todos os registros :bi:`Address (Aux)` executando ":doc:`reregistration_procedure_cadastro_aux_setup_020`".
+    #. Excluir todos os registros :bi:`Address (Aux)` executando ":doc:`/procedure/reregistration/reregistration_procedure_cadastro_aux_setup_020`".
 
-    #. Associar todos os registros :bi:`Person` a um registro :bi:`Person (Aux)` executando ":doc:`reregistration_procedure_cadastro_aux_setup_030`".
+    #. Associar todos os registros :bi:`Person` a um registro :bi:`Person (Aux)` executando ":doc:`/procedure/reregistration/reregistration_procedure_cadastro_aux_setup_030`".
 
-    #. Associar todos os registros :bi:`Address (Aux)` a um registro :bi:`Address (Aux)` executando ":doc:`reregistration_procedure_cadastro_aux_setup_040`".
+    #. Associar todos os registros :bi:`Address (Aux)` a um registro :bi:`Address (Aux)` executando ":doc:`/procedure/reregistration/reregistration_procedure_cadastro_aux_setup_040`".
 
-    #. Remover a Fase de todos os registros :bi:`Person (Aux)` executando ":doc:`reregistration_procedure_cadastro_aux_setup_050`".
+    #. Remover a Fase de todos os registros :bi:`Person (Aux)` executando ":doc:`/procedure/reregistration/reregistration_procedure_cadastro_aux_setup_050`".
 
-    #. Remover a Fase de todos os registros :bi:`Address (Aux)` executando ":doc:`reregistration_procedure_cadastro_aux_setup_060`".
+    #. Remover a Fase de todos os registros :bi:`Address (Aux)` executando ":doc:`/procedure/reregistration/reregistration_procedure_cadastro_aux_setup_060`".
 
     #. Executar o Verification Batch “Default Batch”
 

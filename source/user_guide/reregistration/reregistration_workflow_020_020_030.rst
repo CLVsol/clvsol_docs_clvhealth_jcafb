@@ -61,7 +61,7 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
 
-    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_020_030`".
+    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_020_020_030`".
 
 .. toctree::
    :maxdepth: 2

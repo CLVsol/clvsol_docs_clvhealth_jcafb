@@ -9,5 +9,6 @@ Documentação do *CLVhealth-JCAFB-2021*
    :caption: Conteúdo:
 
    user_guide/index
+   procedure/index
    this_documentation/index
    general_index

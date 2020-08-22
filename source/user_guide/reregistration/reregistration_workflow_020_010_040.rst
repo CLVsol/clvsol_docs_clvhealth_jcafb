@@ -119,7 +119,7 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Não será necessário qualquer ação de atualização adicional do registro :bi:`Person (Aux)`.
 
-    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_010_040`".
+    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_020_010_040`".
 
 .. toctree::
    :maxdepth: 2

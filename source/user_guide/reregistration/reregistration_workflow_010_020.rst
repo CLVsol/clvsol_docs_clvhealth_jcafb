@@ -22,7 +22,7 @@ Procura por uma **Pessoa** em **Persons**
 
     Em geral é mais conveniente usar o método ":doc:`reregistration_workflow_010_010`" que é mais abrangente, e permite a identificação simultânea de todos os registros associados à Pessoa.
 
-    A procura por uma Pessoa em :bi:`Persons` é feita utilizando o procedimento ":doc:`reregistration_procedure_010_020`".
+    A procura por uma Pessoa em :bi:`Persons` é feita utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_010_020`".
 
 .. toctree::
    :maxdepth: 2

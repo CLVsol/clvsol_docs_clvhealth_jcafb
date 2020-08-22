@@ -16,6 +16,8 @@
 Remover a Fase de todas as Pessoas (Aux) (Procedimento)
 =======================================================
 
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_cadastro_aux_setup`".
+
     #. Executar a Ação :bi:`Person (Aux) Mass Edit` para todas as Pessoas (Aux):
 
         #. Acessar a *view* :bi:`Persons (Aux)`:

@@ -16,7 +16,7 @@
 Procura por uma **Família** em **Contatos** (Procedimento)
 ==========================================================
 
-    * *Workflow*: ":doc:`reregistration_workflow_010_030`".
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_workflow_010_030`".
 
     #. Procurar pela Família na *view* :bi:`Contatos`:
 

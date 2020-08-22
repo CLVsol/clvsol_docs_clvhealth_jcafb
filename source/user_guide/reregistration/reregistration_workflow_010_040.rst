@@ -20,7 +20,7 @@ Procura por uma **Família** em **Families**
 
     Por conveniência é possivel usar também o método ":doc:`reregistration_workflow_010_030`".
 
-    A procura por uma Família em :bi:`Families` é feita utilizando o procedimento ":doc:`reregistration_procedure_010_040`".
+    A procura por uma Família em :bi:`Families` é feita utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_010_040`".
 
 .. toctree::
    :maxdepth: 2

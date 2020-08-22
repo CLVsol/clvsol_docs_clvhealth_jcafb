@@ -89,7 +89,7 @@ Fluxo de Trabalho (*Workflow*)
                 * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
                 * A criação de :bi:`Address (Aux)`, deve ser **habilitada**.
 
-    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_010_010`".
+    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_020_010_010`".
 
 .. toctree::
    :maxdepth: 2

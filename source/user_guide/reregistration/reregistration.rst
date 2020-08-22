@@ -34,4 +34,3 @@ Essa consolidação se dá quando todas as alterações de Cadastro (atualizaç�
    reregistration_cadastro
    reregistration_cadastro_aux_setup
    reregistration_workflow
-   reregistration_procedure

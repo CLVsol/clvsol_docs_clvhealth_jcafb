@@ -16,6 +16,8 @@
 Associar todas as Pessoas a uma Pessoa (Aux) (Procedimento)
 ===========================================================
 
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_cadastro_aux_setup`".
+
     #. Executar a Ação :bi:`Person Associate to Person (Aux)` para todas as Pessoas:
 
         #. Acessar a *view* :bi:`Persons`:

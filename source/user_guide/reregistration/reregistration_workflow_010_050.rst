@@ -20,7 +20,7 @@ Procura por um **Endereço** em **Contatos**
 
     A procura por um Endereço utilizando a *view* **Contatos** pode ser realizada tanto a partir do **Nome** do mesmo (situação em que é incerta a existência de registro(s) associado(s) ao Endereço), quanto a partir do **Código** do mesmo (situação em que é certa a existência de registro(s) associado(s) ao Endereço.
 
-    A procura por um Endereço em **Contatos** é feita utilizando o procedimento ":doc:`reregistration_procedure_010_050`".
+    A procura por um Endereço em **Contatos** é feita utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_010_050`".
 
 .. toctree::
    :maxdepth: 2

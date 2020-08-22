@@ -20,7 +20,7 @@ A **Pessoa já cadastrada** mudou-se para um **Endereço já cadastrado** (Proce
 
     Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
-    * *Workflow*: ":doc:`reregistration_workflow_020_010_040`".
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_workflow_020_010_040`".
 
     #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos procedimentos:
 
@@ -35,8 +35,8 @@ A **Pessoa já cadastrada** mudou-se para um **Endereço já cadastrado** (Proce
 
     #. Procurar pelo registro :bi:`Address` :green:`(novo)` associado ao novo Endereço informado para a Pessoa utilizando um dos procedimentos:
 
-        * :doc:`reregistration_workflow_010_050`
-        * :doc:`reregistration_workflow_010_060`
+        * :doc:`/user_guide/reregistration/reregistration_workflow_010_050`
+        * :doc:`/user_guide/reregistration/reregistration_workflow_010_060`
 
     #. Confirmar que todos os dados do registro :bi:`Address` :green:`(novo)` serão mantidos.
 

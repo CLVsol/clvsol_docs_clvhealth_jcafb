@@ -16,7 +16,7 @@
 A **Pessoa não cadastrada** reside em um **Endereço já cadastrado** (Procedimento)
 ==================================================================================
 
-    * *Workflow*: ":doc:`reregistration_workflow_020_020_010`".
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_workflow_020_020_010`".
 
     #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o procedimento:
 

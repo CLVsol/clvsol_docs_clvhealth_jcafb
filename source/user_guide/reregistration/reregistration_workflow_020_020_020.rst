@@ -88,7 +88,7 @@ Fluxo de Trabalho (*Workflow*)
 
         #. Preencher os campos de *Contact Information* com os dados de Endereço do registro :bi:`Address (Aux)`.
 
-    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_020_020`".
+    O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedure/reregistration/reregistration_procedure_020_020_020`".
 
 .. toctree::
    :maxdepth: 2

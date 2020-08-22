@@ -16,7 +16,7 @@
 Procura por um **Endereço** em **Addresses** (Procedimento)
 ===========================================================
 
-    * *Workflow*: ":doc:`reregistration_workflow_010_060`".
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_workflow_010_060`".
 
     #. Procurar pelo Endereço na *view* :bi:`Addresses`:
 

@@ -16,7 +16,7 @@
 A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado** (Procedimento)
 ==========================================================================================
 
-    * *Workflow*: ":doc:`reregistration_workflow_020_010_010`".
+    * *Workflow*: ":doc:`/user_guide/reregistration/reregistration_workflow_020_010_010`".
 
     #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos procedimentos:
 
