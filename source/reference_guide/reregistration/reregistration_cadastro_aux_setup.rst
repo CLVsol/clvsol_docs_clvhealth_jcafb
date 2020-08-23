@@ -24,19 +24,19 @@ Essa preparação é, da forma descrita a seguir, realizada somente uma vez, no 
 
 A Preparação do Cadastro Auxiliar é implementada através das seguintes ações:
 
-    #. Excluir todos os registros :bi:`Person (Aux)` executando ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_010`".
+    #. Excluir todos os registros de Pessoas do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_010`".
 
-    #. Excluir todos os registros :bi:`Address (Aux)` executando ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_020`".
+    #. Excluir todos os registros de Endereços do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_020`".
 
-    #. Associar todos os registros :bi:`Person` a um registro :bi:`Person (Aux)` executando ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_030`".
+    #. Associar todas as Pessoas a uma Pessoa (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_030`".
 
-    #. Associar todos os registros :bi:`Address (Aux)` a um registro :bi:`Address (Aux)` executando ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_040`".
+    #. Associar todos os Endereços a um Endereço (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_040`".
 
-    #. Remover a Fase de todos os registros :bi:`Person (Aux)` executando ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_050`".
+    #. Remover a Fase de todas as Pessoas (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_050`".
 
-    #. Remover a Fase de todos os registros :bi:`Address (Aux)` executando ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_060`".
+    #. Remover a Fase de todos os Endereços (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_060`".
 
-    #. Executar o Verification Batch “Default Batch”
+    #. Executar o Verification Batch “Default Batch” executando ":doc:`/procedures/verification/verification_procedure_010`".
 
 .. toctree::
    :maxdepth: 3
