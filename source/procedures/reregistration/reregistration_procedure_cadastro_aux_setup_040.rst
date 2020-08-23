@@ -13,7 +13,7 @@
 .. index:: Associar todos os Endereços a um Endereço (Aux) (Procedimento)
 
 ==============================================================
-Associar todas os Endereços a um Endereço (Aux) (Procedimento)
+Associar todos os Endereços a um Endereço (Aux) (Procedimento)
 ==============================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`".
@@ -34,7 +34,7 @@ Associar todas os Endereços a um Endereço (Aux) (Procedimento)
 
                 * *Create new Address (Aux)*: **marcado**
 
-                #. Utilize o botão :bi:`Associate to Address (Aux)` para executar a Ação.
+            #. Utilize o botão :bi:`Associate to Address (Aux)` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2

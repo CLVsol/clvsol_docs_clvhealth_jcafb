@@ -10,15 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procedimentos
+.. index:: Procedimentos de Verificação
 
-=============
-Procedimentos
-=============
+================================
+**Procedimentos** de Verificação
+================================
 
 .. toctree::
-   :maxdepth: 5
-   :caption: Conteúdo:
+   :maxdepth: 3
+   :caption: Tópicos Relacionados:
 
-   reregistration/reregistration_procedure
-   verification/verification_procedure
+   verification_procedure_010

@@ -12,13 +12,13 @@
 
 .. index:: Excluir todos os Endereços do Cadastro Address (Aux) (Procedimento)
 
-===================================================================
-Excluir todos os Endereços do Cadastro Address (Aux) (Procedimento)
-===================================================================
+===========================================================================
+Excluir todos os registros de Endereços do Cadastro Auxiliar (Procedimento)
+===========================================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`".
 
-    #. Excluir todos os Endereços do Cadastro :bi:`Address (Aux)`:
+    #. Excluir todos os **Endereços** do **Cadastro Auxiliar**:
 
         #. Acessar a *view* **Contatos**:
 
@@ -32,7 +32,7 @@ Excluir todos os Endereços do Cadastro Address (Aux) (Procedimento)
 
         #. Exercutar a Ação **Excluir**:
 
-                #. Utilize o botão :bi:`Ok` para executar a Ação.
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
 
     #. Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:`Address (Aux)`:
 

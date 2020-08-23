@@ -10,15 +10,15 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Excluir todas as Pessoas do Cadastro Person (Aux) (Procedimento)
+.. index:: Excluir todos os registros de Pessoas do Cadastro Auxiliar (Procedimento)
 
-================================================================
-Excluir todas as Pessoas do Cadastro Person (Aux) (Procedimento)
-================================================================
+=========================================================================
+Excluir todos os registros de Pessoas do Cadastro Auxiliar (Procedimento)
+=========================================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`".
 
-    #. Excluir todas as Pessoas do Cadastro :bi:`Person (Aux)`:
+    #. Excluir todas as **Pessoas** do **Cadastro Auxiliar**:
 
         #. Acessar a *view* **Contatos**:
 

@@ -36,7 +36,7 @@ Associar todas as Pessoas a uma Pessoa (Aux) (Procedimento)
 
                 * *Create new Address (Aux)*: **marcado**
 
-                #. Utilize o botão :bi:`Associate to Person (Aux)` para executar a Ação.
+            #. Utilize o botão :bi:`Associate to Person (Aux)` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2

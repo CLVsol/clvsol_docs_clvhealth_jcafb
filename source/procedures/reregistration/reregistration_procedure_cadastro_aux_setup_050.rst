@@ -32,9 +32,12 @@ Remover a Fase de todas as Pessoas (Aux) (Procedimento)
 
             * Parâmetros utilizados:
 
+                * *Register State*: :bi:`Set` » :bi:`Verified`
+                * *State*: **nenhuma ação**
+                * *Person (Aux) Verification Execute*: **desmarcado**
                 * *Phase*: :bi:`Remove`
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2
