@@ -10,16 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-======
-Índice
-======
+.. index:: Guia de Referência
 
-* :ref:`genindex`
+==================
+Guia de Referência
+==================
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 5
    :caption: Conteúdo:
 
-   reference_guide/index
-   procedures/index
-   this_documentation/index
+   reregistration/reregistration

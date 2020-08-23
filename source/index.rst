@@ -1,3 +1,15 @@
+.. raw:: html
+
+    <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
+    <style> .blue {color:blue} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
+
+.. role:: red
+.. role:: green
+.. role:: blue
+.. role:: bi
+
 ======================================
 Documentação do *CLVhealth-JCAFB-2021*
 ======================================
@@ -8,7 +20,7 @@ Documentação do *CLVhealth-JCAFB-2021*
    :maxdepth: 3
    :caption: Conteúdo:
 
-   user_guide/index
-   procedure/index
+   reference_guide/index
+   procedures/index
    this_documentation/index
    general_index
