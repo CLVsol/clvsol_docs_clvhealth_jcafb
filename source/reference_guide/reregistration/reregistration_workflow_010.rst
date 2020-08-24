@@ -54,7 +54,9 @@ Após a execução da pesquisa por uma Família:
 
    reregistration_workflow_010_010
    reregistration_workflow_010_020
+   reregistration_workflow_010_025
    reregistration_workflow_010_030
    reregistration_workflow_010_040
    reregistration_workflow_010_050
    reregistration_workflow_010_060
+   reregistration_workflow_010_065
