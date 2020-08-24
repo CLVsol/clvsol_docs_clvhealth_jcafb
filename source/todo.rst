@@ -10,18 +10,15 @@
 .. role:: blue
 .. role:: bi
 
-======================================
-Documentação do *CLVhealth-JCAFB-2021*
-======================================
+=====
+To Do
+=====
 
-* :ref:`genindex`
+    #. :red:`Criar um procedimento para exclusão dos registros orfãos presentes na view "Contatos"!` 
+
+    #. :red:`Criar um procedimento para exclusão dos registros orfãos presentes na view "Verification Outcomes"!` 
+
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 6
    :caption: Conteúdo:
-
-   todo
-   reference_guide/index
-   procedures/index
-   this_documentation/index
-   general_index
