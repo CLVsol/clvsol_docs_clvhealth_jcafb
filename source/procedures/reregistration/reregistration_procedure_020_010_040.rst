@@ -10,15 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa já cadastrada mudou-se para um Endereço já cadastrado (Procedimento)
+.. index:: A Pessoa já cadastrada mudou-se para um outro Endereço já cadastrado (Procedimento)
 
-=====================================================================================
-A **Pessoa já cadastrada** mudou-se para um **Endereço já cadastrado** (Procedimento)
-=====================================================================================
-
-    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
-
-    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+===========================================================================================
+A **Pessoa já cadastrada** mudou-se para um outro **Endereço já cadastrado** (Procedimento)
+===========================================================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_010_040`".
 
@@ -27,18 +23,10 @@ A **Pessoa já cadastrada** mudou-se para um **Endereço já cadastrado** (Proce
         * :doc:`reregistration_procedure_010_010`
         * :doc:`reregistration_procedure_010_020`
 
-    #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
-
-    #. Confirmar a mudança de Endereço da Pessoa.
-
-    #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
-
     #. Procurar pelo registro :bi:`Address` :green:`(novo)` associado ao novo Endereço informado para a Pessoa utilizando um dos procedimentos:
 
         * :doc:`/reference_guide/reregistration/reregistration_workflow_010_050`
         * :doc:`/reference_guide/reregistration/reregistration_workflow_010_060`
-
-    #. Confirmar que todos os dados do registro :bi:`Address` :green:`(novo)` serão mantidos.
 
     #. A partir do registro :bi:`Person` encontrado, exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
 
@@ -69,17 +57,27 @@ A **Pessoa já cadastrada** mudou-se para um **Endereço já cadastrado** (Proce
 
     #. Abrir o registro :bi:`Address (Aux)` associado à Pessoa apresentado na *view* :bi:`Addresses (Aux)`.
 
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
+        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+
+        #. Alterar o :bi:`State` para ":bi:`Available`", utilizando o botão [:bi:`Available`].
+
+        #. Alterar a :bi:`Phase` para "**JCAFB-2021v**", editando o registro.
+
+        #. Exercutar a Ação ":bi:`Address (Aux) Verification Execute`":
+
+            #. Utilizar o botão :bi:`Address (Aux) Verification Execute` para executar a Ação.
+
+    #. Retornar ao registro :bi:`Person (Aux)`:
 
         #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 
-    #. Retornar ao registro :bi:`Person (Aux)`.
+        #. Alterar o :bi:`State` para ":bi:`Available`", utilizando o botão [:bi:`Available`].
 
-    #. A partir do registro :bi:`Person (Aux)`:
+        #. Alterar a :bi:`Phase` para "**JCAFB-2021v**", editando o registro.
 
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Person (Aux)`.
+        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
 
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+            #. Utilizar o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2

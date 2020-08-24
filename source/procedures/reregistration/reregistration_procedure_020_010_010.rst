@@ -34,11 +34,29 @@ A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado** (
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
-
     #. Abrir o registro :bi:`Address (Aux)` associado ao campo *Address (Aux)*:
 
         #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+
+        #. Alterar o :bi:`State` para ":bi:`Available`", utilizando o botão [:bi:`Available`].
+
+        #. Alterar a :bi:`Phase` para "**JCAFB-2021v**", editando o registro.
+
+        #. Exercutar a Ação ":bi:`Address (Aux) Verification Execute`":
+
+            #. Utilizar o botão :bi:`Address (Aux) Verification Execute` para executar a Ação.
+
+    #. Retornar ao registro :bi:`Person (Aux)`:
+
+        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+
+        #. Alterar o :bi:`State` para ":bi:`Available`", utilizando o botão [:bi:`Available`].
+
+        #. Alterar a :bi:`Phase` para "**JCAFB-2021v**", editando o registro.
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
+
+            #. Utilizar o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2

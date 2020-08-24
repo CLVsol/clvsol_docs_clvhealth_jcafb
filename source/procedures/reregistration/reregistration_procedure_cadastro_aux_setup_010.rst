@@ -34,7 +34,7 @@ Excluir todos os registros de Pessoas do Cadastro Auxiliar (Procedimento)
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-    #. Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:'Person (Aux)`:
+    #. Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:`Person (Aux)`:
 
         #. Acessar a *view* :bi:`Verification Outcomes`:
 
