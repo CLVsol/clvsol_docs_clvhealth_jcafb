@@ -32,6 +32,10 @@ Procura por uma **Família** em **Families** (Procedimento)
 
         #. Utilizar o registro associado à Família apresentado na *view* :bi:`Families`.
 
+    #.  **Caso um registro associado a essa Família NÃO seja encontrado** na *view* :bi:`Families`:
+
+        #. Será necessário realizar o cadastramento da Família.
+
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:

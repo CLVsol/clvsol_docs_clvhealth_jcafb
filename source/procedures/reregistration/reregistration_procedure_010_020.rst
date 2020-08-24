@@ -32,8 +32,6 @@ Procura por uma **Pessoa** em **Persons** (Procedimento)
 
         #. Utilizar o registro associado à Pessoa apresentado na *view* :bi:`Persons`.
 
-        #. A Pessoa será declarada como "**já cadastrada**".
-
     #. **Caso um registro associado à Pessoa NÃO seja encontrado** na *view* :bi:`Persons`, Procurar pela Pessoa na *view* :bi:`Persons (Aux)`:
 
         #. Acessar a *view* :bi:`Persons (Aux)`:
@@ -48,11 +46,9 @@ Procura por uma **Pessoa** em **Persons** (Procedimento)
 
             #. Utilizar o registro associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-            #. A Pessoa será declarada como **em fase de recadastramento**.
-
         #. **Caso um registro associado à Pessoa NÃO seja encontrado** na *view* :bi:`Persons (Aux)`,
 
-            #. A Pessoa será declarada como "**não cadastrada**".
+            #. Será necessário realizar o cadastramento da Pessoa.
 
 .. toctree::
    :maxdepth: 2

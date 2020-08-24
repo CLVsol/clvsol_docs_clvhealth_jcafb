@@ -40,9 +40,7 @@ Procura por uma **Pessoa** em **Contatos** (Procedimento)
 
         #. Utilizar o registro associado à Pessoa apresentado na *view* :bi:`Persons`.
 
-        #. A Pessoa será declarada como "**já cadastrada**".
-
-    #. **Caso um registro associado a essa Pessoa seja encontrado** somente com *Address Type* ":bi:`Person (Aux)`":
+    #. **Caso um registro associado a essa Pessoa seja encontrado** com *Address Type* ":bi:`Person (Aux)`":
 
         #. Abrir o registro de contato encontrado com *Address Type* ":bi:`Person (Aux)`".
 
@@ -50,11 +48,9 @@ Procura por uma **Pessoa** em **Contatos** (Procedimento)
 
         #. Utilizar o registro associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-        #. A Pessoa será declarada como "**em fase de recadastramento**".
-
     #.  **Caso um registro associado a essa Pessoa NÃO seja encontrado** com qualquer *Address Type*:
 
-        #. A Pessoa será declarada como "**não cadastrada**".
+        #. Será necessário realizar o cadastramento da Pessoa.
 
 .. toctree::
    :maxdepth: 2

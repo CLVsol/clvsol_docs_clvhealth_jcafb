@@ -40,6 +40,10 @@ Procura por uma **Família** em **Contatos** (Procedimento)
 
         #. Utilizar o registro associado à Família apresentado na *view* :bi:`Families`.
 
+    #.  **Caso um registro associado a essa Família NÃO seja encontrado** com *Address Type* ":bi:`Family`":
+
+        #. Será necessário realizar o cadastramento da Família.
+
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:

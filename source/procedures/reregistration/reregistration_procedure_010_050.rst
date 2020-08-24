@@ -40,8 +40,6 @@ Procura por um **Endereço** em **Contatos** (Procedimento)
 
         #. Utilizar o registro associado ao Endereço apresentado na *view* :bi:`Addresses`.
 
-        #. O Endereço será declarado como "**já cadastrado**".
-
     #. **Caso um registro associado a esse Endereço seja encontrado** somente com *Address Type* ":bi:`Address (Aux)`":
 
         #. Abrir o registro de contato encontrado com *Address Type* ":bi:`Address (Aux)`".
@@ -50,11 +48,9 @@ Procura por um **Endereço** em **Contatos** (Procedimento)
 
         #. Utilizar o registro associado ao Endereço apresentado na *view* :bi:`Addresses (Aux)`.
 
-        #. O Endereço será declarado como **em fase de recadastramento**.
-
     #.  **Caso um registro associado a esse Endereço NÃO seja encontrado** com qualquer *Address Type*:
 
-        #. O Endereço será declarado como "**não cadastrado**".
+        #. Será necessário realizar o cadastramento do Endereço.
 
 .. toctree::
    :maxdepth: 2
