@@ -16,14 +16,14 @@
 A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado**
 ===========================================================================
 
-    Caso **exista uma Família** associada à Pessoa, o registro *Person (Aux)* será associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada à Pessoa, o registro *Person (Aux)* será associado a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
     Caso **não exista uma Família** associada à Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
-Cadastro
---------
+Cadastro Principal
+------------------
 
-    O **Cadastro** identificado poderá conter os seguintes registros:
+    O **Cadastro Principal** identificado poderá conter os seguintes registros:
 
         * :bi:`Person`: relativo à Pessoa
         * :bi:`Address`: relativo ao Endereço da Pessoa
@@ -34,8 +34,8 @@ Cadastro Auxiliar
 
     O **Cadastro Auxiliar** criado poderá conter os seguintes registros:
 
-        * :bi:`Person (Aux)`
-        * :bi:`Address (Aux)`
+        * :bi:`Person (Aux)`: relativo à Pessoa
+        * :bi:`Address (Aux)`: relativo ao Endereço da Pessoa
 
 Relacionamento entre os registros dos Cadastros
 -----------------------------------------------
@@ -69,27 +69,9 @@ Relacionamento entre os registros dos Cadastros
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
 
-    #. **Cadastro**:
-
-        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
-
-            * :doc:`reregistration_workflow_010_010`
-            * :doc:`reregistration_workflow_010_020`
-
-        #. Confirmar que todos os dados do registro :bi:`Person` associado à Pessoa serão mantidos.
-
-        #. Confirmar que todos os dados do registro :bi:`Address`, associado ao registro :bi:`Person`, serão mantidos.
-
-        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
-
-    #. **Cadastro Auxiliar**:
-
-        #. Os registros do  **Cadastro Auxiliar** relacionados à Pessoa devem ser criados a partir do registro :bi:`Person`, executando a Ação ":BI:`Person Associate to Person (Aux)`":
-
-                * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
-                * A criação de :bi:`Address (Aux)`, deve ser **habilitada**.
-
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_020_010_010`".
+
+    Alternativamente, considerando a :doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`, o processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_020_010_010_alt`".
 
 .. toctree::
    :maxdepth: 2

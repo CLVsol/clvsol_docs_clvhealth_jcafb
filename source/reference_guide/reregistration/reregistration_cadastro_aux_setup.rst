@@ -36,7 +36,7 @@ A Preparação do Cadastro Auxiliar é implementada através das seguintes açõ
 
     #. Remover a Fase de todos os Endereços (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_060`".
 
-    #. Excluir todos os registros de Pessoas falecidas do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_070`".
+    #. :red:`(Não Executado])` Excluir todos os registros de Pessoas falecidas do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_070`".
     
     #. Executar o Verification Batch “Default Batch” executando ":doc:`/procedures/verification/verification_procedure_010`".
 

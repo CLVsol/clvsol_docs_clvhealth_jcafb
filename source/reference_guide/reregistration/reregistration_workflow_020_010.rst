@@ -16,13 +16,11 @@
 Criação do **Cadastro Auxiliar** (**Pessoa já cadastrada**)
 ===========================================================
 
-O processo de criação do **Cadastro Auxiliar** associado a uma Pessoa **já cadastrada** é utilizado quando a Pessoa tiver sido declarada como **já cadastrada**.
+O processo de criação do **Cadastro Auxiliar** associado a uma Pessoa **já cadastrada** é utilizado quando não for identificado um registro associado a ela em ":bi:`Persons (Aux)`".
 
-Este processo é, basicamente, a atualização das informações em uma cópia do **Cadastro** atual associado à Pessoa. 
+Portanto, quando não existir ainda um **Cadastro Auxiliar** associado à Pessoa, o mesmo deverá ser criado como uma cópia do **Cadastro Principal** existente, associado à Pessoa.
 
-Portanto, quando não existir ainda um **Cadastro Auxiliar** associado à Pessoa, o mesmo deverá ser criado como uma cópia do **Cadastro** existente, associado à Pessoa.
-
-Se porventura já existir um **Cadastro Auxiliar** associado à Pessoa, o mesmo será selecionado para dar proseguimento ao processo de recadastramento da mesma.
+Se porventura já existir um **Cadastro Auxiliar** associado à Pessoa, o mesmo será selecionado.
 
 O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades (Aux)**:
 
@@ -32,9 +30,9 @@ O **Cadastro Auxiliar** criado poderá ser composto pelas seguintes **Entidades 
 
     * :bi:`Address (Aux)`:
 
-        * O registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir do registro :bi:`Address` associado ao Endereço da Pessoa, quando se constatar que a Pessoa foi mantida no Endereço atual cadastrado.
+        * O registro :bi:`Address (Aux)`, quando necessário, deverá ser **criado automaticamente** a partir do registro :bi:`Address` associado ao Endereço da Pessoa, quando se constatar que a Pessoa foi mantida no Endereço atual cadastrado.
 
-        * O registro :bi:`Address (Aux)` deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado, quando se constatar que a Pessoa mudou-se para o Endereço associado a este registro :bi:`Address`.
+        * O registro :bi:`Address (Aux)`, quando necessário, deverá ser **criado automaticamente** a partir de um registro :bi:`Address` já cadastrado, quando se constatar que a Pessoa mudou-se para o Endereço associado a este registro :bi:`Address`.
 
         * O registro :bi:`Address (Aux)` deverá ser **criado manualmente**, quando se constatar que a Pessoa mudou-se para um Endereço não cadastrado da comunidade atendida.
 
