@@ -26,7 +26,9 @@ Associar todas as Pessoas a uma Pessoa (Aux) (Procedimento)
 
                 * :bi:`Community` » :bi:`Community` » :bi:`Persons`
 
-        #. Selecionar todas as Pessoas
+        #. Ativar o filtro **Agrupar por** » :bi:`Register State`
+
+        #. Selecionar todos as Pessoas com :bi:`Register State` != ":bi:`Canceled`"
 
         #. Exercutar a Ação :bi:`Person Associate to Person (Aux)`:
 

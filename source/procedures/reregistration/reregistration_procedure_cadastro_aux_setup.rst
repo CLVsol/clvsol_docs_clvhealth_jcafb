@@ -26,3 +26,4 @@ Preparação do **Cadastro Auxiliar** (Procedimentos)
    reregistration_procedure_cadastro_aux_setup_040
    reregistration_procedure_cadastro_aux_setup_050
    reregistration_procedure_cadastro_aux_setup_060
+   reregistration_procedure_cadastro_aux_setup_070

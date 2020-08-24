@@ -26,7 +26,9 @@ Associar todos os Endereços a um Endereço (Aux) (Procedimento)
 
                 * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
 
-        #. Selecionar todos os Endereços
+        #. Ativar o filtro **Agrupar por** » :bi:`Register State`
+
+        #. Selecionar todos os Endereços com :bi:`Register State` != ":bi:`Canceled`"
 
         #. Exercutar a Ação :bi:`Address Associate to Address (Aux)`:
 
