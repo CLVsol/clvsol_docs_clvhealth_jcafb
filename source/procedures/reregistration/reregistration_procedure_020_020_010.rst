@@ -18,18 +18,10 @@ A **Pessoa não cadastrada** reside em um **Endereço já cadastrado** (Procedim
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_020_010`".
 
-    #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o procedimento:
-
-        * :doc:`reregistration_procedure_010_010`
-
-    #. Confirmar que o(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` não seja(m) encontrado(s).
-
     #. Procurar por um registro :bi:`Address` associado ao Endereço da Pessoa utilizando um dos procedimentos:
 
         * :doc:`reregistration_procedure_010_050`
         * :doc:`reregistration_procedure_010_060`
-
-    #. Confirmar que todos os dados do registro :bi:`Address`, relacionado ao Endereço da Pessoa, serão mantidos.
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 
@@ -61,15 +53,29 @@ A **Pessoa não cadastrada** reside em um **Endereço já cadastrado** (Procedim
 
     #. Abrir o registro :bi:`Address (Aux)` associado à Pessoa apresentado na *view* :bi:`Addresses (Aux)`.
 
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Address (Aux)`.
+        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
 
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+            #. Parâmetros apresentados:
+
+                * *Register State*: :bi:`Set` » :bi:`Revised`
+                * *State*: :bi:`Set` » :bi:`Available`
+                * *Phase*: **JCAFB-2021v**
+                * *Person (Aux) Verification Execute*: **marcado**
+
+            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
     #. Retornar ao registro :bi:`Person (Aux)`.
 
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Person (Aux)`.
+        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
 
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+            #. Parâmetros apresentados:
+
+                * *Register State*: :bi:`Set` » :bi:`Revised`
+                * *State*: :bi:`Set` » :bi:`Available`
+                * *Phase*: **JCAFB-2021v**
+                * *Person (Aux) Verification Execute*: **marcado**
+
+            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2

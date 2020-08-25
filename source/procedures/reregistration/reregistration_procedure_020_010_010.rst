@@ -36,27 +36,29 @@ A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado** (
 
     #. Abrir o registro :bi:`Address (Aux)` associado ao campo *Address (Aux)*:
 
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
 
-        #. Alterar o :bi:`State` para ":bi:`Available`", utilizando o botão [:bi:`Available`].
+            #. Parâmetros apresentados:
 
-        #. Alterar a :bi:`Phase` para "**JCAFB-2021v**", editando o registro.
+                * *Register State*: :bi:`Set` » :bi:`Revised`
+                * *State*: :bi:`Set` » :bi:`Available`
+                * *Phase*: **JCAFB-2021v**
+                * *Person (Aux) Verification Execute*: **marcado**
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Verification Execute`":
-
-            #. Utilizar o botão :bi:`Address (Aux) Verification Execute` para executar a Ação.
+            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
     #. Retornar ao registro :bi:`Person (Aux)`:
 
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
+        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
 
-        #. Alterar o :bi:`State` para ":bi:`Available`", utilizando o botão [:bi:`Available`].
+            #. Parâmetros apresentados:
 
-        #. Alterar a :bi:`Phase` para "**JCAFB-2021v**", editando o registro.
+                * *Register State*: :bi:`Set` » :bi:`Revised`
+                * *State*: :bi:`Set` » :bi:`Available`
+                * *Phase*: **JCAFB-2021v**
+                * *Person (Aux) Verification Execute*: **marcado**
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
-
-            #. Utilizar o botão :bi:`Person (Aux) Verification Execute` para executar a Ação.
+            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2

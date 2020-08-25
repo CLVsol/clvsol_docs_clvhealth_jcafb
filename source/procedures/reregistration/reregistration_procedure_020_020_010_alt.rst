@@ -10,25 +10,19 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa não cadastrada reside em um Endereço não cadastrado (Procedimento)
+.. index:: A Pessoa não cadastrada reside em um Endereço já cadastrado (Procedimento Alternativo)
 
-===================================================================================
-A **Pessoa não cadastrada** reside em um **Endereço não cadastrado** (Procedimento)
-===================================================================================
+==============================================================================================
+A **Pessoa não cadastrada** reside em um **Endereço já cadastrado** (Procedimento Alternativo)
+==============================================================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_020_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_020_010`".
 
-    #. Acessar a *view* :bi:`Addresses (Aux)`:
+    #. Procurar por um registro :bi:`Address` associado ao Endereço da Pessoa utilizando o procedimento:
 
-        * Menu de acesso:
+        * :doc:`reregistration_procedure_010_065`
 
-            * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
-
-    #. Criar um novo registro :bi:`Address (Aux)`:
-
-        #. Preencher o registro :bi:`Address (Aux)` com as informações apresentadas para o Endereço da Pessoa.
-
-        #. Salvar o registro.
+    #. Abrir o registro :bi:`Address (Aux)` associado à Pessoa apresentado na *view* :bi:`Addresses (Aux)`.
 
         #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
 
@@ -49,7 +43,7 @@ A **Pessoa não cadastrada** reside em um **Endereço não cadastrado** (Procedi
 
     #. Criar um novo registro :bi:`Person (Aux)`:
 
-        #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço e à Família.
+        #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço.
 
         #. Salvar o registro.
 
@@ -59,6 +53,7 @@ A **Pessoa não cadastrada** reside em um **Endereço não cadastrado** (Procedi
 
                 * *Register State*: :bi:`Set` » :bi:`Revised`
                 * *State*: :bi:`Set` » :bi:`Available`
+                * *Address*: :bi:`Set` » :bi:`Address`
                 * *Address (Aux)*: :bi:`Set` » :bi:`Address (Aux)`
                 * *Get Reference Address (Aux) Data*: **marcado**
                 * *Phase*: **JCAFB-2021v**

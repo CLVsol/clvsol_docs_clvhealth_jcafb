@@ -10,25 +10,19 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa não cadastrada reside em um Endereço fora da comunidade atendida pela JCAFB (Procedimento)
+.. index:: A Pessoa já cadastrada mudou-se para um Endereço fora da comunidade atendida pela JCAFB (Procedimento Alternativo)
 
-===========================================================================================================
-A **Pessoa não cadastrada** reside em um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
-===========================================================================================================
+==========================================================================================================================
+A **Pessoa já cadastrada** mudou-se para um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento Alternativo)
+==========================================================================================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_020_030`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_010_070`".
 
-    #. Acessar a *view* :bi:`Persons (Aux)`:
+    #. Procurar pelo registro :bi:`Person (Aux)` associado à Pessoa utilizando o procedimento:
 
-        * Menu de acesso:
+        * :doc:`reregistration_procedure_010_025`
 
-            * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
-
-    #. Criar um novo registro :bi:`Person (Aux)`:
-
-        #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço e à Família.
-
-        #. Salvar o registro.
+    #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
         #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
 
@@ -37,8 +31,9 @@ A **Pessoa não cadastrada** reside em um **Endereço fora da comunidade** atend
                 * *Register State*: :bi:`Set` » :bi:`Revised`
                 * *State*: :bi:`Set` » :bi:`Unvailable`
                 * *Address is unavailable*: :bi:`Set` » **marcado**
-                * *Family is unavailabl*: :bi:`Set` » **marcado**
+                * *Address*: :bi:`Remove`
                 * *Address (Aux) is unavailable*: :bi:`Set` » **marcado**
+                * *Address (Aux)*: :bi:`Remove`
                 * *Contact Information is unavailable*: :bi:`Set` » **marcado**
                 * *Clear Address Data*: **marcado**
                 * *Phase*: **JCAFB-2021v**

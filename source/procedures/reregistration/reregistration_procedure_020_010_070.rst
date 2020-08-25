@@ -16,22 +16,12 @@
 A **Pessoa já cadastrada** mudou-se para um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
 ==============================================================================================================
 
-    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
-
-    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
-
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_010_070`".
 
     #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos procedimentos:
 
         * :doc:`reregistration_procedure_010_010`
         * :doc:`reregistration_procedure_010_020`
-
-    #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
-
-    #. Confirmar a mudança de Endereço da Pessoa.
-
-    #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
 
     #. A partir do registro :bi:`Person` encontrado, exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
 
@@ -44,23 +34,28 @@ A **Pessoa já cadastrada** mudou-se para um **Endereço fora da comunidade** at
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-    #. Editar o registro :bi:`Person (Aux)`:
+        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
 
-        #. Remover do campo *Address* a associação ao registro :bi:`Address` :green:`(antigo)`, utilizando o botão [:bi:`Remove Reference Address`].
+            #. Parâmetros apresentados:
 
-        #. Marcar o campo :bi:`Address is unavailable`.
+                * *Register State*: :bi:`Set` » :bi:`Revised`
+                * *State*: :bi:`Set` » :bi:`Unvailable`
+                * *Address is unavailable*: :bi:`Set` » **marcado**
+                * *Address*: :bi:`Remove`
+                * *Address (Aux) is unavailable*: :bi:`Set` » **marcado**
+                * *Address (Aux)*: :bi:`Remove`
+                * *Contact Information is unavailable*: :bi:`Set` » **marcado**
+                * *Clear Address Data*: **marcado**
+                * *Phase*: **JCAFB-2021v**
+                * *Person (Aux) Verification Execute*: **marcado**
 
-        #. Marcar o campo :bi:`Address (Aux) is unavailable`.
+            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
+
+    #. Caso necessário, editar o registro :bi:`Person (Aux)`:
 
         #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
 
         #. Salvar o registro.
-
-    #. A partir do registro :bi:`Person (Aux)`:
-
-        #. Não será necessário a execução de qualquer procedimento adicional no registro :bi:`Person (Aux)`.
-
-        #. Alterar o :bi:`Register State` para ":bi:`Revised`", utilizando o botão [:bi:`Revised`].
 
 .. toctree::
    :maxdepth: 2

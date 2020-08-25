@@ -10,24 +10,23 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: A Pessoa já cadastrada mudou-se para um ourto Endereço não cadastrado (Procedimento)
+.. index:: A Pessoa já cadastrada mudou-se para um ourto Endereço não cadastrado (Procedimento Alternativo)
 
-============================================================================================
-A **Pessoa já cadastrada** mudou-se para um ourto **Endereço não cadastrado** (Procedimento)
-============================================================================================
+========================================================================================================
+A **Pessoa já cadastrada** mudou-se para um ourto **Endereço não cadastrado** (Procedimento Alternativo)
+========================================================================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_020_010_050`".
 
-    #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos procedimentos:
+    #. Procurar pelo registro :bi:`Person (Aux)` associado à Pessoa utilizando o procedimento:
 
-        * :doc:`reregistration_procedure_010_010`
-        * :doc:`reregistration_procedure_010_020`
+        * :doc:`reregistration_procedure_010_025`
 
     #. Procurar por um registro :bi:`Address` associado ao Endereço da Pessoa utilizando o procedimento:
 
-        * :doc:`reregistration_procedure_010_050`
+        * :doc:`reregistration_procedure_010_065`
 
-    #. Confirmar que o(s) registro(s) :bi:`Address` e/ou :bi:`Address (Aux)` não seja(m) encontrado(s).
+    #. Confirmar que o registro :bi:`Address (Aux)` não seja encontrado.
 
     #. Acessar a *view* :bi:`Addresses (Aux)`:
 
@@ -41,8 +40,6 @@ A **Pessoa já cadastrada** mudou-se para um ourto **Endereço não cadastrado**
 
         #. Salvar o registro.
 
-    #. Registro :bi:`Address (Aux)`.
-
         #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
@@ -54,18 +51,7 @@ A **Pessoa já cadastrada** mudou-se para um ourto **Endereço não cadastrado**
 
             #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
-    #. A partir do registro :bi:`Person` encontrado, exercutar a Ação ":bi:`Person Associate to Person (Aux)`":
-
-        #. Parâmetros apresentados:
-
-            * *Create new Person (Aux)*: **habilitado**
-            * *Create new Family (Aux)*: **desabilitado**
-
-        #. Utilizar o botão [:bi:`Associate do Perton (Aux)`] para executar a Ação.
-
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
-
-    #. Editar o registro :bi:`Person (Aux)`:
 
         #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
 
