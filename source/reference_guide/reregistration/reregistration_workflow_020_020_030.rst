@@ -16,17 +16,17 @@
 A **Pessoa não cadastrada** reside em um **Endereço fora da comunidade** atendida pela JCAFB
 ============================================================================================
 
-Cadastro
---------
+Cadastro Principal
+------------------
 
-    Nenhum registro será identificado no **Cadastro**.
+    Nenhum registro será identificado.
 
 Cadastro Auxiliar
 -----------------
 
     O **Cadastro Auxiliar** criado conterá os seguintes registros:
 
-        * :bi:`Person (Aux)`
+        * :bi:`Person (Aux)`: relativo à Pessoa
 
 Relacionamento entre os registros dos Cadastros
 -----------------------------------------------
@@ -42,24 +42,6 @@ Relacionamento entre os registros dos Cadastros
 
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
-
-    #. **Cadastro**:
-
-        #. Procurar pelo(s) registro(s) :bi:`Person` e/ou :bi:`Person (Aux)` associado(s) à Pessoa utilizando o método:
-
-            * :doc:`reregistration_workflow_010_010`
-
-        **Observação 1**: Nenhum registro :bi:`Person` deverá ser encontrado.
-
-        **Observação 2**: Nenhum registro :bi:`Person (Aux)` deverá ser encontrado, a menos que a nova Pessoa já esteja em processo de recadastramento.
-
-    #. *View* :bi:`Person (Aux)`:
-
-        #. Criar manualmente um novo registro :bi:`Person (Aux)`, preenchido com as informações apresentadas para a Pessoa, exceto as informaçôes do Endereço.
-
-    #. Registro :bi:`Person (Aux)`:
-
-        #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
 
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_020_020_030`".
 

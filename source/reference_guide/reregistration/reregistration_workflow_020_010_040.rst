@@ -16,9 +16,9 @@
 A **Pessoa já cadastrada** mudou-se para um outro **Endereço já cadastrado**
 ============================================================================
 
-    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada à Pessoa, o registro *Person (Aux)* será associado a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada à Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
 Cadastro Principal
 ------------------

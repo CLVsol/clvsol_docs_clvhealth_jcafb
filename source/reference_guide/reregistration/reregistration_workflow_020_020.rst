@@ -16,7 +16,7 @@
 Criação do **Cadastro Auxiliar** (**Pessoa não cadastrada**)
 ============================================================
 
-O processo de criação do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é utilizado quando a Pessoa tiver sido declarada como **não cadastrada**.
+O processo de criação do **Cadastro Auxiliar** para uma Pessoa **não cadastrada** é utilizado quando a Pessoa tiver sido identificada como **não cadastrada**.
 
 Portanto, quando não existir ainda um **Cadastro Auxiliar** para a Pessoa, o mesmo deverá ser manualmente criado para conter as informações disponíveis para a Pessoa. Essas informações serão manualmente inseridas nos registros pertinentes.
 

@@ -16,9 +16,9 @@
 A **Pessoa já cadastrada** mudou-se para um **Endereço fora da comunidade** atendida pela JCAFB
 ===============================================================================================
 
-    Caso **exista uma Família** associada ao Endereço atual da Pessoa, a Pessoa continuará associada a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
+    Caso **exista uma Família** associada à Pessoa, o registro *Person (Aux)* será associado a essa Família e os itens indicados como ":green:`(Opcional)`" deverão ser considerados.
 
-    Caso **não exista uma Família** associada ao Endereço atual da Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
+    Caso **não exista uma Família** associada à Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
 Cadastro
 --------
@@ -34,7 +34,7 @@ Cadastro Auxiliar
 
     O **Cadastro Auxiliar** criado deverá conter os seguintes registros:
 
-        * :bi:`Person (Aux)`
+        * :bi:`Person (Aux)`: relativo à Pessoa
 
 Relacionamento entre os registros dos Cadastros
 -----------------------------------------------
@@ -52,7 +52,7 @@ Relacionamento entre os registros dos Cadastros
 
     * :bi:`Person (Aux)`:
 
-        * *Address* » :bi:`Address` :green:`(antigo)`
+        * *Address* » **vazio**
         * *Address (Aux)* » **vazio**
         * :green:`(Opcional)` *Family* » :bi:`Family`
         * *Related Person* » :bi:`Person`
@@ -62,37 +62,9 @@ Relacionamento entre os registros dos Cadastros
 Fluxo de Trabalho (*Workflow*)
 ------------------------------
 
-    #. **Cadastro**:
-
-        #. Procurar pelo registro :bi:`Person` associado à Pessoa utilizando um dos métodos:
-
-            * :doc:`reregistration_workflow_010_010`
-            * :doc:`reregistration_workflow_010_020`
-
-        #. Confirmar que todos os dados do registro :bi:`Person`, relacionados à Pessoa, serão mantidos.
-
-        #. Confirmar a mudança de Endereço da Pessoa.
-
-        #. :green:`(Opcional)` Confirmar que todos os dados do registro :bi:`Family`, associado ao registro :bi:`Person`, serão mantidos.
-
-    #. **Cadastro Auxiliar**:
-
-        #. Os registros do  **Cadastro Auxiliar** relacionados à Pessoa devem ser criados a partir do registro :bi:`Person`, executando a Ação ":BI:`Person Associate to Person (Aux)`":
-
-                * A criação de :bi:`Person (Aux)`, deve ser **habilitada**.
-                * A criação de :bi:`Address (Aux)`, deve ser **desabilitada**.
-
-    #. Registro :bi:`Person (Aux)`:
-
-        #. Remover do campo *Address* a associação ao registro :bi:`Address` :green:`(antigo)`.
-
-        #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
-
-    #. Registro :bi:`Person (Aux)`:
-
-        #. Não será necessário qualquer ação de atualização adicional do registro :bi:`Person (Aux)`.
-
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_020_010_070`".
+
+    Alternativamente, considerando a :doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`, o processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_020_010_070_alt`".
 
 .. toctree::
    :maxdepth: 2
