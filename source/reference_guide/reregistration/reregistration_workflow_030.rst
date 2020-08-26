@@ -16,6 +16,24 @@
 :red:`(Revisar)` Consolidação do **Cadastro Auxiliar**
 ======================================================
 
+Execução do *Verification Batch* "**JCAFB-2021v - Default Batch**"
+------------------------------------------------------------------
+
+    #. Acessar a *view* :bi:`Verification Batches`:
+
+        * Menu de acesso:
+
+            * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+    #. Selecionar o *Verification Batch* ":bi:`JCAFB-2021v - Default Batch`".
+
+    #. Exercutar a Ação ":bi:`Verification Batch Exec`":
+
+        #. Utilizar o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+Uso de *Verification Outcomes*
+------------------------------
+
     #. Acessar a *view* :bi:`Verification Outcomes`:
 
         * Menu de acesso:
@@ -39,5 +57,4 @@
    :caption: Itens Relacionados:
 
    reregistration_workflow_030_010
-.. reregistration_workflow_030_020
-.. reregistration_workflow_030_030
+   reregistration_workflow_030_020
