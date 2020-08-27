@@ -21,7 +21,6 @@
    :caption: Tópicos Relacionados:
 
    reregistration_procedure_cadastro_aux_setup
-
    reregistration_procedure_010
-
    reregistration_procedure_020
+   reregistration_procedure_030
