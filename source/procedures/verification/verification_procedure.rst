@@ -21,3 +21,5 @@
    :caption: Tópicos Relacionados:
 
    verification_procedure_010
+   verification_procedure_020
+   verification_procedure_030
