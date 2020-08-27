@@ -16,41 +16,9 @@
 :red:`(Revisar)` Consolidação do **Cadastro Principal**
 =======================================================
 
-Execução do *Verification Batch* "**JCAFB-2021v - Default Batch**"
-------------------------------------------------------------------
+    * :doc:`/procedures/verification/verification_procedure_020`".
 
-    #. Acessar a *view* :bi:`Verification Batches`:
-
-        * Menu de acesso:
-
-            * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
-
-    #. Selecionar o *Verification Batch* ":bi:`JCAFB-2021v - Default Batch`".
-
-    #. Exercutar a Ação ":bi:`Verification Batch Exec`":
-
-        #. Utilizar o botão :bi:`Verification Batch Exec` para executar a Ação.
-
-Uso de *Verification Outcomes*
-------------------------------
-
-    #. Acessar a *view* :bi:`Verification Outcomes`:
-
-        * Menu de acesso:
-
-            * :bi:`Verification` » :bi:`Verification` » :bi:`Verification Outcomes`
-
-    #. Aplicar o filtro: **Agrupar Por** » :bi:`Model Name` » :bi:`Verification Outcome Status` » :bi:`Outcome Informations`.
-
-    #. Selecionar os :bi:`Verification Outcomes` que atendam aos critérios desejados.
-
-    #. Exercutar a Ação ":bi:`Verification Outcome Reference Mass Edit`":
-
-        #. Parâmetros apresentados:
-
-            * *Verification Markers*: :bi:`Add` » :bi:`Adicionar: Verification Markers`
-
-        #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
+    * :doc:`/procedures/verification/verification_procedure_030`".
 
 .. toctree::
    :maxdepth: 2
