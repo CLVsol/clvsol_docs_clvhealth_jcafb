@@ -16,6 +16,20 @@
 :red:`(Revisar)` Consolidação de :bi:`Person`
 =============================================
 
+_person_verification
+--------------------
+
+_person_verification_family
+---------------------------
+
+_person_verification_ref_address
+--------------------------------
+
+_person_verification_person_aux
+-------------------------------
+
+    * :blue:`(Nenhuma ação)` :doc:`/procedures/reregistration/reregistration_procedure_040_030_010`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:

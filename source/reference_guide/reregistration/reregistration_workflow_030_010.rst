@@ -16,7 +16,13 @@
 :red:`(Revisar)` Consolidação de :bi:`Address (Aux)`
 ====================================================
 
+_address_aux_verification
+-------------------------
+
     * :red:`(Opcional)` :doc:`/procedures/reregistration/reregistration_procedure_030_010_010`".
+
+_address_aux_verification_related_address
+-----------------------------------------
 
     * :doc:`/procedures/reregistration/reregistration_procedure_030_010_020`".
 

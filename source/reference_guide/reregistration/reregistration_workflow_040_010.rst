@@ -16,6 +16,17 @@
 :red:`(Revisar)` Consolidação de :bi:`Address`
 ==============================================
 
+_address_verification
+---------------------
+
+_address_verification_associated_persons
+----------------------------------------
+
+_address_verification_address_aux
+---------------------------------
+
+    * :blue:`(Nenhuma ação)` :doc:`/procedures/reregistration/reregistration_procedure_040_010_010`".
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:

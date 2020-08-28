@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação do Cadastro Auxiliar
+.. index:: Consolidação das Entidades do Cadastro Auxiliar
 
-=======================================================
-:red:`(Revisar)` Consolidação do **Cadastro Principal**
-=======================================================
+=====================================================================
+:red:`(Revisar)` Consolidação das Entidades do **Cadastro Principal**
+=====================================================================
 
     * :doc:`/procedures/verification/verification_procedure_020`".
 
