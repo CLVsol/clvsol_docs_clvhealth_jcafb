@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: 'Related Address "Verification State" is "Warning (L0)".' (Procedimento)
+.. index:: [_address_aux_verification_related_address] 'Related Address "Verification State" is "Warning (L0)".' (Procedimento)
 
-===================================================================================================
-*Outcome Information*: '**Related Address "Verification State" is "Warning (L0)".**' (Procedimento)
-===================================================================================================
+========================================================================================================================
+[_address_aux_verification_related_address] '**Related Address "Verification State" is "Warning (L0)".**' (Procedimento)
+========================================================================================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010`".
 

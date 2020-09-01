@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: 'Missing "Related Address".' (Procedimento)
+.. index:: [_address_aux_verification_related_address] 'Missing "Related Address".' (Procedimento)
 
-======================================================================
-*Outcome Information*: '**Missing "Related Address".**' (Procedimento)
-======================================================================
+===========================================================================================
+[_address_aux_verification_related_address] '**Missing "Related Address".**' (Procedimento)
+===========================================================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010`".
 

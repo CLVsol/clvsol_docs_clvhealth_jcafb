@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: '"Address Code" is missing.' (Procedimento)
+.. index:: [_address_aux_verification] '"Address Code" is missing.' (Procedimento)
 
-======================================================================
-*Outcome Information*: '**"Address Code" is missing.**' (Procedimento)
-======================================================================
+===========================================================================
+[_address_aux_verification] '**"Address Code" is missing.**' (Procedimento)
+===========================================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010`".
 
