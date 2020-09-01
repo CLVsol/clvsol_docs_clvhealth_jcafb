@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: [_address_aux_verification] '"Address Code" is missing.' (Procedimento)
+.. index:: Address (Aux) Set Code (Procedimento)
 
-===========================================================================
-[_address_aux_verification] '**"Address Code" is missing.**' (Procedimento)
-===========================================================================
+===========================================
+:bi:`Address (Aux) Set Code` (Procedimento)
+===========================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010`".
 
@@ -26,12 +26,7 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.address_aux**
-        * *Action*: **_address_aux_verification**
-        * *State*: **Warning (L0)**
-        * *Outcome Information*: '**"Address Code" is missing.**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Address (Aux) Set Code`":
 

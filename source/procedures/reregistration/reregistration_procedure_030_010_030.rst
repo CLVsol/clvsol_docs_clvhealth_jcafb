@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: '"Phase" has changed.' (Procedimento)
+.. index:: Address (Aux) Related Address Update (Procedimento)
 
-================================================================
-*Outcome Information*: '**"Phase" has changed.**' (Procedimento)
-================================================================
+=========================================================
+:bi:`Address (Aux) Related Address Update` (Procedimento)
+=========================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010`".
 
@@ -26,12 +26,7 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.address_aux**
-        * *Action*: **_address_aux_verification_related_address**
-        * *State*: **Warning (L0)**
-        * *Outcome Information*: '**"Phase" has changed.**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Address (Aux) Related Address Update`":
 

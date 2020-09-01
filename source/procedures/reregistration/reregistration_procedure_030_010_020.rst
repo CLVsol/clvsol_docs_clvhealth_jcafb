@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: [_address_aux_verification_related_address] 'Missing "Related Address".' (Procedimento)
+.. index:: Address (Aux) Related Address Create (Procedimento)
 
-===========================================================================================
-[_address_aux_verification_related_address] '**Missing "Related Address".**' (Procedimento)
-===========================================================================================
+=========================================================
+:bi:`Address (Aux) Related Address Create` (Procedimento)
+=========================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010`".
 
@@ -26,12 +26,7 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.address_aux**
-        * *Action*: **_address_aux_verification_related_address**
-        * *State*: **Error (L0)**
-        * *Outcome Information*: '**Missing "Related Address".**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Address (Aux) Related Address Create`":
 
