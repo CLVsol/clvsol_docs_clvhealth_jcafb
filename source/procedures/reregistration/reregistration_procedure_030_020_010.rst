@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: '"Person Code" is missing.' (Procedimento)
+.. index:: Person (Aux) Set Code (Procedimento)
 
-=====================================================================
-*Outcome Information*: '**"Person Code" is missing.**' (Procedimento)
-=====================================================================
+==========================================
+:bi:`Person (Aux) Set Code` (Procedimento)
+==========================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020`".
 
@@ -26,12 +26,7 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.person_aux**
-        * *Action*: **_person_aux_verification**
-        * *State*: **Warning (L0)**
-        * *Outcome Information*: '**"Person Code" is missing.**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Person (Aux) Set Code`":
 

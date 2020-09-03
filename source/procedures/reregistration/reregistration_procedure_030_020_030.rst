@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: 'Missing "Related Person"' (Procedimento)
+.. index:: Person (Aux) Related Person Create (Procedimento)
 
-====================================================================
-*Outcome Information*: '**Missing "Related Person"**' (Procedimento)
-====================================================================
+=======================================================
+:bi:`Person (Aux) Related Person Create` (Procedimento)
+=======================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020`".
 
@@ -26,18 +26,13 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.person_aux**
-        * *Action*: **_person_aux_verification_related_person**
-        * *State*: **Error (L1)**
-        * *Outcome Information*: '**Missing "Related Person".**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Person (Aux) Related Person Create`":
 
         #. Parâmetros apresentados:
 
-            * *Person (Aux) Set Code*: **marcado**
+            * *Person (Aux) Related Person Create*: **marcado**
             * *Person (Aux) Associate to Address*: **marcado**
             * *Related Person Verification Execute*: **marcado**
             * *Person (Aux) Verification Execute*: **marcado**
