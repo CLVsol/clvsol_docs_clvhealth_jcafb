@@ -10,13 +10,13 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: '"Address" has changed.' (Procedimento)
+.. index:: Person (Aux) Related Person Update (2) (Procedimento)
 
-==================================================================
-*Outcome Information*: '**"Address" has changed.**' (Procedimento)
-==================================================================
+===========================================================
+:bi:`Person (Aux) Related Person Update (2)` (Procedimento)
+===========================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020`".
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 
@@ -26,18 +26,13 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.person_aux**
-        * *Action*: **_person_aux_verification_related_person**
-        * *State*: **Warning (L1)**
-        * *Outcome Information*: '**"Address" has changed.**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Person (Aux) Related Person Update`":
 
         #. Parâmetros apresentados:
 
-            * *Update Contact Information Data*: **desmarcado**
+            * *Update Contact Information Data*: **marcado**
             * *Update Address Data*: **marcado**
             * *Update Family Datae*: **desmarcado**
             * *Related Person Verification Execute*: **marcado**

@@ -24,8 +24,8 @@ Consolidação de :bi:`Person (Aux)` (Procedimentos)
    reregistration_procedure_030_020_020
    reregistration_procedure_030_020_030
    reregistration_procedure_030_020_040
-   reregistration_procedure_030_020_050
-   reregistration_procedure_030_020_060
    reregistration_procedure_030_020_070
    reregistration_procedure_030_020_090
+   reregistration_procedure_030_020_095
    reregistration_procedure_030_020_100
+   reregistration_procedure_030_020_110

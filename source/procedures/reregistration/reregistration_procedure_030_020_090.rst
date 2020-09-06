@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: 'Family "Contact Information (Address)" mismatch.' (Procedimento)
+.. index:: Person (Aux) Family Update (Procedimento)
 
-============================================================================================
-*Outcome Information*: '**Family "Contact Information (Address)" mismatch.**' (Procedimento)
-============================================================================================
+===============================================
+:bi:`Person (Aux) Family Update` (Procedimento)
+===============================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020`".
 
@@ -26,12 +26,7 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.person_aux**
-        * *Action*: **_person_aux_verification_family**
-        * *State*: **Warning (L1)**
-        * *Outcome Information*: '**Family "Contact Information (Address)" mismatch.**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Person (Aux) Family Update`":
 

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Outcome Information: 'Missing "Family".' (Procedimento)
+.. index:: Person (Aux) Associate to Family (Procedimento)
 
-=============================================================
-*Outcome Information*: '**Missing "Family".**' (Procedimento)
-=============================================================
+=====================================================
+:bi:`Person (Aux) Associate to Family` (Procedimento)
+=====================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020`".
 

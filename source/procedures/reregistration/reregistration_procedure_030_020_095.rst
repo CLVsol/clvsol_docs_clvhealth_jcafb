@@ -10,13 +10,13 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Person (Aux) Related Person Update (Procedimento)
+.. index:: Person (Aux) Family Update (2) (Procedimento)
 
-=======================================================
-:bi:`Person (Aux) Related Person Update` (Procedimento)
-=======================================================
+===================================================
+:bi:`Person (Aux) Family Update (2)` (Procedimento)
+===================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020`".
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 
@@ -28,17 +28,16 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Person (Aux) Related Person Update`":
+    #. Exercutar a Ação ":bi:`Person (Aux) Family Update`":
 
         #. Parâmetros apresentados:
 
             * *Update Contact Information Data*: **marcado**
-            * *Update Address Data*: **desmarcado**
-            * *Update Family Datae*: **desmarcado**
-            * *Related Person Verification Execute*: **marcado**
+            * *Update Address Data*: **marcado**
+            * *Family Verification Execute*: **marcado**
             * *Person (Aux) Verification Execute*: **marcado**
 
-        #. Utilizar o botão :bi:`Related Person Update` para executar a Ação.
+        #. Utilizar o botão :bi:`Family Update` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2
