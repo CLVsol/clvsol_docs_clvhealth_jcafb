@@ -22,3 +22,4 @@ Consolidação de :bi:`Person (Aux)`
 
    reregistration_workflow_030_020_010
    reregistration_workflow_030_020_020
+   reregistration_workflow_030_020_030
