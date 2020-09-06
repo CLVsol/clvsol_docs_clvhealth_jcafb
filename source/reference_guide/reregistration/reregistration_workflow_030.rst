@@ -21,7 +21,7 @@ Consolidação das Entidades do **Cadastro Auxiliar**
     * :doc:`/procedures/verification/verification_procedure_030`".
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Itens Relacionados:
 
    reregistration_workflow_030_010

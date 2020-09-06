@@ -32,35 +32,9 @@ Consolidação de :bi:`Person (Aux)` - (L0)
         * *State*: **Warning (L0)**
         * *Outcome Information*: '**"Person Code" is missing.**'
 
-    Procedimento de correção :green:`(Opcional)`: :doc:`/procedures/reregistration/reregistration_procedure_030_020_010`.
+    De maneira geral não é necessária a execução de qualquer procedimento de correção para o registro *Person (Aux)*, uma vez que o *Person Code* será automaticamente criado por ocasião da criação do registro *Person* relacionado no Cadastro Principal (verificar o item :ref:`Missing Related Person. [_person_aux_verification_related_person]`).
 
-    Procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_030`.
-
-_person_aux_verification_family
--------------------------------
-
-    * :doc:`/procedures/reregistration/reregistration_procedure_030_020_090`".
-
-.. index:: Missing Family. [_person_aux_verification_family]
-
-**Missing "Family".** [_person_aux_verification_family]
--------------------------------------------------------
-
-    O registro Person (Aux) não está associado a um registro *Family* no Cadastro Principal..
-
-    :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.person_aux**
-        * *Action*: **_person_aux_verification_family**
-        * *State*: **Warning (L1)**
-        * *Outcome Information*: '**Missing "Family".**'
-
-    Não é necessária a execução de qualquer procedimento de correção no registro *Person (Aux)*.
-
-:doc:`/procedures/reregistration/reregistration_procedure_030_020_100`".
-
-_person_aux_verification_ref_address
-------------------------------------
+    De qualquer forma é possível gerar um *Person Code* utilizando o procedimento de correção :green:`(Opcional)`: :doc:`/procedures/reregistration/reregistration_procedure_030_020_010`.
 
 .. index:: Missing Address. [_person_aux_verification_ref_address]
 
@@ -73,20 +47,18 @@ _person_aux_verification_ref_address
 
         * *Model Name*: **clv.person_aux**
         * *Action*: **_person_aux_verification_ref_address**
-        * *State*: **Error (L1)**
+        * *State*: **Error (L0)**
         * *Outcome Information*: '**Missing "Address".**'
 
-    Procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_020`.
+    Se, por algum motivo especial não for necessário ou conveniente associar o registro *Person (Aux)* a um registro *Address* do Cadastro Principal, indicar o campo "*Address is unavailable*"" do registro *Person (Aux)* como **marcado** e executar a Ação "*Person (Aux) Verification Execute*".
 
-    Procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_030`.
+    De maneira geral não é necessária a execução de qualquer procedimento de correção para o registro *Person (Aux)*, uma vez que o o registro *Person (Aux)* será automaticamente associado a um registro *Address* do Cadastro Principal por ocasião da criação do registro *Person* relacionado no Cadastro Principal (verificar o item :ref:`Missing Related Person. [_person_aux_verification_related_person]`).
 
-_person_aux_verification_ref_address_aux
-----------------------------------------
-
-_person_aux_verification_related_person
----------------------------------------
+    De qualquer forma se o registro *Person (Aux)* já possuir um registro *Person* relacionado no Cadastro Principal, é possível associar o registro *Person (Aux)* a um registro *Address* do Cadastro Principal utilizando o procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_020`.
 
 .. index:: Missing Related Person. [_person_aux_verification_related_person]
+
+.. _Missing Related Person. [_person_aux_verification_related_person]:
 
 **Missing "Related Person".** [_person_aux_verification_related_person]
 -----------------------------------------------------------------------
@@ -97,34 +69,12 @@ _person_aux_verification_related_person
 
         * *Model Name*: **clv.person_aux**
         * *Action*: **_person_aux_verification_related_person**
-        * *State*: **Error (L1)**
+        * *State*: **Error (L0)**
         * *Outcome Information*: '**Missing "Related Person".**'
 
-    Procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_030`.
+    Se, por algum motivo especial não for necessário ou conveniente criar um registro *Person* relacionado no Cadastro Principal, indicar o campo "*Related Person is unavailable*"" do registro *Person (Aux)* como **marcado** e executar a Ação "*Person (Aux) Verification Execute*".
 
-    * :doc:`/procedures/reregistration/reregistration_procedure_030_020_040`".
-
-    * :doc:`/procedures/reregistration/reregistration_procedure_030_020_050`".
-
-    * :doc:`/procedures/reregistration/reregistration_procedure_030_020_060`".
-
-    * :doc:`/procedures/reregistration/reregistration_procedure_030_020_070`".
-
-.. index:: Related Person Verification State is Warning (L0). [_person_aux_verification_related_person]
-
-**Related Person "Verification State" is "Warning (L0)".** [_person_aux_verification_related_person]
-----------------------------------------------------------------------------------------------------
-
-    O *Verification State* do registro registro *Address* relacionado no Cadastro Principal é "Warning (L0)".
-
-    :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.person_aux**
-        * *Action*: **_person_aux_verification_related_person**
-        * *State*: **Warning (L1)**
-        * *Outcome Information*: '**"Related Person "Verification State" is "Warning (L0)".**'
-
-    Não é necessária a execução de qualquer procedimento de correção no registro *Person (Aux)*.
+    Para criar um registro *Person* relacionado no Cadastro Principal utilizar o procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_030`.
 
 .. toctree::
    :maxdepth: 2
