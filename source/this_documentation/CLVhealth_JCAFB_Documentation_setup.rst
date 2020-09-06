@@ -19,6 +19,14 @@ References
 
 		* `reStructuredText (RST) Tutorial <https://www.devdungeon.com/content/restructuredtext-rst-tutorial-0>`_
 
+		* `reStructuredText Primer <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
+
+		* `7. Documenting Python <https://devguide.python.org/documenting/#style-guide>`_
+
+		* `Restructured Text (reST) and Sphinx CheatSheet <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html>`_
+
+		* `Documentation style guide <https://documentation-style-guide-sphinx.readthedocs.io/en/latest/style-guide.html>`_
+
 	* **Alabaster**
 
 
