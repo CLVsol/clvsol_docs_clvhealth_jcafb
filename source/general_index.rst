@@ -17,7 +17,7 @@
 * :ref:`genindex`
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 7
    :caption: Conteúdo:
 
    todo
