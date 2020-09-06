@@ -12,9 +12,9 @@
 
 .. index:: Consolidação das Entidades do Cadastro Auxiliar
 
-====================================================================
-:red:`(Revisar)` Consolidação das Entidades do **Cadastro Auxiliar**
-====================================================================
+===================================================
+Consolidação das Entidades do **Cadastro Auxiliar**
+===================================================
 
     * :doc:`/procedures/verification/verification_procedure_020`".
 
