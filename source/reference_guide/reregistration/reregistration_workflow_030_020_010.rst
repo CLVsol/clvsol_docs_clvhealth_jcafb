@@ -76,6 +76,38 @@ Consolidação de :bi:`Person (Aux)` - (L0)
 
     Para criar um registro *Person* relacionado no Cadastro Principal utilizar o procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_030`.
 
+.. index:: Date of Birth is missing. [_person_aux_verification]
+
+**"Date of Birth" is missing.** [_person_aux_verification]
+----------------------------------------------------------
+
+    O parâmetro *Date of Birth* do registro registro *Person (Aux)* não foi definido.
+
+    :bi:`Verification Outcome`:
+
+        * *Model Name*: **clv.person_aux**
+        * *Action*: **_person_aux_verification**
+        * *State*: **Warning (L0)**
+        * *Outcome Information*: '**"Date of Birth" is missing.**'
+
+    Não é necessária a execução de qualquer procedimento de correção no registro *Person (Aux)*.
+
+.. index:: Deceased Date is missing. [_person_aux_verification]
+
+**"Deceased Date" is missing.** [_person_aux_verification]
+----------------------------------------------------------
+
+    O parâmetro *Deceased Date* do registro registro *Person (Aux)* não foi definido.
+
+    :bi:`Verification Outcome`:
+
+        * *Model Name*: **clv.person_aux**
+        * *Action*: **_person_aux_verification**
+        * *State*: **Warning (L0)**
+        * *Outcome Information*: '**"Deceased Date" is missing.**'
+
+    Não é necessária a execução de qualquer procedimento de correção no registro *Person (Aux)*.
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:
