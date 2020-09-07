@@ -19,5 +19,3 @@ Consolidação de :bi:`Address` (Procedimentos)
 .. toctree::
    :maxdepth: 2
    :caption: Tópicos Relacionados:
-
-   reregistration_procedure_040_010_010
