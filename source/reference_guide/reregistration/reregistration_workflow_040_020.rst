@@ -12,19 +12,10 @@
 
 .. index:: Consolidação de Family
 
-=============================================
-:red:`(Revisar)` Consolidação de :bi:`Family`
-=============================================
-
-_family_verification
---------------------
-
-_family_verification_associated_persons
----------------------------------------
-
-_family_verification_ref_address
---------------------------------
+============================
+Consolidação de :bi:`Family`
+============================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Procedimentos:
+   :caption: Itens Relacionados:
