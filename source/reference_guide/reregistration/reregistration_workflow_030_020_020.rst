@@ -93,14 +93,46 @@ Consolidação de :bi:`Person (Aux)` - (L1)
 **Related Person "Verification State" is "Warning (L0)".** [_person_aux_verification_related_person]
 ----------------------------------------------------------------------------------------------------
 
-    O *Verification State* do registro registro *Address* relacionado no Cadastro Principal é "Warning (L0)".
+    O *Verification State* do registro registro *Person* relacionado no Cadastro Principal é "Warning (L0)".
 
     :bi:`Verification Outcome`:
 
         * *Model Name*: **clv.person_aux**
         * *Action*: **_person_aux_verification_related_person**
         * *State*: **Warning (L1)**
-        * *Outcome Information*: '**"Related Person "Verification State" is "Warning (L0)".**'
+        * *Outcome Information*: '**Related Person "Verification State" is "Warning (L0)".**'
+
+    Não é necessária a execução de qualquer procedimento de correção no registro *Person (Aux)*.
+
+.. index:: Address (Aux) Verification State is Error (L0). [_person_aux_verification_ref_address_aux]
+
+**Address (Aux) "Verification State" is "Error (L0)".** [_person_aux_verification_ref_address_aux]
+--------------------------------------------------------------------------------------------------
+
+    O *Verification State* do registro registro *Address (Aux)* relacionado é "Error (L0)".
+
+    :bi:`Verification Outcome`:
+
+        * *Model Name*: **clv.person_aux**
+        * *Action*: **_person_aux_verification_ref_address_aux**
+        * *State*: **Warning (L1)**
+        * *Outcome Information*: '**Address (Aux) "Verification State" is "Error (L0)".**'
+
+    Não é necessária a execução de qualquer procedimento de correção no registro *Person (Aux)*.
+
+.. index:: Address (Aux) Verification State is Warning (L1). [_person_aux_verification_ref_address_aux]
+
+**Address (Aux) "Verification State" is "Warning (L1)".** [_person_aux_verification_ref_address_aux]
+----------------------------------------------------------------------------------------------------
+
+    O *Verification State* do registro registro *Address (Aux)* relacionado é "Warning (L1)".
+
+    :bi:`Verification Outcome`:
+
+        * *Model Name*: **clv.person_aux**
+        * *Action*: **_person_aux_verification_ref_address_aux**
+        * *State*: **Warning (L1)**
+        * *Outcome Information*: '**Address (Aux) "Verification State" is "Warning (L1)".**'
 
     Não é necessária a execução de qualquer procedimento de correção no registro *Person (Aux)*.
 
