@@ -16,7 +16,7 @@
 Consolidação das Entidades do **Cadastro Auxiliar**
 ===================================================
 
-    * :doc:`/procedures/verification/verification_procedure_020`".
+    Durante o processo de Consolidadação pode ser necessário a execução da verificação de todas as entidades dos Cadastros já envolvidas no processo de recadastramento. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
 
     * :doc:`/procedures/verification/verification_procedure_030`".
 
