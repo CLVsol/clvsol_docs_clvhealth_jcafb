@@ -10,16 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procedimentos
+.. index:: Procedimentos de Survey
 
-=============
-Procedimentos
-=============
+===========================
+**Procedimentos** de Survey
+===========================
 
 .. toctree::
-   :maxdepth: 5
-   :caption: Conteúdo:
+   :maxdepth: 3
+   :caption: Tópicos Relacionados:
 
-   reregistration/reregistration_procedure
-   survey/survey_procedure
-   verification/verification_procedure
+   survey_procedure_010_010
