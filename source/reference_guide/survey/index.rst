@@ -10,15 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Guia de Referência
+.. index:: Surveys
 
-==================
-Guia de Referência
-==================
+===========
+**Surveys**
+===========
 
 .. toctree::
-   :maxdepth: 5
-   :caption: Conteúdo:
+   :maxdepth: 4
+   :caption: Tópicos Relacionados:
 
-   reregistration/reregistration
-   survey/index
+   survey_workflow_010_010
