@@ -16,7 +16,7 @@
 :bi:`Address (Aux) Set Code` (Procedimento)
 ===========================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010`".
 
     #. Acessar a *view* :bi:`Addresses (Aux)`:
 
