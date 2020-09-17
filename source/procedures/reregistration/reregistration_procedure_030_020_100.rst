@@ -16,7 +16,7 @@
 :bi:`Person (Aux) Associate to Family` (Procedimento)
 =====================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030`".
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 

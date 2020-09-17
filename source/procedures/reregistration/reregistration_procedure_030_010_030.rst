@@ -16,7 +16,8 @@
 :bi:`Address (Aux) Related Address Update` (Procedimento)
 =========================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_010`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_020`".
 
     #. Acessar a *view* :bi:`Addresses (Aux)`:
 
