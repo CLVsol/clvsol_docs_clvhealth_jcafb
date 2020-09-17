@@ -17,7 +17,7 @@ Consolidação de :bi:`Address (Aux)`
 ===================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Itens Relacionados:
 
    reregistration_workflow_030_010_010
