@@ -20,6 +20,8 @@ Consolidação das Entidades do **Cadastro Auxiliar**
 
     * :doc:`/procedures/verification/verification_procedure_030`".
 
+    * :doc:`/procedures/verification/verification_procedure_040`".
+
 .. toctree::
    :maxdepth: 3
    :caption: Itens Relacionados:
