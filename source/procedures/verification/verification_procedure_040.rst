@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Uso de Verification Outcomes (Procedimento)
+.. index:: Marcação de Verification Markers (Procedimento)
 
-=============================================
-Uso de *Verification Outcomes* (Procedimento)
-=============================================
+=================================================
+Marcação de *Verification Markers* (Procedimento)
+=================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030`".
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_040`".
@@ -26,6 +26,16 @@ Uso de *Verification Outcomes* (Procedimento)
             * :bi:`Verification` » :bi:`Verification` » :bi:`Verification Outcomes`
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Model Name` » :bi:`Verification Outcome Status` » :bi:`Outcome Informations`.
+
+    #. Selecionar os :bi:`Verification Outcomes` que atendam aos critérios desejados.
+
+    #. Exercutar a Ação ":bi:`Verification Outcome Reference Mass Edit`":
+
+        #. Parâmetros apresentados:
+
+            * *Verification Markers*: :bi:`Add` » :bi:`Adicionar: Verification Markers`
+
+        #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2
