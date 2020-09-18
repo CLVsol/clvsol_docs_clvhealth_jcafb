@@ -25,7 +25,9 @@
         * *State*: **Error (L0)**
         * *Outcome Information*: '**Missing related "Person (Aux)" register.**'
 
-    Não é necessária a execução de qualquer procedimento de correção no registro *Person*.
+    Esta situação é a desejada quando o registro *Person* tiver sido "Cancelado" (*Register State* = "*Canceled*"). Neste caso, não é necessária a execução de qualquer procedimento de correção no registro *Person*.
+
+    Para situações em que o registro *Person* não tiver sido "Cancelado" (*Register State* != "*Canceled*") e houver a possibilidade da Pessoa referenciado pelo registro vir a ser recadastrada, é conveniente a criação de um registro *Person (Aux)*, utilizando o procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_040_030_010`.
 
 .. toctree::
    :maxdepth: 2
