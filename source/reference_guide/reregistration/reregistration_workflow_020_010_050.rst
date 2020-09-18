@@ -20,8 +20,7 @@ A **Pessoa já cadastrada** mudou-se para um outro **Endereço não cadastrado**
 
     Caso **não exista uma Família** associada à Pessoa, os itens indicados como ":green:`(Opcional)`" deverão ser desconsiderados.
 
-Cadastro
---------
+**Cadastro Principal**:
 
     O **Cadastro** identificado deverá conter os seguintes registros:
 
@@ -29,8 +28,7 @@ Cadastro
         * :bi:`Address` :green:`(antigo)`: relativo ao antigo Endereço da Pessoa
         * :green:`(Opcional)` :bi:`Family`: relativo à Família da Pessoa
 
-Cadastro Auxiliar
------------------
+**Cadastro Auxiliar**:
 
     O **Cadastro Auxiliar** criado deverá conter os seguintes registros:
 
@@ -38,8 +36,7 @@ Cadastro Auxiliar
         * :bi:`Address (Aux)` :green:`(antigo)`: relativo ao antigo Endereço da Pessoa
         * :bi:`Address (Aux)` :green:`(novo)`: relativo ao novo Endereço da Pessoa
 
-Relacionamento entre os registros dos Cadastros
------------------------------------------------
+**Relacionamento entre os registros dos Cadastros**:
 
     * :green:`(Opcional)` :bi:`Family`:
 
@@ -73,8 +70,7 @@ Relacionamento entre os registros dos Cadastros
         * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)` :green:`(novo)`
         * Outros Dados = Outros Dados de :bi:`Person`
 
-Fluxo de Trabalho (*Workflow*)
-------------------------------
+**Fluxo de Trabalho** (:bi:`Workflow`):
 
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_020_010_050`".
 

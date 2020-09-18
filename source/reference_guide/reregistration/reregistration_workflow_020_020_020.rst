@@ -16,21 +16,18 @@
 A **Pessoa não cadastrada** reside em um **Endereço não cadastrado**
 ====================================================================
 
-Cadastro Principal
-------------------
+**Cadastro Principal**:
 
     Nenhum registro será identificado.
 
-Cadastro Auxiliar
------------------
+**Cadastro Auxiliar**:
 
     O **Cadastro Auxiliar** criado poderá conter os seguintes registros:
 
         * :bi:`Person (Aux)`: relativo à Pessoa
         * :bi:`Address (Aux)`: relativo ao Endereço da Pessoa
 
-Relacionamento entre os registros dos Cadastros
------------------------------------------------
+**Relacionamento entre os registros dos Cadastros**:
 
     * :bi:`Address (Aux)`:
 
@@ -47,8 +44,7 @@ Relacionamento entre os registros dos Cadastros
         * *Contact Information* = Dados de Endereço de :bi:`Address (Aux)`
         * Outros Dados = Outros Dados informados para a Pessoa
 
-Fluxo de Trabalho (*Workflow*)
-------------------------------
+**Fluxo de Trabalho** (:bi:`Workflow`):
 
     O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_020_020_020`".
 
