@@ -16,7 +16,10 @@
 :bi:`Person (Aux) Reload` (Procedimento)
 ========================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_010`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_030`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_040`".
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 

@@ -16,7 +16,7 @@
 :bi:`Person (Aux) Related Person Update (2)` (Procedimento)
 ===========================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_040`".
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 

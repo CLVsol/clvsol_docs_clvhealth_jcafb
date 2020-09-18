@@ -16,7 +16,7 @@
 :bi:`Person (Aux) Set Code` (Procedimento)
 ==========================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_010`".
 
     #. Acessar a *view* :bi:`Persons (Aux)`:
 
