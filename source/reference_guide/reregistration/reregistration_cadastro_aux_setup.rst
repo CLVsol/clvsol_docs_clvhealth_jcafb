@@ -28,6 +28,14 @@ A Preparação do Cadastro Auxiliar é implementada através das seguintes açõ
 
     #. Excluir todos os registros de Endereços do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_020`".
 
+    #. Excluir os :bi:`Verification Outcomes` referentes a todos os registros de Pessoas do Cadastro Principal executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_023`".
+
+    #. Excluir os :bi:`Verification Outcomes` referentes a todos os registros de Famílias do Cadastro Principal executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_025`".
+
+    #. Excluir os :bi:`Verification Outcomes` referentes a todos os registros de Endereços do Cadastro Principal executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_027`".
+
+    #. Executar o Verification Batch “Default Batch” executando ":doc:`/procedures/verification/verification_procedure_010`".
+
     #. Associar todas as Pessoas a uma Pessoa (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_030`".
 
     #. Associar todos os Endereços a um Endereço (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_040`".
