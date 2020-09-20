@@ -46,3 +46,7 @@ As informações de Endereço do :bi:`Contact Information` das 3 Entidades do Ca
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:
+
+   reregistration_cadastro_010_010
+   reregistration_cadastro_010_020
+   reregistration_cadastro_010_030
