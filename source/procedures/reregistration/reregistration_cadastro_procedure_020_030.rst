@@ -10,17 +10,12 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procedimentos
+.. index:: Address (Aux) (Procedimentos)
 
-=============
-Procedimentos
-=============
+===================================
+:bi:`Address (Aux)` (Procedimentos)
+===================================
 
 .. toctree::
-   :maxdepth: 5
-   :caption: Conteúdo:
-
-   reregistration/reregistration_cadastro_procedure
-   reregistration/reregistration_procedure
-   survey/survey_procedure
-   verification/verification_procedure
+   :maxdepth: 2
+   :caption: Tópicos Relacionados:
