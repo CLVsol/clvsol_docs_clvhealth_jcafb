@@ -16,6 +16,8 @@
 :bi:`Person (Aux)`
 ==================
 
+	* ":doc:`/procedures/reregistration/reregistration_cadastro_procedure_020_010_010`
+	
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:
