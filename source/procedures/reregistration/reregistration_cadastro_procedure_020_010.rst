@@ -19,3 +19,5 @@
 .. toctree::
    :maxdepth: 2
    :caption: Tópicos Relacionados:
+
+   reregistration_cadastro_procedure_020_010_010
