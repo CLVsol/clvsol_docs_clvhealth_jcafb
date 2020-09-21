@@ -21,3 +21,4 @@ Consolidação de :bi:`Person` (Procedimentos)
    :caption: Tópicos Relacionados:
 
    reregistration_procedure_040_030_010
+   reregistration_procedure_040_030_015

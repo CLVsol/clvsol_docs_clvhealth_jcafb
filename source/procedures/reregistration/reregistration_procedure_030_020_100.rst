@@ -26,12 +26,7 @@
 
     #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
 
-    #. :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.person_aux**
-        * *Action*: **_person_aux_verification_family**
-        * *State*: **Warning (L1)**
-        * *Outcome Information*: '**Missing "Family".**'
+    #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação ":bi:`Person (Aux) Associate to Family`":
 
