@@ -21,3 +21,4 @@ Consolidação de :bi:`Family`
    :caption: Itens Relacionados:
 
    reregistration_workflow_040_020_010
+   reregistration_workflow_040_020_020

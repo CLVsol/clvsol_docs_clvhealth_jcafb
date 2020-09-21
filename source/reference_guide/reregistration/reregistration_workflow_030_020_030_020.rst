@@ -22,7 +22,7 @@
 
         * *Model Name*: **clv.person_aux**
         * *Action*: **_person_aux_verification_family**
-        * *State*: **Warning (L2)**
+        * *State*: **Error (L2)**
         * *Outcome Information*: '**Missing "Family".**'
 
     Para associar o registro *Person (Aux)* a um registro *Family* relacionado no Cadastro Principal utilizar o procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_100`.

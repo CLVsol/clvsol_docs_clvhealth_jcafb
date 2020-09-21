@@ -21,4 +21,5 @@ Consolidação de :bi:`Person`
    :caption: Itens Relacionados:
 
    reregistration_workflow_040_030_010
+   reregistration_workflow_040_030_015
    reregistration_workflow_040_030_020
