@@ -22,3 +22,4 @@ Consolidação de :bi:`Address (Aux)` - (L0)
 
    reregistration_workflow_030_010_010_010
    reregistration_workflow_030_010_010_020
+   reregistration_workflow_030_010_010_030

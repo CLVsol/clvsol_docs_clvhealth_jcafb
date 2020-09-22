@@ -25,9 +25,13 @@
         * *State*: **Warning (L1)**
         * *Outcome Information*: '**Associated Person (Aux) "Phase" mismatch.**'
 
-    Não é necessária a execução de qualquer procedimento de correção no registro *Address (Aux)*.
+    Essa situação pode ocorrer quando:
 
-    Esta situação ocorre quando a Fase do Endereço (Aux) foi alterada mas o Fase de pelo menos uma Pessoa (Aux) associada a esse Endereço (Aux) não foi ainda alterada. Quando todos os registros pertinentes às Pessoas (Aux) associadas ao Endereço (Aux) forem consolidados, essa situação deixará de existir. 
+        #. A Fase do Endereço (Aux) foi alterada devido ao recadastramento de pelo menos uma Pessoa (Aux) associada ao Endereço (Aux), existindo ainda pelo menos uma Pessoa (Aux) associada a esse Endereço (Aux) não recadastrada ainda. Quando todas as Pessoas (Aux) associadas ao Endereço (Aux) forem recadastradas, essa situação deixará de existir.
+
+        #. A Fase do Endereço (Aux) foi alterada devido à mudança de pelo menos uma Pessoa (Aux) para o Endereço (Aux), existindo ainda outra(s) Pessoa(s) (Aux) associada(s) a esse Endereço (Aux) não recadastrada(s) ainda. Quando todas as Pessoas (Aux) associadas ao Endereço (Aux) forem recadastradas, essa situação deixará de existir.
+
+    Não é necessária a execução de qualquer procedimento de correção no registro *Address (Aux)*.
 
 .. toctree::
    :maxdepth: 2

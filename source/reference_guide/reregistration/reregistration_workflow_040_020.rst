@@ -22,3 +22,4 @@ Consolidação de :bi:`Family`
 
    reregistration_workflow_040_020_010
    reregistration_workflow_040_020_020
+   reregistration_workflow_040_020_030
