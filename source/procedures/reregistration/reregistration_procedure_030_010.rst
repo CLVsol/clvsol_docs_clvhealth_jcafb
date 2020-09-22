@@ -22,5 +22,6 @@ Consolidação de :bi:`Address (Aux)` (Procedimentos)
 
    reregistration_procedure_030_010_010
    reregistration_procedure_030_010_020
+   reregistration_procedure_030_010_025
    reregistration_procedure_030_010_030
    reregistration_procedure_030_010_040
