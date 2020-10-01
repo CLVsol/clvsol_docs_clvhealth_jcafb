@@ -194,7 +194,20 @@ Lista de *Schedules* instalados (1)
         * :blue:`(Enabled - Sync)` hr.job (hr.job)
         * :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
         * :blue:`(Enabled - Sync)` hr.employee (hr.employee)
-        * :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
+
+        .. * :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
+
+        * :blue:`(Enabled - Sync)` survey.survey (survey.survey)
+        * :blue:`(Enabled - Sync)` survey.question (survey.question) [1]
+        * :blue:`(Enabled - Sync)` survey.question (survey.question) [2]
+        * :blue:`(Enabled - Sync)` survey.question (survey.question) [3]
+        * :blue:`(Enabled - Sync)` survey.question (survey.question) [4]
+        * :blue:`(Enabled - Sync)` survey.question (survey.question) [5]
+        * :blue:`(Enabled - Sync)` survey.question.answer (survey.label)
+
+        .. * :blue:`(Enabled - Sync)` survey.user_input (survey.user_input)
+        .. * :blue:`(Enabled - Sync)` clv.document (clv.document) [2]
+        .. * :blue:`(Enabled - Sync)` survey.user_input_line (survey.user_input_line)
 
 Executar o *External Sync Batch* "*Default Batch*" (1)
 ------------------------------------------------------
@@ -240,7 +253,7 @@ Executar o *External Sync Batch* "*Default Batch*" (1)
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:01:09.484`
+            * :bi:`Execution time: 0:06:00.024`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo padrão:
 
