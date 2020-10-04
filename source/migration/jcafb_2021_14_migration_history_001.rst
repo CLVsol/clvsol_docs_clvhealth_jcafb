@@ -68,7 +68,14 @@ Lista de *Schedules* instalados (1)
         * :blue:`(Enabled - Sync)` survey.user_input (survey.user_input) [2]
 
         .. * :blue:`(Enabled - Sync)` clv.document (clv.document) [2]
-        .. * :blue:`(Enabled - Sync)` survey.user_input_line (survey.user_input_line)
+
+        * :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input_line) [1]
+        * :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input_line) [2]
+
+        * :blue:`(Enabled - Sync)` clv.document.category (clv.document.category)
+        * :blue:`(Enabled - Sync)` clv.document.type (clv.document.type)
+        * :blue:`(Enabled - Sync)` clv.document (clv.document)
+        * :blue:`(Enabled - Sync)` clv.document.item (clv.document.item)
 
 Executar o *External Sync Batch* "*Default Batch*" (1)
 ------------------------------------------------------
