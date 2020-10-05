@@ -203,11 +203,11 @@ Lista de *Schedules* instalados (10)
 
         .. * :blue:`(Enabled - Sync)` clv.document (clv.document) [2]
 
-        .. * :blue:`(Enabled - Sync)` hr.department (hr.department) [rec]
-        .. * :blue:`(Enabled - Sync)` hr.department (hr.department)
-        .. * :blue:`(Enabled - Sync)` hr.job (hr.job)
-        .. * :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
-        .. * :blue:`(Enabled - Sync)` hr.employee (hr.employee)
+        * :blue:`(Enabled - Sync)` hr.department (hr.department) [rec]
+        * :blue:`(Enabled - Sync)` hr.department (hr.department)
+        * :blue:`(Enabled - Sync)` hr.job (hr.job)
+        * :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
+        * :blue:`(Enabled - Sync)` hr.employee (hr.employee)
 
         .. .. * :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
 
