@@ -97,8 +97,20 @@ Lista de *Schedules* instalados (10)
 
         * :blue:`(Enabled - Sync)` clv.document.category (clv.document.category)
         * :blue:`(Enabled - Sync)` clv.document.type (clv.document.type)
-        * :blue:`(Enabled - Sync)` clv.document (clv.document)
+        * :blue:`(Enabled - Sync)` clv.document.type (clv.document.type)
+        * :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter)
         * :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [1]
+
+        * :blue:`(Enabled - Sync)` clv.lab_test.unit (clv.lab_test.unit)
+        * :blue:`(Enabled - Sync)` clv.lab_test.parasite (clv.lab_test.parasite)
+        * :blue:`(Enabled - Sync)` clv.lab_test.crystal (clv.lab_test.crystal)
+        * :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type)
+        * :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
+        * :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request)
+        * :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result)
+        * :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report)
+        * :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [2]
+        * :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [1]
 
 Executar o *External Sync Batch* "*Default Batch*" (10)
 -------------------------------------------------------
@@ -294,6 +306,78 @@ Executar o *External Sync Batch* "*Default Batch*" (40)
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
             * :bi:`Execution time: 6:14:40.907`
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo padrão:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+.. _Lista de Schedules instalados (50):
+
+Lista de *Schedules* instalados (50)
+------------------------------------
+
+    * Lista de *Schedules* instalados:
+
+        * :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [2]
+
+Executar o *External Sync Batch* "*Default Batch*" (50)
+-------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar todos os :bi:`External Sync Schedules`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit (2)`, todos os :bi:`External Sync Schedules`:
+
+            * Lista de *Schedules*:
+
+                * :ref:`Lista de Schedules instalados (50)`
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`Confituration` » :bi:`External Sync` » :bi:`Batch Members` » **Ação** » :bi:`External Sync Schedule Mass Edit (2)`
+
+            * Parâmetros alterados:
+                
+                * *External Host*: "**https://192.168.25.189**"
+                * *Max Task Registers*: "**300.000**"
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e executar o *Odoo* no modo manual:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. [tkl-odoo14-jcafb21-vm] Executar o :bi:`External Sync Batch` "**Default Batch (50)**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch (50)**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * :bi:`Execution time: 2:47:28.343`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo padrão:
 
@@ -555,6 +639,148 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-10-06a)
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
             tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-10-06a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo14-jcafb21-vm**".
+
+        #. Salvar o registro editado.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-10-07a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-10-07a.sql
+
+            gzip clvhealth_jcafb_2021v_14_2020-10-07a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-10-07a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-10-07a.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-10-07a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-10-07a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-10-07a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-10-07a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-10-07a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2020-10-07a.sql
+.. index:: clvhealth_jcafb_2021v_14_2020-10-07a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2020-10-07a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-10-07a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-10-07a)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2020-10-07a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2020-10-07a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-10-07a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-10-07a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
