@@ -14,6 +14,76 @@
 Migração do Banco de Dados - JCAFB-2021v-14
 ===========================================
 
+Criar uma nova instância do *CLVhealth-JCAFB-2021v-14* (2020-10-10)
+-------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Excluir a instância do *CLVhealth-JCAFB-2021v-14* existente:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo manual:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21-vm** e executar o **install.py**:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm (session 2)
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l odoo
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_14"
+
+        * **Execution time: 0:04:49.113**
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm (session 1)
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
 Criar o *External Sync Host* "https://192.168.25.189"
 -----------------------------------------------------
 
