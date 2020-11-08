@@ -10,15 +10,15 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Excluir os Verification Outcomes referentes aos registros de Famílias do Cadastro Principal (Procedimento)
+.. index:: Excluir todos os Verification Outcomes (Procedimento)
 
-============================================================================================================
-Excluir os *Verification Outcomes* referentes aos registros de Famílias do Cadastro Principal (Procedimento)
-============================================================================================================
+=======================================================
+Excluir todos os *Verification Outcomes* (Procedimento)
+=======================================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`".
 
-    #. Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:`Family`:
+    #. Excluir todos os :bi:`Verification Outcomes`:
 
         #. Acessar a *view* :bi:`Verification Outcomes`:
 
@@ -26,9 +26,7 @@ Excluir os *Verification Outcomes* referentes aos registros de Famílias do Cada
 
                 * :bi:`Verification` » :bi:`Verification` » :bi:`Verification Outcomes`
 
-        #. Ativar o filtro **Agrupar por** » :bi:`Model Name`
-
-        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.family**"
+        #. Selecionar todas os :bi:`Verification Outcomes`
 
         #. Exercutar a Ação **Excluir**:
 
