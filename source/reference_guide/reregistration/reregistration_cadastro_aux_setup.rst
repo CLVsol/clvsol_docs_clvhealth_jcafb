@@ -28,13 +28,7 @@ A Preparação do Cadastro Auxiliar é implementada através das seguintes açõ
 
     #. Excluir todos os registros de Endereços do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_020`".
 
-    #. Excluir os :bi:`Verification Outcomes` referentes a todos os registros de Pessoas do Cadastro Principal executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_023`".
-
-    #. Excluir os :bi:`Verification Outcomes` referentes a todos os registros de Famílias do Cadastro Principal executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_025`".
-
-    #. Excluir os :bi:`Verification Outcomes` referentes a todos os registros de Endereços do Cadastro Principal executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_027`".
-
-    #. Executar o Verification Batch “Default Batch” executando ":doc:`/procedures/verification/verification_procedure_010`".
+    #. Excluir todos os registros :bi:`Verification Outcomes` executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_025`".
 
     #. Associar todas as Pessoas a uma Pessoa (Aux) executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_030`".
 
@@ -46,7 +40,9 @@ A Preparação do Cadastro Auxiliar é implementada através das seguintes açõ
 
     #. :red:`(Não Executado])` Excluir todos os registros de Pessoas falecidas do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_070`".
     
-    #. Executar o Verification Batch “Default Batch” executando ":doc:`/procedures/verification/verification_procedure_010`".
+    #. :red:`(Não Executado])` Executar o Verification Batch “Default Batch” executando ":doc:`/procedures/verification/verification_procedure_010`".
+
+    #. Executar o Verification Batch “Default Batch” executando ":doc:`/procedures/verification/verification_procedure_015`".
 
 .. toctree::
    :maxdepth: 3
