@@ -10,20 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-======================================
-Documentação do *CLVhealth-JCAFB-2021*
-======================================
+.. index:: Preparação dos Dados
 
-* :ref:`genindex`
+====================
+Preparação dos Dados
+====================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
 
-   todo
-   reference_guide/index
-   procedures/index
-   migration/index
-   preparation/index
-   this_documentation/index
-   general_index
+   jcafb_2021_14_preparation_history_001
