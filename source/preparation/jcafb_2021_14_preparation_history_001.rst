@@ -490,8 +490,6 @@ Executar a "Preparação do Cadastro Auxiliar" (Fase 2)
 :red:`(Não Executado)` Executar o *Verification Batch* “Default Batch”
 ----------------------------------------------------------------------
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`".
-
     #. Executar o *Verification Batch* “Default Batch”:
 
         #. Acessar a *view* :bi:`Verification Batches`:
@@ -669,8 +667,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-11-10e)
 
         #. Salvar o registro editado.
 
-Executar o Cadastramento/Recadastramento (Fase 1)
--------------------------------------------------
+Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxiliar)
+-------------------------------------------------------------------------------
 
     * Referência :doc:`/reference_guide/reregistration/reregistration_workflow`"
 
@@ -678,9 +676,11 @@ Executar o Cadastramento/Recadastramento (Fase 1)
 
     #. Utilizar como fonte de dados para o Cadastramento/Recadastramento (Fase 1):
 
-        * Workbook: "**JCAFB02021v - clv.person - Recadastramento (pré Jornada).xlsx**""
+        * Workbook: "**JCAFB02021v - clv.person - Recadastramento (pré Jornada).xlsx**"
 
-        * Planilha: "**Recadastramento (pré Jornada) 1**""
+        * Planilha: "**Recadastramento (pré Jornada) 1**"
+
+    #. Aplicar o descrito em :doc:`/reference_guide/reregistration/reregistration_workflow_020`"
 
     **Observações**:
 
@@ -856,5 +856,221 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-11-11a)
             * "**http://tkl-odoo14-jcafb21-vm**".
 
         #. Salvar o registro editado.
+
+Atualizar o *Verification Domain Filter* dos *Verification Schedules* (Current Phase)
+-------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Atualizar o *Verification Domain Filter* dos *Verification Schedules*:
+
+        * *Verification Schedules*:
+
+            * "Current Phase - clv.address [_address_verification_exec]"
+
+            * "Current Phase - clv.address_aux [_address_aux_verification_exec]"
+
+            * "Current Phase - clv.family [_family_verification_exec]"
+
+            * "Current Phase - clv.person [_person_verification_exec]"
+
+            * "Current Phase - clv.person_aux [_person_aux_verification_exec]"
+
+        * Atualização:
+
+            * De: "**[('phase_id', '=', 0)]**"
+
+            * Para: "**[('phase_id', '=', 5)]**" (**JCAFB-2021v**)
+
+:red:`(Não Executado)` Executar o *Verification Batch* “Current Phase - Default Batch”
+--------------------------------------------------------------------------------------
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:00:15.537`
+
+Executar o *Verification Batch* “Current Phase - Default Batch” (método alternativo)
+------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Verification Batch: Execute [Current Phase - Default Batch]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**"
+
+        #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
+
+            * :bi:`Execution time: 0:00:14.190`
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-11-12a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-11-12a.sql
+
+            gzip clvhealth_jcafb_2021v_14_2020-11-12a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-11-12a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-11-12a.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-11-12a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-11-12a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-11-12a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-11-12a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-11-12a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2020-11-12a.sql
+.. index:: clvhealth_jcafb_2021v_14_2020-11-12a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2020-11-12a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-11-12a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-11-12a)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2020-11-12a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2020-11-12a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-11-12a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-11-12a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo14-jcafb21-vm**".
+
+        #. Salvar o registro editado.
+
+Executar a Criação do Cadastro Auxiliar (Fase 1 - Consolidação das Entidades do Cadastro Auxiliar)
+--------------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/reference_guide/reregistration/reregistration_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Aplicar o descrito em :doc:`/reference_guide/reregistration/reregistration_workflow_030`"
+
+    **Observações**:
 
 .. toctree::   :maxdepth: 2
