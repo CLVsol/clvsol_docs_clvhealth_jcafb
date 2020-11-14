@@ -16,9 +16,22 @@
 Executar o *Verification Batch* “Default Batch” (Procedimento)
 ==============================================================
 
-    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_cadastro_aux_setup`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_040`".
 
-    #. Executar o *Verification Batch* “Default Batch”:
+    #. Executar manualmente a "Ação Agendada" "**Verification Batch: Execute [Default Batch]**":
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Verification Batch: Execute [Default Batch]**"
+
+        #. Executar a Ação Agendada "**Verification Batch: Execute [Default Batch]**", clicando no botão **Rodar Manualmente**.
+
+    #. :blue:`(Procedimento Alternativo)` Executar o *Verification Batch* “Default Batch”:
 
         #. Acessar a *view* :bi:`Verification Batches`:
 
