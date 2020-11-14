@@ -19,7 +19,19 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (Procediment
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_030`".
     * *Workflow*: ":doc:`/reference_guide/reregistration/reregistration_workflow_040`".
 
-    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+    #. Executar manualmente a "Ação Agendada" "**Verification Batch: Execute [Current Phase - Default Batch]**":
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**"
+
+        #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
+
+    #. :blue:`(Procedimento Alternativo)` Executar o *Verification Batch* “Current Phase - Default Batch”:
 
         #. Acessar a *view* :bi:`Verification Batches`:
 
