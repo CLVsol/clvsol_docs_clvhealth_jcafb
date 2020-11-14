@@ -24,6 +24,8 @@ Desmarcar o Campo *Family is Unavailable* (Procedimento)
 
             * :bi:`Community` » :bi:`Community` » :bi:`Persons`
 
+    #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State` » :bi:`Verification Outcome Informations`.
+
     #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação :bi:`Person Mass Edit`:

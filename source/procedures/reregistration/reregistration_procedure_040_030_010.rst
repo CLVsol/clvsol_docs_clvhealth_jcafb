@@ -24,6 +24,8 @@ Associar Pessoa(s) a uma Pessoa (Aux) (Procedimento)
 
             * :bi:`Community` » :bi:`Community` » :bi:`Persons`
 
+    #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State` » :bi:`Verification Outcome Informations`.
+
     #. Selecionar o(s) registro(s) desejado(s).
 
     #. Exercutar a Ação :bi:`Person Associate to Person (Aux)`:

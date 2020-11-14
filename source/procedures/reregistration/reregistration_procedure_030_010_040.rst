@@ -25,7 +25,7 @@
 
             * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
 
-    #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`.
+    #. Aplicar o filtro: **Agrupar Por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State` » :bi:`Verification Outcome Informations`.
 
     #. Selecionar o(s) registro(s) desejado(s).
 
