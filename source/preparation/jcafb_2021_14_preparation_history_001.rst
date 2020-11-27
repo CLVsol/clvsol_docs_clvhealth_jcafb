@@ -525,6 +525,31 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-11-16b)
 
         #. Salvar o registro editado.
 
+Atualizar o *Verification Domain Filter* dos *Verification Schedules* (Current Phase)
+-------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Atualizar o *Verification Domain Filter* dos *Verification Schedules*:
+
+        * *Verification Schedules*:
+
+            * "Current Phase - clv.address [_address_verification_exec]"
+
+            * "Current Phase - clv.address_aux [_address_aux_verification_exec]"
+
+            * "Current Phase - clv.family [_family_verification_exec]"
+
+            * "Current Phase - clv.person [_person_verification_exec]"
+
+            * "Current Phase - clv.person_aux [_person_aux_verification_exec]"
+
+        * Atualização:
+
+            * De: "**[('phase_id', '=', 0)]**"
+
+            * Para: "**[('phase_id', '=', 5)]**" (**JCAFB-2021v**)
+
 Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxiliar)
 -------------------------------------------------------------------------------
 
@@ -572,31 +597,6 @@ Executar o *Verification Batch* “Default Batch” (método alternativo)
         #. Executar a Ação Agendada "**Verification Batch: Execute [Default Batch]**", clicando no botão **Rodar Manualmente**.
 
             * :bi:`Execution time: 0:30:05.978`
-
-Atualizar o *Verification Domain Filter* dos *Verification Schedules* (Current Phase)
--------------------------------------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-    #. Atualizar o *Verification Domain Filter* dos *Verification Schedules*:
-
-        * *Verification Schedules*:
-
-            * "Current Phase - clv.address [_address_verification_exec]"
-
-            * "Current Phase - clv.address_aux [_address_aux_verification_exec]"
-
-            * "Current Phase - clv.family [_family_verification_exec]"
-
-            * "Current Phase - clv.person [_person_verification_exec]"
-
-            * "Current Phase - clv.person_aux [_person_aux_verification_exec]"
-
-        * Atualização:
-
-            * De: "**[('phase_id', '=', 0)]**"
-
-            * Para: "**[('phase_id', '=', 5)]**" (**JCAFB-2021v**)
 
 :red:`(Não Executado)` Executar o *Verification Batch* “Current Phase - Default Batch”
 --------------------------------------------------------------------------------------
