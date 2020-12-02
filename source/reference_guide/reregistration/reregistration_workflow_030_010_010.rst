@@ -20,6 +20,6 @@ Consolidação de :bi:`Address (Aux)` - (L0)
    :maxdepth: 2
    :caption: Itens Relacionados:
 
+   reregistration_workflow_030_010_010_030
    reregistration_workflow_030_010_010_010
    reregistration_workflow_030_010_010_020
-   reregistration_workflow_030_010_010_030
