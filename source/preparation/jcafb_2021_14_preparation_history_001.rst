@@ -875,6 +875,12 @@ Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxili
 
     **Método Alternativo**:
 
+    #. [mint19] Copiar manualmente o arquivo "**JCAFB02021v - clv.person - Recadastramento (pré Jornada).xls**":
+
+        * de: **/home/mint19/Downloads**
+
+        * para: **sftp://odoo@tkl-odoo14-jcafb21-vm/opt/odoo/clvsol_filestore/clvhealth_jcafb** 
+
     #. [tkl-odoo14-jcafb21-vm] Executar manualmente os *Processing Schedules* **Regegistration Import XLS (1)** e **Regegistration Import XLS (2)**:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
@@ -885,7 +891,7 @@ Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxili
 
                 * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
 
-        #. Selecionar os *Processing Schedules* "**Regegistration Import XLS (1)**" "**Regegistration Import XLS (2)**"
+        #. Selecionar os *Processing Schedules* "**Regegistration Import XLS (1)**" e "**Regegistration Import XLS (2)**"
 
         #. Exercutar a Ação :bi:`Processing Schedule Execute`:
 
@@ -946,7 +952,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (método alt
 
         #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
 
-            * :bi:`Execution time: 0:00:14.190`
+            * :bi:`Execution time: 0:00:45.965`
 
 Adicionar novos *Street Patterns*
 ---------------------------------
@@ -976,10 +982,10 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (método alt
 
         #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
 
-            * :bi:`Execution time: 0:00:14.190`
+            * :bi:`Execution time: 0:00:41.267`
 
-Executar a Criação do Cadastro Auxiliar (Fase 1 - Consolidação das Entidades do Cadastro Auxiliar)
---------------------------------------------------------------------------------------------------
+Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
+------------------------------------------------------------------------------------------
 
     * Referência :doc:`/reference_guide/reregistration/reregistration_workflow`"
 
@@ -987,38 +993,84 @@ Executar a Criação do Cadastro Auxiliar (Fase 1 - Consolidação das Entidades
 
     #. Aplicar o descrito em :doc:`/reference_guide/reregistration/reregistration_workflow_030`"
 
-    **Observações**:
+    **Ações efetivamente executadas**:
 
-    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010`"
+        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010_010`"
+        Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010_020`"
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010`"
 
-    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020`"
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010_010`"
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_010`" e/ou :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_020`"
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010_020`"
 
-    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010`"
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020`"
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_010`"
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_010`" e/ou :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_020`"
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_020`"
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010`"
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_030`"
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_010`"
 
-    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020`"
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_020`"
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_010`" e/ou :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_020`"
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_030`"
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_040`"
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020`"
 
-        #. Warning (L1) - Address "Contact Information (Address)" mismatch.
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_010`" e/ou :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_020`"
 
-            * Person (Aux) Associate to Address
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_040`"
 
-    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030`"
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030`"
 
-        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030_010`"
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030_010`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020`"
+
+            #. Processar o Recadastramento de todas as Pessoas indicadas por: :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_040`"
+
+Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Principal)
+-------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/reference_guide/reregistration/reregistration_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Aplicar o descrito em :doc:`/reference_guide/reregistration/reregistration_workflow_040`"
+
+    **Ações efetivamente executadas**:
+
+        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
+
+        Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_040_020`"
+
+            #. Processar o Recadastramento de todas as Pessoas indicadas por: :doc:`/reference_guide/reregistration/reregistration_workflow_040_020_010`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030`"
+
+            #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030_020`"
+
+Executar o *Verification Batch* “Current Phase - Default Batch” (método alternativo)
+------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Verification Batch: Execute [Current Phase - Default Batch]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**"
+
+        #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
+
+            * :bi:`Execution time: 0:01:49.587`
 
 .. toctree::   :maxdepth: 2
