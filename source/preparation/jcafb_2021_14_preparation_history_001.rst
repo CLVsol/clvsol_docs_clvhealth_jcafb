@@ -873,10 +873,26 @@ Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxili
 
     #. Aplicar o descrito em :doc:`/reference_guide/reregistration/reregistration_workflow_020`"
 
-    **Observações**:
+    **Método Alternativo**:
 
-Executar o *Verification Batch* “Default Batch” (método alternativo)
---------------------------------------------------------------------
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente os *Processing Schedules* **Regegistration Import XLS (1)** e **Regegistration Import XLS (2)**:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* :bi:`Processing Schedules`:
+
+            * Menu de acesso:
+
+                * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
+
+        #. Selecionar os *Processing Schedules* "**Regegistration Import XLS (1)**" "**Regegistration Import XLS (2)**"
+
+        #. Exercutar a Ação :bi:`Processing Schedule Execute`:
+
+            #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
+
+:red:`(Não Executado)` Executar o *Verification Batch* “Default Batch” (método alternativo)
+-------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Verification Batch: Execute [Default Batch]**":
 
@@ -932,6 +948,36 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (método alt
 
             * :bi:`Execution time: 0:00:14.190`
 
+Adicionar novos *Street Patterns*
+---------------------------------
+
+    #. Adicionar os novos *Street Patterns* listados a seguir, utilizando o procedimento :doc:`/procedures/reregistration/reregistration_procedure_030_010_025`:
+
+        * *Address (Aux)* "Rua Nova Batatais, 98 (Centro)" [].
+
+        * *Address (Aux)* "Rua Nova Fernão, 84 (Centro)" [].
+
+        * *Address (Aux)* "Rua Nova Olinda, 95 (Centro)" [].
+
+Executar o *Verification Batch* “Current Phase - Default Batch” (método alternativo)
+------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Verification Batch: Execute [Current Phase - Default Batch]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**"
+
+        #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
+
+            * :bi:`Execution time: 0:00:14.190`
+
 Executar a Criação do Cadastro Auxiliar (Fase 1 - Consolidação das Entidades do Cadastro Auxiliar)
 --------------------------------------------------------------------------------------------------
 
@@ -942,5 +988,37 @@ Executar a Criação do Cadastro Auxiliar (Fase 1 - Consolidação das Entidades
     #. Aplicar o descrito em :doc:`/reference_guide/reregistration/reregistration_workflow_030`"
 
     **Observações**:
+
+    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010_010`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_010_020`"
+
+    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_010`" e/ou :doc:`/reference_guide/reregistration/reregistration_workflow_030_010_020_020`"
+
+    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_010`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_020`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_010_030`"
+
+    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_010`" e/ou :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_020`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_020_040`"
+
+        #. Warning (L1) - Address "Contact Information (Address)" mismatch.
+
+            * Person (Aux) Associate to Address
+
+    #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030`"
+
+        #. :doc:`/reference_guide/reregistration/reregistration_workflow_030_020_030_010`"
 
 .. toctree::   :maxdepth: 2
