@@ -33,7 +33,7 @@
         #. Parâmetros apresentados:
 
             * *Update Contact Information Data*: **marcado**
-            * *Update Address Data*: **desmarcado**
+            * *Update Address Data*: **marcado**
             * *Family Verification Execute*: **marcado**
             * *Person (Aux) Verification Execute*: **marcado**
 
