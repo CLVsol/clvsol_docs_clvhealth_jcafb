@@ -26,7 +26,7 @@ Excluir todos os registros de Pessoas do Cadastro Auxiliar (Procedimento)
 
                 * **Contatos** » **Contatos**
 
-        #. Ativar o filtro **Agrupar por** » :bi:`Person Type`
+        #. Ativar o filtro **Agrupar por** » :bi:`Address Type`
 
         #. Selecionar todas as :bi:`Persons (Aux)`
 
