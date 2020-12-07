@@ -91,4 +91,164 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-06a)
 
         #. Salvar o registro editado.
 
+Atualisar a *Person Age Ranges* para todas as Pessoas (método alternativo)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Person: Update Age Range**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Person: Update Age Range**"
+
+        #. Executar a Ação Agendada "**Person: Update Age Range**", clicando no botão **Rodar Manualmente**.
+
+Atualizar o *Person Category* de todas as Pessoas
+-------------------------------------------------
+
+    Critérios utilizados:
+
+        * **Criança**: todas as Pessoas na faixa etária "3-10 anos".
+
+        * **Idoso**: todas as Pessoas na faixa etária "60+ anos".
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Age Ranges` » :bi:`Categories`
+
+          #. Ativar o filtro **Agrupar por** » :bi:`Age Ranges` » :bi:`Categories`
+
+          #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**0-2 anos**" » :bi:`Category` = "**Criança**"
+
+            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Categories*: **Remove** » **Criança**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**3-10 anos**" » :bi:`Category` = "**indefinido**"
+
+            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Categories*: **Set** » **Criança**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**11-17 anos**" » :bi:`Category` = "**Gestante**"
+
+            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Categories*: **Remove** » **Gestante**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Gestante**"
+
+            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Categories*: **Remove** » **Gestante**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Idoso**"
+
+            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Categories*: **Remove** » **Idoso**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**160+ anos**" » :bi:`Category` = "**indefinido**"
+
+            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Categories*: **Set** » **Idoso**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**indefinido**" » :bi:`Category` = "**Idoso**"
+
+            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Categories*: **Remove** » **Idoso**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Selecionar as Crianças para o Projeto JCAFB-2021v
+-------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para as Crianças selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Person State`
+
+        #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Person State` = :bi:`Available`
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person State*: **Set** » **Selected**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Selecionar os Idosos para o Projeto JCAFB-2021v
+-----------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para os Idosos selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Person State`
+
+        #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Person State` = :bi:`Available`
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person State*: **Set** » **Selected**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
