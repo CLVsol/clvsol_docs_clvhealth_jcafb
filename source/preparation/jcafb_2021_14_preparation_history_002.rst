@@ -91,23 +91,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-06a)
 
         #. Salvar o registro editado.
 
-Atualisar a *Person Age Ranges* para todas as Pessoas (método alternativo)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Person: Update Age Range**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* **Ações Agendadas**:
-
-            * Menu de acesso:
-
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
-
-        #. Acessar a Ação Agendada "**Person: Update Age Range**"
-
-        #. Executar a Ação Agendada "**Person: Update Age Range**", clicando no botão **Rodar Manualmente**.
-
 Atualizar o *Person Category* de todas as Pessoas
 -------------------------------------------------
 
@@ -181,7 +164,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
                 #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**160+ anos**" » :bi:`Category` = "**indefinido**"
+            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**60+ anos**" » :bi:`Category` = "**indefinido**"
 
             #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
@@ -251,7 +234,200 @@ Selecionar os Idosos para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-07a)
+Executar o *Verification Batch* “Current Phase - Default Batch”
+---------------------------------------------------------------
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:01:39.518`
+
+Selecionar os Endereços para o Projeto JCAFB-2021v
+--------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para os Endereços selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Verification State` » :bi:`Verification Outcome Informations`
+
+        #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L0)`" » :bi:`Verification Outcome Informations` = :bi:`Please, verify "Address State".`
+
+        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Address State*: **Set** » **Selected**
+
+                * *Address Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:01:40.516`
+
+Selecionar as Famílias para o Projeto JCAFB-2021v
+-------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para as Famílias selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Verification State` » :bi:`Verification Outcome Informations`
+
+        #. Selecionar todas as Famílias com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L0)`" » :bi:`Verification Outcome Informations` = :bi:`Address "State" mismatch.`
+
+        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Family State*: **Set** » **Selected**
+
+                * *Family Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:01:43.076`
+
+Selecionar os Endereços (Aux) para o Projeto JCAFB-2021v
+--------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address (Aux) Reload` para os Endereços (Aux) selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses (Aux)*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses (Aux)`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Verification State` » :bi:`Verification Outcome Informations`
+
+        #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L1)`" » :bi:`Verification Outcome Informations` = :bi:`"State" has changed.`
+
+        #. Exercutar a Ação ":bi:`Address (Aux) Reload`":
+
+            * Parâmetros utilizados:
+
+                * *Address (Aux) Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Reload` para executar a Ação.
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:01:43.000`
+
+Selecionar as Pessoas (Aux) para o Projeto JCAFB-2021v
+------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person (Aux) Reload` para as Pessoas (Aux) selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons (Aux)*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons (Aux)`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Verification State` » :bi:`Verification Outcome Informations`
+
+        #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L1)`" » :bi:`Verification Outcome Informations` = :bi:`"State" has changed.`
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Reload`":
+
+            * Parâmetros utilizados:
+
+                * *Update Contact Information Data*: **desmarcado**
+
+                * *Update Address Data*: **desmarcado**
+
+                * *Update Family Data*: **desmarcado**
+
+                * *Person (Aux) Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Reload` para executar a Ação.
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:01:42.241`
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-08a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -277,16 +453,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-07a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-12-07a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-12-08a.sql
 
-            gzip clvhealth_jcafb_2021v_14_2020-12-07a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-12-07a.sql
+            gzip clvhealth_jcafb_2021v_14_2020-12-08a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2020-12-08a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-12-07a.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-12-08a.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-07a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-08a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -306,17 +482,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-07a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-12-07a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-12-07a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-12-07a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-07a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-12-08a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2020-12-08a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-12-08a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-08a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2020-12-07a.sql
-.. index:: clvhealth_jcafb_2021v_14_2020-12-07a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-07a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-07a
+.. index:: clvhealth_jcafb_2021v_14_2020-12-08a.sql
+.. index:: clvhealth_jcafb_2021v_14_2020-12-08a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-08a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-08a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-07a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-08a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -340,22 +516,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-07a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2020-12-07a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2020-12-08a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2020-12-07a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2020-12-08a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-12-07a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2020-12-08a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-07a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-08a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
