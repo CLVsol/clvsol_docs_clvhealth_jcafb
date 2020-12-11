@@ -912,6 +912,25 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05c)
 
         #. Salvar o registro editado.
 
+Executar o *Verification Batch* “Default Batch” (método alternativo)
+--------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Verification Batch: Execute [Default Batch]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Verification Batch: Execute [Default Batch]**"
+
+        #. Executar a Ação Agendada "**Verification Batch: Execute [Default Batch]**", clicando no botão **Rodar Manualmente**.
+
+            * :bi:`Execution time: 0:30:07.783`
+
 Atualizar o *Register State* dos Endereços já recadastrados
 -----------------------------------------------------------
 
