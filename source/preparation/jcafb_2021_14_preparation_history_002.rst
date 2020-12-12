@@ -256,7 +256,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 Selecionar os Endereços para o Projeto JCAFB-2021v
 --------------------------------------------------
 
-    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para os Endereços selecionadas para o Projeto JCAFB-2021v:
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Mass Edit` para os Endereços selecionadas para o Projeto JCAFB-2021v:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
