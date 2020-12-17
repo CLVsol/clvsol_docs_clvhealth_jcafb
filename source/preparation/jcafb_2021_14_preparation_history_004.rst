@@ -179,4 +179,25 @@ Criar os Sumários para as Famílias selecionadas para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Family Summary Set Up` para executar a Ação.
 
+Criar os Sumários para as Pessoas selecionadas para o Projeto JCAFB-2021v
+-------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Summary Set Up` para as Pessoas selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Person State`
+
+        #. Selecionar todos as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person State` = ":bi:`Selected`"
+
+        #. Exercutar a Ação ":bi:`Person Summary Set Up`":
+
+            #. Utilize o botão :bi:`Person Summary Set Up` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
