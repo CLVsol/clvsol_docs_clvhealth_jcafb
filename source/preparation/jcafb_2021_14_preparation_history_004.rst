@@ -158,4 +158,25 @@ Criar os Sumários para os Endereços selecionados para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Address Summary Set Up` para executar a Ação.
 
+Criar os Sumários para as Famílias selecionadas para o Projeto JCAFB-2021v
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Family Summary Set Up` para as Famílias selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Family State`
+
+        #. Selecionar todos as Famílias com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Family State` = ":bi:`Selected`"
+
+        #. Exercutar a Ação ":bi:`Family Summary Set Up`":
+
+            #. Utilize o botão :bi:`Family Summary Set Up` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
