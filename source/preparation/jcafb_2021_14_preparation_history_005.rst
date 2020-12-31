@@ -252,6 +252,67 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-20b)
 
         #. Salvar o registro editado.
 
+Trascrição das Respostas de um Termo de Consentimento via URL genérica
+----------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Set Survey User Input` para os documentos desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor [tkl-odoo14-jcafb21-vm] usando uma das URLs:
+
+            * [TAA21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para a Análise Físico-Química e Microbiológica da Água: `http://tkl-odoo14-jcafb21-vm/survey/start/taa21 <http://tkl-odoo14-jcafb21-vm/survey/start/taa21>`_
+
+            * [TAN21] JCAFB 2021 - Termo de Consentimento para a Campanha de Detecção de Anemia: `http://tkl-odoo14-jcafb21-vm/survey/start/tan21 <http://tkl-odoo14-jcafb21-vm/survey/start/tan21>`_
+
+            * [TCR21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames Coproparasitológicos: `http://tkl-odoo14-jcafb21-vm/survey/start/tcr21 <http://tkl-odoo14-jcafb21-vm/survey/start/tcr21>`_
+
+            * [TDH21] JCAFB 2021 - Termo de Consentimento para a Campanha de Detecão de Diabetes, Hipertensão Arterial e Hipercolesterolemia: `http://tkl-odoo14-jcafb21-vm/survey/start/tdh21 <http://tkl-odoo14-jcafb21-vm/survey/start/tdh21>`_
+
+            * [TID21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames de Urina e Coproparasitológico: `http://tkl-odoo14-jcafb21-vm/survey/start/tid21 <http://tkl-odoo14-jcafb21-vm/survey/start/tid21>`_
+
+        #. Iniciar a Pesquisa.
+
+Trascrição das Respostas de um Questionário via URL genérica
+------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Set Survey User Input` para os documentos desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor [tkl-odoo14-jcafb21-vm] usando uma das URLs:
+
+            * [QAN21] JCAFB 2021 - Questionário para detecção de Anemia: `http://tkl-odoo14-jcafb21-vm/survey/start/qan21 <http://tkl-odoo14-jcafb21-vm/survey/start/qan21>`_
+
+            * [QDH21] JCAFB 2021 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia: `http://tkl-odoo14-jcafb21-vm/survey/start/qdh21 <http://tkl-odoo14-jcafb21-vm/survey/start/qdh21>`_
+
+            * [QMD21] JCAFB 2021 - Questionário - Medicamentos: `http://tkl-odoo14-jcafb21-vm/survey/start/qmd21 <http://tkl-odoo14-jcafb21-vm/survey/start/qmd21>`_
+
+            * [QSC21] JCAFB 2021 - Questionário Socioeconômico Individual (Crianças): `http://tkl-odoo14-jcafb21-vm/survey/start/qsc21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsc21>`_
+
+            * [QSF21] JCAFB 2021 - Questionário Socioeconômico Familiar (Crianças e Idosos): `http://tkl-odoo14-jcafb21-vm/survey/start/qsf21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsf21>`_
+
+            * [QSI21] JCAFB 2021 - Questionário Socioeconômico Individual (Idosos): `http://tkl-odoo14-jcafb21-vm/survey/start/qsi21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsi21>`_
+
+        #. Iniciar a Pesquisa.
+
+Trascrição dos Resultados de um Exame via URL genérica
+------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Set Survey User Input` para os documentos desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor [tkl-odoo14-jcafb21-vm] usando uma das URLs:
+
+            * [EAA21] JCAFB 2021 - Laboratório - Análise de Água: `http://tkl-odoo14-jcafb21-vm/survey/start/eaa21 <http://tkl-odoo14-jcafb21-vm/survey/start/eaa21>`_
+
+            * [EAN21] JCAFB 2021 - Exames para detecção de Anemia: `http://tkl-odoo14-jcafb21-vm/survey/start/ean21 <http://tkl-odoo14-jcafb21-vm/survey/start/ean21>`_
+
+            * [ECP21] JCAFB 2021 - JCAFB 2021 - Laboratório - Parasitologia: `http://tkl-odoo14-jcafb21-vm/survey/start/ecp21 <http://tkl-odoo14-jcafb21-vm/survey/start/ecp21>`_
+
+            * [EDH21] JCAFB 2021- Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia: `http://tkl-odoo14-jcafb21-vm/survey/start/edh21 <http://tkl-odoo14-jcafb21-vm/survey/start/edh21>`_
+
+            * [EEV21] JCAFB 2021 - Laboratório - Pesquisa de Enterobius vermicularis: `http://tkl-odoo14-jcafb21-vm/survey/start/eev21 <http://tkl-odoo14-jcafb21-vm/survey/start/eev21>`_
+
+            * [EUR21] JCAFB 2021 - Laboratório - Urinálise: `http://tkl-odoo14-jcafb21-vm/survey/start/eur21 <http://tkl-odoo14-jcafb21-vm/survey/start/eur21>`_
+
+        #. Iniciar a Pesquisa.
+
 Criar *Survey User Input(s)* para Documento(s)
 ----------------------------------------------
 
@@ -267,7 +328,7 @@ Criar *Survey User Input(s)* para Documento(s)
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document Type` ou qualquer outro para facilitar a procura pelo(s) Documento(s) desejado(s).
 
-        #. Selecionar todos os Funcionários com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Trabalho` = ":bi:`Grupo de Campo`"
+        #. Selecionar os Documentos desejados.
 
         #. Exercutar a Ação ":bi:`Document Set Survey User Input`":
 
