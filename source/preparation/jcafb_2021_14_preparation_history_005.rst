@@ -706,6 +706,106 @@ Executar a Ação *Document Items Refresh* para Documentos do Projeto JCAFB-2021
 
             #. Utilize o botão :bi:`Items Refresh` para executar a Ação.
 
+:red:`(Não Utilizado)` Executar a Ação *Document Items Edit* para um Documento do Projeto JCAFB-2021v
+-----------------------------------------------------------------------------------------------------
+
+    * **Observação**: A Ação :bi:`Document Items Edit` não está operacional. :red:`Redefinir o uso dessa Ação para editar automaticamente o Questíonário referente ao Documento.`
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Items Edit` para um determinado :bi:`Document` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
+
+        #. Abrir o Documento desejado.
+
+        #. Exercutar a Ação ":bi:`Document Items Edit`":
+
+            #. Utilize o botão :bi:`Document Update` para executar a Ação.
+
+Executar a Ação *Document Items Update from Survey* para Documentos do Projeto JCAFB-2021v
+------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Items Update from Survey` para os :bi:`Documents` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
+
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`"
+
+        #. Exercutar a Ação ":bi:`Document Items Update from Survey`":
+
+            #. Utilize o botão :bi:`Update from Survey` para executar a Ação.
+
+Executar a Ação *Document Items Ok Set Up* para Documentos do Projeto JCAFB-2021v
+---------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Items Ok Set Up` para os :bi:`Documents` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
+
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`"
+
+        #. Exercutar a Ação ":bi:`Document Items Ok Set Up`":
+
+            #. Utilize o botão :bi:`Items Ok Set Up` para executar a Ação.
+
+Executar a Ação *Document Mass Edit* para Documentos do Projeto JCAFB-2021v
+---------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Mass Edit` para os :bi:`Documents` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State` » :bi:`Items Ok`
+
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`" » :bi:`Items Ok` = ":bi:`False`"
+
+        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Register State*: **Set** » **Done**
+
+                * *Document State*: **Set** » **Archived**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
 :red:`(Não Utilizado)` Trascrição dos Resultados de um Exame via URL genérica
 -----------------------------------------------------------------------------
 
