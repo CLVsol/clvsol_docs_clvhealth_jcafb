@@ -616,6 +616,96 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-15a)
 
         #. Salvar o registro editado.
 
+Executar a Ação *Survey User Input Refresh* para as transcrições de Questionários do Projeto JCAFB-2021v
+--------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Survey User Input Refresh` para as :bi:`Participations` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Participations*:
+
+            * Menu de acesso:
+
+                * :bi:`Pesquisas` » :bi:`Participations` » :bi:`Participations`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Status` » :bi:`Survey User Input State`
+
+        #. Pesquisar Pesquisa *for* **21**
+
+        #. Selecionar todas as :bi:`Participations` com: :bi:`Status` = "**Concluído**" » :bi:`Survey User Input State` = ":bi:`New`"
+
+        #. Exercutar a Ação ":bi:`Survey User Input Refresh`":
+
+            #. Utilize o botão :bi:`Survey User Input Refresh` para executar a Ação.
+
+Executar a Ação *Survey User Input Validate* para as transcrições de Questionários do Projeto JCAFB-2021v
+---------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Survey User Input Validate` para as :bi:`Participations` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Participations*:
+
+            * Menu de acesso:
+
+                * :bi:`Pesquisas` » :bi:`Participations` » :bi:`Participations`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Status` » :bi:`Survey User Input State`
+
+        #. Pesquisar Pesquisa *for* **21**
+
+        #. Selecionar todas as :bi:`Participations` com: :bi:`Status` = "**Concluído**" » :bi:`Survey User Input State` = ":bi:`Checked`"
+
+        #. Exercutar a Ação ":bi:`Survey User Input Validate`":
+
+            #. Utilize o botão :bi:`Survey User Input Validate` para executar a Ação.
+
+Executar a Ação *Document Type Items Set Up* para *Document Types* do Projeto JCAFB-2021v
+-----------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Type Items Set Up` para os :bi:`Document Types` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Document Types*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Document` » :bi:`Types`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase`
+
+        #. Selecionar todos os :bi:`Document Types` com: :bi:`Phase` = "**JCAFB-21v**"
+
+        #. Exercutar a Ação ":bi:`Document Type Items Set Up`":
+
+            #. Utilize o botão :bi:`Items Set Up` para executar a Ação.
+
+Executar a Ação *Document Items Refresh* para Documentos do Projeto JCAFB-2021v
+-------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Items Refresh` para os :bi:`Documents` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
+
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`"
+
+        #. Exercutar a Ação ":bi:`Document Items Refresh`":
+
+            #. Utilize o botão :bi:`Items Refresh` para executar a Ação.
+
 :red:`(Não Utilizado)` Trascrição dos Resultados de um Exame via URL genérica
 -----------------------------------------------------------------------------
 
