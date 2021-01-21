@@ -14,8 +14,8 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-04d)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-04d)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -230,8 +230,8 @@ Executar a "Preparação do Cadastro Auxiliar" (Fase 1)
 
     #. Excluir todos os registros de Endereços do Cadastro Auxiliar executando o procedimento ":doc:`/procedures/reregistration/reregistration_procedure_cadastro_aux_setup_020`".
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05a)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05a)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -295,8 +295,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05a)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-05a
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-05a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05a)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05a)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -432,8 +432,8 @@ Executar o *Verification Batch* “Default Batch” (método alternativo)
 
             * :bi:`Execution time: 0:32:01.916`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05b)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05b)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -497,8 +497,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05b)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-05b
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-05b
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05b)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05b)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -770,8 +770,8 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (método alt
 
             * :bi:`Execution time: 0:02:02.146`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05c)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05c)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -835,8 +835,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05c)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-05c
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-05c
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05c)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-05c)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -1322,8 +1322,8 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             * :bi:`Execution time: 0:01:57.474`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11a)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11a)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -1387,8 +1387,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11a)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-11a
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-11a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11a)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11a)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
