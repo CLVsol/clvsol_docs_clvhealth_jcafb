@@ -14,8 +14,8 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11a)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11a)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -427,8 +427,8 @@ Selecionar as Pessoas (Aux) para o Projeto JCAFB-2021v
 
             * :bi:`Execution time: 0:01:44.384`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11b)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11b)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -492,8 +492,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11b)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-11b
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-11b
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11b)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11b)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -616,8 +616,8 @@ Criar Famílias para o Projeto JCAFB-2021v
 
             * :bi:`Execution time: 0:01:40.876`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11c)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11c)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -681,8 +681,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11c)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-11c
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-11c
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11c)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11c)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
