@@ -14,8 +14,8 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11c)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-11c)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -196,8 +196,8 @@ Associar as Pessoas selecionadas aos Grupos da JCAFB-2021v
 
         * Distribuir os Idosos selecionados pelos Grupos da JCAFB-2021v de forma que o número de Idosos seja equanimemente distribuido entre os Grupos.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-12a)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-12a)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -261,8 +261,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-12a)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-12a
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-12a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-12a)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-12a)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -493,8 +493,8 @@ Criar as Requisições de Exames para os Idosos selecionados para o Projeto JCAF
 
             #. Utilize o botão :bi:`Lab Test Request Set Up` para executar a Ação.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-13a)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-13a)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -558,8 +558,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-13a)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-13a
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-13a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-13a)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-13a)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
