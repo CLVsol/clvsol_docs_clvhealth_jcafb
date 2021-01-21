@@ -14,8 +14,8 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-13a)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-13a)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -200,8 +200,8 @@ Criar os Sumários para as Pessoas selecionadas para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Person Summary Set Up` para executar a Ação.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-20a)
---------------------------------------------------------------------------
+:red:`(Backup Excluido)` Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-20a)
+---------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
@@ -265,8 +265,8 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-20a)
 .. index:: filestore_clvhealth_jcafb_2021v_14_2020-12-20a
 .. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2020-12-20a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-20a)
-------------------------------------------------------------------------------
+:red:`(Backup Excluido)` Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2020-12-20a)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
 
