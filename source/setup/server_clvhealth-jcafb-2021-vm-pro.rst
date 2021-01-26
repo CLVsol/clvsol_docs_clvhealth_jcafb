@@ -98,7 +98,7 @@ VM preparation
                 passwd odoo
 
 
-        #. Edit the file "**/etc/password**" (as root):
+        #. Edit the file "**/etc/passwd**" (as root):
 
             ::
 
@@ -108,34 +108,6 @@ VM preparation
 
                 odoo:x:110:118::/var/lib/odoo:/bin/bash
 
-    #. :red:`(Not Used)` Set the **Odoo Master Account** password:
-
-        #. Edit the file "**/etc/odoo/odoo.conf**" (as odoo):
-
-            ::
-
-                admin_passwd = $pbkdf2-sha512$25000$...
-
-            ::
-
-                ;admin_passwd = admin
-
-        #. Stop and start the Odoo server, using the following commands (as root):
-
-            ::
-
-                ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            ::
-
-                /etc/init.d/odoo stop
-
-                /etc/init.d/odoo start
-
-        #. Please set a master password to secure it:
-
-            * `How to Recover/Change Master Password in Odoo <https://www.youtube.com/watch?v=SJlM6jUslxk>`_
-
     #. Update host name, executing the following commands:
 
         ::
@@ -143,7 +115,6 @@ VM preparation
             HOSTNAME=clvhealth-jcafb-2021-vm-pro
             echo "$HOSTNAME" > /etc/hostname
             sed -i "s|127.0.1.1 \(.*\)|127.0.1.1 $HOSTNAME|" /etc/hosts
-            # /etc/init.d/hostname.sh start
 
     #. Change the timezone, executing the following command and picking out the time zone from a list:
 
@@ -320,108 +291,6 @@ Development
 
             exit
 
-    #. To install erppeek (for python 3.5), use the following commands (as root):
-
-        ::
-
-            pip3 install erppeek
-
-    #. To install xlrd 1.2.0, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlrd==1.2.0
-
-    #. To install xlrd 1.1.0, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlrd
-            pip3 install xlwt
-            pip3 install xlutils
-
-        ::
-
-            root@clvhealth-jcafb-2021-vm-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlrd
-            Requirement already satisfied: xlrd in /usr/lib/python3/dist-packages (1.1.0)
-            root@clvhealth-jcafb-2021-vm-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlwt
-            Collecting xlwt
-              Downloading https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl (99kB
-                100% |████████████████████████████████| 102kB 1.3MB/s 
-            odoo 12.0.post20200609 requires pyldap, which is not installed.
-            odoo 12.0.post20200609 requires qrcode, which is not installed.
-            odoo 12.0.post20200609 requires vobject, which is not installed.
-            Installing collected packages: xlwt
-            Successfully installed xlwt-1.3.0
-            root@clvhealth-jcafb-2021-vm-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlutils
-            Collecting xlutils
-              Downloading https://files.pythonhosted.org/packages/c7/55/e22ac73dbb316cabb5db28bef6c87044a95914f713a6e81b593f8a0d2f79/xlutils-2.0.0-py2.py3-none-any.whl (55kB)
-                100% |████████████████████████████████| 61kB 1.0MB/s 
-            Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.1.0)
-            Requirement already satisfied: xlwt>=0.7.4 in /usr/local/lib/python3.7/dist-packages (from xlutils) (1.3.0)
-            Installing collected packages: xlutils
-            Successfully installed xlutils-2.0.0
-
-        **To Verify**:
-
-            * :red:`odoo 12.0.post20200609 requires pyldap, which is not installed.`
-            * :red:`odoo 12.0.post20200609 requires qrcode, which is not installed.`
-            * :red:`odoo 12.0.post20200609 requires vobject, which is not installed.`
-
-    #. To install xlrd 1.2.0, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlrd==1.2.0
-
-    #. :red:`(Not Used)` To install odoolib (for python 3.5), use the following commands (as root):
-
-        ::
-
-            pip3 install odoo-client-lib
-
-    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
-
-        #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            ::
-
-                apt-get install node-less
-
-        #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            ::
-
-                pip3 install suds-py3
-
-        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            ::
-
-                pip3 install erpbrasil.base
-
-        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            ::
-
-                pip3 install pycep-correios
-
 Replace the Odoo installation (Odoo 14.0)
 -----------------------------------------
 
@@ -562,6 +431,111 @@ Replace the Odoo installation (Odoo 14.0)
                 Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
                 Can't uninstall 'Jinja2'. No files were found to uninstall.
             Successfully installed Jinja2-2.11.2
+
+Não Executado
+-------------
+
+    #. To install erppeek (for python 3.5), use the following commands (as root):
+
+        ::
+
+            pip3 install erppeek
+
+    #. To install xlrd 1.2.0, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlrd==1.2.0
+
+    #. To install xlrd 1.1.0, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlrd
+            pip3 install xlwt
+            pip3 install xlutils
+
+        ::
+
+            root@clvhealth-jcafb-2021-vm-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlrd
+            Requirement already satisfied: xlrd in /usr/lib/python3/dist-packages (1.1.0)
+            root@clvhealth-jcafb-2021-vm-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlwt
+            Collecting xlwt
+              Downloading https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl (99kB
+                100% |████████████████████████████████| 102kB 1.3MB/s 
+            odoo 12.0.post20200609 requires pyldap, which is not installed.
+            odoo 12.0.post20200609 requires qrcode, which is not installed.
+            odoo 12.0.post20200609 requires vobject, which is not installed.
+            Installing collected packages: xlwt
+            Successfully installed xlwt-1.3.0
+            root@clvhealth-jcafb-2021-vm-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlutils
+            Collecting xlutils
+              Downloading https://files.pythonhosted.org/packages/c7/55/e22ac73dbb316cabb5db28bef6c87044a95914f713a6e81b593f8a0d2f79/xlutils-2.0.0-py2.py3-none-any.whl (55kB)
+                100% |████████████████████████████████| 61kB 1.0MB/s 
+            Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.1.0)
+            Requirement already satisfied: xlwt>=0.7.4 in /usr/local/lib/python3.7/dist-packages (from xlutils) (1.3.0)
+            Installing collected packages: xlutils
+            Successfully installed xlutils-2.0.0
+
+        **To Verify**:
+
+            * :red:`odoo 12.0.post20200609 requires pyldap, which is not installed.`
+            * :red:`odoo 12.0.post20200609 requires qrcode, which is not installed.`
+            * :red:`odoo 12.0.post20200609 requires vobject, which is not installed.`
+
+    #. To install xlrd 1.2.0, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlrd==1.2.0
+
+    #. :red:`(Not Used)` To install odoolib (for python 3.5), use the following commands (as root):
+
+        ::
+
+            pip3 install odoo-client-lib
+
+    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
+
+        #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            ::
+
+                apt-get install node-less
+
+        #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            ::
+
+                pip3 install suds-py3
+
+        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            ::
+
+                pip3 install erpbrasil.base
+
+        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            ::
+
+                pip3 install pycep-correios
 
 Repositories Installation
 -------------------------
