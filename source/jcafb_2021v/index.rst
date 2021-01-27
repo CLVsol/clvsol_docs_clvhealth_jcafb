@@ -10,22 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-======================================
-Documentação do *CLVhealth-JCAFB-2021*
-======================================
+.. index:: CLVhealth-JCAFB_2021-14
 
-* :ref:`genindex`
+=======================
+CLVhealth-JCAFB_2021-14
+=======================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
 
-   todo
-   reference_guide/index
-   procedures/index
-   jcafb_2021v/index
    migration/index
-   preparation/index
-   setup/index
-   this_documentation/index
-   general_index
