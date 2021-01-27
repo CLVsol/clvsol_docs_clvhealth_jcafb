@@ -340,6 +340,21 @@ Replace the Odoo installation (Odoo 14.0)
             su odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
+    #. Configure "osv_memory_age_limit"
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            * `[14.0] DeprecationWarning: The osv-memory-age-limit <https://github.com/odoo/odoo/issues/60681>`_
+
+            ::
+
+                osv_memory_age_limit = 1.0
+
+            ::
+
+                # osv_memory_age_limit = 1.0
+                osv_memory_age_limit = False
+
     #. Configure Odoo Server timeouts
 
         #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
@@ -359,6 +374,21 @@ Replace the Odoo installation (Odoo 14.0)
                 # limit_time_real = 120
                 limit_time_real = 72000
 
+    #. Configure "server_wide_modules"
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            * `[odoo12.0] How the api_integration works using python3 for odoov12?  <https://www.odoo.com/fr_FR/forum/aide-1/question/odoo12-0-how-the-api-integration-works-using-python3-for-odoov12-141915>`_
+
+            ::
+
+                server_wide_modules = base,web
+
+            ::
+
+                # server_wide_modules = base,web
+                server_wide_modules = None
+
     #. Configure Odoo Server workers
 
         #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
@@ -376,35 +406,11 @@ Replace the Odoo installation (Odoo 14.0)
                 # workers = 2
                 workers = 5
 
-    #. Configure "server_wide_modules"
+    #. To install erppeek (for python 3.5), use the following commands (as root):
 
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+        ::
 
-            * `[odoo12.0] How the api_integration works using python3 for odoov12?  <https://www.odoo.com/fr_FR/forum/aide-1/question/odoo12-0-how-the-api-integration-works-using-python3-for-odoov12-141915>`_
-
-            ::
-
-                server_wide_modules = base,web
-
-            ::
-
-                # server_wide_modules = base,web
-                server_wide_modules = None
-
-    #. Configure "osv_memory_age_limit"
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-            * `[14.0] DeprecationWarning: The osv-memory-age-limit <https://github.com/odoo/odoo/issues/60681>`_
-
-            ::
-
-                osv_memory_age_l3imit = 1.0
-
-            ::
-
-                # osv_memory_age_limit = 1.0
-                osv_memory_age_limit = False
+            pip3 install erppeek
 
     #. To install Jinja2-2.11.2, execute the following commands (as root):
 
@@ -412,7 +418,7 @@ Replace the Odoo installation (Odoo 14.0)
 
             ::
 
-                2021-01-14 13:29:55,275 8698 WARNING clvhealth_jcafb_2021v_14 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+                2021-01-27 14:41:47,921 3811 WARNING clvhealth_jcafb_2021v_14 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
                 from collections import MutableSet, MutableMapping, MutableSequence
  
         ::
@@ -432,14 +438,90 @@ Replace the Odoo installation (Odoo 14.0)
                 Can't uninstall 'Jinja2'. No files were found to uninstall.
             Successfully installed Jinja2-2.11.2
 
-Não Executado
--------------
+    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
 
-    #. To install erppeek (for python 3.5), use the following commands (as root):
+        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            ::
+
+                pip3 install erpbrasil.base
+
+        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            ::
+
+                pip3 install pycep-correios
+
+Repositories Installation
+-------------------------
+
+    #. To install all "**modules**", use the following commands (as odoo):
 
         ::
 
-            pip3 install erppeek
+            ssh clvhealth-jcafb-2021-vm-pro -l odoo
+
+        ::
+
+            cd /opt/odoo
+            # git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
+            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0to14.0
+            # git clone https://github.com/OCA/partner-contact oca_partner-contact --branch 13.0
+
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
+
+        ::
+
+            ssh clvhealth-jcafb-2021-vm-pro -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons
+
+        ::
+
+            # addons_path = /usr/lib/python3/dist-packages/odoo/addons
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
+
+:red:`Não Executado`
+--------------------
 
     #. To install xlrd 1.2.0, execute the following commands (as root):
 
@@ -517,86 +599,6 @@ Não Executado
 
                 pip3 install suds-py3
 
-        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            ::
-
-                pip3 install erpbrasil.base
-
-        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            ::
-
-                pip3 install pycep-correios
-
-Repositories Installation
--------------------------
-
-    #. To install all "**modules**", use the following commands (as odoo):
-
-        ::
-
-            ssh clvhealth-jcafb-2021-vm-pro -l odoo
-
-        ::
-
-            cd /opt/odoo
-            git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
-            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 13.0to14.0
-            git clone https://github.com/OCA/partner-contact oca_partner-contact --branch 13.0
-
-    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
-
-        ::
-
-            ssh clvhealth-jcafb-2021-vm-pro -l root
-
-        ::
-
-            cd /opt/odoo/clvsol_clvhealth_jcafb/project
-            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
-
-        * SymLink <https://wiki.debian.org/SymLink>`_
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-        ::
-
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons
-
-        ::
-
-            # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
-
 Remote access to the server
 ---------------------------
 
@@ -626,7 +628,7 @@ Remote access to the server
         ::
 
             cd /opt/odoo/clvsol_clvhealth_jcafb/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb"
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_14"
 
             dropdb -i clvhealth_jcafb
 
