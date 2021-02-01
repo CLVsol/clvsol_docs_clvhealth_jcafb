@@ -22,3 +22,4 @@ Migração de Dados - Fase 1
 
    clvsol_filestore_clvhealth_jcafb_init
    jcafb_2021_14_migration_history_001
+   jcafb_2021_14_migration_history_002
