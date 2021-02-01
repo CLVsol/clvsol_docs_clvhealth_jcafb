@@ -23,5 +23,4 @@
    todo
    reference_guide/index
    procedures/index
-   migration/index
    this_documentation/index
