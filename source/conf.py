@@ -23,9 +23,9 @@ copyright = '2020, Carlos Eduardo Vercelino - CLVsol'
 author = 'Carlos Eduardo Vercelino - CLVsol'
 
 # The short X.Y version.
-version = '13.0'
+version = '14.0'
 # The full version, including alpha/beta/rc tags.
-release = '13.0.4.0'
+release = '14.0.5.0'
 
 
 # -- General configuration ---------------------------------------------------
