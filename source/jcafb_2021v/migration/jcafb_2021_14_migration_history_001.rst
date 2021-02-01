@@ -246,148 +246,6 @@ Executar o *External Sync Batch* "*Default Batch [10]*" (método alternativo)
 
             * :bi:`Execution time: 0:48:48.849`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-29a)
---------------------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-01-29a.sql
-
-            gzip clvhealth_jcafb_2021v_14_2021-01-29a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-01-29a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz clvhealth_jcafb_2021v_14
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-01-29a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-01-29a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_14_2021-01-29a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-01-29a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-01-29a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-29a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-29a)
-------------------------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-01-29a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_14
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-01-29a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [clvhealth-jcafb-2021-vm-pro] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://clvhealth-jcafb-2021-vm-pro**".
-
-        #. Salvar o registro editado.
-
 .. _Lista de Schedules instalados (30b):
 
 Lista de *Schedules* instalados (30b)
@@ -424,155 +282,13 @@ Executar o *External Sync Batch* "*Default Batch [30]*" (método alternativo)
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**External Sync Batch: Execute [Default Batch [30]]**"
 
         #. Executar a Ação Agendada "**External Sync Batch: Execute [Default Batch [30]]**", clicando no botão **Rodar Manualmente**.
 
             * :bi:`Execution time: 3:07:55.122`
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-31a)
---------------------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-01-31a.sql
-
-            gzip clvhealth_jcafb_2021v_14_2021-01-31a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-01-31a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-31a.tar.gz clvhealth_jcafb_2021v_14
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-01-31a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-01-31a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-31a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_14_2021-01-31a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-01-31a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-01-31a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-31a)
-------------------------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-01-31a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_14
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-01-31a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-31a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [clvhealth-jcafb-2021-vm-pro] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://clvhealth-jcafb-2021-vm-pro**".
-
-        #. Salvar o registro editado.
 
 .. _Lista de Schedules instalados (40b):
 
@@ -609,155 +325,13 @@ Executar o *External Sync Batch* "*Default Batch [40]*" (método alternativo)
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**External Sync Batch: Execute [Default Batch [40]]**"
 
         #. Executar a Ação Agendada "**External Sync Batch: Execute [Default Batch [40]]**", clicando no botão **Rodar Manualmente**.
 
             * :bi:`Execution time: 3:04:56.379`
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-31b)
---------------------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-01-31b.sql
-
-            gzip clvhealth_jcafb_2021v_14_2021-01-31b.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-01-31b.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-31b.tar.gz clvhealth_jcafb_2021v_14
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31b.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-01-31b.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-01-31b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-31b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31b.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_14_2021-01-31b.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-01-31b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-01-31b
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31b
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-31b)
-------------------------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            ssh clvhealth-jcafb-2021-vm-pro -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-01-31b.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_14
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-01-31b.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-31b.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-31b.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
-
-        ::
-
-            # ***** clvhealth-jcafb-2021-vm-pro
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [clvhealth-jcafb-2021-vm-pro] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://clvhealth-jcafb-2021-vm-pro**".
-
-        #. Salvar o registro editado.
 
 .. _Lista de Schedules instalados (50b):
 
@@ -794,7 +368,7 @@ Executar o *External Sync Batch* "*Default Batch [50]*" (método alternativo)
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**External Sync Batch: Execute [Default Batch [50]]**"
 
@@ -932,7 +506,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-31c)
 
             * Menu de acesso:
                 
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
 
         #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
 
@@ -955,7 +529,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-31c)
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**Verification Batch: Execute [Default Batch]**":
 
