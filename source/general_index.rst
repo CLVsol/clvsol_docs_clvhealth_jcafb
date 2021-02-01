@@ -23,4 +23,6 @@
    todo
    reference_guide/index
    procedures/index
+   jcafb_2021v/index
+   setup/index
    this_documentation/index
