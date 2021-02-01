@@ -14,7 +14,7 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-29a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-01a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -38,22 +38,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-29a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-01-29a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-02-01a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-01-29a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-02-01a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-01a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-01-29a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-01a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -90,140 +90,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-01-29a)
             * "**http://tkl-odoo14-jcafb21-vm**".
 
         #. Salvar o registro editado.
-
-Atualizar o *Verification Domain Filter* dos *Verification Schedules* (Current Phase)
--------------------------------------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-    #. Atualizar o *Verification Domain Filter* dos *Verification Schedules*:
-
-        * *Verification Schedules*:
-
-            * "Current Phase - clv.address [_address_verification_exec]"
-
-            * "Current Phase - clv.address_aux [_address_aux_verification_exec]"
-
-            * "Current Phase - clv.family [_family_verification_exec]"
-
-            * "Current Phase - clv.person [_person_verification_exec]"
-
-            * "Current Phase - clv.person_aux [_person_aux_verification_exec]"
-
-        * Atualização:
-
-            * De: "**[('phase_id', '=', 0)]**"
-
-            * Para: "**[('phase_id', '=', 5)]**" (**JCAFB-2021v**)
-
-Excluir o endereço "Sem endereço S/N/[morador de rua] (Centro) [140.333-80]"
-----------------------------------------------------------------------------
-
-    #. Excluir o endereço "Sem endereço S/N/[morador de rua] (Centro) [140.333-80]" dos Cadastros Auxiliar e Principal:
-
-        * :red:`(Não Executado)` *Verification Outcomes*: pesquisar por *Reference Name* "Sem endereço" [6 registros excluídos].
-
-        * *Address (Aux)* (*view* Contatos): pesquisar por *Name* "Sem endereço" [1 registro excluído].
-
-        * *Address History*: pesquisar por *Address* "Sem endereço" [1 registro excluído].
-
-        * *Person History*: pesquisar por *Address* "Sem endereço" [1 registro excluído].
-
-        * *Address* (*view* Contatos): pesquisar por *Entity Code* "Sem endereço" [1 registro excluído].
-
-
-
-
-
-Preparar *Global Settings* para o banco de dados *CLVhealth-JCAFB-2021v-14*
----------------------------------------------------------------------------
-
-    #. Acessar a *View* *Global Settings*:
-
-        * Menu de acesso:
-
-            * :bi:`Base` » :bi:`Global Settings` » :bi:`Global Settings`
-
-        #. Configurar o parâmetro :bi:`Phase` » :bi:`Phase`: **JCAFB-2021v**
-
-        #. Configurar o parâmetro :bi:`Person` » :bi:`Reference Date`: **31/01/2021**
-
-:red:`(Não Executado)` Atualisar a Idade de Referência e *Person Age Ranges* para todas as Pessoas
---------------------------------------------------------------------------------------------------
-
-    #. [ttkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para todas as Pessoas:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* *Persons*:
-
-            * Menu de acesso:
-
-                * :bi:`Communities` » :bi:`Communities` » :bi:`Persons`
-
-        #. Selecionar todas as Pessoas
-
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
-
-            * Parâmetros utilizados:
-
-                * *Person Reference Age Refresh*: **marcado**
-
-            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
-
-Atualisar a Idade de Referência e *Person Age Ranges* para todas as Pessoas (método alternativo)
-------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Person: Compute Age Reference**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* **Ações Agendadas**:
-
-            * Menu de acesso:
-
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
-
-        #. Acessar a Ação Agendada "**Person: Compute Age Reference**"
-
-        #. Executar a Ação Agendada "**Person: Compute Age Reference**", clicando no botão **Rodar Manualmente**.
-
-    #. :red:`(Não Necessário)` [tkl-odoo14-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Person: Update Age Range**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* **Ações Agendadas**:
-
-            * Menu de acesso:
-
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
-
-        #. Acessar a Ação Agendada "**Person: Update Age Range**"
-
-        #. Executar a Ação Agendada "**Person: Update Age Range**", clicando no botão **Rodar Manualmente**.
-
-Marcar o *Active Log* de todos os Objetos
------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Global Log Client Mass Edit` para todos os Objetos:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* *Global Log Clients*:
-
-            * Menu de acesso:
-
-                * :bi:`Base` » :bi:`Global Logs` » :bi:`Global Log Clients`
-
-        #. Selecionar todos os :bi:`Global Log Clients`
-
-        #. Exercutar a Ação ":bi:`Global Log Client Mass Edit`":
-
-            * Parâmetros utilizados:
-
-                * *Active Log*: **Set** **marcado**
-
-            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Executar a "Preparação do Cadastro Auxiliar" (Fase 1)
 -----------------------------------------------------
