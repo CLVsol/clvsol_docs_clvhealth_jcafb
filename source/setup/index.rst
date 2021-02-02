@@ -8,3 +8,4 @@ Administração do *CLVhealth-JCAFB*
 
    server_tkl-odoo14-jcafb21-vm
    server_clvhealth-jcafb-2021-vm-pro
+   server_clvheatlh-jcafb-2021-aws-tst
