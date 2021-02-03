@@ -302,6 +302,193 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-01c)
 
         #. Salvar o registro editado.
 
+Redefinir a **Senha** de todos os Funcionários da **JCAFB-2021v**
+-----------------------------------------------------------------
+
+    #. [clvhealth-jcafb-2021-vm-pro] Executar a Ação :bi:`Employee Mass Edit` para todas os Funcionários da **JCAFB-2021v**:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
+
+        #. Acessar a *View* *Funcionários*:
+
+            * Menu de acesso:
+
+                * :bi:`Funcionários` » :bi:`Funcionários`
+
+        #. Selecionar todos os Funcionários da **JCAFB-2021v**
+
+        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Reset User Password*: :bi:`marcado`
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Redefinir a senha do usuário de referência da JCAFB-2021v
+---------------------------------------------------------
+
+    #. Redefinir a senha do usuário de referência:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
+
+        #. Acessar a *View* *Users*:
+
+            * Menu de acesso:
+
+                * :bi:`Definições` » :bi:`Utilizadores e Empresas` » :bi:`Usuários`
+
+        #. Selecionar o usuário de referência.
+
+        #. Exercutar a Ação "**Alterar Senha**":
+
+            * Parâmetros:
+                * Nova Senha: *******
+            
+            #. Utilize o botão "**Alterar Senha**" para executar a ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-03a)
+--------------------------------------------------------------------------
+
+    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvhealth-jcafb-2021-vm-pro
+            #
+
+            ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** clvhealth-jcafb-2021-vm-pro
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-03a.sql
+
+            gzip clvhealth_jcafb_2021v_14_2021-02-03a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-03a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
+
+        ::
+
+            # ***** clvhealth-jcafb-2021-vm-pro
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-03a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-03a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2021-02-03a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-02-03a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-02-03a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-03a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-03a)
+------------------------------------------------------------------------------
+
+    #. [clvhealth-jcafb-2021-vm-pro] Estabelecer uma sessão ssh com o servidor **clvhealth-jcafb-2021-vm-pro** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvhealth-jcafb-2021-vm-pro
+            #
+
+            ssh clvhealth-jcafb-2021-vm-pro -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvhealth-jcafb-2021-vm-pro] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** clvhealth-jcafb-2021-vm-pro
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2021-02-03a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2021-02-03a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
+
+        ::
+
+            # ***** clvhealth-jcafb-2021-vm-pro
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [clvhealth-jcafb-2021-vm-pro] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://clvhealth-jcafb-2021-vm-pro**".
+
+        #. Salvar o registro editado.
+
 Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxiliar)
 -------------------------------------------------------------------------------
 
@@ -810,21 +997,7 @@ Atualizar o *State* de Endereços (Aux) afetados pelo Recadastramento
             #. Utilize o botão :bi:`Reload` para executar a Ação.
 
 Atualizar o *Register State* dos Endereços já recadastrados
------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar a Ação :bi:`Address Mass Edit` para os Endereços já recadastrados:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* *Addresses*:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`
-
-        #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
+-----------------------------------------------------------1v1v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
 
         #. Exercutar a Ação ":bi:`Address Mass Edit`":
 
@@ -837,21 +1010,7 @@ Atualizar o *Register State* dos Endereços já recadastrados
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Atualizar o *Register State* das Famílias já recadastradas
------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar a Ação :bi:`Family Mass Edit` para as Famílias já recadastradas:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* *Families*:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Community` » :bi:`Families`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`
-
-        #. Selecionar todas as Famílias com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
+-----------------------------------------------------------1v1v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
 
         #. Exercutar a Ação ":bi:`Family Mass Edit`":
 
@@ -864,21 +1023,7 @@ Atualizar o *Register State* das Famílias já recadastradas
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Atualizar o *Register State* das Pessoas já recadastradas
------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar a Ação :bi:`Person Mass Edit` para as Pessoas já recadastradas:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* *Persons*:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`
-
-        #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
+-----------------------------------------------------------1v1v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
 
         #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
@@ -891,21 +1036,7 @@ Atualizar o *Register State* das Pessoas já recadastradas
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Atualizar o *Register State* dos Endereços (Aux) já recadastrados
------------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar a Ação :bi:`Address (Aux) Mass Edit` para os Endereços (Aux) já recadastrados:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* *Addresses (Aux)*:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Community` » :bi:`Addresses (Aux)`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`
-
-        #. Selecionar todos os Endereços (Aux) com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
+-----------------------------------------------------------------1v1v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
 
         #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
 
@@ -918,21 +1049,7 @@ Atualizar o *Register State* dos Endereços (Aux) já recadastrados
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Atualizar o *Register State* das Pessoas (Aux) já recadastradas
----------------------------------------------------------------
-
-    #. [clvhealth-jcafb-2021-vm-pro] Executar a Ação :bi:`Person (Aux) Mass Edit` para as Pessoas (Aux) já recadastradas:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
-
-        #. Acessar a *View* *Persons (Aux)*:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Community` » :bi:`Persons (Aux)`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`
-
-        #. Selecionar todas as Pessoas (Aux) com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
+---------------------------------------------------------------1v1v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`Ok`
 
         #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
 
@@ -945,82 +1062,7 @@ Atualizar o *Register State* das Pessoas (Aux) já recadastradas
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Cancelar a Pessoa "Valmir Lourenço Almeida Barbosa [210.540-37]"
-----------------------------------------------------------------
-
-    Está sendo assumido que "Valmir Lourenço Almeida Barbosa [210.540-37]" já possui um registro válido como "Valmir Lourenço Almeida Barbosa [210.541-18]".
-
-    #. Cancelar a Pessoa "Valmir Lourenço Almeida Barbosa [210.540-37]" nos Cadastros Auxiliar e Principal:
-
-        #. Acessar a *view* :bi:`Persons (Aux)`:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
-
-        #. Procurar pelo registro :bi:`Person (Aux)` associado a "Valmir Lourenço Almeida Barbosa [210.540-37]".
-
-        #. Abrir o registro :bi:`Person (Aux)` encontrado.
-
-            #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
-
-                #. Parâmetros apresentados:
-
-                    * *Register State*: :bi:`Set` » :bi:`Canceled`
-                    * *State*: :bi:`Set` » :bi:`Unvailable`
-                    * *Address is unavailable*: :bi:`Set` » **marcado**
-                    * *Address*: :bi:`Remove`
-                    * *Address (Aux) is unavailable*: :bi:`Set` » **marcado**
-                    * *Address (Aux)*: :bi:`Remove`
-                    * *Family is unavailable*: :bi:`Set` » **marcado**
-                    * *Family*: :bi:`Remove`
-                    * *Contact Information is unavailable*: :bi:`Set` » **marcado**
-                    * *Clear Address Data*: **marcado**
-                    * *Phase*: **JCAFB-2021v**
-                    * *Person (Aux) Verification Execute*: **marcado**
-
-                #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
-
-            #. Exercutar a Ação ":bi:`Person (Aux) Related Person Update`":
-
-                #. Parâmetros apresentados:
-
-                    * *Update Contact Information Data*: **marcado**
-                    * *Update Address Data*: **marcado**
-                    * *Update Family Data*: **marcado**
-                    * *Related Person Verification Execute*: **marcado**
-                    * *Person (Aux) Verification Execute*: **marcado**
-
-                #. Utilizar o botão :bi:`Related Person Update` para executar a Ação.
-
-        #. Acessar a *view* :bi:`Addresses (Aux)`:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
-
-
-        #. Procurar pelo registro :bi:`Address (Aux)` associado a "Estância Nossa Senhora Aparecida (Porto) [140.498-99]".
-
-        #. Abrir o registro :bi:`Address (Aux)` encontrado.
-
-            #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
-
-                #. Parâmetros apresentados:
-
-                    * *Register State*: :bi:`Set` » :bi:`Done`
-                    * *Address (Aux) Verification Execute*: **marcado**
-
-                #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
-
-        #. Acessar a *view* :bi:`Persons (Aux)`:
-
-            * Menu de acesso:
-
-                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Register State` » :bi:`Verification State`
-
-        #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`[Warning (L1)]`
+----------------------------------------------------------------1v1v**" » :bi:`Register State` = ":bi:`Revised`" » :bi:`Verification State` = :bi:`[Warning (L1)]`
 
         #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
 
