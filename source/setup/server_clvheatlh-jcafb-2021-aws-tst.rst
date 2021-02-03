@@ -623,7 +623,7 @@ Remote access to the server
 
         ::
 
-            ssh tkl-odoo13-jcafb21-vm -l root
+            ssh clvheatlh-jcafb-2021-aws-tst -l root
 
         ::
 
@@ -640,7 +640,7 @@ Remote access to the server
 
         ::
 
-            ssh tkl-odoo13-jcafb21-vm -l odoo
+            ssh clvheatlh-jcafb-2021-aws-tst -l odoo
 
         ::
 
@@ -656,7 +656,7 @@ Atualizar os fontes do projeto
 
         ::
 
-            ssh tkl-odoo13-jcafb21-vm -l odoo
+            ssh clvheatlh-jcafb-2021-aws-tst -l odoo
 
         ::
 
