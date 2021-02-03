@@ -10,16 +10,12 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2021-14
+.. index:: Manutenção de Dados - Fase 1
 
-=======================
-CLVhealth-JCAFB_2021-14
-=======================
+============================
+Manutenção de Dados - Fase 1
+============================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
-
-   migration/index_1
-   preparation/index_1
-   maintenance/index_1
