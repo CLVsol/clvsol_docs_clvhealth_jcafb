@@ -14,7 +14,95 @@
 Manutenção do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-[clvheatlh-jcafb-2021-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-03a)
+[clvheatlh-jcafb-2021-aws-tst] Atualizar os fontes do projeto
+-------------------------------------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-tst -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+        ::
+
+            # ***** clvheatlh-jcafb-2021-aws-tst
+            #
+
+            cd /opt/odoo/clvsol_odoo_client
+            git pull
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_l10n_brazil
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+[clvheatlh-jcafb-2021-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-05a)
 --------------------------------------------------------------------------------------------------------------
 
     #. [clvheatlh-jcafb-2021-aws-tst] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2021-aws-tst** e paralizar o *Odoo*:
@@ -38,22 +126,22 @@ Manutenção do Banco de Dados - JCAFB-2021v-14
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2021v_14_2021-02-03a.sql.gz
+            gzip -d clvhealth_jcafb_2021v_14_2021-02-05a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-02-03a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-02-05a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-05a.tar.gz
 
             mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-03a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-05a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2021-aws-tst** ao modo desejado:
 
