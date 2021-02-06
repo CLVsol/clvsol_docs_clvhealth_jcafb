@@ -586,18 +586,6 @@ Atualizar o *Register State* das Pessoas (Aux) já recadastradas
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Cancelar a Pessoa "Valmir Lourenço Almeida Barbosa [210.540-37]"
-----------------------------------------------------------------
-
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
-
-            #. Parâmetros apresentados:
-
-                * *Register State*: :bi:`Set` » :bi:`Done`
-                * *Person (Aux) Verification Execute*: **marcado**
-
-            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
-
 Executar o *Verification Batch* “Current Phase - Default Batch”
 ---------------------------------------------------------------
 
