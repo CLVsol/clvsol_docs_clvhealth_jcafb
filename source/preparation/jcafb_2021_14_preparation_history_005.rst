@@ -516,7 +516,7 @@ Executar a Ação *Document Type Items Set Up* para *Document Types* do Projeto 
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase`
 
-        #. Selecionar todos os :bi:`Document Types` com: :bi:`Phase` = "**JCAFB-21v**"
+        #. Selecionar todos os :bi:`Document Types` com: :bi:`Phase` = "**JCAFB-2021v**"
 
         #. Exercutar a Ação ":bi:`Document Type Items Set Up`":
 
@@ -539,7 +539,7 @@ Executar a Ação *Document Items Refresh* para Documentos do Projeto JCAFB-2021
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
 
-        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`"
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`"
 
         #. Exercutar a Ação ":bi:`Document Items Refresh`":
 
@@ -587,7 +587,7 @@ Executar a Ação *Document Items Update from Survey* para Documentos do Projeto
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
 
-        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`"
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`"
 
         #. Exercutar a Ação ":bi:`Document Items Update from Survey`":
 
@@ -610,7 +610,7 @@ Executar a Ação *Document Items Ok Set Up* para Documentos do Projeto JCAFB-20
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
 
-        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`"
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`"
 
         #. Exercutar a Ação ":bi:`Document Items Ok Set Up`":
 
@@ -633,7 +633,7 @@ Executar a Ação *Document Mass Edit* para Documentos do Projeto JCAFB-2021v
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State` » :bi:`Items Ok`
 
-        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-21v**" » :bi:`Document State` = ":bi:`New`" » :bi:`Items Ok` = ":bi:`False`"
+        #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`" » :bi:`Items Ok` = ":bi:`False`"
 
         #. Exercutar a Ação ":bi:`Document Mass Edit`":
 
