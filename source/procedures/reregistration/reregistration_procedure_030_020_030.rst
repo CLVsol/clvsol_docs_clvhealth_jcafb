@@ -32,7 +32,7 @@
 
         #. Parâmetros apresentados:
 
-            * *Person (Aux) Related Person Create*: **marcado**
+            * *Person (Aux) Set Code*: **marcado**
             * *Person (Aux) Associate to Address*: **marcado**
             * *Related Person Verification Execute*: **marcado**
             * *Person (Aux) Verification Execute*: **marcado**
