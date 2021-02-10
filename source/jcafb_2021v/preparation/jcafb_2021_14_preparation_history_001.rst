@@ -602,7 +602,7 @@ Atualizar o(s) módulo(s) [clv_employee]
 
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_survey
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_employee
             
         #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
 
