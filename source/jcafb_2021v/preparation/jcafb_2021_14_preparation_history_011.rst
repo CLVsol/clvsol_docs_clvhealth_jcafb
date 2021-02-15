@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-=============================================
-Preparação do Banco de Dados - JCAFB-2021v-14
-=============================================
+===============================================================================
+Preparação do Banco de Dados - JCAFB-2021v-14 (Recadastramento (pré Jornada) 1)
+===============================================================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-10a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-15a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -38,22 +38,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-10a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-02-10a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-02-15a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-02-10a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-02-15a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-10a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-15a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-10a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-15a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -79,7 +79,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-10a)
 
             * Menu de acesso:
                 
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
 
         #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
 
@@ -91,14 +91,14 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-10a)
 
         #. Salvar o registro editado.
 
-Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxiliar)
--------------------------------------------------------------------------------
+Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
+----------------------------------------------------------------------
 
     * Referência :doc:`/reference_guide/reregistration/reregistration_workflow`"
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
-    #. Utilizar como fonte de dados para o Cadastramento/Recadastramento (Fase 1):
+    #. Utilizar como fonte de dados para o Cadastramento/Recadastramento:
 
         * Workbook: "**JCAFB02021v - clv.person - Recadastramento (pré Jornada).xlsx**"
 
@@ -114,7 +114,7 @@ Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxili
 
         * para: **sftp://odoo@tkl-odoo14-jcafb21-vm/opt/odoo/clvsol_filestore/clvhealth_jcafb** 
 
-    #. [tkl-odoo14-jcafb21-vm] Executar manualmente os *Processing Schedules* **Reregistration Import XLS (1)** e **Reregistration Import XLS (2)**:
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente o *Processing Schedule* **Reregistration Import XLS (1)**:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
@@ -124,7 +124,7 @@ Executar a Criação do Cadastro Auxiliar (Fase 1 - Criação do Cadastro Auxili
 
                 * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
 
-        #. Selecionar os *Processing Schedules* "**Reregistration Import XLS (1)**" e "**Reregistration Import XLS (2)**"
+        #. Selecionar o *Processing Schedule* "**Reregistration Import XLS (1)**"
 
         #. Exercutar a Ação :bi:`Processing Schedule Execute`:
 
@@ -160,24 +160,22 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (método alt
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**"
 
         #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
 
-            * :bi:`Execution time: 0:00:51.674`
+            * :bi:`Execution time: 0:00:18.144`
 
 Adicionar novos *Street Patterns*
 ---------------------------------
 
     #. Adicionar os novos *Street Patterns* listados a seguir, utilizando o procedimento :doc:`/procedures/reregistration/reregistration_procedure_030_010_025`:
 
-        * *Address (Aux)* "Rua Nova Batatais, 98 (Centro)" [].
+        * *Address (Aux)* "Rua Nova Fernão [Centro]".
 
-        * *Address (Aux)* "Rua Nova Fernão, 84 (Centro)" [].
-
-        * *Address (Aux)* "Rua Nova Olinda, 95 (Centro)" [].
+        * *Address (Aux)* "Rua Nova Olinda [Centro)]".
 
 Executar o *Verification Batch* “Current Phase - Default Batch” (método alternativo)
 ------------------------------------------------------------------------------------
@@ -190,13 +188,13 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (método alt
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**"
 
         #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
 
-            * :bi:`Execution time: 0:00:50.619`
+            * :bi:`Execution time: 0:00:17.416`
 
 Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
 ------------------------------------------------------------------------------------------
@@ -279,13 +277,13 @@ Executar o *Verification Batch* “Current Phase - Default Batch” (método alt
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**"
 
         #. Executar a Ação Agendada "**Verification Batch: Execute [Current Phase - Default Batch]**", clicando no botão **Rodar Manualmente**.
 
-            * :bi:`Execution time: 0:01:45.333`
+            * :bi:`Execution time: 0:00:32.131`
 
 Atualizar o *State* de Endereços afetados pelo Recadastramento
 --------------------------------------------------------------
@@ -325,13 +323,13 @@ Executar o *Verification Batch* “Default Batch” (método alternativo)
 
             * Menu de acesso:
 
-                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
 
         #. Acessar a Ação Agendada "**Verification Batch: Execute [Default Batch]**"
 
         #. Executar a Ação Agendada "**Verification Batch: Execute [Default Batch]**", clicando no botão **Rodar Manualmente**.
 
-            * :bi:`Execution time: 0:29:15.834`
+            * :bi:`Execution time: 0:28:36.667`
 
 Atualizar a Fase de Famílias afetadas pelo Recadastramento
 ----------------------------------------------------------
@@ -410,7 +408,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:01:47.709`
+            * :bi:`Execution time: 0:00:40.519`
 
 Atualizar o *State* de Endereços afetados pelo Recadastramento
 --------------------------------------------------------------
@@ -456,7 +454,7 @@ Executar o *Verification Batch* “Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:28:30.313`
+            * :bi:`Execution time: 0:29:39.260`
 
 Atualizar o *State* de Endereços (Aux) afetados pelo Recadastramento
 --------------------------------------------------------------------
@@ -565,9 +563,9 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:01:49.371`
+            * :bi:`Execution time: 0:00:36.025`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-11a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-15b)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -593,16 +591,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-11a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-11a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-15b.sql
 
-            gzip clvhealth_jcafb_2021v_14_2021-02-11a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-11a.sql
+            gzip clvhealth_jcafb_2021v_14_2021-02-15b.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-15b.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-11a.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-15b.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-11a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-15b.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -622,17 +620,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-11a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-11a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-11a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-11a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-11a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-15b.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-15b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-15b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-15b.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2021-02-11a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-02-11a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-02-11a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-11a
+.. index:: clvhealth_jcafb_2021v_14_2021-02-15b.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-02-15b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-02-15b
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-15b
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-11a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-15b)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -656,22 +654,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-11a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-02-11a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-02-15b.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-02-11a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-02-15b.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-11a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-15b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-11a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-15b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -697,7 +695,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-11a)
 
             * Menu de acesso:
                 
-                * **Configurações** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
 
         #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
 
