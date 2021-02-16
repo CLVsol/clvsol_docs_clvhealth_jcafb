@@ -100,7 +100,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         * **Idoso**: todas as Pessoas na faixa etária "60+ anos".
 
-    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit` para todas as Pessoas:
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit`:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
@@ -112,77 +112,107 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Ativar o filtro **Agrupar por** » :bi:`Age Ranges` » :bi:`Categories`
 
-          #. Ativar o filtro **Agrupar por** » :bi:`Age Ranges` » :bi:`Categories`
+        #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**0-2 anos**" » :bi:`Category` = "**Criança**"
 
-          #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**0-2 anos**" » :bi:`Category` = "**Criança**"
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
-            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+            * Parâmetros utilizados:
 
-                * Parâmetros utilizados:
+                * *Categories*: **Remove** » **Criança**
 
-                    * *Categories*: **Remove** » **Criança**
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+        #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**3-10 anos**" » :bi:`Category` = "**indefinido**"
 
-            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**3-10 anos**" » :bi:`Category` = "**indefinido**"
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
-            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+            * Parâmetros utilizados:
 
-                * Parâmetros utilizados:
+                * *Categories*: **Set** » **Criança**
 
-                    * *Categories*: **Set** » **Criança**
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+        #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**11-17 anos**" » :bi:`Category` = "**Gestante**"
 
-            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**11-17 anos**" » :bi:`Category` = "**Gestante**"
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
-            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+            * Parâmetros utilizados:
 
-                * Parâmetros utilizados:
+                * *Categories*: **Remove** » **Gestante**
 
-                    * *Categories*: **Remove** » **Gestante**
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+        #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Gestante**"
 
-            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Gestante**"
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
-            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+            * Parâmetros utilizados:
 
-                * Parâmetros utilizados:
+                * *Categories*: **Remove** » **Gestante**
 
-                    * *Categories*: **Remove** » **Gestante**
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+        #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Idoso**"
 
-            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Idoso**"
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
-            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+            * Parâmetros utilizados:
 
-                * Parâmetros utilizados:
+                * *Categories*: **Remove** » **Idoso**
 
-                    * *Categories*: **Remove** » **Idoso**
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+        #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**60+ anos**" » :bi:`Category` = "**indefinido**"
 
-            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**60+ anos**" » :bi:`Category` = "**indefinido**"
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
-            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+            * Parâmetros utilizados:
 
-                * Parâmetros utilizados:
+                * *Categories*: **Set** » **Idoso**
 
-                    * *Categories*: **Set** » **Idoso**
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+        #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**indefinido**" » :bi:`Category` = "**Idoso**"
 
-            #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**indefinido**" » :bi:`Category` = "**Idoso**"
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
-            #. Exercutar a Ação ":bi:`Person Mass Edit`":
+            * Parâmetros utilizados:
 
-                * Parâmetros utilizados:
+                * *Categories*: **Remove** » **Idoso**
 
-                    * *Categories*: **Remove** » **Idoso**
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Person State` » :bi:`Categories`
+
+        #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unavailable**" » :bi:`Category` = "**Criança**"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Categories*: **Remove** » **Criança**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unavailable**" » :bi:`Category` = "**Idoso**"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Categories*: **Remove** » **Idoso**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Selecionar as Crianças para o Projeto JCAFB-2021v
 -------------------------------------------------
@@ -251,7 +281,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:01:50.940`
+            * :bi:`Execution time: 0:00:38.521`
 
 Selecionar as Pessoas (Aux) para o Projeto JCAFB-2021v
 ------------------------------------------------------
@@ -298,7 +328,7 @@ Selecionar as Pessoas (Aux) para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:01:48.185`
+            * :bi:`Execution time: 0:00:37.874`
 
 Selecionar os Endereços para o Projeto JCAFB-2021v
 --------------------------------------------------
@@ -341,7 +371,7 @@ Selecionar os Endereços para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:01:50.457`
+            * :bi:`Execution time: 0:00:35.880`
 
 Selecionar os Endereços (Aux) para o Projeto JCAFB-2021v
 --------------------------------------------------------
@@ -382,7 +412,7 @@ Selecionar os Endereços (Aux) para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:01:52.681`
+            * :bi:`Execution time: 0:00:34.927`
 
 Selecionar as Famílias para o Projeto JCAFB-2021v
 -------------------------------------------------
@@ -425,7 +455,7 @@ Selecionar as Famílias para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:01:53.959`
+            * :bi:`Execution time: 0:00:38.492`
 
 Criar Famílias para o Projeto JCAFB-2021v
 -----------------------------------------
@@ -440,9 +470,9 @@ Criar Famílias para o Projeto JCAFB-2021v
 
                 * :bi:`Community` » :bi:`Community` » :bi:`Persons (Aux)`
 
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Person (aux) State` » :bi:`Family`
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Person (Aux) State` » :bi:`Family`
 
-        #. Selecionar todas as Pessoas (Aux) com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person (aux) State` = ":bi:`Selected`" » :bi:`Family` = :bi:`Indefinido`
+        #. Selecionar todas as Pessoas (Aux) com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person (Aux) State` = ":bi:`Selected`" » :bi:`Family` = :bi:`Indefinido`
 
         #. Exercutar a Ação ":bi:`Person (Aux) Associate to Family`":
 
@@ -472,7 +502,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:02:01.302`
+            * :bi:`Execution time: 0:00:35.788`
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit`:
 
@@ -510,7 +540,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:02:01.963`
+            * :bi:`Execution time: 0:00:35.154`
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person (Aux) Reload`:
 
@@ -554,9 +584,9 @@ Criar Famílias para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:31:07.928`
+            * :bi:`Execution time: 0:29:04.115`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-14a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-16a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -582,16 +612,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-14a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-14a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-16a.sql
 
-            gzip clvhealth_jcafb_2021v_14_2021-02-14a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-14a.sql
+            gzip clvhealth_jcafb_2021v_14_2021-02-16a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-16a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-14a.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-16a.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-14a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-16a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -611,17 +641,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-14a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-14a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-14a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-14a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-14a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-16a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-16a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-16a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-16a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2021-02-14a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-02-14a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-02-14a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-14a
+.. index:: clvhealth_jcafb_2021v_14_2021-02-16a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-02-16a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-02-16a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-16a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-14a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-16a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -645,22 +675,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-14a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-02-14a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-02-16a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-02-14a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-02-16a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-14a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-16a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-14a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-16a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
