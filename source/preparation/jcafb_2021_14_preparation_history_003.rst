@@ -14,27 +14,6 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Associar as Pessoas selecionadas aos Grupos da JCAFB-2021v
-----------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-    #. Acessar a *View* *Persons*:
-
-        * Menu de acesso:
-
-            * :bi:`Community` » :bi:`Community` » :bi:`Persons`
-
-    #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Person State` » :bi:`Responsible Employee` » :bi:`Categories`
-
-    #. Selecionar as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person State` = ":bi:`Selected`" » :bi:`Responsible Employee` = :bi:`Indefinido`» :bi:`Category` = :bi:`Criança`:
-
-        * Distribuir as Crianças selecionados pelos Grupos da JCAFB-2021v de forma que o número de Crianças seja equanimemente distribuido entre os Grupos.
-
-    #. Selecionar as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person State` = ":bi:`Selected`" » :bi:`Responsible Employee` = :bi:`Indefinido`» :bi:`Category` = :bi:`Idoso`:
-
-        * Distribuir os Idosos selecionados pelos Grupos da JCAFB-2021v de forma que o número de Idosos seja equanimemente distribuido entre os Grupos.
-
 Criar os Documentos para as Crianças selecionadas para o Projeto JCAFB-2021v
 ----------------------------------------------------------------------------
 
