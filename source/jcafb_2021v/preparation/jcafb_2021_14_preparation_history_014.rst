@@ -246,4 +246,88 @@ Criar as Requisições de Exames para os Idosos selecionados para o Projeto JCAF
 
             #. Utilize o botão :bi:`Lab Test Request Set Up` para executar a Ação.
 
+Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
+----------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Employee Summary Set Up` para os Grupos de Campo do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Funcionários*:
+
+            * Menu de acesso:
+
+                * :bi:`Funcionários` » :bi:`Funcionários` » :bi:`Funcionários`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Trabalho`
+
+        #. Selecionar todos os Funcionários com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Trabalho` = ":bi:`Grupo de Campo`"
+
+        #. Exercutar a Ação ":bi:`Employee Summary Set Up`":
+
+            #. Utilize o botão :bi:`Employee Summary Set Up` para executar a Ação.
+
+Criar os Sumários para os Endereços selecionados para o Projeto JCAFB-2021v
+---------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Summary Set Up` para os Endereços selecionados para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Address State`
+
+        #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Address State` = ":bi:`Selected`"
+
+        #. Exercutar a Ação ":bi:`Address Summary Set Up`":
+
+            #. Utilize o botão :bi:`Address Summary Set Up` para executar a Ação.
+
+Criar os Sumários para as Famílias selecionadas para o Projeto JCAFB-2021v
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Family Summary Set Up` para as Famílias selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Family State`
+
+        #. Selecionar todos as Famílias com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Family State` = ":bi:`Selected`"
+
+        #. Exercutar a Ação ":bi:`Family Summary Set Up`":
+
+            #. Utilize o botão :bi:`Family Summary Set Up` para executar a Ação.
+
+Criar os Sumários para as Pessoas selecionadas para o Projeto JCAFB-2021v
+-------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Summary Set Up` para as Pessoas selecionadas para o Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Person State`
+
+        #. Selecionar todos as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person State` = ":bi:`Selected`"
+
+        #. Exercutar a Ação ":bi:`Person Summary Set Up`":
+
+            #. Utilize o botão :bi:`Person Summary Set Up` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
