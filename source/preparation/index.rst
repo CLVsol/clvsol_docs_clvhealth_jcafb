@@ -20,6 +20,5 @@ Preparação dos Dados
    :maxdepth: 3
    :caption: Conteúdo:
 
-   jcafb_2021_14_preparation_history_003
    jcafb_2021_14_preparation_history_004
    jcafb_2021_14_preparation_history_005
