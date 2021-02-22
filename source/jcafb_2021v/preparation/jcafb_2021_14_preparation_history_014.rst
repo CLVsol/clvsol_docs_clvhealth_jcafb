@@ -91,13 +91,16 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-18a)
 
         #. Salvar o registro editado.
 
-Instalar o(s) módulo(s) [clv_patient, clv_patient_aux]
-------------------------------------------------------
+Instalar o(s) módulo(s) [clv_patient, clv_patient_community, clv_patient_aux, clv_patient_jcafb, clv_patient_aux_jcafb]
+-----------------------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
         * clv_patient
+        * clv_patient_community
         * clv_patient_aux
+        * clv_patient_jcafb
+        * clv_patient_aux_jcafb
 
     #. [clvhealth-jcafb-2021-vm-pro] **Executar** a atualização do(s) Módulo(s):
 
