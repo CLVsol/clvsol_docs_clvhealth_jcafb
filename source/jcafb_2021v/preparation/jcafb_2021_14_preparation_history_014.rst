@@ -91,8 +91,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-18a)
 
         #. Salvar o registro editado.
 
-Instalar o(s) módulo(s) [clv_patient, clv_patient_community, clv_patient_aux, clv_patient_jcafb, clv_patient_aux_jcafb]
------------------------------------------------------------------------------------------------------------------------
+Instalar o(s) módulo(s) [ver lista]
+-----------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
@@ -101,6 +101,7 @@ Instalar o(s) módulo(s) [clv_patient, clv_patient_community, clv_patient_aux, c
         * clv_patient_aux
         * clv_patient_jcafb
         * clv_patient_aux_jcafb
+        * clv_patient_community_verification_jcafb
 
     #. [clvhealth-jcafb-2021-vm-pro] **Executar** a atualização do(s) Módulo(s):
 
@@ -147,5 +148,89 @@ Instalar o(s) módulo(s) [clv_patient, clv_patient_community, clv_patient_aux, c
                 exit
 
                 /etc/init.d/odoo start
+
+Marcar as Pessoas que sejam Pacientes da JCAFB-2021v
+----------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Is Patient` » :bi:`Categories`
+
+        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`" » :bi:`Categories` = "**Criança**"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Is Patient*: **Set** **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`" » :bi:`Categories` = "**Idoso**"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Is Patient*: **Set** **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Executar o processo de verificação para todas as Pessoas
+--------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Verification Execute` para todas as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Selecionar todas as Pessoas
+
+        #. Exercutar a Ação ":bi:`Person Verification Execute`":
+
+            #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
+
+Associar as Pessoas a um Paciente
+---------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Person Associate to Patient* para as Pessoas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * *Community* > *Community* > *Persons*
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Verification State` » :bi:`Verification Outcome Informations`
+
+        #. Selecionar todas as Pessoas com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Patient" register.`"
+
+        #. Exercutar a Ação "**Person Associate to Patient**":
+
+            * Parâmetros utilizados:
+
+                * *Create new Patient*: **marcado**
+
+            #. Utilize o botão *Associate to Patient* para executar a Ação.
+
+        #. Selecionar todas as Pessoas com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Patient" register.`"
+
+        #. Exercutar a Ação ":bi:`Person Verification Execute`":
+
+            #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
 
 .. toctree::   :maxdepth: 2
