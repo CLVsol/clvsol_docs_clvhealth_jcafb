@@ -101,6 +101,8 @@ Instalar o(s) módulo(s) [ver lista]
         * clv_patient_aux
         * clv_patient_jcafb
         * clv_patient_aux_jcafb
+        * clv_patient_verification_jcafb
+        * clv_patient_aux_verification_jcafb
         * clv_patient_community_verification_jcafb
 
     #. [clvhealth-jcafb-2021-vm-pro] **Executar** a atualização do(s) Módulo(s):
@@ -232,5 +234,82 @@ Associar as Pessoas a um Paciente
         #. Exercutar a Ação ":bi:`Person Verification Execute`":
 
             #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
+
+Executar o processo de verificação para todos os Patientes
+----------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Patient Verification Execute` para todos os Patientes:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patients`
+
+        #. Selecionar todos os Patientes
+
+        #. Exercutar a Ação ":bi:`Patient Verification Execute`":
+
+            #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
+
+Associar todos os Patientes a um Paciente (Aux)
+-----------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Patient Associate to Patient (Aux)` para todos os Pacientes:
+
+        #. Acessar a *view* :bi:`Patients`:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Register State`
+
+        #. Selecionar todos os Pacientes com :bi:`Register State` != ":bi:`Canceled`"
+
+        #. Exercutar a Ação :bi:`Patient Associate to Patient (Aux)`:
+
+            * Parâmetros utilizados:
+
+                * *Create new Patient (Aux)*: **marcado**
+
+            #. Utilize o botão :bi:`Associate to Patient (Aux)` para executar a Ação.
+
+Executar o processo de verificação para todos os Patientes
+----------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Patient Verification Execute` para todos os Patientes:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patients`
+
+        #. Selecionar todos os Patientes
+
+        #. Exercutar a Ação ":bi:`Patient Verification Execute`":
+
+            #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
+
+Executar o processo de verificação para todos os Patientes (Aux)
+----------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Patient (Aux) Verification Execute` para todos os Patientes (Aux):
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patients (Aux)`
+
+        #. Selecionar todos os Patientes
+
+        #. Exercutar a Ação ":bi:`Patient (Aux) Verification Execute`":
+
+            #. Utilize o botão :bi:`Patient (Aux) Verification Execute` para executar a Ação.
 
 .. toctree::   :maxdepth: 2
