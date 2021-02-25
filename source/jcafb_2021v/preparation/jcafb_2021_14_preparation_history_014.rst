@@ -91,8 +91,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-18a)
 
         #. Salvar o registro editado.
 
-Instalar o(s) módulo(s) [ver lista]
------------------------------------
+:red:`(Já Executado)` Instalar o(s) módulo(s) [ver lista]
+---------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
