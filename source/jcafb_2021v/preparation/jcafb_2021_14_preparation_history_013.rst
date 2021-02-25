@@ -91,8 +91,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-16a)
 
         #. Salvar o registro editado.
 
-Atualizar o(s) módulo(s) [clv_person]
--------------------------------------
+:red:`(Já Executado)` Atualizar o(s) módulo(s) [clv_person]
+-----------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
@@ -161,8 +161,8 @@ Associar as Pessoas selecionadas aos Grupos da JCAFB-2021v
 
         * Distribuir os Idosos e Crianças selecionados pelos Grupos da JCAFB-2021v de forma que o números de Idosos e Crianças sejam equanimemente distribuido entre os Grupos.
 
-Atualizar o(s) módulo(s) [clv_person_aux]
------------------------------------------
+:red:`(Já Executado)` Atualizar o(s) módulo(s) [clv_person_aux]
+---------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
@@ -356,8 +356,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-17a)
 
         #. Salvar o registro editado.
 
-Atualizar o(s) módulo(s) [clv_address, clv_family, clv_person]
---------------------------------------------------------------
+:red:`(Já Executado)` Atualizar o(s) módulo(s) [clv_address, clv_family, clv_person]
+------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
