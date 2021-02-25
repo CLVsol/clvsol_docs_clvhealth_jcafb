@@ -91,8 +91,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-15b)
 
         #. Salvar o registro editado.
 
-Atualizar o *Person Category* de todas as Pessoas
--------------------------------------------------
+:red:`(Já Executado)` Atualizar o *Person Category* de todas as Pessoas
+-----------------------------------------------------------------------
 
     Critérios utilizados:
 
