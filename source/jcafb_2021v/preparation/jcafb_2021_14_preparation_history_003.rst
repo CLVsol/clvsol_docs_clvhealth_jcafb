@@ -1074,7 +1074,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
-        #. Acessar a *View* *Persons*:
+        #. Acessar a *View* *Documents*:
 
             * Menu de acesso:
 
@@ -1088,7 +1088,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha Anemia (JCAFB-2017)**
+                * *Markers*: **Add** » **Campanha Anemia (JCAFB-2017)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1098,7 +1098,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha Anemia (JCAFB-2018)**
+                * *Markers*: **Add** » **Campanha Anemia (JCAFB-2018)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1108,7 +1108,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha Anemia (JCAFB-2019)**
+                * *Markers*: **Add** » **Campanha Anemia (JCAFB-2019)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1118,7 +1118,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha Anemia (JCAFB-2020)**
+                * *Markers*: **Add** » **Campanha Anemia (JCAFB-2020)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1128,7 +1128,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha DHC (JCAFB-2017)**
+                * *Markers*: **Add** » **Campanha DHC (JCAFB-2017)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1138,7 +1138,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha DHC (JCAFB-2018)**
+                * *Markers*: **Add** » **Campanha DHC (JCAFB-2018)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1148,7 +1148,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha DHC (JCAFB-2019)**
+                * *Markers*: **Add** » **Campanha DHC (JCAFB-2019)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1158,7 +1158,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Campanha DHC (JCAFB-2020)**
+                * *Markers*: **Add** » **Campanha DHC (JCAFB-2020)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1169,7 +1169,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
-        #. Acessar a *View* *Persons*:
+        #. Acessar a *View* *Documents*:
 
             * Menu de acesso:
 
@@ -1183,7 +1183,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2017)**
+                * *Markers*: **Add** » **Selected (JCAFB-2017)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1193,7 +1193,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2017)**
+                * *Markers*: **Add** » **Selected (JCAFB-2017)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1203,7 +1203,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2018)**
+                * *Markers*: **Add** » **Selected (JCAFB-2018)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1213,7 +1213,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2018)**
+                * *Markers*: **Add** » **Selected (JCAFB-2018)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1223,7 +1223,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2019)**
+                * *Markers*: **Add** » **Selected (JCAFB-2019)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1233,7 +1233,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2019)**
+                * *Markers*: **Add** » **Selected (JCAFB-2019)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1243,7 +1243,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2020)**
+                * *Markers*: **Add** » **Selected (JCAFB-2020)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
@@ -1253,11 +1253,46 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
             * Parâmetros utilizados:
 
-                * *Markers*: **Add** **Selected (JCAFB-2020)**
+                * *Markers*: **Add** » **Selected (JCAFB-2020)**
 
             #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-01a)
+Marcar as Crianças e os Idosos que ainda não participaram do Projeto da JCAFB (2017 - 2020)
+-------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Markers` » :bi:`Categories``
+
+        #. Selecionar todas as Pessoas com: :bi:`Markers` = ":bi:`Indefinido`" » :bi:`Categories` = "**Criança**""
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit"`:
+
+            * Parâmetros utilizados:
+
+                * *Markers*: **Add** » **Não Participante (JCAFB)**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Selecionar todas as Pessoas com: :bi:`Markers` = ":bi:`Indefinido`" » :bi:`Categories` = "**Idoso**""
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit"`:
+
+            * Parâmetros utilizados:
+
+                * *Markers*: **Add** » **Não Participante (JCAFB)**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-02a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -1283,16 +1318,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-01a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-01a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-02a.sql
 
-            gzip clvhealth_jcafb_2021v_14_2021-03-01a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-01a.sql
+            gzip clvhealth_jcafb_2021v_14_2021-03-02a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-02a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-01a.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-02a.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-01a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-02a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -1312,17 +1347,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-01a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-01a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-01a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-01a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-01a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-02a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-02a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-02a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-02a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2021-03-01a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-03-01a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-01a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-01a
+.. index:: clvhealth_jcafb_2021v_14_2021-03-02a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-03-02a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-02a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-02a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-01a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-02a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -1346,22 +1381,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-01a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-03-01a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-03-02a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-03-01a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-03-02a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-01a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-02a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-01a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-02a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
