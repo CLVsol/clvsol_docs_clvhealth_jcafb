@@ -14,7 +14,7 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-25a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-03a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -38,22 +38,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-25a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-02-25a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-03-03a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-02-25a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-03-03a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-25a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-03a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-25a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-03a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -164,9 +164,11 @@ Marcar as Pessoas que sejam Pacientes da JCAFB-2021v
 
                 * :bi:`Community` » :bi:`Community` » :bi:`Persons`
 
-        #. Ativar o filtro **Agrupar por** » :bi:`Is Patient` » :bi:`Categories`
+        #. Ativar o filtro **Filtros** » **Adicionar Filtro Personalizado** » :bi:`Marker Names` » **contém** » **Selected**
 
-        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`" » :bi:`Categories` = "**Criança**"
+        #. Ativar o filtro **Agrupar por** » :bi:`Is Patient`
+
+        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
 
         #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
@@ -176,7 +178,39 @@ Marcar as Pessoas que sejam Pacientes da JCAFB-2021v
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`" » :bi:`Categories` = "**Idoso**"
+        #. Ativar o filtro **Filtros** » **Adicionar Filtro Personalizado** » :bi:`Marker Names` » **contém** » **Campanha Anemia**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Is Patient`
+
+        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Is Patient*: **Set** **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Ativar o filtro **Filtros** » **Adicionar Filtro Personalizado** » :bi:`Marker Names` » **contém** » **Campanha DHC**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Is Patient`
+
+        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Is Patient*: **Set** **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Ativar o filtro **Filtros** » **Adicionar Filtro Personalizado** » :bi:`Marker Names` » **contém** » **Não Participante**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Is Patient`
+
+        #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
 
         #. Exercutar a Ação ":bi:`Person Mass Edit`":
 
@@ -221,11 +255,74 @@ Criar as Categorias de Pacientes para a JCAFB-2021v
 
                 * *Name*: **Criança**
 
-        * Categorias criadas:
-            
             * **Idoso**
 
                 * *Name*: **Idoso**
+
+Criar os Marcadores de Pacientes para a JCAFB-2021v
+---------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Criar os Marcadores de Pacientes para a **JCAFB-2021v**:
+
+        * Menu de acesso:
+            
+            * :bi:`Health` » :bi:`Configuration` » :bi:`Patient` » :bi:`Markers`
+
+        * Marcadores criados:
+            
+            * **Campanha Anemia (JCAFB-2017)**
+
+                * *Name*: **Campanha Anemia (JCAFB-2017)**
+
+            * **Campanha Anemia (JCAFB-2018)**
+
+                * *Name*: **Campanha Anemia (JCAFB-2019)**
+
+            * **Campanha Anemia (JCAFB-2019)**
+
+                * *Name*: **Campanha Anemia (JCAFB-2020)**
+
+            * **Campanha Anemia (JCAFB-2020)**
+
+                * *Name*: **Campanha Anemia (JCAFB-2018)**
+
+            * **Campanha DHC (JCAFB-2017)**
+
+                * *Name*: **Campanha DHC (JCAFB-2017)**
+
+            * **Campanha DHC (JCAFB-2018)**
+
+                * *Name*: **Campanha DHC (JCAFB-2019)**
+
+            * **Campanha DHC (JCAFB-2019)**
+
+                * *Name*: **Campanha DHC (JCAFB-2020)**
+
+            * **Campanha DHC (JCAFB-2020)**
+
+                * *Name*: **Campanha DHC (JCAFB-2018)**
+
+            * **Não Participante (JCAFB)**
+
+                * *Name*: **Não Participante (JCAFB)**
+
+            * **Selected (JCAFB-2017)**
+
+                * *Name*: **Selected (JCAFB-2017)**
+
+            * **Selected (JCAFB-2018)**
+
+                * *Name*: **Selected (JCAFB-2019)**
+
+            * **Selected (JCAFB-2019)**
+
+                * *Name*: **Selected (JCAFB-2020)**
+
+            * **Selected (JCAFB-2020)**
+
+                * *Name*: **Selected (JCAFB-2018)**
 
 Associar as Pessoas a um Paciente
 ---------------------------------
@@ -319,6 +416,8 @@ Atualizar o *Register State* de todos os Pacientes
 
                 * *Register State*: **Set** » **Done**
 
+                * *Patient Verification Execute*: **marcado**
+
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 Associar todos os Pacientes a um Paciente (Aux)
@@ -404,7 +503,7 @@ Executar o processo de verificação para todos os Pacientes (Aux)
 
             #. Utilize o botão :bi:`Patient (Aux) Verification Execute` para executar a Ação.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-28a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-03b)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -430,16 +529,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-28a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-28a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-03b.sql
 
-            gzip clvhealth_jcafb_2021v_14_2021-02-28a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-02-28a.sql
+            gzip clvhealth_jcafb_2021v_14_2021-03-03b.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-03b.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-28a.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-03b.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-28a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-03b.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -459,17 +558,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-28a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-28a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-02-28a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-28a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-28a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-03b.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-03b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-03b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-03b.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2021-02-28a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-02-28a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-02-28a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-28a
+.. index:: clvhealth_jcafb_2021v_14_2021-03-03b.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-03-03b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-03b
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-03b
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-28a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-03b)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -493,22 +592,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-02-28a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-02-28a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-03-03b.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-02-28a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-03-03b.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-02-28a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-03b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-02-28a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-03b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
