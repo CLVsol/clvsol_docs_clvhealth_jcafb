@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procedimentos relatlivos aos Cadastros
+.. index:: Procedimentos relatlivos aos Cadastros [Comunidade]
 
-======================================
-Procedimentos relatlivos aos Cadastros
-======================================
+===================================================
+Procedimentos relatlivos aos Cadastros [Comunidade]
+===================================================
 
 .. toctree::
    :maxdepth: 2
