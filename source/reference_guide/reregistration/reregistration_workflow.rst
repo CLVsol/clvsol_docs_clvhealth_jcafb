@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Fluxo de Trabalho (Workflow) do Cadastramento/Recadastramento
+.. index:: Fluxo de Trabalho (Workflow) do Cadastramento/Recadastramento [Comunidade]
 
-===================================================================
-**Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento
-===================================================================
+================================================================================
+**Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento [Comunidade]
+================================================================================
 
 O **Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento de **Pessoas**, concomitante ao de **Endereços** é descrito pelas etapas apresentadas em seguida.
 

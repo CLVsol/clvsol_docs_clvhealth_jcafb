@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Relacionamento entre o Cadastro Auxiliar e o Cadastro Principal
+.. index:: Relacionamento entre o Cadastro Auxiliar e o Cadastro Principal [Comunidade]
 
-=======================================================================
-Relacionamento entre o **Cadastro Auxiliar** e o **Cadastro Principal**
-=======================================================================
+====================================================================================
+Relacionamento entre o **Cadastro Auxiliar** e o **Cadastro Principal** [Comunidade]
+====================================================================================
 
 Além do inter-relacionamento entre as **Entidades** que compõem cada um dos Cadastros, existe o relacionamento entre as **Entidades (Aux)** do **Cadastro Auxiliar** e as **Entidades** do **Cadastro Principal**:
 

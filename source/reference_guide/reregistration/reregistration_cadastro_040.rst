@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Sincronismo entre o Cadastro Auxiliar e o Cadastro Principal
+.. index:: Sincronismo entre o Cadastro Auxiliar e o Cadastro Principal [Comunidade]
 
-====================================================================
-Sincronismo entre o **Cadastro Auxiliar** e o **Cadastro Principal**
-====================================================================
+=================================================================================
+Sincronismo entre o **Cadastro Auxiliar** e o **Cadastro Principal** [Comunidade]
+=================================================================================
 
 Como já salientado anteriormente, as informações cadastrais de todas as Pessoas e seus respectivos Endereços são armazenadas duplamente no **Cadastro Principal** e no **Cadastro Auxiliar**.
 

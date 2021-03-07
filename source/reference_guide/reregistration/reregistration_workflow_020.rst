@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Criação do Cadastro Auxiliar
+.. index:: Criação do Cadastro Auxiliar [Comunidade]
 
-================================
-Criação do **Cadastro Auxiliar**
-================================
+=============================================
+Criação do **Cadastro Auxiliar** [Comunidade]
+=============================================
 
     Se, após a pesquisa por uma **Pessoa** nos **Cadastros**, não for identificado um registro associado a ela em ":bi:`Persons (Aux)`", essa Pessoa deve ser incluída no **Cadastro Auxiliar**.
 

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Os Cadastros
+.. index:: Os Cadastros [Comunidade]
 
-================
-Os **Cadastros**
-================
+=============================
+Os **Cadastros** [Comunidade]
+=============================
 
 Os **Cadastros** são os elementos centrais de armazenamento das informações geradas e coletadas durante a realização das atividades da :bi:`JCAFB`.
 

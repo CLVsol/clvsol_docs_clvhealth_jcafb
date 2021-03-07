@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura pelas Entidades nos Cadastros existentes
+.. index:: Procura pelas Entidades nos Cadastros existentes [Comunidade]
 
-========================================================
-Procura pelas **Entidades** nos **Cadastros** existentes
-========================================================
+=====================================================================
+Procura pelas **Entidades** nos **Cadastros** existentes [Comunidade]
+=====================================================================
 
 De posse dos dados referentes a uma Entidade do Cadastro (Pessoa, Endereço ou Família), o primeiro passo é a pesquisa pela existência prévia de registros relacionados a essa Entidade tanto no **Cadastro** (Pessoa, Endereço ou Família) quanto no **Cadastro Auxiliar** (Pessoa ou Endereço).
 

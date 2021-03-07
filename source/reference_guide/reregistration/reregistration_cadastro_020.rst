@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Cadastro Auxiliar
+.. index:: Cadastro Auxiliar [Comunidade]
 
-=====================
-**Cadastro Auxiliar**
-=====================
+==================================
+**Cadastro Auxiliar** [Comunidade]
+==================================
 
 O **Cadastro Auxiliar** é composto pelas 2 **Entidades (Aux)**:
 

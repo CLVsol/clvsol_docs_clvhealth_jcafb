@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Cadastro Principal
+.. index:: Cadastro Principal [Comunidade]
 
-======================
-**Cadastro Principal**
-======================
+===================================
+**Cadastro Principal** [Comunidade]
+===================================
 
 O **Cadastro Principal** é composto pelas 3 **Entidades de Cadastro**:
 

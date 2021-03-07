@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Preparação do Cadastro Auxiliar
+.. index:: Preparação do Cadastro Auxiliar [Comunidade]
 
-===================================
-Preparação do **Cadastro Auxiliar**
-===================================
+================================================
+Preparação do **Cadastro Auxiliar** [Comunidade]
+================================================
 
 De forma a agilizar o Processo de  **Cadastramento/Recadastramento** de todas as Pessoas, concomitantemente ao de seus respectivos Endereços é conveniente que o **Cadastro Auxiliar** seja preparado previamente.
 
