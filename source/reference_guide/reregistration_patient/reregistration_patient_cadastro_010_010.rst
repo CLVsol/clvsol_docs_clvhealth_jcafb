@@ -10,16 +10,12 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Guia de Referência
+.. index:: Patient
 
-==================
-Guia de Referência
-==================
+=============
+:bi:`Patient`
+=============
 
 .. toctree::
-   :maxdepth: 5
-   :caption: Conteúdo:
-
-   reregistration/reregistration
-   reregistration_patient/reregistration_patient
-   survey/index
+   :maxdepth: 2
+   :caption: Itens Relacionados:

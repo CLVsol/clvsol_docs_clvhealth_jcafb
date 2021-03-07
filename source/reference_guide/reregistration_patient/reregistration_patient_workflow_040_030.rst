@@ -10,16 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Guia de Referência
+.. index:: Consolidação de Patient
 
-==================
-Guia de Referência
-==================
+=============================
+Consolidação de :bi:`Patient`
+=============================
 
 .. toctree::
-   :maxdepth: 5
-   :caption: Conteúdo:
+   :maxdepth: 2
+   :caption: Itens Relacionados:
 
-   reregistration/reregistration
-   reregistration_patient/reregistration_patient
-   survey/index
+   reregistration_patient_workflow_040_030_010

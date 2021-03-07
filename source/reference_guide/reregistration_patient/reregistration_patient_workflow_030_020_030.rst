@@ -10,16 +10,12 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Guia de Referência
+.. index:: Consolidação de Patient (Aux) - (L2)
 
-==================
-Guia de Referência
-==================
+==========================================
+Consolidação de :bi:`Patient (Aux)` - (L2)
+==========================================
 
 .. toctree::
-   :maxdepth: 5
-   :caption: Conteúdo:
-
-   reregistration/reregistration
-   reregistration_patient/reregistration_patient
-   survey/index
+   :maxdepth: 2
+   :caption: Procedimentos:
