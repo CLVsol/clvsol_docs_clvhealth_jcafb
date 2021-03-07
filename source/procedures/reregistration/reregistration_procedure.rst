@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procedimentos de Recadastramento
+.. index:: Procedimentos de Recadastramento [Comunidade]
 
-====================================
-**Procedimentos** de Recadastramento
-====================================
+=================================================
+**Procedimentos** de Recadastramento [Comunidade]
+=================================================
 
 .. toctree::
    :maxdepth: 3
