@@ -10,14 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Cadastramento/Recadastramento
-.. index:: O Processo de Cadastramento/Recadastramento
+.. index:: Cadastramento/Recadastramento [Comunidade]
+.. index:: O Processo de Cadastramento/Recadastramento [Comunidade]
 
-=================================
-**Cadastramento/Recadastramento**
-=================================
+==============================================
+**Cadastramento/Recadastramento** [Comunidade]
+==============================================
 
-O Processo de **Cadastramento/Recadastramento** é a base do planejamento e preparação, que antecedem a maioria das atividades da :bi:`JCAFB`.
+O Processo de **Cadastramento/Recadastramento** de uma Comunidade é a base do planejamento e preparação, que antecedem a maioria das atividades da :bi:`JCAFB`.
 
 Este Processo baseia-se no **Cadastramento/Recadastramento** de todas as Pessoas atendidas pela :bi:`JCAFB`, concomitantemente ao **Cadastramento/Recadastramento** dos respectivos Endereços, quando estes estiverem localizados na comunidade atendida pela :bi:`JCAFB`.
 
