@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Cadastro Auxiliar (Procedimentos)
+.. index:: Cadastro Auxiliar [Comunidade] (Procedimentos)
 
-=====================================
-**Cadastro Auxiliar** (Procedimentos)
-=====================================
+==================================================
+**Cadastro Auxiliar** [Comunidade] (Procedimentos)
+==================================================
 
 .. toctree::
    :maxdepth: 2

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Cadastro Principal (Procedimentos)
+.. index:: Cadastro Principal [Comunidade] (Procedimentos)
 
-======================================
-**Cadastro Principal** (Procedimentos)
-======================================
+===================================================
+**Cadastro Principal** [Comunidade] (Procedimentos)
+===================================================
 
 .. toctree::
    :maxdepth: 2

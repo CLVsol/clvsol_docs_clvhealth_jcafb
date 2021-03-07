@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação das Entidades do Cadastro Principal (Procedimentos)
+.. index:: Consolidação das Entidades do Cadastro Principal [Comunidade] (Procedimentos)
 
-====================================================================
-Consolidação das Entidades do **Cadastro Principal** (Procedimentos)
-====================================================================
+=================================================================================
+Consolidação das Entidades do **Cadastro Principal** [Comunidade] (Procedimentos)
+=================================================================================
 
 .. toctree::
    :maxdepth: 2

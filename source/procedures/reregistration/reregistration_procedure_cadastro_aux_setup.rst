@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Preparação do Cadastro Auxiliar (Procedimentos)
+.. index:: Preparação do Cadastro Auxiliar [Comunidade] (Procedimentos)
 
-===================================================
-Preparação do **Cadastro Auxiliar** (Procedimentos)
-===================================================
+================================================================
+Preparação do **Cadastro Auxiliar** [Comunidade] (Procedimentos)
+================================================================
 
 .. toctree::
    :maxdepth: 2

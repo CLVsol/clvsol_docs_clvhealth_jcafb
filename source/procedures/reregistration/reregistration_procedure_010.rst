@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura pelas Entidades nos Cadastros existentes (Procedimentos)
+.. index:: Procura pelas Entidades nos Cadastros existentes [Comunidade] (Procedimentos)
 
-========================================================================
-Procura pelas **Entidades** nos **Cadastros** existentes (Procedimentos)
-========================================================================
+=====================================================================================
+Procura pelas **Entidades** nos **Cadastros** existentes [Comunidade] (Procedimentos)
+=====================================================================================
 
 .. toctree::
    :maxdepth: 2
