@@ -22,6 +22,7 @@ Consolidação de :bi:`Patient (Aux)` - (L0)
    :caption: Procedimentos:
 
    reregistration_patient_workflow_030_020_010_005
+   reregistration_patient_workflow_030_020_010_006
    reregistration_patient_workflow_030_020_010_010
    reregistration_patient_workflow_030_020_010_030
    reregistration_patient_workflow_030_020_010_040
