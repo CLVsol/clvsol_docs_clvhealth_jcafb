@@ -21,6 +21,7 @@ Consolidação de :bi:`Patient (Aux)` (Procedimentos)
    :caption: Tópicos Relacionados:
 
    reregistration_patient_procedure_030_020_005
+   reregistration_patient_procedure_030_020_006
    reregistration_patient_procedure_030_020_010
    reregistration_patient_procedure_030_020_030
    reregistration_patient_procedure_030_020_040
