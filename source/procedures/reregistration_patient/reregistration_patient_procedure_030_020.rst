@@ -20,6 +20,7 @@ Consolidação de :bi:`Patient (Aux)` (Procedimentos)
    :maxdepth: 2
    :caption: Tópicos Relacionados:
 
+   reregistration_patient_procedure_030_020_005
    reregistration_patient_procedure_030_020_010
    reregistration_patient_procedure_030_020_030
    reregistration_patient_procedure_030_020_040
