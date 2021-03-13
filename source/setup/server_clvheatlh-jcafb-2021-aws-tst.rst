@@ -582,8 +582,8 @@ Repositories Installation
             git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 14.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 14.0
