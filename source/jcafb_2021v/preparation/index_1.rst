@@ -26,6 +26,8 @@ Preparação de Dados - Fase 1
    jcafb_2021_14_preparation_history_004
    jcafb_2021_14_preparation_history_005
 
+   jcafb_2021_14_preparation_history_011
+
    jcafb_2021_14_preparation_history_111
    jcafb_2021_14_preparation_history_112
    jcafb_2021_14_preparation_history_113
