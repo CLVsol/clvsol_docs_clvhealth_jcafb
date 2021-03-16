@@ -1062,35 +1062,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-03a)
 
         #. Salvar o registro editado.
 
-Criar os Marcadores de Endereços para a JCAFB-2021v
----------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-    #. Criar os Marcadores de Endereços para a **JCAFB-2021v**:
-
-        * Menu de acesso:
-            
-            * :bi:`Community` » :bi:`Configuration` » :bi:`Address` » :bi:`Markers`
-
-        * Markers criados:
-            
-            * **Selected (JCAFB-2017)**
-
-                * *Name*: **Selected (JCAFB-2020)**
-
-            * **Selected (JCAFB-2018)**
-
-                * *Name*: **Selected (JCAFB-2020)**
-
-            * **Selected (JCAFB-2019)**
-
-                * *Name*: **Selected (JCAFB-2020)**
-
-            * **Selected (JCAFB-2020)**
-
-                * *Name*: **Selected (JCAFB-2020)**
-
 Atualizar o(s) módulo(s) [ver lista]
 ------------------------------------
 
@@ -1145,6 +1116,35 @@ Atualizar o(s) módulo(s) [ver lista]
                 exit
 
                 /etc/init.d/odoo start
+
+Criar os Marcadores de Endereços para a JCAFB-2021v
+---------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Criar os Marcadores de Endereços para a **JCAFB-2021v**:
+
+        * Menu de acesso:
+            
+            * :bi:`Community` » :bi:`Configuration` » :bi:`Address` » :bi:`Markers`
+
+        * Markers criados:
+            
+            * **Selected (JCAFB-2017)**
+
+                * *Name*: **Selected (JCAFB-2020)**
+
+            * **Selected (JCAFB-2018)**
+
+                * *Name*: **Selected (JCAFB-2020)**
+
+            * **Selected (JCAFB-2019)**
+
+                * *Name*: **Selected (JCAFB-2020)**
+
+            * **Selected (JCAFB-2020)**
+
+                * *Name*: **Selected (JCAFB-2020)**
 
 Marcar os Endereços atuais das Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 -----------------------------------------------------------------------------------------
