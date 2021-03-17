@@ -98,6 +98,234 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
 
         * clv_residence
         * clv_residence_community
+        * clv_residence_jcafb
+        * clv_residence_verification_jcafb
+        * clv_residence_community_verification_jcafb
+
+    #. [clvhealth-jcafb-2021-vm-pro] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **clvhealth-jcafb-2021-vm-pro** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** clvhealth-jcafb-2021-vm-pro (session 1)
+                #
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **clvhealth-jcafb-2021-vm-pro** e executar o **install.py**:
+
+            ::
+
+                # ***** clvhealth-jcafb-2021-vm-pro (session 2)
+                #
+
+                ssh clvhealth-jcafb-2021-vm-pro -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13"
+            
+        #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
+
+            ::
+
+                # ***** clvhealth-jcafb-2021-vm-pro (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Marcar os Endereços das Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
+----------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Ativar o filtro **Filtros** » **Adicionar Filtro Personalizado** » :bi:`Marker Names` » **contém** » **Selected**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Is Residence`
+
+        #. Selecionar todos os Endereços com: :bi:`Is Residence` = ":bi:`false`"
+
+        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Is Residence*: **Set** **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Executar o processo de verificação para todos os Endereços
+----------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Verification Execute` para todos os Endereços:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todos os Endereços
+
+        #. Exercutar a Ação ":bi:`Address Verification Execute`":
+
+            #. Utilize o botão :bi:`Address Verification Execute` para executar a Ação.
+
+Criar as Categorias de Residências para a JCAFB-2021v
+-----------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Criar as Categorias de Residências para a **JCAFB-2021v**:
+
+        * Menu de acesso:
+            
+            * :bi:`Health` » :bi:`Configuration` » :bi:`Residence` » :bi:`Categories`
+
+        * Categorias criadas:
+            
+            * **Zona Rural**
+
+                * *Name*: **Zona Rural**
+
+            * **Zona Urbana**
+
+                * *Name*: **Zona Urbana**
+
+Criar os Marcadores de Residências para a JCAFB-2021v
+-----------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Criar os Marcadores de Residências para a **JCAFB-2021v**:
+
+        * Menu de acesso:
+            
+            * :bi:`Health` » :bi:`Configuration` » :bi:`Residence` » :bi:`Markers`
+
+        * Marcadores criados:
+            
+            * **Selected (JCAFB-2017)**
+
+                * *Name*: **Selected (JCAFB-2017)**
+
+            * **Selected (JCAFB-2018)**
+
+                * *Name*: **Selected (JCAFB-2019)**
+
+            * **Selected (JCAFB-2019)**
+
+                * *Name*: **Selected (JCAFB-2020)**
+
+            * **Selected (JCAFB-2020)**
+
+                * *Name*: **Selected (JCAFB-2018)**
+
+Associar os Endereços a uma Residência
+--------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Address Associate to Residence* para os Endereços:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:` » :bi:`Addresses`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Verification State` » :bi:`Verification Outcome Informations`
+
+        #. Selecionar todos os Endereços com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Residence" register.`"
+
+        #. Exercutar a Ação "**Address Associate to Patient**":
+
+            * Parâmetros utilizados:
+
+                * *Create new Residence*: **marcado**
+
+            #. Utilize o botão *Associate to Residence* para executar a Ação.
+
+        #. Selecionar todas as Pessoas com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Residence" register.`"
+
+        #. Exercutar a Ação ":bi:`Address Verification Execute`":
+
+            #. Utilize o botão :bi:`Address Verification Execute` para executar a Ação.
+
+Executar o processo de verificação para todas as Residências
+------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Residence Verification Execute` para todas as Residências:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Resiodences*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar todas as Residências
+
+        #. Exercutar a Ação ":bi:`Residence Verification Execute`":
+
+            #. Utilize o botão :bi:`Residence Verification Execute` para executar a Ação.
+
+Atualizar o *Register State* de todas as Residências
+----------------------------------------------------
+
+    Critérios utilizados:
+
+        * **Done**: todas as Residências.
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Residence Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar todas as Residências
+
+        #. Exercutar a Ação ":bi:`Residence Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Register State*: **Set** » **Done**
+
+                * *Residence Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
+-------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
+
         * clv_patient
         * clv_patient_community
         * clv_patient_aux
