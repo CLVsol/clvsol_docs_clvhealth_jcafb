@@ -157,6 +157,80 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
 
                 /etc/init.d/odoo start
 
+Atualizar o(s) módulo(s) [clv_processing_jcafb]
+-----------------------------------------------
+
+    #. [clvhealth-jcafb-2021-vm-pro] Lista de Módulos:
+
+        * clv_processing_jcafb
+
+    #. [clvhealth-jcafb-2021-vm-pro] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **clvhealth-jcafb-2021-vm-pro** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** clvhealth-jcafb-2021-vm-pro (session 1)
+                #
+
+                ssh clvhealth-jcafb-2021-vm-pro -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **clvhealth-jcafb-2021-vm-pro** e executar o **install.py**:
+
+            ::
+
+                # ***** clvhealth-jcafb-2021-vm-pro (session 2)
+                #
+
+                ssh clvhealth-jcafb-2021-vm-pro -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" - m clv_processing_jcafb
+            
+        #. Retornar a execução do *Odoo* do servidor **clvhealth-jcafb-2021-vm-pro** ao modo desejado:
+
+            ::
+
+                # ***** clvhealth-jcafb-2021-vm-pro (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Atualizar o *Verification Domain Filter* dos *Verification Schedules* (Current Phase)
+-------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvhealth-jcafb-2021-vm-pro <https://clvhealth-jcafb-2021-vm-pro>`_
+
+    #. Atualizar o *Verification Domain Filter* dos *Verification Schedules*:
+
+        * *Verification Schedules*:
+
+            * "Current Phase - clv.patient [_patient_verification_exec]"
+
+            * "Current Phase - clv.patient_aux [_patient_aux_verification_exec]"
+
+            * "Current Phase - clv.residence [_residence_verification_exec]"
+
+        * Atualização:
+
+            * De: "**[('phase_id', '=', 0)]**"
+
+            * Para: "**[('phase_id', '=', 5)]**" (JCAFB-2021v)
+
 Marcar os Endereços das Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 ----------------------------------------------------------------------------------
 
