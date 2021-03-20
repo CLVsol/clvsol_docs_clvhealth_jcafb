@@ -1357,4 +1357,436 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-16a)
 
         #. Salvar o registro editado.
 
+Atualizar o *Address Category* dos Endereços
+--------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Atualizar o :bi:`Address Category` conforme necessário.
+
+            * Adicionar uma categoria quando não houver.
+
+Atualizar o *Person State* das Pessoas
+--------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Person State`
+
+        #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unselect**"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person State*: **Set** » **Available**
+
+                * *Person Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address Categories` » :bi:`Person State`
+
+        #. Selecionar todas as Pessoas com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Person State` = "**Available**"
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person State*: **Set** » **Unavailable**
+
+                * *Person Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Person (Aux) State* das Pessoas (Aux)
+--------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person (Aux) Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons (Aux)*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Persons (Aux)`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Person (Aux) State`
+
+        #. Selecionar todas as Pessoas (Aux) com: :bi:`Person (Aux) State` = "**Unselect**"
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person (Aux) State*: **Set** » **Available**
+
+                * *Person (Aux) Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address Categories` » :bi:`Person (Aux) State`
+
+        #. Selecionar todas as Pessoas com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Person (Aux) State` = "**Available**"
+
+        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Person (Aux) State*: **Set** » **Unavailable**
+
+                * *Person (Aux) Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Address State* dos Endereços
+-----------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address State`
+
+        #. Selecionar todas as Pessoas com: :bi:`Address State` = "**Unselect**"
+
+        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Address State*: **Set** » **Available**
+
+                * *Address Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Address (Aux) State* dos Endereços (Aux)
+-----------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address (Aux) Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses (Aux)*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Auxiliary` » :bi:`Addresses (Aux)`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address (Aux) State`
+
+        #. Selecionar todas as Pessoas com: :bi:`Address (Aux) State` = "**Unselect**"
+
+        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Address (Aux) State*: **Set** » **Available**
+
+                * *Address (Aux) Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Family State* das Famílias
+---------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Family Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Families*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Families`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Family State`
+
+        #. Selecionar todas as Famílias com: :bi:`Family State` = "**Unselect**"
+
+        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Family State*: **Set** » **Available**
+
+                * *Family Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address Categories` » :bi:`Family State`
+
+        #. Selecionar todas as Famílias com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Family State` = "**Available**"
+
+        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Family State*: **Set** » **Unavailable**
+
+                * *Family Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Selecionar todas as Famílias com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Family State` = "**Unknown**"
+
+        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Family State*: **Set** » **Unavailable**
+
+                * *Family Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Excluir o *Global Tag* de todas as Pessoas
+---------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Person Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Persons`
+
+        #. Selecionar todas as Pessoas
+
+        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Global Tag*: **Remove** » **Todas as Tags existentes**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Excluir o *Global Tag* de todos os Endereços
+--------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Selecionar todos os Endereços
+
+        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Global Tag*: **Remove** » **Todas as Tags existentes**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Excluir os *Global Tags* definidos
+----------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Excluir os *Global Tags* definidos:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Global Tags`
+
+        #. Selecionar todas as Tags
+
+        #. Exercutar a Ação ":bi:`Excluir`":
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+Executar o *Verification Batch* “Default Batch”
+-----------------------------------------------
+
+    #. Executar o *Verification Batch* “Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:28:21.280`
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-20a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-20a.sql
+
+            gzip clvhealth_jcafb_2021v_14_2021-03-20a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-20a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-20a.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-20a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-20a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-20a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-20a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-20a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2021-03-20a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-03-20a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-20a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-20a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-20a)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2021-03-20a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2021-03-20a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-20a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-20a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo14-jcafb21-vm**".
+
+        #. Salvar o registro editado.
+
 .. toctree::   :maxdepth: 2
