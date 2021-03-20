@@ -14,7 +14,7 @@
 Preparação do Banco de Dados - JCAFB-2021v-14 (Recadastramento (pré Jornada) 1)
 ===============================================================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-17a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-20d)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -38,22 +38,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-17a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-03-17a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-03-20d.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-03-17a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-03-20d.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-17a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-20d.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-17a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-20d.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -90,6 +90,39 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-17a)
             * "**http://tkl-odoo14-jcafb21-vm**".
 
         #. Salvar o registro editado.
+
+:red:`(Não Executado)` Associar os Pacientes a uma Residência
+-------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Patient Associate to Residence* para os Pacientes:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Selecionar todos os Pacientes.
+
+        #. Exercutar a Ação "**Patient Associate to Residence**":
+
+            * Parâmetros utilizados:
+
+                * *Create new Residence*: **desmarcado**
+
+                * *Residence Verification Execute*: **marcado**
+
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão *Associate to Residence* para executar a Ação.
+
+        #. Selecionar todos os Pacientes.
+
+        #. Exercutar a Ação ":bi:`Patient Verification Execute`":
+
+            #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
 
 Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
 ----------------------------------------------------------------------
