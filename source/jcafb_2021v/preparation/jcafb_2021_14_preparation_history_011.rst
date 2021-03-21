@@ -163,7 +163,7 @@ Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
 
                 #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
-                * :bi:`Execution time: 0:00:08.278`
+                * :bi:`Execution time: 0:00:08.382`
 
 Executar o *Verification Batch* “Current Phase - Default Batch”
 ---------------------------------------------------------------
@@ -182,7 +182,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:00:10.866`
+            * :bi:`Execution time: 0:00:06.364`
 
 Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
 ------------------------------------------------------------------------------------------
