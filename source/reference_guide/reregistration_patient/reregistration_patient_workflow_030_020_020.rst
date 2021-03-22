@@ -25,3 +25,5 @@ Consolidação de :bi:`Patient (Aux)` - (L1)
    reregistration_patient_workflow_030_020_020_030
    reregistration_patient_workflow_030_020_020_045
    reregistration_patient_workflow_030_020_020_050
+   reregistration_patient_workflow_030_020_020_060
+   reregistration_patient_workflow_030_020_020_070

@@ -25,3 +25,7 @@ Consolidação de :bi:`Patient`
    reregistration_patient_workflow_040_030_030
    reregistration_patient_workflow_040_030_040
    reregistration_patient_workflow_040_030_050
+
+   reregistration_patient_workflow_040_030_110
+   reregistration_patient_workflow_040_030_120
+   reregistration_patient_workflow_040_030_130
