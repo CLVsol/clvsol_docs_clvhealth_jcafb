@@ -104,9 +104,11 @@ Selecionar as Crianças para o Projeto JCAFB-2021v
 
                 * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
 
+        #. Ativar a classificação dos Pacientes pelo campo :bi:`Ramdon ID`
+
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
 
-        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Patient State` = :bi:`Available`
+        #. Selecionar os 20 primeiros Pacientes listados com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Patient State` = :bi:`Available`
 
         #. Exercutar a Ação ":bi:`Patient Mass Edit`":
 
@@ -129,9 +131,11 @@ Selecionar os Idosos para o Projeto JCAFB-2021v
 
                 * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
 
+        #. Ativar a classificação dos Pacientes pelo campo :bi:`Ramdon ID`
+
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
 
-        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Patient State` = :bi:`Available`
+        #. Selecionar os 20 primeiros Pacientes listados com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Patient State` = :bi:`Available`
 
         #. Exercutar a Ação ":bi:`Patient Mass Edit`":
 
@@ -158,7 +162,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:00:11.162`
+            * :bi:`Execution time: 0:00:15.031`
 
 Selecionar os Pacientes (Aux) para o Projeto JCAFB-2021v
 --------------------------------------------------------
@@ -201,7 +205,7 @@ Selecionar os Pacientes (Aux) para o Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:00:10.600`
+            * :bi:`Execution time: 0:00:16.035`
 
 Associar os Pacientes selecionados aos Grupos da JCAFB-2021v
 ------------------------------------------------------------
@@ -220,7 +224,9 @@ Associar os Pacientes selecionados aos Grupos da JCAFB-2021v
 
         * Distribuir os Idosos e Crianças selecionados pelos Grupos da JCAFB-2021v de forma que o números de Idosos e Crianças sejam equanimemente distribuido entre os Grupos.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-15a)
+    #. Para a verificação da distribuição dos Pacientes entre os Grupos, em uma outra *Tab*, ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Responsible Employee` » :bi:`Categories`.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-23a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -246,16 +252,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-15a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-15a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-23a.sql
 
-            gzip clvhealth_jcafb_2021v_14_2021-03-15a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-15a.sql
+            gzip clvhealth_jcafb_2021v_14_2021-03-23a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-23a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-15a.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-23a.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-15a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-23a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -275,17 +281,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-15a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-15a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-15a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-15a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-15a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-23a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-23a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-23a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-23a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2021-03-15a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-03-15a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-15a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-15a
+.. index:: clvhealth_jcafb_2021v_14_2021-03-23a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-03-23a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-23a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-23a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-15a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-23a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -309,22 +315,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-15a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-03-15a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-03-23a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-03-15a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-03-23a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-15a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-23a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-15a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-23a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -361,5 +367,75 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-15a)
             * "**http://tkl-odoo14-jcafb21-vm**".
 
         #. Salvar o registro editado.
+
+Associar os Pacientes selecionados a uma Residência
+---------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Patient Associate to Residence* para os Pacientes selecionados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Persons*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Patient State` » :bi:`Residence`
+
+        #. Selecionar as Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Patient State` = ":bi:`Selected`" » :bi:`Residence` = :bi:`Indefinido`:
+
+        #. Exercutar a Ação "**Patient Associate to Residence**":
+
+            * Parâmetros utilizados:
+
+                * *Create new Residence*: **desmarcado**
+
+                * *Residence Verification Execute*: **marcado**
+
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão *Associate to Residence* para executar a Ação.
+
+        #. Selecionar as Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Patient State` = ":bi:`Selected`" » :bi:`Residence` = :bi:`Indefinido`:
+
+        #. Exercutar a Ação "**Patient Associate to Residence**":
+
+            * Parâmetros utilizados:
+
+                * *Create new Residence*: **marcado**
+
+                * *Residence Verification Execute*: **marcado**
+
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão *Associate to Residence* para executar a Ação.
+
+Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Principal)
+-------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Aplicar o descrito em :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040`"
+
+    **Ações efetivamente executadas**:
+
+        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
+
+        Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
+
+        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030`"
+
+            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_040`"
+
+            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_050`"
+
+            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_060`"
+
+            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_070`"
+
+        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_040`"
 
 .. toctree::   :maxdepth: 2
