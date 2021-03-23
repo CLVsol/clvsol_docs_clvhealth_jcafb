@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação de Patient
+.. index:: Consolidação de Residence
 
-=============================
-Consolidação de :bi:`Patient`
-=============================
+===============================
+Consolidação de :bi:`Residence`
+===============================
 
 .. toctree::
    :maxdepth: 2

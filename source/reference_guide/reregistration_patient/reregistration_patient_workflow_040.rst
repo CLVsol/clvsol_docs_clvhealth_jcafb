@@ -29,3 +29,4 @@ Consolidação das Entidades do **Cadastro Principal** [Pacientes]
    :caption: Itens Relacionados:
 
    reregistration_patient_workflow_040_030
+   reregistration_patient_workflow_040_040

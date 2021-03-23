@@ -23,9 +23,7 @@
         * *State*: **Warning (L0)**
         * *Outcome Information*: '**Residence "Responsible Empĺoyee" mismatch.**'
 
-    Para alterar o *Responsible Empĺoyee* do  registro *Residence* associado ao registro *Patient*, utilizar o procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_090`.
-
-    Alternativamente, para alterar o *Responsible Empĺoyee* do  registro *Residence* associado ao registro *Patient*, utilizar o procedimento de correção: :doc:`/procedures/reregistration/reregistration_procedure_030_020_095`.
+    Para alterar o *Phase* do  registro *Residence* associado ao registro *Patient*, utilizar o procedimento de correção: :doc:`/procedures/reregistration_patient/reregistration_patient_procedure_040_030_040`.
 
 .. toctree::
    :maxdepth: 2
