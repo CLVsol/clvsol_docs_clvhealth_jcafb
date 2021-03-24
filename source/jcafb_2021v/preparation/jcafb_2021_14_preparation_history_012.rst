@@ -483,6 +483,8 @@ Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadast
 
             #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_040`"
 
+            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_045`"
+
             #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_050`"
 
             #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_060`"
