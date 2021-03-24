@@ -21,3 +21,4 @@ Consolidação das Entidades do **Cadastro Principal** [Pacientes] (Procedimento
    :caption: Tópicos Relacionados:
 
    reregistration_patient_procedure_040_030
+   reregistration_patient_procedure_040_040
