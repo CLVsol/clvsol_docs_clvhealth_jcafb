@@ -75,17 +75,13 @@ Server preparation
             12321(Webmin)    0.0.0.0/0  (enabled)
             12322(Adminer)   0.0.0.0/0  (enabled)
 
-    #. Upgrade the software:
+    #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
 
-        ::
+        #. Open a web browser and type in the Odoo URL, in my case: http://clvheatlh-jcafb-2021-aws-pro.tklapp.com.
 
-            ssh clvheatlh-jcafb-2021-aws-pro -l root
+        #. Click on 'Manage Databases'.
 
-        ::
-
-            apt-get update
-            apt-get -y upgrade
-            apt-get autoremove
+        #. Clik on 'Delete' (Delete the 'Turnkeylinux Example ' database).
 
     #. Set the **odoo** user password (Linux):
 
@@ -179,6 +175,18 @@ Server preparation
             ::
 
                 ssh -L 33335:127.0.0.1:5432 root@clvheatlh-jcafb-2021-aws-pro
+
+    #. :red:`(Not Used)` Upgrade the software:
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+        ::
+
+            apt-get update
+            apt-get -y upgrade
+            apt-get autoremove
 
 Development
 -----------
@@ -297,7 +305,7 @@ Development
 Replace the Odoo installation (Odoo 14.0)
 -----------------------------------------
 
-    #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
+    #. :red:`(Not Used)` Delete the 'Turnkeylinux Example ' database, using the following procedure:
 
         #. Open a web browser and type in the Odoo URL, in my case: http://clvheatlh-jcafb-2021-aws-pro.tklapp.com.
 
@@ -323,6 +331,7 @@ Replace the Odoo installation (Odoo 14.0)
             apt-get update
 
             apt-get install odoo
+            # grub-pc package is being upgraded: NOT UPGRADED!
 
             # apt-get remove odoo
 
@@ -439,7 +448,7 @@ Replace the Odoo installation (Odoo 14.0)
               Found existing installation: Jinja2 2.10
                 Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
                 Can't uninstall 'Jinja2'. No files were found to uninstall.
-            Successfully installed Jinja2-2.11.2
+            Successfully installed Jinja2-2.11.3
 
     #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
 
