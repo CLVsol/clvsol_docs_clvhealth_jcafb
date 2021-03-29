@@ -341,33 +341,66 @@ Development (2)
 
             exit
 
-    #. :red:`(Not Used)` To install erppeek (for python 3.5), use the following commands (as root):
+    #. To install erppeek (for python 3.5), use the following commands (as root):
 
         ::
 
             pip3 install erppeek
 
-tkl-odoo14n-jcafb21-vm_2021-03-28d.rar
+    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
 
-:red:`(Not Used)` Remove the Odoo installation (Odoo 12.0)
-----------------------------------------------------------
+        #. :red:`(Not Used)` To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
 
-    #. To remove the Odoo installation (Odoo 12.0), use the following commands (as root):
+            ::
 
-        ::
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
 
-            ssh tkl-odoo14n-jcafb21-vm -l root
+            ::
 
-        ::
+                apt-get install node-less
 
-            /etc/init.d/odoo stop
+        #. :red:`(Not Used)` To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
 
-        ::
+            ::
 
-            apt-get remove odoo
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+            ::
+
+                pip3 install suds-py3
+
+        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+            ::
+
+                pip3 install erpbrasil.base
+
+        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+            ::
+
+                pip3 install pycep-correios
+
+    * tkl-odoo14n-jcafb21-vm_2021-03-29b.rar
 
 Replace the Odoo installation (Odoo 14.0)
 -----------------------------------------
+
+    #. :red:`(Not Used)` Delete the 'Turnkeylinux Example ' database, using the following procedure:
+
+        #. Open a web browser and type in the Odoo URL, in my case: http://tkl-odoo14n-jcafb21-vm.
+
+        #. Click on 'Manage Databases'.
+
+        #. Clik on 'Delete' (Delete the 'Turnkeylinux Example ' database).
 
     #. To replace the Odoo installation (Odoo 14.0), use the following commands (as root):
 
@@ -406,25 +439,6 @@ Replace the Odoo installation (Odoo 14.0)
 
             su odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. To downgrade the Odoo release (Odoo 14.0-20210202), use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo14n-jcafb21-vm -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            mv /usr/lib/python3/dist-packages/odoo /usr/lib/python3/dist-packages/odoo.old
-
-            cd /usr/lib/python3/dist-packages
-            wget https://nightly.odoo.com/14.0/nightly/src/odoo_14.0.20210202.tar.gz
-
-            tar xfv odoo_14.0.20210202.tar.gz
-
-            mv /usr/lib/python3/dist-packages/odoo-14.0.post20210202/odoo /usr/lib/python3/dist-packages
 
     #. Configure Odoo Server timeouts
 
@@ -492,7 +506,7 @@ Replace the Odoo installation (Odoo 14.0)
                 # osv_memory_age_limit = 1.0
                 osv_memory_age_limit = False
 
-    #. :red:`(Not Used)` To install Jinja2-2.11.2, execute the following commands (as root):
+    #. To install Jinja2-2.11.2, execute the following commands (as root):
 
         * Issue:
 
@@ -577,6 +591,28 @@ Repositories Installation
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
             addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
+
+Downgrade the Odoo release (Odoo 14.0-20210202)
+-----------------------------------------------
+
+    #. To downgrade the Odoo release (Odoo 14.0-20210202), use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo14n-jcafb21-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            mv /usr/lib/python3/dist-packages/odoo /usr/lib/python3/dist-packages/odoo.old
+
+            cd /usr/lib/python3/dist-packages
+            wget https://nightly.odoo.com/14.0/nightly/src/odoo_14.0.20210202.tar.gz
+
+            tar xfv odoo_14.0.20210202.tar.gz
+
+            cp -avr /usr/lib/python3/dist-packages/odoo-14.0.post20210202/odoo /usr/lib/python3/dist-packages
 
 Remote access to the server
 ---------------------------
@@ -696,103 +732,6 @@ Atualizar os fontes do projeto
 
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-Repositories
-------------
-
-    #. `tkl-odoo14n-jcafb21-vm <https://tkl-odoo14n-jcafb21-vm>`_
-
-          Name of the Turnkey Linux Server.
-
-    #. `clvsol_odoo_client (13.0) <https://github.com/CLVsol/clvsol_odoo_client>`_
-
-          CLVsol Odoo Client.
-
-    #. `clvsol_clvhealth_jcafb (14.0) <https://github.com/CLVsol/clvsol_clvhealth_jcafb/tree/14.0>`_
-
-          Implemantation of CLVhealth-JCAFB-2021, the CLVsol Health Management solution for JCAFB.
-
-    #. `clvsol_l10n_brazil (14.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/14.0>`_
-
-          Core da localização Brasileira do Odoo (used by CLVsol solutions)
-          Este projeto contêm os módulos básicos da localização brasileira do Odoo, para uso exclusivo pelas soluções da CLVsol.
-          Os módulos desse projeto deverão ser substituídos pelos módulos equivalentes do repositório `OCA/l10n-brazil (13.0) <https://github.com/OCA/l10n-brazil/tree/13.0>`_, quando disponíveis para a versão do Odoo utilizada.
-
-    #. `OCA/l10n-brazil (12.0) <https://github.com/OCA/l10n-brazil/tree/12.0>`_
-
-          Este projeto contêm os principais módulos da localização brasileira do Odoo.
-
-    #. `clvsol_odoo_addons (14.0) <https://github.com/CLVsol/clvsol_odoo_addons/tree/14.0>`_
-
-          CLVsol Odoo Addons.
-
-    #. `clvsol_odoo_addons_jcafb (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_jcafb/tree/14.0>`_
-
-          CLVsol Odoo Addons - JCAFB customizations.
-
-    #. `clvsol_odoo_addons_history (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_history/tree/14.0>`_
-
-          CLVsol Odoo Addons - History
-
-    #. `clvsol_odoo_addons_history_jcafb (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb/tree/14.0>`_
-
-          CLVsol Odoo Addons - History - JCAFB customizations
-
-    #. `clvsol_odoo_addons_l10n_br (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br/tree/14.0>`_
-
-          CLVsol Odoo Addons - Brazilian Localization.
-
-    #. `clvsol_odoo_addons_l10n_br_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb/tree/13.0>`_
-
-          CLVsol Odoo Addons - Brazilian Localization - JCAFB customizations
-
-    #. `clvsol_odoo_addons_verification (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification/tree/13.0>`_
-
-          CLVsol Odoo Addons - Verification
-
-    #. `clvsol_odoo_addons_verification_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb/tree/13.0>`_
-
-          CLVsol Odoo Addons - Verification - JCAFB customizations
-
-    #. `clvsol_odoo_addons_summary (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary/tree/13.0>`_
-
-          CLVsol Odoo Addons - Summary
-
-    #. `clvsol_odoo_addons_summary_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb/tree/13.0>`_
-
-          CLVsol Odoo Addons - Summary - JCAFB customizations
-
-    #. `clvsol_odoo_addons_export (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export/tree/13.0>`_
-
-          CLVsol Odoo Addons - Export
-
-    #. `clvsol_odoo_addons_export_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb/tree/13.0>`_
-
-          CLVsol Odoo Addons - Export - JCAFB customizations
-
-    #. `clvsol_odoo_addons_report (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report/tree/13.0>`_
-
-          CLVsol Odoo Addons - Report
-
-    #. `clvsol_odoo_addons_report_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb/tree/13.0>`_
-
-          CLVsol Odoo Addons - Report - JCAFB customizations
-
-    #. `clvsol_odoo_addons_process (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process/tree/13.0>`_
-
-          CLVsol Odoo Addons - Process
-
-    #. `clvsol_odoo_addons_process_jcafb (13.0) <https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb/tree/13.0>`_
-
-          CLVsol Odoo Addons - Process - JCAFB customizations
-
-    #. `clvsol_odoo_addons_sync (14.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync/tree/14.0>`_
-
-          CLVsol Odoo Addons - Sync
-
-    #. `clvsol_odoo_addons_sync_jcafb (13.0to14.0) <https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb/tree/13.0to14.0>`_
-
-          CLVsol Odoo Addons - Sync - JCAFB customizations
 
 References
 ----------
