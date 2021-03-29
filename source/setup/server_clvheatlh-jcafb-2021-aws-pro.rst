@@ -14,7 +14,7 @@
 Criação do Servidor de Produção na AWS "clvheatlh-jcafb-2021-aws-pro"
 =====================================================================
 
-This project will help you create a server to host the **CLVhealth-JCAFB**, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstation infrastructure.
+    This project will help you create a server to host the **CLVhealth-JCAFB**, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstation infrastructure.
 
 Server preparation
 ------------------
@@ -75,13 +75,32 @@ Server preparation
             12321(Webmin)    0.0.0.0/0  (enabled)
             12322(Adminer)   0.0.0.0/0  (enabled)
 
-    #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
+Development (1)
+---------------
 
-        #. Open a web browser and type in the Odoo URL, in my case: http://clvheatlh-jcafb-2021-aws-pro.tklapp.com.
+    #. Notes on the installation:
 
-        #. Click on 'Manage Databases'.
+        #. Installation: **/usr/lib/python3/dist-packages/odoo**
 
-        #. Clik on 'Delete' (Delete the 'Turnkeylinux Example ' database).
+        #. Configuration File: **/etc/odoo/odoo.conf**
+
+        #. Init file: **/etc/init.d/odoo**
+
+        #. DAEMON: **/usr/bin/odoo**
+
+        #. LOGFILE: **/var/log/odoo/odoo-server.log**
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
 
     #. Set the **odoo** user password (Linux):
 
@@ -105,6 +124,84 @@ Server preparation
             ::
 
                 odoo:x:110:118::/var/lib/odoo:/bin/bash
+
+    #. Copy file "**/etc/odoo/odoo.conf**" into "**/etc/odoo/odoo-man.conf**". Edit the file "**/etc/odoo/odoo-man.conf**" (as root):
+
+        ::
+
+            logfile = /var/log/odoo/odoo-server.log
+
+        ::
+
+            # logfile = /var/log/odoo/odoo-server.log
+            logfile = False
+
+    #. Setup the file "**/etc/odoo/odoo-man.conf**" (Group: odoo[118] Owner: odoo[112]) permissions, using the following commands (as root):
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+        ::
+
+            chown -R odoo:odoo /etc/odoo/odoo-man.conf
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. Install **basic dependencies** needed by Odoo, using the following commands (as root):
+
+        * Extracted from LOGFILE: **/var/log/odoo/odoo-server.log**:
+
+            ::
+
+                2021-02-02 17:44:13,204 11461 WARNING ? odoo.addons.base.models.res_currency: The num2words python library is not installed, amount-to-text features won't be fully available. 
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+        ::
+
+            pip3 install num2words
+
+    #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
+
+        #. Open a web browser and type in the Odoo URL, in my case: http://clvheatlh-jcafb-2021-aws-pro.tklapp.com.
+
+        #. Click on 'Manage Databases'.
+
+        #. Clik on 'Delete' (Delete the 'Turnkeylinux Example ' database).
+
+    #. Upgrade the software:
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+        ::
+
+            apt-get update
+            apt-get -y upgrade
+            # grub-pc package is being upgraded: NOT UPGRADED!
+            apt-get autoremove
+
+VM preparation (2)
+------------------
 
     #. Update host name, executing the following commands:
 
@@ -176,99 +273,8 @@ Server preparation
 
                 ssh -L 33335:127.0.0.1:5432 root@clvheatlh-jcafb-2021-aws-pro
 
-    #. :red:`(Not Used)` Upgrade the software:
-
-        ::
-
-            ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-        ::
-
-            apt-get update
-            apt-get -y upgrade
-            apt-get autoremove
-
-Development
------------
-
-    #. Notes on the installation:
-
-        #. Installation: **/usr/lib/python3/dist-packages/odoo**
-
-        #. Configuration File: **/etc/odoo/odoo.conf**
-
-        #. Init file: **/etc/init.d/odoo**
-
-        #. DAEMON: **/usr/bin/odoo**
-
-        #. LOGFILE: **/var/log/odoo/odoo-server.log**
-
-    #. To stop and start the Odoo server, use the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            /etc/init.d/odoo start
-
-    #. Copy file "**/etc/odoo/odoo.conf**" into "**/etc/odoo/odoo-man.conf**". Edit the file "**/etc/odoo/odoo-man.conf**" (as root):
-
-        ::
-
-            logfile = /var/log/odoo/odoo-server.log
-
-        ::
-
-            # logfile = /var/log/odoo/odoo-server.log
-            logfile = False
-
-    #. Setup the file "**/etc/odoo/odoo-man.conf**" (Group: odoo[118] Owner: odoo[112]) permissions, using the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-        ::
-
-            chown -R odoo:odoo /etc/odoo/odoo-man.conf
-
-
-    #. To stop and start the Odoo server, use the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            /etc/init.d/odoo start
-
-        ::
-
-            su odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. Install **basic dependencies** needed by Odoo, using the following commands (as root):
-
-        * Extracted from LOGFILE: **/var/log/odoo/odoo-server.log**:
-
-            ::
-
-                2021-02-02 17:44:13,204 11461 WARNING ? odoo.addons.base.models.res_currency: The num2words python library is not installed, amount-to-text features won't be fully available. 
-
-        ::
-
-            ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-        ::
-
-            pip3 install num2words
+Development (2)
+---------------
 
     #. To create the **/opt/odoo** directory, use the following commands (as root):
 
@@ -302,6 +308,56 @@ Development
 
             exit
 
+    #. To install erppeek (for python 3.5), use the following commands (as root):
+
+        ::
+
+            pip3 install erppeek
+
+    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
+
+        #. :red:`(Not Used)` To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+            ::
+
+                apt-get install node-less
+
+        #. :red:`(Not Used)` To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+            ::
+
+                pip3 install suds-py3
+
+        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+            ::
+
+                pip3 install erpbrasil.base
+
+        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+
+            ::
+
+                ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+            ::
+
+                pip3 install pycep-correios
+
+    #. Reinitialize the VM.
+
 Replace the Odoo installation (Odoo 14.0)
 -----------------------------------------
 
@@ -331,7 +387,6 @@ Replace the Odoo installation (Odoo 14.0)
             apt-get update
 
             apt-get install odoo
-            # grub-pc package is being upgraded: NOT UPGRADED!
 
             # apt-get remove odoo
 
@@ -418,12 +473,6 @@ Replace the Odoo installation (Odoo 14.0)
                 # workers = 2
                 workers = 5
 
-    #. To install erppeek (for python 3.5), use the following commands (as root):
-
-        ::
-
-            pip3 install erppeek
-
     #. To install Jinja2-2.11.2, execute the following commands (as root):
 
         * Issue:
@@ -449,121 +498,6 @@ Replace the Odoo installation (Odoo 14.0)
                 Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
                 Can't uninstall 'Jinja2'. No files were found to uninstall.
             Successfully installed Jinja2-2.11.3
-
-    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
-
-        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-            ::
-
-                pip3 install erpbrasil.base
-
-        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-            ::
-
-                pip3 install pycep-correios
-
-:red:`Não Executado`
---------------------
-
-    #. To install erppeek (for python 3.5), use the following commands (as root):
-
-        ::
-
-            pip3 install erppeek
-
-    #. To install xlrd 1.1.0, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlrd
-            pip3 install xlwt
-            pip3 install xlutils
-
-        ::
-
-            root@clvheatlh-jcafb-2021-aws-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlrd
-            Requirement already satisfied: xlrd in /usr/lib/python3/dist-packages (1.1.0)
-            root@clvheatlh-jcafb-2021-aws-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlwt
-            Collecting xlwt
-              Downloading https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl (99kB
-                100% |████████████████████████████████| 102kB 1.3MB/s 
-            odoo 12.0.post20200609 requires pyldap, which is not installed.
-            odoo 12.0.post20200609 requires qrcode, which is not installed.
-            odoo 12.0.post20200609 requires vobject, which is not installed.
-            Installing collected packages: xlwt
-            Successfully installed xlwt-1.3.0
-            root@clvheatlh-jcafb-2021-aws-pro .../clvsol_clvhealth_jcafb/project# pip3 install xlutils
-            Collecting xlutils
-              Downloading https://files.pythonhosted.org/packages/c7/55/e22ac73dbb316cabb5db28bef6c87044a95914f713a6e81b593f8a0d2f79/xlutils-2.0.0-py2.py3-none-any.whl (55kB)
-                100% |████████████████████████████████| 61kB 1.0MB/s 
-            Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.1.0)
-            Requirement already satisfied: xlwt>=0.7.4 in /usr/local/lib/python3.7/dist-packages (from xlutils) (1.3.0)
-            Installing collected packages: xlutils
-            Successfully installed xlutils-2.0.0
-
-        **To Verify**:
-
-            * :red:`odoo 12.0.post20200609 requires pyldap, which is not installed.`
-            * :red:`odoo 12.0.post20200609 requires qrcode, which is not installed.`
-            * :red:`odoo 12.0.post20200609 requires vobject, which is not installed.`
-
-    #. :red:`(Not Used)` To install odoolib (for python 3.5), use the following commands (as root):
-
-        ::
-
-            pip3 install odoo-client-lib
-
-    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
-
-        #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-            ::
-
-                apt-get install node-less
-
-        #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-            ::
-
-                pip3 install suds-py3
-
-        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-            ::
-
-                pip3 install erpbrasil.base
-
-        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2021-aws-pro -l root
-
-            ::
-
-                pip3 install pycep-correios
 
 Repositories Installation
 -------------------------
@@ -624,6 +558,28 @@ Repositories Installation
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
             addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
+
+Downgrade the Odoo release (Odoo 14.0-20210202)
+-----------------------------------------------
+
+    #. To downgrade the Odoo release (Odoo 14.0-20210202), use the following commands (as root):
+
+        ::
+
+            ssh clvheatlh-jcafb-2021-aws-pro -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            mv /usr/lib/python3/dist-packages/odoo /usr/lib/python3/dist-packages/odoo.old
+
+            cd /usr/lib/python3/dist-packages
+            wget https://nightly.odoo.com/14.0/nightly/src/odoo_14.0.20210202.tar.gz
+
+            tar xfv odoo_14.0.20210202.tar.gz
+
+            cp -avr /usr/lib/python3/dist-packages/odoo-14.0.post20210202/odoo /usr/lib/python3/dist-packages
 
 Remote access to the server
 ---------------------------
