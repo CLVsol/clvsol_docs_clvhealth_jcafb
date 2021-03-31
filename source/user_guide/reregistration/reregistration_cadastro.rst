@@ -30,3 +30,4 @@ Essa "redundância" dos dados permite a verificação/validação das alteraçõ
 
    reregistration_cadastro_010
    reregistration_cadastro_020
+   reregistration_cadastro_030
