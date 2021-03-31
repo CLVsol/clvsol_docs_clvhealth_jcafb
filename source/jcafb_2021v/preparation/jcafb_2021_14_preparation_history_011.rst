@@ -124,8 +124,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-25a)
 
             #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
 
-Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
-----------------------------------------------------------------------
+Executar o Cadastramento/Recadastramento (Preparação das Entidades do Cadastro Auxiliar)
+----------------------------------------------------------------------------------------
 
     * Referência :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow`"
 
@@ -163,7 +163,7 @@ Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
 
                 #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
-                * :bi:`Execution time: 0:00:04.810`
+                * :bi:`Execution time: 0:00:04.927`
 
             #. Selecionar o *Processing Schedule* "**Reregistration Import XLS - Patient (2)**"
 
@@ -171,7 +171,7 @@ Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
 
                 #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
-                * :bi:`Execution time: 0:00:04.257`
+                * :bi:`Execution time: 0:00:03.838`
 
 Executar o *Verification Batch* “Current Phase - Default Batch”
 ---------------------------------------------------------------
@@ -190,7 +190,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:00:06.927`
+            * :bi:`Execution time: 0:00:07.505`
 
 Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
 ------------------------------------------------------------------------------------------
@@ -329,6 +329,42 @@ Atualizar o *Patient Category* de todos os Pacientes
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
+Executar o *Verification Batch* “Current Phase - Default Batch”
+---------------------------------------------------------------
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:00:16.387`
+
+Consolidação das Entidades do Cadastro Auxiliar
+-----------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Aplicar o descrito em :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030`"
+
+    **Ações efetivamente executadas**:
+
+        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
+
+        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020`"
+
+            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_080`"
+
+            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_090`"
+
 Atualizar o *Register State* dos Pacientes já recadastrados
 -----------------------------------------------------------
 
@@ -355,7 +391,7 @@ Atualizar o *Register State* dos Pacientes (Aux) já recadastrados
 
         #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-22b)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-31a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -381,16 +417,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-22b)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-22b.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-31a.sql
 
-            gzip clvhealth_jcafb_2021v_14_2021-03-22b.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-22b.sql
+            gzip clvhealth_jcafb_2021v_14_2021-03-31a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-03-31a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-22b.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-22b.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -410,17 +446,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-22b)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-22b.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-22b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-22b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-22b.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-31a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-03-31a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2021-03-22b.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-03-22b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-22b
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-22b
+.. index:: clvhealth_jcafb_2021v_14_2021-03-31a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-03-31a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-03-31a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-31a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-22b)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-31a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -444,22 +480,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-22b)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-03-22b.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-03-31a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-03-22b.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-03-31a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-22b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-22b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
