@@ -20,4 +20,4 @@ Guia do Usuário
    :maxdepth: 5
    :caption: Conteúdo:
 
-   reregistration/reregistration_index
+   reregistration/reregistration
