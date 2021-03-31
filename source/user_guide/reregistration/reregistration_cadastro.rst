@@ -29,3 +29,4 @@ Essa "redundância" dos dados permite a verificação/validação das alteraçõ
    :caption: Conteúdo:
 
    reregistration_cadastro_010
+   reregistration_cadastro_020
