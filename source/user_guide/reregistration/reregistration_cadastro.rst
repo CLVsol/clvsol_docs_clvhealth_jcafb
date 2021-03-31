@@ -27,3 +27,5 @@ Essa "redundância" dos dados permite a verificação/validação das alteraçõ
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
+
+   reregistration_cadastro_010
