@@ -22,6 +22,7 @@ Documentação do *CLVhealth-JCAFB-2021*
 
    todo
    reference_guide/index
+   user_guide/index
    procedures/index
    jcafb_2021v/index
    setup/index
