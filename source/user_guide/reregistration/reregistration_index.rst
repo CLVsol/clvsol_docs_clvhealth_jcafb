@@ -30,3 +30,4 @@ Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados no **C
    :caption: Tópicos Relacionados:
 
    reregistration_cadastro
+   reregistration_workflow
