@@ -24,9 +24,9 @@ Este Processo baseia-se no **Cadastramento/Recadastramento** de todos os Pacient
 Esse cadastramento/recadastramento é realizado inicialmente no **Cadastro Auxiliar**, composto pela entidade de cadastro :bi:`Patient (Aux)`.
 
 Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados no **Cadastro Principal**, composto pela entidades de cadastros :bi:`Patient` e :bi:`Residence`.
- 
-Essa consolidação se dá quando todas as alterações de Cadastro (atualizações de dados e/ou inclusões de Pacientes) são consolidadas do **Cadastro Auxiliar** para o **Cadastro Principal**.
 
 .. toctree::
    :maxdepth: 4
    :caption: Tópicos Relacionados:
+
+   reregistration_cadastro
