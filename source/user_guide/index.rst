@@ -19,3 +19,5 @@ Guia do Usuário
 .. toctree::
    :maxdepth: 5
    :caption: Conteúdo:
+
+   reregistration/reregistration_index
