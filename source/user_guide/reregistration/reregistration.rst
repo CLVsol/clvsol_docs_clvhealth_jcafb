@@ -31,3 +31,4 @@ Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados no **C
 
    reregistration_cadastro
    reregistration_workflow
+   reregistration_procedure
