@@ -23,3 +23,4 @@ Os **Procedimentos** do Cadastramento/Recadastramento de **Pacientes** são apre
    :caption: Tópicos Relacionados:
 
    reregistration_procedure_010
+   reregistration_procedure_020

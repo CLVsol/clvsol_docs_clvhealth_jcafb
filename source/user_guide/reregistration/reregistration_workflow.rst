@@ -23,3 +23,4 @@ O **Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento de **Pacie
    :caption: Tópicos Relacionados:
 
    reregistration_workflow_010
+   reregistration_workflow_020
