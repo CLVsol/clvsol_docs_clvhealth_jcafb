@@ -56,18 +56,10 @@ O **Paciente já cadastrado** mudou-se para um **Endereço fora da comunidade** 
 
                 * *Register State*: :bi:`Set` » :bi:`Revised`
                 * *State*: :bi:`Set` » :bi:`Unvailable`
-                * *Contact Information is unavailable*: :bi:`Set` » **marcado**
-                * *Clear Address Data*: **marcado**
                 * *Phase*: **JCAFB-2021v**
                 * *Patient (Aux) Verification Execute*: **marcado**
 
             #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
-
-    #. Caso necessário, editar o registro :bi:`Patient (Aux)`:
-
-        #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Pessoa fora da comunidade.
-
-        #. Salvar o registro.
 
 .. toctree::
    :maxdepth: 2
