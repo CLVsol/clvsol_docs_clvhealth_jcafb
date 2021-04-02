@@ -18,34 +18,40 @@ O **Paciente não cadastrado** reside em um **Endereço da Comunidade** (Procedi
 
     * *Workflow*: ":doc:`reregistration_workflow_020_020_010`".
 
-    #. Acessar a *view* :bi:`Patients (Aux)`:
+    #. Procurar pelo Paciente na *view* :bi:`Patients (Aux)`:
 
-        * Menu de acesso:
+        #. Acessar a *view* :bi:`Patients (Aux)`:
 
-            * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients (Aux)`
+            * Menu de acesso:
 
-    #. Criar um novo registro :bi:`Person (Aux)`:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients (Aux)`
 
-        #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço.
+        #. Pesquisar pelo Paciente.
 
-        #. Salvar o registro.
+        #. Certificar-se de que não existe qualquer registro :bi:`Patients (Aux)` associado ao Paciente.
 
-        #. Editar o registro :bi:`Patient (Aux)`:
+    #. Caso nenhum registro seja encontrado:
+
+        #. Criar um novo registro :bi:`Person (Aux)`:
+
+            #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço.
 
             #. Preencher os dados de :bi:`Contact Information` com as informações apresentadas para o Endereço da Paciente.
 
             #. Salvar o registro.
 
-        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Certificar-se que as informações de Endereço apresentadas para o Paciente apontam para um local dentro da Comunidade atendida pela JCAFB:
 
-            #. Parâmetros apresentados:
+            #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
-                * *Register State*: :bi:`Set` » :bi:`Revised`
-                * *State*: :bi:`Set` » :bi:`Available`
-                * *Phase*: **JCAFB-2021v**
-                * *Person (Aux) Verification Execute*: **marcado**
+                #. Parâmetros apresentados:
 
-            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
+                    * *Register State*: :bi:`Set` » :bi:`Revised`
+                    * *State*: :bi:`Set` » :bi:`Available`
+                    * *Phase*: **JCAFB-2021v**
+                    * *Person (Aux) Verification Execute*: **marcado**
+
+                #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2

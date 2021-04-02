@@ -10,44 +10,48 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: O Paciente não cadastrada reside em um Endereço fora da comunidade atendida pela JCAFB (Procedimento)
+.. index:: O Paciente não cadastrado reside em um Endereço fora da comunidade atendida pela JCAFB (Procedimento)
 
 =============================================================================================================
-O **Paciente não cadastrada** reside em um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
+O **Paciente não cadastrado** reside em um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
 =============================================================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_020_030`".
 
-    #. Acessar a *view* :bi:`Patients (Aux)`:
+    #. Procurar pelo Paciente na *view* :bi:`Patients (Aux)`:
 
-        * Menu de acesso:
+        #. Acessar a *view* :bi:`Patients (Aux)`:
 
-            * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients (Aux)`
+            * Menu de acesso:
 
-    #. Criar um novo registro :bi:`Patient (Aux)`:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients (Aux)`
 
-        #. Preencher o registro :bi:`Patient (Aux)` com as informações apresentadas para a Paciente, exceto informaçôes relativas ao Endereço.
+        #. Pesquisar pelo Paciente.
 
-        #. Salvar o registro.
+        #. Certificar-se de que não existe qualquer registro :bi:`Patients (Aux)` associado ao Paciente.
 
-        #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
+    #. Caso nenhum registro seja encontrado:
 
-            #. Parâmetros apresentados:
+        #. Criar um novo registro :bi:`Person (Aux)`:
 
-                * *Register State*: :bi:`Set` » :bi:`Revised`
-                * *State*: :bi:`Set` » :bi:`Unvailable`
-                * *Contact Information is unavailable*: :bi:`Set` » **marcado**
-                * *Clear Address Data*: **marcado**
-                * *Phase*: **JCAFB-2021v**
-                * *Patient (Aux) Verification Execute*: **marcado**
+            #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço.
 
-            #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
+            #. Preencher os dados de :bi:`Contact Information` com as informações apresentadas para o Endereço da Paciente.
 
-    #. Caso necessário, editar o registro :bi:`Patient (Aux)`:
+            #. Salvar o registro.
 
-        #. Preencher os campos de *Contact Information* com informações que indiquem o novo Endereço da Paciente fora da comunidade.
+        #. Certificar-se que as informações de Endereço apresentadas para o Paciente apontam para um local fora da Comunidade atendida pela JCAFB:
 
-        #. Salvar o registro.
+            #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
+
+                #. Parâmetros apresentados:
+
+                    * *Register State*: :bi:`Set` » :bi:`Revised`
+                    * *State*: :bi:`Set` » :bi:`Unvailable`
+                    * *Phase*: **JCAFB-2021v**
+                    * *Person (Aux) Verification Execute*: **marcado**
+
+                #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
 .. toctree::
    :maxdepth: 2
