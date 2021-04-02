@@ -108,7 +108,7 @@ Criar os Documentos para as Crianças selecionadas para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Person State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Document Set Up [Person]`":
+        #. Executar a Ação ":bi:`Document Set Up [Person]`":
 
             * Parâmetros utilizados:
 
@@ -139,7 +139,7 @@ Criar os Documentos para os Idosos selecionados para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Person State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Document Set Up [Person]`":
+        #. Executar a Ação ":bi:`Document Set Up [Person]`":
 
             * Parâmetros utilizados:
 
@@ -172,7 +172,7 @@ Criar os Documentos para as Famílias selecionadas para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Famílias com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Family State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Document Set Up [Family]`":
+        #. Executar a Ação ":bi:`Document Set Up [Family]`":
 
             * Parâmetros utilizados:
 
@@ -201,7 +201,7 @@ Criar as Requisições de Exames para as Crianças selecionadas para o Projeto J
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Person State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Lab Test Request Set Up [Person]`":
+        #. Executar a Ação ":bi:`Lab Test Request Set Up [Person]`":
 
             * Parâmetros utilizados:
 
@@ -232,7 +232,7 @@ Criar as Requisições de Exames para os Idosos selecionados para o Projeto JCAF
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Person State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Lab Test Request Set Up [Person]`":
+        #. Executar a Ação ":bi:`Lab Test Request Set Up [Person]`":
 
             * Parâmetros utilizados:
 
@@ -263,7 +263,7 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
         #. Selecionar todos os Funcionários com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Trabalho` = ":bi:`Grupo de Campo`"
 
-        #. Exercutar a Ação ":bi:`Employee Summary Set Up`":
+        #. Executar a Ação ":bi:`Employee Summary Set Up`":
 
             #. Utilize o botão :bi:`Employee Summary Set Up` para executar a Ação.
 
@@ -284,7 +284,7 @@ Criar os Sumários para os Endereços selecionados para o Projeto JCAFB-2021v
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Address State` = ":bi:`Selected`"
 
-        #. Exercutar a Ação ":bi:`Address Summary Set Up`":
+        #. Executar a Ação ":bi:`Address Summary Set Up`":
 
             #. Utilize o botão :bi:`Address Summary Set Up` para executar a Ação.
 
@@ -305,7 +305,7 @@ Criar os Sumários para as Famílias selecionadas para o Projeto JCAFB-2021v
 
         #. Selecionar todos as Famílias com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Family State` = ":bi:`Selected`"
 
-        #. Exercutar a Ação ":bi:`Family Summary Set Up`":
+        #. Executar a Ação ":bi:`Family Summary Set Up`":
 
             #. Utilize o botão :bi:`Family Summary Set Up` para executar a Ação.
 
@@ -326,7 +326,7 @@ Criar os Sumários para as Pessoas selecionadas para o Projeto JCAFB-2021v
 
         #. Selecionar todos as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person State` = ":bi:`Selected`"
 
-        #. Exercutar a Ação ":bi:`Person Summary Set Up`":
+        #. Executar a Ação ":bi:`Person Summary Set Up`":
 
             #. Utilize o botão :bi:`Person Summary Set Up` para executar a Ação.
 

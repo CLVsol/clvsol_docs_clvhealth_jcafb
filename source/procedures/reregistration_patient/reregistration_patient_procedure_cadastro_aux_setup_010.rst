@@ -30,7 +30,7 @@ Excluir todos os registros de Pacientes do Cadastro Auxiliar (Procedimento)
 
         #. Selecionar todos os :bi:`Patient (Aux)`
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -46,7 +46,7 @@ Excluir todos os registros de Pacientes do Cadastro Auxiliar (Procedimento)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.patient_aux**"
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 

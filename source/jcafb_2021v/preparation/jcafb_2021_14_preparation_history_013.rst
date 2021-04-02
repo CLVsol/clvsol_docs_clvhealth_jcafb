@@ -108,7 +108,7 @@ Criar os Documentos para as Crianças selecionadas para o Projeto JCAFB-2021v
 
         #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Patient State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Document Set Up [Patient]`":
+        #. Executar a Ação ":bi:`Document Set Up [Patient]`":
 
             * Parâmetros utilizados:
 
@@ -141,7 +141,7 @@ Criar os Documentos para os Idosos selecionados para o Projeto JCAFB-2021v
 
         #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Patient State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Document Set Up [Patient]`":
+        #. Executar a Ação ":bi:`Document Set Up [Patient]`":
 
             * Parâmetros utilizados:
 
@@ -176,7 +176,7 @@ Criar as Requisições de Exames para as Crianças selecionadas para o Projeto J
 
         #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Patient State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Lab Test Request Set Up [Patient]`":
+        #. Executar a Ação ":bi:`Lab Test Request Set Up [Patient]`":
 
             * Parâmetros utilizados:
 
@@ -207,7 +207,7 @@ Criar as Requisições de Exames para os Idosos selecionados para o Projeto JCAF
 
         #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Patient State` = :bi:`Selected`
 
-        #. Exercutar a Ação ":bi:`Lab Test Request Set Up [Patient]`":
+        #. Executar a Ação ":bi:`Lab Test Request Set Up [Patient]`":
 
             * Parâmetros utilizados:
 
@@ -234,7 +234,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -257,7 +257,7 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
         #. Selecionar todos os Funcionários com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Trabalho` = ":bi:`Grupo de Campo`"
 
-        #. Exercutar a Ação ":bi:`Employee Summary Set Up`":
+        #. Executar a Ação ":bi:`Employee Summary Set Up`":
 
             #. Utilize o botão :bi:`Employee Summary Set Up` para executar a Ação.
 
@@ -278,7 +278,7 @@ Criar os Sumários para as Residências selecionados para o Projeto JCAFB-2021v
 
         #. Selecionar todos as Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Residence State` = ":bi:`Selected`"
 
-        #. Exercutar a Ação ":bi:`Residence Summary Set Up`":
+        #. Executar a Ação ":bi:`Residence Summary Set Up`":
 
             #. Utilize o botão :bi:`Residence Summary Set Up` para executar a Ação.
 
@@ -299,7 +299,7 @@ Criar os Sumários para os Pacientes selecionados para o Projeto JCAFB-2021v
 
         #. Selecionar todos as Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Patient State` = ":bi:`Selected`"
 
-        #. Exercutar a Ação ":bi:`Patient Summary Set Up`":
+        #. Executar a Ação ":bi:`Patient Summary Set Up`":
 
             #. Utilize o botão :bi:`Patient Summary Set Up` para executar a Ação.
 

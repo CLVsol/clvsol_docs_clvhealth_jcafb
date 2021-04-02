@@ -36,7 +36,7 @@ O **Paciente não cadastrado** reside em um **Endereço da Comunidade** (Procedi
 
             #. Salvar o registro.
 
-        #. Exercutar a Ação ":bi:`Patient (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

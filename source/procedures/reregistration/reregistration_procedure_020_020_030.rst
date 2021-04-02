@@ -30,7 +30,7 @@ A **Pessoa não cadastrada** reside em um **Endereço fora da comunidade** atend
 
         #. Salvar o registro.
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

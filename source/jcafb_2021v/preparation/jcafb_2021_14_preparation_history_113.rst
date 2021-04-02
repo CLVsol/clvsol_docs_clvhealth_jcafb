@@ -48,7 +48,7 @@ Associar os Endereços selecionados aos Grupos da JCAFB-2021v
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Address State` = ":bi:`Selected`" » :bi:`Responsible Employee` = :bi:`indefinido`
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -73,7 +73,7 @@ Associar as Familias selecionadas aos Grupos da JCAFB-2021v
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Family State` = ":bi:`Selected`" » :bi:`Responsible Employee` = :bi:`indefinido`
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -94,7 +94,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -117,7 +117,7 @@ Associar as Pessoas disponíveis aos Grupos da JCAFB-2021v
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person State` = ":bi:`Available`" » :bi:`Verification State` = ":bi:`Warning (L0)`" » :bi:`Outcome Informations` = :bi:`Address "Responsible Empĺoyee" mismatch.` » :bi:`Responsible Employee` = :bi:`Indefinido`
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -140,7 +140,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 

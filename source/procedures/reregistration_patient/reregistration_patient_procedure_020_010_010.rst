@@ -33,7 +33,7 @@ O **Paciente já cadastrado** continua a residir no mesmo **Endereço** (Procedi
 
     #. Abrir o registro :bi:`Patient (Aux)` associado à Paciente apresentado na *view* :bi:`Patients (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Patient (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

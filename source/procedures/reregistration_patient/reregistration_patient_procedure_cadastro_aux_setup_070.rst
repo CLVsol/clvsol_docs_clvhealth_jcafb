@@ -30,7 +30,7 @@ Excluir todos os registros de Pacientes falecidos do Cadastro Auxiliar (Procedim
 
         #. Selecionar todos os :bi:`Patients (Aux)` apresentadas
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 

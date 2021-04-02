@@ -30,7 +30,7 @@ Associar todos os Pacientes a um Paciente (Aux) (Procedimento)
 
         #. Selecionar todos as Pessoas com :bi:`Register State` != ":bi:`Canceled`"
 
-        #. Exercutar a Ação :bi:`Patient Associate to Patient (Aux)`:
+        #. Executar a Ação :bi:`Patient Associate to Patient (Aux)`:
 
             * Parâmetros utilizados:
 

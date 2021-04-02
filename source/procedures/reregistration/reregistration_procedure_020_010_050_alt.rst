@@ -40,7 +40,7 @@ A **Pessoa já cadastrada** mudou-se para um ourto **Endereço não cadastrado**
 
         #. Salvar o registro.
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 
@@ -53,7 +53,7 @@ A **Pessoa já cadastrada** mudou-se para um ourto **Endereço não cadastrado**
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

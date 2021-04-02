@@ -49,7 +49,7 @@ Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
 
         #. Selecionar o *Processing Schedule* "**Reregistration Import XLS (1)**"
 
-        #. Exercutar a Ação :bi:`Processing Schedule Execute`:
+        #. Executar a Ação :bi:`Processing Schedule Execute`:
 
             #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
@@ -66,7 +66,7 @@ Executar a Criação do Cadastro Auxiliar (Criação do Cadastro Auxiliar)
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -225,7 +225,7 @@ Atualizar o *State* de Endereços afetados pelo Recadastramento
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**Indefinido**" » :bi:`Verification State` = :bi:`Warning (L0)` » :bi:`Verification Outcome Information` = ":bi:`Please, verify "Address State".`"
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -271,7 +271,7 @@ Atualizar a Fase de Famílias afetadas pelo Recadastramento
 
         #. Selecionar todas as Famílias com: :bi:`Phase` = "**Indefinido**" » :bi:`Verification State` = :bi:`Warning (L0)` » :bi:`Verification Outcome Information` = ":bi:`Address "Phase" mismatch.`"
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -300,7 +300,7 @@ Atualizar o *State* de Famílias afetadas pelo Recadastramento
 
         #. Selecionar todas as Famílias com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Verification State` = :bi:`Warning (L0)` » :bi:`Verification Outcome Information` = ":bi:`Address "State" mismatch.`"
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -327,7 +327,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -350,7 +350,7 @@ Atualizar o *State* de Endereços afetados pelo Recadastramento
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**Indefinido**" » :bi:`Verification State` = :bi:`Warning (L0)` » :bi:`Verification Outcome Information` = ":bi:`Please, verify "Address State".`"
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -373,7 +373,7 @@ Executar o *Verification Batch* “Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -396,7 +396,7 @@ Atualizar o *State* de Endereços (Aux) afetados pelo Recadastramento
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**Indefinido**" » :bi:`Verification State` = ":bi:`Warning (L1)`" » :bi:`Verification Outcome Informations` = :bi:`"State" has changed.`
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Reload`":
+        #. Executar a Ação ":bi:`Address (Aux) Reload`":
 
             * Parâmetros utilizados:
 
@@ -407,7 +407,7 @@ Atualizar o *State* de Endereços (Aux) afetados pelo Recadastramento
 Atualizar o *Register State* dos Endereços já recadastrados
 -----------------------------------------------------------
 
-    #. Exercutar a Ação ":bi:`Address Mass Edit`":
+    #. Executar a Ação ":bi:`Address Mass Edit`":
 
         * Parâmetros utilizados:
 
@@ -420,7 +420,7 @@ Atualizar o *Register State* dos Endereços já recadastrados
 Atualizar o *Register State* das Famílias já recadastradas
 -----------------------------------------------------------
 
-    #. Exercutar a Ação ":bi:`Family Mass Edit`":
+    #. Executar a Ação ":bi:`Family Mass Edit`":
 
         * Parâmetros utilizados:
 
@@ -433,7 +433,7 @@ Atualizar o *Register State* das Famílias já recadastradas
 Atualizar o *Register State* das Pessoas já recadastradas
 -----------------------------------------------------------
 
-    #. Exercutar a Ação ":bi:`Person Mass Edit`":
+    #. Executar a Ação ":bi:`Person Mass Edit`":
 
         * Parâmetros utilizados:
 
@@ -446,7 +446,7 @@ Atualizar o *Register State* das Pessoas já recadastradas
 Atualizar o *Register State* dos Endereços (Aux) já recadastrados
 -----------------------------------------------------------------
 
-    #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+    #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
         * Parâmetros utilizados:
 
@@ -459,7 +459,7 @@ Atualizar o *Register State* dos Endereços (Aux) já recadastrados
 Atualizar o *Register State* das Pessoas (Aux) já recadastradas
 ---------------------------------------------------------------
 
-    #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+    #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
         * Parâmetros utilizados:
 
@@ -482,7 +482,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 

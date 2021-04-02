@@ -110,7 +110,7 @@ Selecionar as Crianças para o Projeto JCAFB-2021v
 
         #. Selecionar os 20 primeiros Pacientes listados com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Patient State` = :bi:`Available`
 
-        #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -137,7 +137,7 @@ Selecionar os Idosos para o Projeto JCAFB-2021v
 
         #. Selecionar os 20 primeiros Pacientes listados com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Patient State` = :bi:`Available`
 
-        #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -158,7 +158,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -181,7 +181,7 @@ Selecionar os Pacientes (Aux) para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L1)`" » :bi:`Verification Outcome Informations` = :bi:`"State" has changed.`
 
-        #. Exercutar a Ação ":bi:`Patient (Aux) Reload`":
+        #. Executar a Ação ":bi:`Patient (Aux) Reload`":
 
             * Parâmetros utilizados:
 
@@ -227,7 +227,7 @@ Associar os Pacientes selecionados a uma Residência
 
         #. Selecionar as Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Patient State` = ":bi:`Selected`" » :bi:`Residence` = :bi:`Indefinido`:
 
-        #. Exercutar a Ação "**Patient Associate to Residence**":
+        #. Executar a Ação "**Patient Associate to Residence**":
 
             * Parâmetros utilizados:
 
@@ -241,7 +241,7 @@ Associar os Pacientes selecionados a uma Residência
 
         #. Selecionar as Pacientes com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Patient State` = ":bi:`Selected`" » :bi:`Residence` = :bi:`Indefinido`:
 
-        #. Exercutar a Ação "**Patient Associate to Residence**":
+        #. Executar a Ação "**Patient Associate to Residence**":
 
             * Parâmetros utilizados:
 
@@ -276,7 +276,7 @@ Atualizar o *Residence Category* de todas as Residências
 
         #. Selecionar todas as Residências com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Residence State` = "**Unavailable**" » :bi:`Category` = "**Indefinido**" e que estejam localizadas na Zona Rural.
 
-        #. Exercutar a Ação ":bi:`Residence Mass Edit`":
+        #. Executar a Ação ":bi:`Residence Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -287,7 +287,7 @@ Atualizar o *Residence Category* de todas as Residências
         #. Selecionar todas as Residências com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Residence State` = "**Unavailable**" » :bi:`Category` = "**Indefinido**" e que estejam localizadas na Zona Urbana.
 
 
-        #. Exercutar a Ação ":bi:`Residence Mass Edit`":
+        #. Executar a Ação ":bi:`Residence Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -343,7 +343,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 

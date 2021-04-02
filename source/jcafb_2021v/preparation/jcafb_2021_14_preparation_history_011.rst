@@ -106,7 +106,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-25a)
 
         #. Selecionar todos os Pacientes.
 
-        #. Exercutar a Ação "**Patient Associate to Residence**":
+        #. Executar a Ação "**Patient Associate to Residence**":
 
             * Parâmetros utilizados:
 
@@ -120,7 +120,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-25a)
 
         #. Selecionar todos os Pacientes.
 
-        #. Exercutar a Ação ":bi:`Patient Verification Execute`":
+        #. Executar a Ação ":bi:`Patient Verification Execute`":
 
             #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
 
@@ -159,7 +159,7 @@ Executar o Cadastramento/Recadastramento (Preparação das Entidades do Cadastro
 
             #. Selecionar o *Processing Schedule* "**Reregistration Import XLS - Patient (1)**"
 
-            #. Exercutar a Ação :bi:`Processing Schedule Execute`:
+            #. Executar a Ação :bi:`Processing Schedule Execute`:
 
                 #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
@@ -167,7 +167,7 @@ Executar o Cadastramento/Recadastramento (Preparação das Entidades do Cadastro
 
             #. Selecionar o *Processing Schedule* "**Reregistration Import XLS - Patient (2)**"
 
-            #. Exercutar a Ação :bi:`Processing Schedule Execute`:
+            #. Executar a Ação :bi:`Processing Schedule Execute`:
 
                 #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
@@ -186,7 +186,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -279,7 +279,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
         #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Criança**"
 
-        #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -289,7 +289,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
         #. Selecionar todos os Pacientes com: :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Idoso**"
 
-        #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -311,7 +311,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
         #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**3-10 anos**"
 
-        #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -321,7 +321,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
         #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**60+ anos**"
 
-        #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -342,7 +342,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -368,7 +368,7 @@ Consolidação das Entidades do Cadastro Auxiliar
 Atualizar o *Register State* dos Pacientes já recadastrados
 -----------------------------------------------------------
 
-    #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+    #. Executar a Ação ":bi:`Patient Mass Edit`":
 
         * Parâmetros utilizados:
 
@@ -381,7 +381,7 @@ Atualizar o *Register State* dos Pacientes já recadastrados
 Atualizar o *Register State* dos Pacientes (Aux) já recadastrados
 -----------------------------------------------------------------
 
-    #. Exercutar a Ação ":bi:`Patient (Aux) Mass Edit`":
+    #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
         * Parâmetros utilizados:
 

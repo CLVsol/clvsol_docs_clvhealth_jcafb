@@ -30,7 +30,7 @@ Associar todas as Pessoas a uma Pessoa (Aux) (Procedimento)
 
         #. Selecionar todos as Pessoas com :bi:`Register State` != ":bi:`Canceled`"
 
-        #. Exercutar a Ação :bi:`Person Associate to Person (Aux)`:
+        #. Executar a Ação :bi:`Person Associate to Person (Aux)`:
 
             * Parâmetros utilizados:
 

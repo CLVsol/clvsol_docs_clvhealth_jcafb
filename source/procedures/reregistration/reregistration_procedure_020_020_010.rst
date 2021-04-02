@@ -53,7 +53,7 @@ A **Pessoa não cadastrada** reside em um **Endereço já cadastrado** (Procedim
 
     #. Abrir o registro :bi:`Address (Aux)` associado à Pessoa apresentado na *view* :bi:`Addresses (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 
@@ -66,7 +66,7 @@ A **Pessoa não cadastrada** reside em um **Endereço já cadastrado** (Procedim
 
     #. Retornar ao registro :bi:`Person (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

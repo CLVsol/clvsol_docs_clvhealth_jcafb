@@ -33,7 +33,7 @@ O **Paciente já cadastrado** mudou-se para um **Endereço fora da comunidade** 
 
     #. Abrir o registro :bi:`Patient (Aux)` associado ao Paciente apresentado na *view* :bi:`Patients (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Patient (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

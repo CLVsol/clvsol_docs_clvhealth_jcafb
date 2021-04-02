@@ -26,7 +26,7 @@ A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado** (
 
     #. Abrir o registro :bi:`Address (Aux)` associado ao campo *Address (Aux)*:
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 
@@ -39,7 +39,7 @@ A **Pessoa já cadastrada** continua a residir no **Endereço já cadastrado** (
 
     #. Retornar ao registro :bi:`Person (Aux)`:
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

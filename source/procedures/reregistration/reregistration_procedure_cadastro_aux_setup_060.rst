@@ -28,7 +28,7 @@ Remover a Fase de todos os Endereços (Aux) (Procedimento)
 
         #. Selecionar todos os Endereços (Aux)
 
-        #. Exercutar a Ação :bi:`Address (Aux) Mass Edit`:
+        #. Executar a Ação :bi:`Address (Aux) Mass Edit`:
 
             * Parâmetros utilizados:
 

@@ -30,7 +30,7 @@ Excluir todos os registros de Pessoas falecidas do Cadastro Auxiliar (Procedimen
 
         #. Selecionar todas as :bi:`Persons (Aux)` apresentadas
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 

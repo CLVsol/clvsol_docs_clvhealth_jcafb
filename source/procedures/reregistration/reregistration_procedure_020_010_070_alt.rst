@@ -24,7 +24,7 @@ A **Pessoa já cadastrada** mudou-se para um **Endereço fora da comunidade** at
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

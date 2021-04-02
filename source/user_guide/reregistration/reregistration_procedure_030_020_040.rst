@@ -30,7 +30,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Patient (Aux) Related Patient Update`":
+    #. Executar a Ação ":bi:`Patient (Aux) Related Patient Update`":
 
         #. Parâmetros apresentados:
 

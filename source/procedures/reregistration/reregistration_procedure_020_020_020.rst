@@ -30,7 +30,7 @@ A **Pessoa não cadastrada** reside em um **Endereço não cadastrado** (Procedi
 
         #. Salvar o registro.
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 
@@ -53,7 +53,7 @@ A **Pessoa não cadastrada** reside em um **Endereço não cadastrado** (Procedi
 
         #. Salvar o registro.
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

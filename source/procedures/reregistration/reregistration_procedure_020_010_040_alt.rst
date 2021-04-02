@@ -28,7 +28,7 @@ A **Pessoa já cadastrada** mudou-se para um outro **Endereço já cadastrado** 
 
     #. Abrir o registro :bi:`Person (Aux)` associado à Pessoa apresentado na *view* :bi:`Persons (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 
@@ -40,7 +40,7 @@ A **Pessoa já cadastrada** mudou-se para um outro **Endereço já cadastrado** 
 
             #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Associate to Address (Aux)`":
+        #. Executar a Ação ":bi:`Person (Aux) Associate to Address (Aux)`":
 
             #. Parâmetros apresentados:
 
@@ -50,7 +50,7 @@ A **Pessoa já cadastrada** mudou-se para um outro **Endereço já cadastrado** 
 
     #. Abrir o registro :bi:`Address (Aux)` associado à Pessoa apresentado na *view* :bi:`Addresses (Aux)`.
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 
@@ -63,7 +63,7 @@ A **Pessoa já cadastrada** mudou-se para um outro **Endereço já cadastrado** 
 
     #. Retornar ao registro :bi:`Person (Aux)`:
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Verification Execute`":
+        #. Executar a Ação ":bi:`Person (Aux) Verification Execute`":
 
             #. Utilizar o botão [:bi:`Person (Aux) Verification Execute`] para executar a Ação.
 

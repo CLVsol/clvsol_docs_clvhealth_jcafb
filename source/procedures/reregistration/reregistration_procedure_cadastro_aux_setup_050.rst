@@ -28,7 +28,7 @@ Remover a Fase de todas as Pessoas (Aux) (Procedimento)
 
         #. Selecionar todas as Pessoas (Aux)
 
-        #. Exercutar a Ação :bi:`Person (Aux) Mass Edit`:
+        #. Executar a Ação :bi:`Person (Aux) Mass Edit`:
 
             * Parâmetros utilizados:
 

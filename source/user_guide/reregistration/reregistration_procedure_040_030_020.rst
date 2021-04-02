@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Patient Associate to Residence`":
+    #. Executar a Ação ":bi:`Patient Associate to Residence`":
 
         #. Parâmetros apresentados:
 
@@ -36,7 +36,7 @@
 
         #. Utilizar o botão :bi:`Associate to Residence` para executar a Ação.
 
-    #. Exercutar a Ação ":bi:`Patient Verification Execute`":
+    #. Executar a Ação ":bi:`Patient Verification Execute`":
 
         #. Parâmetros apresentados:
 

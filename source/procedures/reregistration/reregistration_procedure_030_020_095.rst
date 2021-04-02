@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Person (Aux) Family Update`":
+    #. Executar a Ação ":bi:`Person (Aux) Family Update`":
 
         #. Parâmetros apresentados:
 

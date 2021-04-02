@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Patient Residence Update`":
+    #. Executar a Ação ":bi:`Patient Residence Update`":
 
         #. Parâmetros apresentados:
 

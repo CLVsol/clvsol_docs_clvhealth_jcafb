@@ -26,7 +26,7 @@ O **Paciente já cadastrado** mudou-se para um ourto **Endereço da Comunidade**
 
         #. Preencher os dados de :bi:`Contact Information` com as informações apresentadas para o Endereço da Paciente.
 
-        #. Exercutar a Ação ":bi:`Patient (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 

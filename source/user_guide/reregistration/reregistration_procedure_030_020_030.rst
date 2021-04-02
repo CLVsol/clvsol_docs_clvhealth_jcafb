@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Patient (Aux) Related Patient Create`":
+    #. Executar a Ação ":bi:`Patient (Aux) Related Patient Create`":
 
         #. Parâmetros apresentados:
 

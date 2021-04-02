@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Residence Set Code`":
+    #. Executar a Ação ":bi:`Residence Set Code`":
 
         #. Parâmetros apresentados:
 

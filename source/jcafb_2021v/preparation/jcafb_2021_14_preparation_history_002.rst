@@ -194,11 +194,11 @@ Cancelar a Pessoa "Valmir Lourenço Almeida Barbosa [210.540-37]"
 
         #. Selecionar o registro :bi:`Person (Aux)` de "Valmir Lourenço Almeida Barbosa [210.540-37]".
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-    #. [tkl-odoo14-jcafb21-vm] Exercutar a Ação ":bi:`Person Mass Edit`" para o registro referente a "Valmir Lourenço Almeida Barbosa [210.540-37]":
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação ":bi:`Person Mass Edit`" para o registro referente a "Valmir Lourenço Almeida Barbosa [210.540-37]":
 
         #. Acessar a *view* **Persons**:
 
@@ -208,7 +208,7 @@ Cancelar a Pessoa "Valmir Lourenço Almeida Barbosa [210.540-37]"
 
         #. Selecionar o registro :bi:`Person` de "Valmir Lourenço Almeida Barbosa [210.540-37]".
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -462,7 +462,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`QAN18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -476,7 +476,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`QDH18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -490,7 +490,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`QMD18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -504,7 +504,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`QSC18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -518,7 +518,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`QSF18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -532,7 +532,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`QSI18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -546,7 +546,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`TAN18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -560,7 +560,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`TCR18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -574,7 +574,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`TDH18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -588,7 +588,7 @@ Consolidar os Documentos do Projeto JCAFB-2018 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2018**" » :bi:`Document Type` = ":bi:`TID18`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -722,7 +722,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`QAN19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -736,7 +736,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`QDH19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -750,7 +750,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`QMD19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -764,7 +764,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`QSC19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -778,7 +778,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`QSF19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -792,7 +792,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`QSI19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -806,7 +806,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`TAN19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -820,7 +820,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`TCR19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -834,7 +834,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`TDH19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -848,7 +848,7 @@ Consolidar os Documentos do Projeto JCAFB-2019 (2)
 
     #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2019**" » :bi:`Document Type` = ":bi:`TID19`" » :bi:`Items Ok` = ":bi:`true`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 

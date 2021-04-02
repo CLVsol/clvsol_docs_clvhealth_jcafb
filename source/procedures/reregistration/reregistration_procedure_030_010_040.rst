@@ -29,7 +29,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Address (Aux) Reload`":
+    #. Executar a Ação ":bi:`Address (Aux) Reload`":
 
         #. Parâmetros apresentados:
 

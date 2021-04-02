@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Person (Aux) Associate to Family`":
+    #. Executar a Ação ":bi:`Person (Aux) Associate to Family`":
 
         #. Parâmetros apresentados:
 

@@ -159,7 +159,7 @@ Preparar *Global Settings* para o banco de dados *CLVhealth-JCAFB-2021v-14*
 
         #. Selecionar todas as Pessoas
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -213,7 +213,7 @@ Marcar o *Active Log* de todos os Objetos
 
         #. Selecionar todos os :bi:`Global Log Clients`
 
-        #. Exercutar a Ação ":bi:`Global Log Client Mass Edit`":
+        #. Executar a Ação ":bi:`Global Log Client Mass Edit`":
 
             * Parâmetros utilizados:
 

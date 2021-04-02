@@ -41,7 +41,7 @@ Executar o *Verification Batch* “Default Batch” (Procedimento)
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 

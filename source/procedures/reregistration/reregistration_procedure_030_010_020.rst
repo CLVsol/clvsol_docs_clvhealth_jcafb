@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Address (Aux) Related Address Create`":
+    #. Executar a Ação ":bi:`Address (Aux) Related Address Create`":
 
         #. Parâmetros apresentados:
 

@@ -28,7 +28,7 @@ Excluir todos os *Verification Outcomes* (Procedimento)
 
         #. Selecionar todas os :bi:`Verification Outcomes`
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 

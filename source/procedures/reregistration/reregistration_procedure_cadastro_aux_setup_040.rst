@@ -30,7 +30,7 @@ Associar todos os Endereços a um Endereço (Aux) (Procedimento)
 
         #. Selecionar todos os Endereços com :bi:`Register State` != ":bi:`Canceled`"
 
-        #. Exercutar a Ação :bi:`Address Associate to Address (Aux)`:
+        #. Executar a Ação :bi:`Address Associate to Address (Aux)`:
 
             * Parâmetros utilizados:
 

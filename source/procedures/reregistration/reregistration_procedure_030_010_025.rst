@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Address (Aux) Street Pattern Add`":
+    #. Executar a Ação ":bi:`Address (Aux) Street Pattern Add`":
 
         #. Parâmetros apresentados:
 

@@ -28,7 +28,7 @@ Remover a Fase de todos os Pacientes (Aux) (Procedimento)
 
         #. Selecionar todos os Pacientes (Aux)
 
-        #. Exercutar a Ação :bi:`Patient (Aux) Mass Edit`:
+        #. Executar a Ação :bi:`Patient (Aux) Mass Edit`:
 
             * Parâmetros utilizados:
 

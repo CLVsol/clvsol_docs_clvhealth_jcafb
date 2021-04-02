@@ -135,7 +135,7 @@ Adicionar novos *Street Patterns*
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -175,7 +175,7 @@ Redefinir a **Senha** de todos os Funcionários da **JCAFB-2021v**
 
         #. Selecionar todos os Funcionários da **JCAFB-2021v**
 
-        #. Exercutar a Ação ":bi:`Employee Mass Edit`":
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -198,7 +198,7 @@ Redefinir a senha do usuário de referência da JCAFB-2021v
 
         #. Selecionar o usuário de referência.
 
-        #. Exercutar a Ação "**Alterar Senha**":
+        #. Executar a Ação "**Alterar Senha**":
 
             * Parâmetros:
                 * Nova Senha: *******
@@ -351,7 +351,7 @@ Atualizar as permissões de todos os Usuários da JCAFB-2021v
 
         #. Selecionar os *Employees* da JCAFB-2021v
 
-        #. Exercutar a Ação "**Employee User Groups Update**":
+        #. Executar a Ação "**Employee User Groups Update**":
 
             #. Selecionar o :bi:`Reference Employee`: Usuário de referência (selecionado no ítem anterior).
 

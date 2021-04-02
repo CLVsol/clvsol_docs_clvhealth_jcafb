@@ -31,7 +31,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Person (Aux) Reload`":
+    #. Executar a Ação ":bi:`Person (Aux) Reload`":
 
         #. Parâmetros apresentados:
 

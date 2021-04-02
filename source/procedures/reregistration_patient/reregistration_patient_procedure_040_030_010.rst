@@ -28,7 +28,7 @@ Associar Paciente(s) a um Paciente (Aux) (Procedimento)
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação :bi:`Patient Associate to Patient (Aux)`:
+    #. Executar a Ação :bi:`Patient Associate to Patient (Aux)`:
 
         * Parâmetros utilizados:
 

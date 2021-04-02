@@ -29,7 +29,7 @@ Marcação de *Verification Markers* (Procedimento)
 
     #. Selecionar os :bi:`Verification Outcomes` que atendam aos critérios desejados.
 
-    #. Exercutar a Ação ":bi:`Verification Outcome Reference Mass Edit`":
+    #. Executar a Ação ":bi:`Verification Outcome Reference Mass Edit`":
 
         #. Parâmetros apresentados:
 

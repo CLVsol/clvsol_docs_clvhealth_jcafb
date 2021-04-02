@@ -462,7 +462,7 @@ Atualizar as permissões de todos os Usuários da JCAFB-2021v
 
         #. Selecionar os *Employees* da JCAFB-2021v
 
-        #. Exercutar a Ação "**Employee User Groups Update**":
+        #. Executar a Ação "**Employee User Groups Update**":
 
             #. Selecionar o :bi:`Reference Employee`: Usuário de referência (selecionado no ítem anterior).
 
@@ -491,7 +491,7 @@ Marcar os Endereços das Pessoas que participaram do Projeto da JCAFB (2017 - 20
 
         #. Selecionar todos os Endereços com: :bi:`Is Residence` = ":bi:`false`"
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -518,7 +518,7 @@ Associar os Endereços a uma Residência
 
         #. Selecionar todos os Endereços com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Residence" register.`"
 
-        #. Exercutar a Ação "**Address Associate to Patient**":
+        #. Executar a Ação "**Address Associate to Patient**":
 
             * Parâmetros utilizados:
 
@@ -532,7 +532,7 @@ Associar os Endereços a uma Residência
 
         #. Selecionar todas as Pessoas com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Residence" register.`"
 
-        #. Exercutar a Ação ":bi:`Address Verification Execute`":
+        #. Executar a Ação ":bi:`Address Verification Execute`":
 
             #. Utilize o botão :bi:`Address Verification Execute` para executar a Ação.
 
@@ -555,7 +555,7 @@ Atualizar o *Register State* de todas as Residências
 
         #. Selecionar todas as Residências
 
-        #. Exercutar a Ação ":bi:`Residence Mass Edit`":
+        #. Executar a Ação ":bi:`Residence Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -586,7 +586,7 @@ Marcar as Pessoas que foram Pacientes da JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -602,7 +602,7 @@ Marcar as Pessoas que foram Pacientes da JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -618,7 +618,7 @@ Marcar as Pessoas que foram Pacientes da JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -634,7 +634,7 @@ Marcar as Pessoas que foram Pacientes da JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Is Patient` = ":bi:`false`"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -661,7 +661,7 @@ Associar as Pessoas a um Paciente
 
         #. Selecionar todas as Pessoas com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Patient" register.`"
 
-        #. Exercutar a Ação "**Person Associate to Patient**":
+        #. Executar a Ação "**Person Associate to Patient**":
 
             * Parâmetros utilizados:
 
@@ -675,7 +675,7 @@ Associar as Pessoas a um Paciente
 
         #. Selecionar todas as Pessoas com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Patient" register.`"
 
-        #. Exercutar a Ação ":bi:`Person Verification Execute`":
+        #. Executar a Ação ":bi:`Person Verification Execute`":
 
             #. Utilize o botão :bi:`Person Verification Execute` para executar a Ação.
 
@@ -698,7 +698,7 @@ Atualizar o *Register State* de todos os Pacientes
 
         #. Selecionar todos os Pacientes
 
-        #. Exercutar a Ação ":bi:`Patient Mass Edit`":
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -725,7 +725,7 @@ Associar todos os Pacientes a um Paciente (Aux)
 
         #. Selecionar todos os Pacientes com :bi:`Register State` != ":bi:`Canceled`"
 
-        #. Exercutar a Ação :bi:`Patient Associate to Patient (Aux)`:
+        #. Executar a Ação :bi:`Patient Associate to Patient (Aux)`:
 
             * Parâmetros utilizados:
 
@@ -750,7 +750,7 @@ Remover a Fase de todos os Pacientes (Aux)
 
         #. Selecionar todos os Pacientes (Aux)
 
-        #. Exercutar a Ação :bi:`Patient (Aux) Mass Edit`:
+        #. Executar a Ação :bi:`Patient (Aux) Mass Edit`:
 
             * Parâmetros utilizados:
 

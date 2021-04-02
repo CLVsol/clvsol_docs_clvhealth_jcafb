@@ -305,7 +305,7 @@ Atualizar as permissões de todos os Usuários da JCAFB-2021v
 
         #. Selecionar os *Employees* da JCAFB-2021v
 
-        #. Exercutar a Ação "**Employee User Groups Update**":
+        #. Executar a Ação "**Employee User Groups Update**":
 
             #. Selecionar o :bi:`Reference Employee`: Usuário de referência (selecionado no ítem anterior).
 

@@ -28,7 +28,7 @@ Associar Pessoa(s) a uma Pessoa (Aux) (Procedimento)
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação :bi:`Person Associate to Person (Aux)`:
+    #. Executar a Ação :bi:`Person Associate to Person (Aux)`:
 
         * Parâmetros utilizados:
 

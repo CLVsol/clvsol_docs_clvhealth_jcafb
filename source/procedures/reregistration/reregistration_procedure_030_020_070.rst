@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Person (Aux) Related Person Update`":
+    #. Executar a Ação ":bi:`Person (Aux) Related Person Update`":
 
         #. Parâmetros apresentados:
 

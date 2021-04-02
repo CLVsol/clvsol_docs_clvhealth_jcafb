@@ -37,7 +37,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**0-2 anos**" » :bi:`Category` = "**Criança**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -47,7 +47,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**3-10 anos**" » :bi:`Category` = "**indefinido**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -57,7 +57,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**11-17 anos**" » :bi:`Category` = "**Gestante**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -67,7 +67,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Gestante**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -77,7 +77,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Idoso**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -87,7 +87,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**60+ anos**" » :bi:`Category` = "**indefinido**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -97,7 +97,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**indefinido**" » :bi:`Category` = "**Idoso**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -119,7 +119,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unavailable**" » :bi:`Category` = "**Criança**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -129,7 +129,7 @@
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unavailable**" » :bi:`Category` = "**Idoso**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -154,7 +154,7 @@ Selecionar as Crianças para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Person State` = :bi:`Available`
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -179,7 +179,7 @@ Selecionar os Idosos para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Person State` = :bi:`Available`
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -200,7 +200,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -223,7 +223,7 @@ Selecionar as Pessoas (Aux) para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L1)`" » :bi:`Verification Outcome Informations` = :bi:`"State" has changed.`
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Reload`":
+        #. Executar a Ação ":bi:`Person (Aux) Reload`":
 
             * Parâmetros utilizados:
 
@@ -247,7 +247,7 @@ Selecionar as Pessoas (Aux) para o Projeto JCAFB-2021v
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -270,7 +270,7 @@ Selecionar os Endereços para o Projeto JCAFB-2021v
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L0)`" » :bi:`Verification Outcome Informations` = :bi:`Please, verify "Address State".`
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -290,7 +290,7 @@ Selecionar os Endereços para o Projeto JCAFB-2021v
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -313,7 +313,7 @@ Selecionar os Endereços (Aux) para o Projeto JCAFB-2021v
 
         #. Selecionar todos os Endereços com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L1)`" » :bi:`Verification Outcome Informations` = :bi:`"State" has changed.`
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Reload`":
+        #. Executar a Ação ":bi:`Address (Aux) Reload`":
 
             * Parâmetros utilizados:
 
@@ -331,7 +331,7 @@ Selecionar os Endereços (Aux) para o Projeto JCAFB-2021v
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -354,7 +354,7 @@ Selecionar as Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Famílias com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L0)`" » :bi:`Verification Outcome Informations` = :bi:`Address "State" mismatch.`
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -374,7 +374,7 @@ Selecionar as Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -397,7 +397,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas (Aux) com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Person (Aux) State` = ":bi:`Selected`" » :bi:`Family` = :bi:`Indefinido`
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Associate to Family`":
+        #. Executar a Ação ":bi:`Person (Aux) Associate to Family`":
 
             * Parâmetros utilizados:
 
@@ -421,7 +421,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -439,7 +439,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = :bi:`"Family" should not be set.`
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -459,7 +459,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
@@ -479,7 +479,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Verification State` = ":bi:`Warning (L1)`" » :bi:`Verification Outcome Informations` = :bi:`"Family" has changed.`
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Reload`":
+        #. Executar a Ação ":bi:`Person (Aux) Reload`":
 
             * Parâmetros utilizados:
 
@@ -503,7 +503,7 @@ Criar Famílias para o Projeto JCAFB-2021v
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 

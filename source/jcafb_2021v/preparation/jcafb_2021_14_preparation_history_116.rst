@@ -31,7 +31,7 @@
 
         #. Selecionar os Documentos desejados.
 
-        #. Exercutar a Ação ":bi:`Document Set Survey User Input`":
+        #. Executar a Ação ":bi:`Document Set Survey User Input`":
 
             #. Utilize o botão :bi:`Set Survey User Input` para executar a Ação.
 
@@ -50,7 +50,7 @@ Trascrição das Respostas de um Questionário ou Termo de Consentimento via Doc
 
     #. Selecionar os Documentos desejados.
 
-    #. Exercutar a Ação ":bi:`Document Set Survey User Input`":
+    #. Executar a Ação ":bi:`Document Set Survey User Input`":
 
         #. Utilize o botão :bi:`Set Survey User Input` para executar a Ação.
 
@@ -113,7 +113,7 @@ Executar a Ação *Survey User Input Refresh* para as transcrições de Question
 
         #. Selecionar todas as :bi:`Participations` com: :bi:`Status` = "**Concluído**" » :bi:`Survey User Input State` = ":bi:`New`"
 
-        #. Exercutar a Ação ":bi:`Survey User Input Refresh`":
+        #. Executar a Ação ":bi:`Survey User Input Refresh`":
 
             #. Utilize o botão :bi:`Survey User Input Refresh` para executar a Ação.
 
@@ -136,7 +136,7 @@ Executar a Ação *Survey User Input Validate* para as transcrições de Questio
 
         #. Selecionar todas as :bi:`Participations` com: :bi:`Status` = "**Concluído**" » :bi:`Survey User Input State` = ":bi:`Checked`"
 
-        #. Exercutar a Ação ":bi:`Survey User Input Validate`":
+        #. Executar a Ação ":bi:`Survey User Input Validate`":
 
             #. Utilize o botão :bi:`Survey User Input Validate` para executar a Ação.
 
@@ -157,7 +157,7 @@ Executar a Ação *Document Type Items Set Up* para *Document Types* do Projeto 
 
         #. Selecionar todos os :bi:`Document Types` com: :bi:`Phase` = "**JCAFB-2021v**"
 
-        #. Exercutar a Ação ":bi:`Document Type Items Set Up`":
+        #. Executar a Ação ":bi:`Document Type Items Set Up`":
 
             #. Utilize o botão :bi:`Items Set Up` para executar a Ação.
 
@@ -180,7 +180,7 @@ Executar a Ação *Document Items Refresh* para Documentos do Projeto JCAFB-2021
 
         #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`"
 
-        #. Exercutar a Ação ":bi:`Document Items Refresh`":
+        #. Executar a Ação ":bi:`Document Items Refresh`":
 
             #. Utilize o botão :bi:`Items Refresh` para executar a Ação.
 
@@ -205,7 +205,7 @@ Executar a Ação *Document Items Refresh* para Documentos do Projeto JCAFB-2021
 
         #. Abrir o Documento desejado.
 
-        #. Exercutar a Ação ":bi:`Document Items Edit`":
+        #. Executar a Ação ":bi:`Document Items Edit`":
 
             #. Utilize o botão :bi:`Document Update` para executar a Ação.
 
@@ -228,7 +228,7 @@ Executar a Ação *Document Items Update from Survey* para Documentos do Projeto
 
         #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`"
 
-        #. Exercutar a Ação ":bi:`Document Items Update from Survey`":
+        #. Executar a Ação ":bi:`Document Items Update from Survey`":
 
             #. Utilize o botão :bi:`Update from Survey` para executar a Ação.
 
@@ -251,7 +251,7 @@ Executar a Ação *Document Items Ok Set Up* para Documentos do Projeto JCAFB-20
 
         #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`"
 
-        #. Exercutar a Ação ":bi:`Document Items Ok Set Up`":
+        #. Executar a Ação ":bi:`Document Items Ok Set Up`":
 
             #. Utilize o botão :bi:`Items Ok Set Up` para executar a Ação.
 
@@ -274,7 +274,7 @@ Executar a Ação *Document Mass Edit* para Documentos do Projeto JCAFB-2021v
 
         #. Selecionar todos os :bi:`Documents` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Document State` = ":bi:`New`" » :bi:`Items Ok` = ":bi:`False`"
 
-        #. Exercutar a Ação ":bi:`Document Mass Edit`":
+        #. Executar a Ação ":bi:`Document Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -299,7 +299,7 @@ Executar a Ação *Lab Test Request Receive* para recebimento de uma amostra par
 
         #. Pesquisar pelo **Código** do :bi:`Lab Test Request` desejado.
 
-        #. Exercutar a Ação ":bi:`Lab Test Request Receive`" para o registro encontrado:
+        #. Executar a Ação ":bi:`Lab Test Request Receive`" para o registro encontrado:
 
             * Parâmetros utilizados:
 

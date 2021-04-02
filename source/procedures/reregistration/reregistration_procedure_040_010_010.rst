@@ -28,7 +28,7 @@ Associar Endereço(s) a um Endereço (Aux) (Procedimento)
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação :bi:`Address Associate to Address (Aux)`:
+    #. Executar a Ação :bi:`Address Associate to Address (Aux)`:
 
         * Parâmetros utilizados:
 

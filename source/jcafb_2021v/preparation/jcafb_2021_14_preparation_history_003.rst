@@ -414,7 +414,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**0-2 anos**" » :bi:`Category` = "**Criança**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -424,7 +424,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**3-10 anos**" » :bi:`Category` = "**indefinido**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -434,7 +434,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**11-17 anos**" » :bi:`Category` = "**Gestante**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -444,7 +444,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Gestante**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -454,7 +454,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**18-59 anos**" » :bi:`Category` = "**Idoso**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -464,7 +464,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**60+ anos**" » :bi:`Category` = "**indefinido**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -474,7 +474,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Age Range` = "**indefinido**" » :bi:`Category` = "**Idoso**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -496,7 +496,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unavailable**" » :bi:`Category` = "**Criança**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -506,7 +506,7 @@ Atualizar o *Person Category* de todas as Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unavailable**" » :bi:`Category` = "**Idoso**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -582,7 +582,7 @@ Excluir o *Person Marker* de todas as Pessoas
 
         #. Selecionar todas as Pessoas
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -658,7 +658,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2017`" » :bi:`Document Type` = "**QAN17**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -668,7 +668,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2018`" » :bi:`Document Type` = "**QAN18**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -678,7 +678,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2019`" » :bi:`Document Type` = "**QAN19**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -688,7 +688,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2020`" » :bi:`Document Type` = "**QAN20**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -698,7 +698,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2017`" » :bi:`Document Type` = "**QDH17**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -708,7 +708,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2018`" » :bi:`Document Type` = "**QDH18**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -718,7 +718,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2019`" » :bi:`Document Type` = "**QDH19**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -728,7 +728,7 @@ Marcar as Pessoas que participaram de algum evento de Campanha da JCAFB (2017 - 
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2020`" » :bi:`Document Type` = "**QDH20**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -753,7 +753,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2017`" » :bi:`Document Type` = "**QSC17**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -763,7 +763,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2017`" » :bi:`Document Type` = "**QSI17**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -773,7 +773,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2018`" » :bi:`Document Type` = "**QSC18**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -783,7 +783,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2018`" » :bi:`Document Type` = "**QSI18**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -793,7 +793,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2019`" » :bi:`Document Type` = "**QSC19**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -803,7 +803,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2019`" » :bi:`Document Type` = "**QSI19**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -813,7 +813,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2020`" » :bi:`Document Type` = "**QSC20**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -823,7 +823,7 @@ Marcar as Pessoas que participaram do Projeto da JCAFB (2017 - 2020)
 
         #. Selecionar todas as Pessoas com: :bi:`Phase` = ":bi:`JCAFB-2020`" » :bi:`Document Type` = "**QSI20**" » :bi:`Items Ok` = "**true**"
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -848,7 +848,7 @@ Marcar as Crianças e os Idosos que ainda não participaram do Projeto da JCAFB 
 
         #. Selecionar todas as Pessoas com: :bi:`Markers` = ":bi:`Indefinido`" » :bi:`Categories` = "**Criança**""
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit"`:
+        #. Executar a Ação ":bi:`Person Mass Edit"`:
 
             * Parâmetros utilizados:
 
@@ -858,7 +858,7 @@ Marcar as Crianças e os Idosos que ainda não participaram do Projeto da JCAFB 
 
         #. Selecionar todas as Pessoas com: :bi:`Markers` = ":bi:`Indefinido`" » :bi:`Categories` = "**Idoso**""
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit"`:
+        #. Executar a Ação ":bi:`Person Mass Edit"`:
 
             * Parâmetros utilizados:
 
@@ -1023,7 +1023,7 @@ Marcar os Endereços atuais das Pessoas que participaram do Projeto da JCAFB (20
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = ":bi:`Available` ou :bi:`Person State` = ":bi:`Unselected`
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -1037,7 +1037,7 @@ Marcar os Endereços atuais das Pessoas que participaram do Projeto da JCAFB (20
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = ":bi:`Available` ou :bi:`Person State` = ":bi:`Unselected`
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -1051,7 +1051,7 @@ Marcar os Endereços atuais das Pessoas que participaram do Projeto da JCAFB (20
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = ":bi:`Available` ou :bi:`Person State` = ":bi:`Unselected`
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -1065,7 +1065,7 @@ Marcar os Endereços atuais das Pessoas que participaram do Projeto da JCAFB (20
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = ":bi:`Available` ou :bi:`Person State` = ":bi:`Unselected`
 
-        #. Exercutar a Ação ":bi:`Document Related Person Set Marker`":
+        #. Executar a Ação ":bi:`Document Related Person Set Marker`":
 
             * Parâmetros utilizados:
 
@@ -1107,7 +1107,7 @@ Atualizar o *Person State* das Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Person State` = "**Unselect**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1121,7 +1121,7 @@ Atualizar o *Person State* das Pessoas
 
         #. Selecionar todas as Pessoas com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Person State` = "**Available**"
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1148,7 +1148,7 @@ Atualizar o *Person (Aux) State* das Pessoas (Aux)
 
         #. Selecionar todas as Pessoas (Aux) com: :bi:`Person (Aux) State` = "**Unselect**"
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1162,7 +1162,7 @@ Atualizar o *Person (Aux) State* das Pessoas (Aux)
 
         #. Selecionar todas as Pessoas com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Person (Aux) State` = "**Available**"
 
-        #. Exercutar a Ação ":bi:`Person (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1189,7 +1189,7 @@ Atualizar o *Address State* dos Endereços
 
         #. Selecionar todas as Pessoas com: :bi:`Address State` = "**Unselect**"
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1216,7 +1216,7 @@ Atualizar o *Address (Aux) State* dos Endereços (Aux)
 
         #. Selecionar todas as Pessoas com: :bi:`Address (Aux) State` = "**Unselect**"
 
-        #. Exercutar a Ação ":bi:`Address (Aux) Mass Edit`":
+        #. Executar a Ação ":bi:`Address (Aux) Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1243,7 +1243,7 @@ Atualizar o *Family State* das Famílias
 
         #. Selecionar todas as Famílias com: :bi:`Family State` = "**Unselect**"
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1257,7 +1257,7 @@ Atualizar o *Family State* das Famílias
 
         #. Selecionar todas as Famílias com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Family State` = "**Available**"
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1269,7 +1269,7 @@ Atualizar o *Family State* das Famílias
 
         #. Selecionar todas as Famílias com: :bi:`Address Categories` = "**Indefinido**" » :bi:`Family State` = "**Unknown**"
 
-        #. Exercutar a Ação ":bi:`Family Mass Edit`":
+        #. Executar a Ação ":bi:`Family Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1294,7 +1294,7 @@ Excluir o *Global Tag* de todas as Pessoas
 
         #. Selecionar todas as Pessoas
 
-        #. Exercutar a Ação ":bi:`Person Mass Edit`":
+        #. Executar a Ação ":bi:`Person Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1317,7 +1317,7 @@ Excluir o *Global Tag* de todos os Endereços
 
         #. Selecionar todos os Endereços
 
-        #. Exercutar a Ação ":bi:`Address Mass Edit`":
+        #. Executar a Ação ":bi:`Address Mass Edit`":
 
             * Parâmetros utilizados:
 
@@ -1340,7 +1340,7 @@ Excluir os *Global Tags* definidos
 
         #. Selecionar todas as Tags
 
-        #. Exercutar a Ação ":bi:`Excluir`":
+        #. Executar a Ação ":bi:`Excluir`":
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -1357,7 +1357,7 @@ Executar o *Verification Batch* “Default Batch”
 
         #. Selecionar o :bi:`Verification Batch` ":bi:`Default Batch`"
 
-        #. Exercutar a Ação :bi:`Verification Batch Exec`:
+        #. Executar a Ação :bi:`Verification Batch Exec`:
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 

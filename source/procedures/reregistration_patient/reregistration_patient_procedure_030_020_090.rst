@@ -28,7 +28,7 @@
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação ":bi:`Patient (Aux) Mass Edit`":
+    #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
         #. Parâmetros apresentados:
 

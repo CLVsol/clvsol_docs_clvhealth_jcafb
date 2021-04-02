@@ -28,7 +28,7 @@ Desmarcar o Campo *Family is Unavailable* (Procedimento)
 
     #. Selecionar o(s) registro(s) desejado(s).
 
-    #. Exercutar a Ação :bi:`Person Mass Edit`:
+    #. Executar a Ação :bi:`Person Mass Edit`:
 
         * Parâmetros utilizados:
 

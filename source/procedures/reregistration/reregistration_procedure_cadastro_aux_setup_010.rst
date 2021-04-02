@@ -30,7 +30,7 @@ Excluir todos os registros de Pessoas do Cadastro Auxiliar (Procedimento)
 
         #. Selecionar todas as :bi:`Persons (Aux)`
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
@@ -46,7 +46,7 @@ Excluir todos os registros de Pessoas do Cadastro Auxiliar (Procedimento)
 
         #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.person_aux**"
 
-        #. Exercutar a Ação **Excluir**:
+        #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
