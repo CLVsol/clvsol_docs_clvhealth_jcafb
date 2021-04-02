@@ -18,11 +18,37 @@ O **Paciente já cadastrado** mudou-se para um **Endereço fora da comunidade** 
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_070`".
 
-    #. Procurar pelo registro :bi:`Patient (Aux)` associado ao Paciente utilizando o procedimento:
+    #. Procurar pelo Paciente na *view* :bi:`Patients (Aux)`:
 
-        * :doc:`reregistration_procedure_010_030`
+        #. Acessar a *view* :bi:`Patients (Aux)`:
 
-    #. Abrir o registro :bi:`Patient (Aux)` associado ao Paciente apresentado na *view* :bi:`Patients (Aux)`.
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients (Aux)`
+
+        #. Pesquisar pelo Paciente.
+
+    #. Abrir o registro :bi:`Patient (Aux)` associado ao Paciente encontrado.
+
+        #. Confirmar que o Paciente mudou-se para um Endereço fora da comunidade atendida pela JCAFB (ou para um Endereço desconhecido):
+
+            #. Caso as informações do novo Endereço sejam apresentadas:
+
+                #. **Editar** o registro associado ao Paciente.
+
+                #. **Atualizar** as informações de :bi:`Contact Information` cadastradas para o Paciente com as novas informações de Endereço apresentadas para o mesmo.
+
+                #. **Salvar** o registro.
+
+            #. Caso as informações do novo Endereço sejam desconhecidas:
+
+                #. **Editar** o registro associado ao Paciente.
+
+                #. **Excluir** todas as informações de :bi:`Contact Information` cadastradas para o Paciente utilizando o botão :bi:`Clear Address Data`.
+
+                #. **Indicar** o parâmetro :bi:`Contact Information is unavailable` como **marcado**.
+
+                #. **Salvar** o registro.
 
         #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
