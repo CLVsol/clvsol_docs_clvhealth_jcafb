@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação das Entidades do Cadastro Auxiliar [Pacientes] (Procedimentos)
+.. index:: Consolidação das Entidades do Cadastro Auxiliar
 
-===============================================================================
-Consolidação das Entidades do **Cadastro Auxiliar** [Pacientes] (Procedimentos)
-===============================================================================
+===================================================
+Consolidação das Entidades do **Cadastro Auxiliar**
+===================================================
 
 .. toctree::
    :maxdepth: 2

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Executar o Verification Batch “Default Batch” (método alternativo) (Procedimento)
+.. index:: Executar o Verification Batch “Default Batch” (método alternativo)
 
-====================================================================================
-Executar o *Verification Batch* “Default Batch”  (método alternativo) (Procedimento)
-====================================================================================
+=====================================================================
+Executar o *Verification Batch* “Default Batch”  (método alternativo)
+=====================================================================
 
     * *Workflow*: ":doc:`reregistration_cadastro_aux_setup`".
 

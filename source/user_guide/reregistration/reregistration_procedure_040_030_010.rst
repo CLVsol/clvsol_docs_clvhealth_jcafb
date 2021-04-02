@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Associar Paciente(s) a um Paciente (Aux) (Procedimento)
+.. index:: Associar Paciente(s) a um Paciente (Aux)
 
-=======================================================
-Associar Paciente(s) a um Paciente (Aux) (Procedimento)
-=======================================================
+========================================
+Associar Paciente(s) a um Paciente (Aux)
+========================================
 
     * *Workflow*: :doc:`reregistration_workflow_040_030_010`
 

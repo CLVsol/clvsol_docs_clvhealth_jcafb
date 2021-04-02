@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient Residence Update (Procedimento)
+.. index:: Patient Residence Update
 
-=============================================
-:bi:`Patient Residence Update` (Procedimento)
-=============================================
+==============================
+:bi:`Patient Residence Update`
+==============================
 
     * *Workflow*: ":doc:`reregistration_workflow_040_030_040`".
 

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: O Paciente não cadastrado reside em um Endereço da Comunidade (Procedimento)
+.. index:: O Paciente não cadastrado reside em um Endereço da Comunidade
 
-====================================================================================
-O **Paciente não cadastrado** reside em um **Endereço da Comunidade** (Procedimento)
-====================================================================================
+=====================================================================
+O **Paciente não cadastrado** reside em um **Endereço da Comunidade**
+=====================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_020_010`".
 

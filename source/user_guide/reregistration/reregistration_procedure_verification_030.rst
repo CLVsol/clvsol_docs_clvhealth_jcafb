@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Uso de Verification Outcomes (Procedimento)
+.. index:: Uso de Verification Outcomes
 
-=============================================
-Uso de *Verification Outcomes* (Procedimento)
-=============================================
+==============================
+Uso de *Verification Outcomes*
+==============================
 
     * *Workflow*: ":doc:`reregistration_workflow_030`".
     * *Workflow*: ":doc:`reregistration_workflow_040`".

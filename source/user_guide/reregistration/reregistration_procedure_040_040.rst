@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação de Residence (Procedimentos)
+.. index:: Consolidação de Residence
 
-===============================================
-Consolidação de :bi:`Residence` (Procedimentos)
-===============================================
+===============================
+Consolidação de :bi:`Residence`
+===============================
 
 .. toctree::
    :maxdepth: 2

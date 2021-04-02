@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: O Paciente já cadastrado mudou-se para um Endereço fora da comunidade atendida pela JCAFB (Procedimento)
+.. index:: O Paciente já cadastrado mudou-se para um Endereço fora da comunidade atendida pela JCAFB
 
-================================================================================================================
-O **Paciente já cadastrado** mudou-se para um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
-================================================================================================================
+=================================================================================================
+O **Paciente já cadastrado** mudou-se para um **Endereço fora da comunidade** atendida pela JCAFB
+=================================================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_070`".
 

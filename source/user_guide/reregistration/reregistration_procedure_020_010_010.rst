@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: O Paciente já cadastrado continua a residir no mesmo Endereço (Procedimento)
+.. index:: O Paciente já cadastrado continua a residir no mesmo Endereço
 
-=======================================================================================
-O **Paciente já cadastrado** continua a residir no mesmo **Endereço** (Procedimento)
-=======================================================================================
+=====================================================================
+O **Paciente já cadastrado** continua a residir no mesmo **Endereço**
+=====================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_010`".
 

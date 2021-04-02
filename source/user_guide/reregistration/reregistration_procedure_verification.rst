@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Verificação (Procedimentos)
+.. index:: Verificação
 
-===========================
-Verificação (Procedimentos)
-===========================
+===========
+Verificação
+===========
 
 .. toctree::
    :maxdepth: 3

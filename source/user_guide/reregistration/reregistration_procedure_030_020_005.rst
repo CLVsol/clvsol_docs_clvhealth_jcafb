@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient (Aux) Street Pattern Add (Procedimento)
+.. index:: Patient (Aux) Street Pattern Add
 
-=====================================================
-:bi:`Patient (Aux) Street Pattern Add` (Procedimento)
-=====================================================
+======================================
+:bi:`Patient (Aux) Street Pattern Add`
+======================================
 
     * *Workflow*: :doc:`reregistration_workflow_030_020_010_005`
 

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Executar o Verification Batch “Default Batch” (Procedimento)
+.. index:: Executar o Verification Batch “Default Batch”
 
-==============================================================
-Executar o *Verification Batch* “Default Batch” (Procedimento)
-==============================================================
+===============================================
+Executar o *Verification Batch* “Default Batch”
+===============================================
 
     * *Workflow*: ":doc:`reregistration_workflow_030`".
     * *Workflow*: ":doc:`reregistration_workflow_040`".

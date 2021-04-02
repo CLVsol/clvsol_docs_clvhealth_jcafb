@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação de Patient (Aux) (Procedimentos)
+.. index:: Consolidação de Patient (Aux)
 
-===================================================
-Consolidação de :bi:`Patient (Aux)` (Procedimentos)
-===================================================
+===================================
+Consolidação de :bi:`Patient (Aux)`
+===================================
 
 .. toctree::
    :maxdepth: 2

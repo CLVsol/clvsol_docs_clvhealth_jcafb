@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient (Aux) Add Category (Procedimento)
+.. index:: Patient (Aux) Add Category
 
-===============================================
-:bi:`Patient (Aux) Add Category` (Procedimento)
-===============================================
+================================
+:bi:`Patient (Aux) Add Category`
+================================
 
     * *Workflow*: ":doc:`reregistration_workflow_030_020_020_090`".
 

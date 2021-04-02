@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação das Entidades do Cadastro Principal [Pacientes] (Procedimentos)
+.. index:: Consolidação das Entidades do Cadastro Principal
 
-================================================================================
-Consolidação das Entidades do **Cadastro Principal** [Pacientes] (Procedimentos)
-================================================================================
+====================================================
+Consolidação das Entidades do **Cadastro Principal**
+====================================================
 
 .. toctree::
    :maxdepth: 2

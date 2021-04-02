@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient (Aux) Reload (Procedimento)
+.. index:: Patient (Aux) Reload
 
-=========================================
-:bi:`Patient (Aux) Reload` (Procedimento)
-=========================================
+==========================
+:bi:`Patient (Aux) Reload`
+==========================
 
     * *Workflow*: ":doc:`reregistration_workflow_030_020_020_010`".
     * *Workflow*: ":doc:`reregistration_workflow_030_020_020_020`".

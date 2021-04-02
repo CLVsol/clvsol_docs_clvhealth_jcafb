@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura por um Paciente em Contatos (Procedimento)
+.. index:: Procura por um Paciente em Contatos
 
-======================================================
-Procura por um **Paciente** em Contatos (Procedimento)
-======================================================
+=======================================
+Procura por um **Paciente** em Contatos
+=======================================
 
     * *Workflow*: ":doc:`reregistration_workflow_010_010`".
 

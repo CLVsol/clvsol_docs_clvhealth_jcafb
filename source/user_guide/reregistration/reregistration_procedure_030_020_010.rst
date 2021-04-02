@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient (Aux) Set Code (Procedimento)
+.. index:: Patient (Aux) Set Code
 
-===========================================
-:bi:`Patient (Aux) Set Code` (Procedimento)
-===========================================
+============================
+:bi:`Patient (Aux) Set Code`
+============================
 
     * *Workflow*: ":doc:`reregistration_workflow_030_020_010_010`".
 

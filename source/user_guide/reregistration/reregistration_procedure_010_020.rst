@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Procura por um Paciente em Patients (Procedimento)
+.. index:: Procura por um Paciente em Patients
 
-========================================================
-Procura por um **Paciente** em *Patients* (Procedimento)
-========================================================
+=========================================
+Procura por um **Paciente** em *Patients*
+=========================================
 
     * *Workflow*: ":doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_010_020`".
 

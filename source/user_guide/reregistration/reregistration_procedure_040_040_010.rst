@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Residence Set Code (Procedimento)
+.. index:: Residence Set Code
 
-=======================================
-:bi:`Residence Set Code` (Procedimento)
-=======================================
+========================
+:bi:`Residence Set Code`
+========================
 
     * *Workflow*: ":doc:`reregistration_workflow_040_040_010`".
 

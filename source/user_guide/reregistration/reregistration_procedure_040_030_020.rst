@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient Associate to Residence (Procedimento)
+.. index:: Patient Associate to Residence
 
-===================================================
-:bi:`Patient Associate to Residence` (Procedimento)
-===================================================
+====================================
+:bi:`Patient Associate to Residence`
+====================================
 
     * *Workflow*: ":doc:`reregistration_workflow_040_030_020`".
 

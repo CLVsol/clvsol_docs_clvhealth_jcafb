@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient (Aux) Related Patient Create (Procedimento)
+.. index:: Patient (Aux) Related Patient Create
 
-=========================================================
-:bi:`Patient (Aux) Related Patient Create` (Procedimento)
-=========================================================
+==========================================
+:bi:`Patient (Aux) Related Patient Create`
+==========================================
 
     * *Workflow*: ":doc:`reregistration_workflow_030_020_010_030`".
 

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: O Paciente já cadastrado mudou-se para um outro Endereço da Comunidade (Procedimento)
+.. index:: O Paciente já cadastrado mudou-se para um outro Endereço da Comunidade
 
-=============================================================================================
-O **Paciente já cadastrado** mudou-se para um outro **Endereço da Comunidade** (Procedimento)
-=============================================================================================
+==============================================================================
+O **Paciente já cadastrado** mudou-se para um outro **Endereço da Comunidade**
+==============================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_050`".
 

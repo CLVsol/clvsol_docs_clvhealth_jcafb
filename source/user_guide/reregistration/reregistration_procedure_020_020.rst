@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Cadastramento de novos Pacientes (Procedimentos)
+.. index:: Cadastramento de novos Pacientes
 
-================================================
-Cadastramento de novos Pacientes (Procedimentos)
-================================================
+================================
+Cadastramento de novos Pacientes
+================================
 
 .. toctree::
    :maxdepth: 2

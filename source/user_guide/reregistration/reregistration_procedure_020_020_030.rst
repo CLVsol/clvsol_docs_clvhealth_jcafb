@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: O Paciente não cadastrado reside em um Endereço fora da comunidade atendida pela JCAFB (Procedimento)
+.. index:: O Paciente não cadastrado reside em um Endereço fora da comunidade atendida pela JCAFB
 
-=============================================================================================================
-O **Paciente não cadastrado** reside em um **Endereço fora da comunidade** atendida pela JCAFB (Procedimento)
-=============================================================================================================
+==============================================================================================
+O **Paciente não cadastrado** reside em um **Endereço fora da comunidade** atendida pela JCAFB
+==============================================================================================
 
     * *Workflow*: ":doc:`reregistration_workflow_020_020_030`".
 

@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Recadastramento de Pacientes já cadastrados (Procedimentos)
+.. index:: Recadastramento de Pacientes já cadastrados
 
-===========================================================
-Recadastramento de Pacientes já cadastrados (Procedimentos)
-===========================================================
+===========================================
+Recadastramento de Pacientes já cadastrados
+===========================================
 
 .. toctree::
    :maxdepth: 2

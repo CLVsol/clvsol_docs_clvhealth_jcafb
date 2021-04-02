@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Patient (Aux) Contact Information Pattern Add (Procedimento)
+.. index:: Patient (Aux) Contact Information Pattern Add
 
-==================================================================
-:bi:`Patient (Aux) Contact Information Pattern Add` (Procedimento)
-==================================================================
+===================================================
+:bi:`Patient (Aux) Contact Information Pattern Add`
+===================================================
 
     * *Workflow*: :doc:`reregistration_workflow_030_020_010_006`
 

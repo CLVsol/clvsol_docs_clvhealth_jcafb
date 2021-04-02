@@ -10,11 +10,11 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Marcação de Verification Markers (Procedimento)
+.. index:: Marcação de Verification Markers
 
-=================================================
-Marcação de *Verification Markers* (Procedimento)
-=================================================
+==================================
+Marcação de *Verification Markers*
+==================================
 
     * *Workflow*: ":doc:`reregistration_workflow_030`".
     * *Workflow*: ":doc:`reregistration_workflow_040`".
