@@ -32,11 +32,23 @@ O **Paciente já cadastrado** mudou-se para um outro **Endereço da Comunidade**
 
         #. Confirmar que as informações de :bi:`Contact Information` cadastradas para o Paciente NÃO coincidem com as informações de Endereço (dentro da Comunidade atendida pela JCAFB) apresentadas para o mesmo:
 
-            #. **Editar** o registro associado ao Paciente, **atualizar** as informações de :bi:`Contact Information` cadastradas para o Paciente com as novas informações de Endereço apresentadas para o mesmo e **salvar** o registro.
+            #. Aplicar as atualizações necessárias:
+
+                #. **Editar** o registro associado ao Paciente.
+
+                #. **Atualizar** as informações de :bi:`Contact Information` cadastradas para o Paciente com as novas informações de Endereço apresentadas para o mesmo.
+
+                #. **Salvar** o registro.
 
         #. Verificar se os Outros Dados cadastrados para o Paciente coincidem com as informações dos Outros Dados apresentadas para o mesmo:
 
-            #. Se for necessário atualizar alguma informação do cadastro, **editar** o registro associado ao Paciente, **alterar** os parâmetros necessários e **salvar** o registro.
+            #. Se for necessário atualizar alguma informação do cadastro:
+
+                #. **Editar** o registro associado ao Paciente.
+
+                #.  **Alterar** os parâmetros necessários.
+
+                #. **Salvar** o registro.
 
         #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 

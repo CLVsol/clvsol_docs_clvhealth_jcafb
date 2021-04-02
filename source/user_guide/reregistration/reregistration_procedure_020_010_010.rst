@@ -34,7 +34,13 @@ O **Paciente já cadastrado** continua a residir no mesmo **Endereço** (Procedi
 
         #. Verificar se os Outros Dados cadastrados para o Paciente coincidem com as informações dos Outros Dados apresentadas para o mesmo:
 
-            #. Se for necessário atualizar alguma informação do cadastro, **editar** o registro associado ao Paciente, **alterar** os parâmetros necessários e **salvar** o registro.
+            #. Se for necessário atualizar alguma informação do cadastro:
+
+                #. **Editar** o registro associado ao Paciente.
+
+                #.  **Alterar** os parâmetros necessários.
+
+                #. **Salvar** o registro.
 
         #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
