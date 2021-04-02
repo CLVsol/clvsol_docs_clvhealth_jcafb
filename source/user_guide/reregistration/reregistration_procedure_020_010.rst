@@ -23,3 +23,4 @@ Recadastramento de Pacientes já cadastrados
    reregistration_procedure_020_010_010
    reregistration_procedure_020_010_050
    reregistration_procedure_020_010_070
+   reregistration_procedure_020_010_080
