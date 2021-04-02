@@ -37,7 +37,7 @@ O **Paciente já cadastrado** continua a residir no mesmo **Endereço**
 
                 * *Related Patient* » :bi:`Patient`
                 * *Contact Information* = Dados de Endereço de :bi:`Patient`
-                * Outros Dados = Outros Dados de :bi:`Patient`
+                * Outros Dados = Outros Dados de :bi:`Patient` :green:`(com as atualizações necessárias)`
 
     **Fluxo de Trabalho** (:bi:`Workflow`):
 

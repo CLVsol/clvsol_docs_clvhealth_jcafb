@@ -18,13 +18,25 @@ O **Paciente já cadastrado** continua a residir no mesmo **Endereço** (Procedi
 
     * *Workflow*: ":doc:`reregistration_workflow_020_010_010`".
 
-    #. Procurar pelo registro :bi:`Patient (Aux)` associado ao Paciente utilizando o procedimento:
+    #. Procurar pelo Paciente na *view* :bi:`Patients (Aux)`:
 
-        * :doc:`reregistration_procedure_010_030`
+        #. Acessar a *view* :bi:`Patients (Aux)`:
 
-    #. Abrir o registro :bi:`Patient (Aux)` associado ao Paciente apresentado na *view* :bi:`Patients (Aux)`.
+            * Menu de acesso:
 
-        #. Exercutar a Ação ":bi:`Patient (Aux) Mass Edit`":
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients (Aux)`
+
+        #. Pesquisar pelo Paciente.
+
+    #. Abrir o registro :bi:`Patient (Aux)` associado ao Paciente encontrado.
+
+        #. Confirmar que as informações de :bi:`Contact Information` cadastradas para o Paciente coincidem com as informações de Endereço apresentadas para o mesmo.
+
+        #. Verificar se os Outros Dados cadastrados para o Paciente coincidem com as informações dos Outros Dados apresentadas para o mesmo:
+
+            #. Se for necessário atualizar alguma informação do cadastro, **editar** o registro associado ao Paciente, **alterar** os parâmetros necessários e **salvar** o registro.
+
+        #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
             #. Parâmetros apresentados:
 
