@@ -22,5 +22,5 @@ Guia do Usuário
 
    reregistration/reregistration
    patient_selection/patient_selection
-   preparation/preparation
+   project_preparation/project_preparation
    execution/execution
