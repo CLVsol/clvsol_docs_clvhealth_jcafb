@@ -19,7 +19,7 @@
 Os **Procedimentos** do Cadastramento/Recadastramento de **Pacientes** são apresentados em seguida.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Tópicos Relacionados:
 
    reregistration_procedure_010
