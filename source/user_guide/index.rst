@@ -17,7 +17,7 @@ Guia do Usuário
 ===============
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 2
    :caption: Conteúdo:
 
    reregistration/reregistration
