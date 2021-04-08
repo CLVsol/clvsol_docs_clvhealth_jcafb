@@ -20,7 +20,7 @@ O **Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento de **Pacie
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tópicos Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_010
    reregistration_workflow_020

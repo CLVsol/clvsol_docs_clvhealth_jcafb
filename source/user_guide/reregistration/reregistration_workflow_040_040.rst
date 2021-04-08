@@ -18,7 +18,7 @@ Consolidação de :bi:`Residence`
 
 .. toctree::
    :maxdepth: 2
-   :caption: Itens Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_040_040_010
 

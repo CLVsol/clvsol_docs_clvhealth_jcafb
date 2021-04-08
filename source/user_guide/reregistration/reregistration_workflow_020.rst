@@ -24,7 +24,7 @@ Cadastramento/Recadastramento de Pacientes
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tópicos Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_020_010
    reregistration_workflow_020_020

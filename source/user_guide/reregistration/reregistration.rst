@@ -27,7 +27,7 @@ Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados na ent
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tópicos Relacionados:
+   :caption: Conteúdo:
 
    reregistration_cadastro
    reregistration_cadastro_aux_setup

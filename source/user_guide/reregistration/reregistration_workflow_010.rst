@@ -20,7 +20,7 @@ De posse dos dados referentes a uma Paciente, o primeiro passo é a pesquisa pel
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tópicos Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_010_010
    reregistration_workflow_010_020

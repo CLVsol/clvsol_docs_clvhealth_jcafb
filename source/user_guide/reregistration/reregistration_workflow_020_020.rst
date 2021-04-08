@@ -20,7 +20,7 @@ Cadastramento de novos Pacientes
 
 .. toctree::
    :maxdepth: 1
-   :caption: Tópicos Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_020_020_010
    reregistration_workflow_020_020_030

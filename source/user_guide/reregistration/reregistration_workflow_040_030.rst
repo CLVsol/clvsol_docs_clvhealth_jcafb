@@ -18,7 +18,7 @@ Consolidação de :bi:`Patient`
 
 .. toctree::
    :maxdepth: 2
-   :caption: Itens Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_040_030_010
    reregistration_workflow_040_030_020

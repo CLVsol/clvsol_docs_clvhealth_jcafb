@@ -26,7 +26,7 @@ Consolidação das Entidades do **Cadastro Principal**
 
 .. toctree::
    :maxdepth: 2
-   :caption: Itens Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_040_030
    reregistration_workflow_040_040

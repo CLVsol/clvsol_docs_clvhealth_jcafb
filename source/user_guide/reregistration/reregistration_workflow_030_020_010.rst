@@ -19,7 +19,7 @@ Consolidação de :bi:`Patient (Aux)` - (L0)
 .. index:: Patient Code is missing. [_person_aux_verification]
 .. toctree::
    :maxdepth: 2
-   :caption: Procedimentos:
+   :caption: Conteúdo:
 
    reregistration_workflow_030_020_010_005
    reregistration_workflow_030_020_010_006

@@ -36,6 +36,6 @@ Consolidação das Entidades do **Cadastro Auxiliar**
 
 .. toctree::
    :maxdepth: 3
-   :caption: Itens Relacionados:
+   :caption: Conteúdo:
 
    reregistration_workflow_030_020
