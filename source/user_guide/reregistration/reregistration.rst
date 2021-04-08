@@ -17,13 +17,13 @@
 **Cadastramento/Recadastramento**
 =================================
 
-O Processo de **Cadastramento/Recadastramento** de Pacientes é a base do planejamento e preparação, que antecedem a maioria das atividades da :bi:`JCAFB`.
+O Processo de **Cadastramento/Recadastramento** de Pacientes é a base do planejamento e preparação, que antecedem a maioria das atividades da :bi:`JCAFB`, baseando-se no **Cadastramento/Recadastramento** de todos os Pacientes atendidos pela :bi:`JCAFB`.
 
-Este Processo baseia-se no **Cadastramento/Recadastramento** de todos os Pacientes atendidos pela :bi:`JCAFB`.
+O **Cadastramento/Recadastramento** é realizado inicialmente na entidade de cadastro :bi:`Patient (Aux)` do **Cadastro Auxiliar**.
 
-Esse cadastramento/recadastramento é realizado inicialmente no **Cadastro Auxiliar**, composto pela entidade de cadastro :bi:`Patient (Aux)`.
+Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados na entidade de cadastro :bi:`Patient` no **Cadastro Principal**.
 
-Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados no **Cadastro Principal**, composto pela entidades de cadastros :bi:`Patient` e :bi:`Residence`.
+**Observação**: Embora o **Cadastro Principal** seja composto também pela entidade de cadastro :bi:`Residence`, ela não é relevante do ponto de vista estrito do **Cadastramento/Recadastramento**. Ela é relevante durante o planejamento e execução das atividade de Campo, quando se estabelece as Residências que serão visitadas.
 
 .. toctree::
    :maxdepth: 2
