@@ -10,16 +10,13 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Guia do Usuário
+.. index:: Preparação para o Projeto JCAFB
+.. index:: O Processo de Preparação para o Projeto JCAFB
 
-===============
-Guia do Usuário
-===============
+===================================
+**Preparação para o Projeto JCAFB**
+===================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
-
-   reregistration/reregistration
-   patient_selection/patient_selection
-   preparation/preparation
