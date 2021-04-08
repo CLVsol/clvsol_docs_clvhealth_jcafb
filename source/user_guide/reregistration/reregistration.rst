@@ -26,9 +26,10 @@ Esse cadastramento/recadastramento é realizado inicialmente no **Cadastro Auxil
 Posteriormente, todos os dados do **Cadastro Auxiliar** são consolidados no **Cadastro Principal**, composto pela entidades de cadastros :bi:`Patient` e :bi:`Residence`.
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Tópicos Relacionados:
 
    reregistration_cadastro
+   reregistration_cadastro_aux_setup
    reregistration_workflow
    reregistration_procedure
