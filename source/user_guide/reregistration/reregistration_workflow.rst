@@ -19,7 +19,7 @@
 O **Fluxo de Trabalho** (*Workflow*) do Cadastramento/Recadastramento de **Pacientes** é descrito pelas etapas apresentadas em seguida.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Tópicos Relacionados:
 
    reregistration_workflow_010
