@@ -10,17 +10,13 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Guia do Usuário
+.. index:: Execução do Projeto JCAFB
+.. index:: O Processo de Execução do Projeto JCAFB
 
-===============
-Guia do Usuário
-===============
+=============================
+**Execução do Projeto JCAFB**
+=============================
 
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
-
-   reregistration/reregistration
-   patient_selection/patient_selection
-   preparation/preparation
-   execution/execution
