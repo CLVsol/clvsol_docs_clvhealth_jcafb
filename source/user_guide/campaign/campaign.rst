@@ -10,18 +10,13 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Guia do Usuário
+.. index:: Campanhas
+.. index:: O Processo de Campanhas
 
-===============
-Guia do Usuário
-===============
+=============================
+**Campanhas**
+=============================
 
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
-
-   reregistration/reregistration
-   patient_selection/patient_selection
-   project_preparation/project_preparation
-   project_execution/project_execution
-   campaign/campaign
