@@ -25,3 +25,4 @@ Guia do Usuário
    project_preparation/project_preparation
    project_execution/project_execution
    campaign/campaign
+   survey/survey
