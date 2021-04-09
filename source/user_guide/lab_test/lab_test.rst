@@ -10,12 +10,12 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Campanhas
-.. index:: O Processo de Campanhas
+.. index:: Testes de Laboratório
+.. index:: O Processo de Testes de Laboratório
 
-=============
-**Campanhas**
-=============
+=========================
+**Testes de Laboratório**
+=========================
 
 .. toctree::
    :maxdepth: 2

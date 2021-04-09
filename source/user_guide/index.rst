@@ -26,3 +26,4 @@ Guia do Usuário
    project_execution/project_execution
    campaign/campaign
    survey/survey
+   lab_test/lab_test
