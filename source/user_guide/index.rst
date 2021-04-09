@@ -27,3 +27,4 @@ Guia do Usuário
    campaign/campaign
    survey/survey
    lab_test/lab_test
+   data_export/data_export
