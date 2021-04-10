@@ -38,4 +38,5 @@
    :maxdepth: 2
    :caption: Itens Relacionados:
 
-   reregistration_cadastro_100_10
+   reregistration_cadastro_100_010
+   reregistration_cadastro_100_020
