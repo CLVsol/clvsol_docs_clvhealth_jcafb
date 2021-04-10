@@ -37,3 +37,5 @@
 .. toctree::
    :maxdepth: 2
    :caption: Itens Relacionados:
+
+   reregistration_cadastro_100_10
