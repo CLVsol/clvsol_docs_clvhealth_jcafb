@@ -127,7 +127,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-25a)
 Executar o Cadastramento/Recadastramento (Preparação das Entidades do Cadastro Auxiliar)
 ----------------------------------------------------------------------------------------
 
-    * Referência :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow`"
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
@@ -137,7 +137,7 @@ Executar o Cadastramento/Recadastramento (Preparação das Entidades do Cadastro
 
         * Planilha: "**Recadastramento (pré Jornada) 1**"
 
-    #. Aplicar o descrito em :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_020`"
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_020`"
 
     **Método Alternativo Executado**:
 
@@ -195,11 +195,11 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
 ------------------------------------------------------------------------------------------
 
-    * Referência :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow`"
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
-    #. Aplicar o descrito em :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030`"
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_030`"
 
     **Ações efetivamente executadas**:
 
@@ -207,40 +207,40 @@ Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadast
 
         Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
 
-        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_010`"
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_010_005`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_005`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_010_006`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_006`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_010_010`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_010`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_010_030`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_030`"
 
-        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020`"
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_010`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_010`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_020`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_020`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_030`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_030`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_050`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_050`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_060`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_060`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_070`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_070`"
 
-        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_030`"
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_030`"
 
 :red:`(Não Executado)` Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Principal)
 ------------------------------------------------------------------------------------------------------------------
 
-    * Referência :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow`"
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
-    #. Aplicar o descrito em :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040`"
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_040`"
 
     **Ações efetivamente executadas**:
 
@@ -248,13 +248,13 @@ Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadast
 
         Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
 
-        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030`"
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_110`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_110`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_120`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_120`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_040_030_130`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_130`"
 
 Atualizar o *Patient Category* de todos os Pacientes
 ----------------------------------------------------
@@ -353,17 +353,17 @@ Consolidação das Entidades do Cadastro Auxiliar
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
-    #. Aplicar o descrito em :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030`"
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_030`"
 
     **Ações efetivamente executadas**:
 
         Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
 
-        #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020`"
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_080`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_080`"
 
-            #. :doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_090`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_090`"
 
 Atualizar o *Register State* dos Pacientes já recadastrados
 -----------------------------------------------------------
