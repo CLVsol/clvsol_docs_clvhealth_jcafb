@@ -28,13 +28,13 @@ O **Paciente não cadastrado** reside em um **Endereço da Comunidade**
 
         #. Pesquisar pelo Paciente.
 
-        #. Certificar-se de que não existe qualquer registro :bi:`Patients (Aux)` associado ao Paciente.
+        #. Certificar-se de que não existe qualquer registro :bi:`Patient (Aux)` associado ao Paciente.
 
     #. Caso nenhum registro seja encontrado:
 
-        #. Criar um novo registro :bi:`Person (Aux)`:
+        #. Criar um novo registro :bi:`Patient (Aux)`:
 
-            #. Preencher o registro :bi:`Person (Aux)` com as informações apresentadas para a Pessoa, exceto informaçôes relativas ao Endereço.
+            #. Preencher o registro :bi:`Patient (Aux)` com as informações apresentadas para o Paciente, exceto informaçôes relativas ao Endereço.
 
             #. Preencher os dados de :bi:`Contact Information` com as informações apresentadas para o Endereço da Paciente.
 
@@ -42,14 +42,14 @@ O **Paciente não cadastrado** reside em um **Endereço da Comunidade**
 
         #. Certificar-se que as informações de Endereço apresentadas para o Paciente apontam para um local dentro da Comunidade atendida pela JCAFB:
 
-            #. Executar a Ação ":bi:`Person (Aux) Mass Edit`":
+            #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
 
                 #. Parâmetros apresentados:
 
                     * *Register State*: :bi:`Set` » :bi:`Revised`
                     * *State*: :bi:`Set` » :bi:`Available`
                     * *Phase*: **JCAFB-2021v**
-                    * *Person (Aux) Verification Execute*: **marcado**
+                    * *Patient (Aux) Verification Execute*: **marcado**
 
                 #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
 
