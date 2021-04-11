@@ -16,32 +16,44 @@
 O **Paciente já cadastrado** continua a residir no mesmo **Endereço**
 =====================================================================
 
-    **Cadastros**:
+    O processo de Recadastramento de um Paciente já cadastrado que continua a residir no mesmo Endereço dentro da comunidade atendida pela JCAFB é descrito pelo **Fluxo de Trabalho** (:bi:`Workflow`) apresentado a seguir:
 
-        * **Cadastro Principal**:
+    #. Aplicação das atualizações necessárias no Cadastro Auxiliar do Paciente:
 
-            * registro :bi:`Patient`
+        A aplicação das atualizações necessárias no Cadastro do Paciente é feita inicialmente no registro :bi:`Patient (Aux)` associado a ele, utilizando o procedimento ":doc:`reregistration_procedure_020_010_010`".
 
-        * **Cadastro Auxiliar:**
+        O conteúdo dos **Cadastros** associados ao Paciente após a aplicação dessas atualizações é o apresentado a seguir:
 
-            * registro :bi:`Patient (Aux)`
+            * **Cadastro Principal**:
 
-        * **Relacionamento entre os registros dos Cadastros**:
+                * :bi:`Patient`:
 
-            * :bi:`Patient`:
+                    * *Contact Information* = Dados de Endereço do Paciente :blue:`inalterados`
+                    * *Contact Information is unavailable* = **desmarcado**
+                    * Outros Dados = Outros Dados do Paciente :blue:`inalterados`
+                    * *Register State* = *Register State* :blue:`inalterado`
+                    * *Patient State* = *Patient State* :blue:`inalterado`
+                    * *Phase* = Phase :blue:`inalterada`
 
-                * *Contact Information* = Dados de Endereço do Paciente
-                * Outros Dados = Outros Dados do Paciente
+            * **Cadastro Auxiliar:**
 
-            * :bi:`Patient (Aux)`:
+                * :bi:`Patient (Aux)`:
 
-                * *Related Patient* » :bi:`Patient`
-                * *Contact Information* = Dados de Endereço de :bi:`Patient`
-                * Outros Dados = Outros Dados de :bi:`Patient` :green:`(com as atualizações necessárias)`
+                    * *Related Patient* » :bi:`Patient`
+                    * *Contact Information* = Dados de Endereço do Paciente :blue:`inalterados`
+                    * *Contact Information is unavailable* = **desmarcado**
+                    * Outros Dados = Outros Dados do Paciente :green:`com a aplicação das atualizações necessárias`
+                    * *Register State* = ":green:`Revised`"
+                    * *Patient State* = ":green:`Available`"
+                    * *Phase* =  :green:`Phase atual`
 
-    **Fluxo de Trabalho** (:bi:`Workflow`):
+    #. Consolidação do Cadastro Auxiliar do Paciente:
 
-        O processamento deste *Workflow* é executado utilizando o procedimento ":doc:`reregistration_procedure_020_010_010`".
+        * Referência: ":doc:`reregistration_workflow_030`"
+
+    #. Consolidação do Cadastro Principal do Paciente:
+
+         * Referência: ":doc:`reregistration_workflow_040`"
 
 .. toctree::
    :maxdepth: 2
