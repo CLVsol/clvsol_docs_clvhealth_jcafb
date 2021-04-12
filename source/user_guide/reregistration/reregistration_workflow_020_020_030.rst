@@ -44,11 +44,15 @@ O **Paciente não cadastrado** reside em um **Endereço fora da Comunidade** ate
 
     #. Consolidação do Cadastro Auxiliar do Paciente:
 
-        * Referência: ":doc:`reregistration_workflow_030`"
+            Referência: ":doc:`reregistration_workflow_030`"
+
+        A Consolidação do registro :bi:`Patient (Aux)` pode ser postergada e executada coletivamente para todos os Pacientes em processo de Cadastramento/Recadastramento em um momento mais oportuno (durante as Campanhas, por exemplo, essa deve ser a regra), mas os :bi:`Verification Outcomes` reportados em cada registro :bi:`Patient (Aux)` devem ser analizados. Erros de digitação e inconsistências entre as informações nos dados apresentados para o Paciente podem ser detectados ainda nesse momento.
 
     #. Consolidação do Cadastro Principal do Paciente:
 
-         * Referência: ":doc:`reregistration_workflow_040`"
+            Referência: ":doc:`reregistration_workflow_040`"
+
+        A Consolidação do registro :bi:`Patient` pode ser postergada e executada coletivamente para todos os Pacientes em processo de Cadastramento/Recadastramento em um momento mais oportuno (durante as Campanhas, por exemplo, essa deve ser a regra).
 
 .. toctree::
    :maxdepth: 2
