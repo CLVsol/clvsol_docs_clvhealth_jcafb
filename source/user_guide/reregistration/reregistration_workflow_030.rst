@@ -26,13 +26,7 @@ Consolidação das Entidades do **Cadastro Auxiliar**
 
     O Processo de Consolidação das Entidades do **Cadastro Auxiliar** é feito guiando-se pelo :bi:`Verification State` e :bi:`Verification Outcomes` de cada registro referentes às Entidades do Cadastro Auxiliar.
 
-    De forma geral, esse processo segue a ordem:
-
-      #. :doc:`reregistration_workflow_030_020_010`
-
-      #. :doc:`reregistration_workflow_030_020_020`
-
-      #. :doc:`reregistration_workflow_030_020_030`
+    Prtesentemente a Consolidação das Entidades do **Cadastro Auxiliar** se resume na :doc:`reregistration_workflow_030_020`.
 
 .. toctree::
    :maxdepth: 3
