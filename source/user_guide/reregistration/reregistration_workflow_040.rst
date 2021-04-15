@@ -25,7 +25,7 @@ Consolidação das Entidades do **Cadastro Principal**
     A marcação de :bi:`Verification Marker` dos registros referentes às Entidades de Cadastro é feita utilizando-se o procedimento ":doc:`/procedures/verification/verification_procedure_040`".
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Conteúdo:
 
    reregistration_workflow_040_030
