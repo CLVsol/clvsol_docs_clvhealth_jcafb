@@ -16,7 +16,6 @@
 Consolidação de :bi:`Patient (Aux)` - (L0)
 ==========================================
 
-.. index:: Patient Code is missing. [_person_aux_verification]
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
