@@ -10,25 +10,19 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Missing Residence. [_patient_verification_residence]
+.. index:: Consolidação de Patient - (L1)
 
-==========================================================
-**Missing "Residence".** [_patient_verification_residence]
-==========================================================
-
-    O registro *Patient* não está associado a uma *Residence*.
-
-    :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.patient**
-        * *Action*: **_patient_verification_residence**
-        * *State*: **Warning (L0)**
-        * *Outcome Information*: '**Missing "Residence".**'
-
-    Se, por algum motivo especial não for necessário ou conveniente associar o registro *Patient* a um registro *Residence* do Cadastro Principal, indicar o campo "*Residence is unavailable*"" do registro *Patient* como **marcado** e executar a Ação "*Patient Verification Execute*".
-
-    De qualquer forma, é possível associar o registro *Patient* a um registro *Residence* do Cadastro Principal utilizando o procedimento de correção: :doc:`reregistration_procedure_040_030_020`.
+====================================
+Consolidação de :bi:`Patient` - (L1)
+====================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Procedimentos:
+   :caption: Conteúdo:
+   
+   reregistration_workflow_040_030_020_060
+   reregistration_workflow_040_030_020_070
+
+   reregistration_workflow_040_030_020_110
+   reregistration_workflow_040_030_020_120
+   reregistration_workflow_040_030_020_130

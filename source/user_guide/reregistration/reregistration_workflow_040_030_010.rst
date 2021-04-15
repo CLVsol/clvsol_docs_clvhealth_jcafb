@@ -10,25 +10,19 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Missing related Patient (Aux) register. [_patient_verification_patient_aux]
+.. index:: Consolidação de Patient - (L0)
 
-=================================================================================
-**Missing related "Patient (Aux)" register.** [_patient_verification_patient_aux]
-=================================================================================
-
-    O registro *Patient* não está associado a um registro *Patient (Aux)*.
-
-    :bi:`Verification Outcome`:
-
-        * *Model Name*: **clv.patient**
-        * *Action*: **_patient_verification_patient_aux**
-        * *State*: **Error (L0)**
-        * *Outcome Information*: '**Missing related "Patient (Aux)" register.**'
-
-    Esta situação é a desejada quando o registro *Patient* tiver sido "Cancelado" (*Register State* = "*Canceled*"). Neste caso, não é necessária a execução de qualquer procedimento de correção no registro *Patient*.
-
-    Para situações em que o registro *Patient* não tiver sido "Cancelado" (*Register State* != "*Canceled*") e houver a possibilidade da Pessoa referenciado pelo registro vir a ser recadastrada, é conveniente a criação de um registro *Patient (Aux)*, utilizando o procedimento de correção: :doc:`reregistration_procedure_040_030_010`.
+====================================
+Consolidação de :bi:`Patient` - (L0)
+====================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Itens Relacionados:
+   :caption: Conteúdo:
+
+   reregistration_workflow_040_030_010_010
+   reregistration_workflow_040_030_010_020
+   reregistration_workflow_040_030_010_030
+   reregistration_workflow_040_030_010_040
+   reregistration_workflow_040_030_010_045
+   reregistration_workflow_040_030_010_050
