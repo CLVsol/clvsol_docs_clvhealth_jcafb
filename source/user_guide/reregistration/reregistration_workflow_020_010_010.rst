@@ -61,8 +61,6 @@ O **Paciente já cadastrado** continua a residir no mesmo **Endereço**
 
             * :doc:`reregistration_workflow_030_020_010_040`
 
-            * :doc:`reregistration_workflow_030_020_010_050`
-
     #. Consolidação do Cadastro Principal do Paciente:
 
             Referência: ":doc:`reregistration_workflow_040`"
