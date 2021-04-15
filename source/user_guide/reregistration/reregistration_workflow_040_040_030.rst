@@ -10,14 +10,12 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: Consolidação de Residence - (L0)
+.. index:: Consolidação de Residence - (L2)
 
 ======================================
-Consolidação de :bi:`Residence` - (L0)
+Consolidação de :bi:`Residence` - (L2)
 ======================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Conteúdo:
-
-   reregistration_workflow_040_040_010_010
+   :caption: Procedimentos:
