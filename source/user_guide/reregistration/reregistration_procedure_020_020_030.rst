@@ -56,7 +56,7 @@ O **Paciente não cadastrado** reside em um **Endereço fora da comunidade** ate
 
                     * *Register State*: :bi:`Set` » :bi:`Revised`
                     * *State*: :bi:`Set` » :bi:`Unvailable`
-                    * *Phase*: **JCAFB-2021v**
+                    * *Phase*: :bi:`Phase` **atual**
                     * *Patient (Aux) Verification Execute*: **marcado**
 
                 #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
