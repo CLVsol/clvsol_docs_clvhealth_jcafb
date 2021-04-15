@@ -250,11 +250,11 @@ Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadast
 
         #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030`"
 
-            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_110`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_020_110`"
 
-            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_120`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_020_120`"
 
-            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_130`"
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_040_030_020_130`"
 
 Atualizar o *Patient Category* de todos os Pacientes
 ----------------------------------------------------
