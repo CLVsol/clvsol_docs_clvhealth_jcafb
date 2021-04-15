@@ -46,7 +46,7 @@ O **Paciente já cadastrado** Faleceu
                 * *State*: :bi:`Set` » :bi:`Unvailable`
                 * *Contact Information is unavailable*: :bi:`Set` » **marcado**
                 * *Clear Address Data*: **marcado**
-                * *Phase*: **JCAFB-2021v**
+                * *Phase*: :bi:`Phase` **atual**
                 * *Patient (Aux) Verification Execute*: **marcado**
 
             #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.

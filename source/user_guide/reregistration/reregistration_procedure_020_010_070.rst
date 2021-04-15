@@ -56,7 +56,7 @@ O **Paciente já cadastrado** mudou-se para um **Endereço fora da comunidade** 
 
                 * *Register State*: :bi:`Set` » :bi:`Revised`
                 * *State*: :bi:`Set` » :bi:`Unvailable`
-                * *Phase*: **JCAFB-2021v**
+                * *Phase*: :bi:`Phase` **atual**
                 * *Patient (Aux) Verification Execute*: **marcado**
 
             #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.

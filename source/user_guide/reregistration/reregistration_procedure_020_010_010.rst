@@ -48,7 +48,7 @@ O **Paciente já cadastrado** continua a residir no mesmo **Endereço**
 
                 * *Register State*: :bi:`Set` » :bi:`Revised`
                 * *State*: :bi:`Set` » :bi:`Available`
-                * *Phase*: **JCAFB-2021v**
+                * *Phase*: :bi:`Phase` **atual**
                 * *Patient (Aux) Verification Execute*: **marcado**
 
             #. Utilizar o botão :bi:`Mass Edit` para executar a Ação.
