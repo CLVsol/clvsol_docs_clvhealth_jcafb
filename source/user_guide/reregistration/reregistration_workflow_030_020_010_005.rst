@@ -22,7 +22,7 @@
 **"Street Pattern" was not recognised.** [_patient_aux_verification]
 ====================================================================
 
-    Essa situação ocorre quando o *Street Pattern* indicado no *Outcome Information* “:bi:`"Street Pattern" was not recognised.` :bi:`(<street pattern>)`” não foi ainda incluído em :bi:`Street Patterns`.
+    Essa situação ocorre quando o *Street Pattern* indicado no *Outcome Information* “:bi:`"Street Pattern" was not recognised.` :bi:`(<street pattern>)`” não foi ainda incluído  na Tabela ":doc:`reregistration_cadastro_100_010`".
 
     :bred:`Importante`: Antes de prosseguir **certifique-se** de que:
 
