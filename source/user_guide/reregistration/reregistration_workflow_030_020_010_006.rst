@@ -24,7 +24,7 @@
 
     :bmaroon:`Nota de advertência`: Observar se o :bi:`Outcome Information` ":doc:`reregistration_workflow_030_020_010_005`" também tenha sido reportado para o :bi:`Patient (Aux)`. Caso positivo, executar primeiro tratamento do mesmo. 
 
-    Essa situação ocorre quando o *Contact Information Pattern* indicado no *Outcome Information* “:bi:`"Contact Information Pattern" was not recognised.` :bi:`(<contact information pattern>)`” não foi ainda incluído na Tabela ":doc:`reregistration_cadastro_100_020`" em :bi:`Contact Information Patterns`.
+    Essa situação ocorre quando o *Contact Information Pattern* indicado no *Outcome Information* “:bi:`"Contact Information Pattern" was not recognised.` :bi:`(<contact information pattern>)`” não foi ainda incluído na Tabela ":doc:`reregistration_cadastro_100_020`".
 
     :bred:`Importante`: Antes de prosseguir **certifique-se** de que:
 
