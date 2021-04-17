@@ -55,6 +55,8 @@ O **Paciente já cadastrado** continua a residir no mesmo **Endereço**
 
         Em particular, os seguintes erros/advertências devem ser analisados e, se possível, corrigidos, durante a aplicação das atualizações no Cadastro Auxiliar do Paciente:
 
+            * :doc:`reregistration_workflow_030_020_010_002`
+
             * :doc:`reregistration_workflow_030_020_010_005`
 
             * :doc:`reregistration_workflow_030_020_010_006`
