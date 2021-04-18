@@ -29,7 +29,7 @@
 
     De maneira geral não é necessária a execução de qualquer procedimento de correção para o registro *Patient (Aux)*, uma vez que o *Patient Code* será automaticamente criado por ocasião da criação do registro *Patient* relacionado no Cadastro Principal (verificar o item :ref:`Missing Related Patient. [_patient_aux_verification_related_patient]`).
 
-    De qualquer forma é possível gerar um *Patient Code* utilizando o procedimento de correção :green:`(Opcional)`: :doc:`reregistration_procedure_030_020_010`.
+    De qualquer forma, principalmente quando se tratar o Cadastramento de um novo Paciente durante um Evento de Campanha, é possível gerar um *Patient Code* utilizando o procedimento de correção :doc:`reregistration_procedure_030_020_010`.
 
 .. toctree::
    :maxdepth: 2
