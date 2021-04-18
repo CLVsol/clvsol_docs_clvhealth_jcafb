@@ -10,7 +10,7 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: "ate of Birth"has changed. [_patient_aux_verification_related_patient]
+.. index:: Date of Birth has changed. [_patient_aux_verification_related_patient]
 
 ============================================================================
 **"Date of Birth" has changed.** [_patient_aux_verification_related_patient]
