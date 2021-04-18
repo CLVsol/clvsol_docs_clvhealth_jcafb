@@ -16,6 +16,8 @@
 Consolidação de :bi:`Patient` - (L2)
 ====================================
 
+  A Consolidação de :bi:`Patient` no nível **L2** se dá pelo tratamento das reportagens de :bi:`Error (L2)` ou :bi:`Warning (L2)`. Presentemente não existem reportagens de nível **L2**" definidas para registros :bi:`Patient`.
+
 .. toctree::
    :maxdepth: 2
    :caption: Procedimentos:
