@@ -24,7 +24,7 @@
 
         * *Model Name*: **clv.patient_aux**
         * *Action*: **_patient_aux_verification_related_patient**
-        * *State*: **Error (L0)**
+        * *State*: **Error (L1)**
         * *Outcome Information*: '**Missing "Related Patient".**'
 
     Se, por algum motivo especial não for necessário ou conveniente criar um registro *Patient* relacionado no Cadastro Principal, indicar o campo "*Related Patient is unavailable*"" do registro *Patient (Aux)* como **marcado** e executar a Ação "*Patient (Aux) Verification Execute*".
