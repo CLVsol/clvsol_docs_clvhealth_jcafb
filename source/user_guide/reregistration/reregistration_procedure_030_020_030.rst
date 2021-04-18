@@ -16,7 +16,7 @@
 :bi:`Patient (Aux) Related Patient Create`
 ==========================================
 
-    * *Workflow*: ":doc:`reregistration_workflow_030_020_010_030`".
+    * *Workflow*: ":doc:`reregistration_workflow_030_020_020_005`".
 
     #. Acessar a *view* :bi:`Patients (Aux)`:
 
