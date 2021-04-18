@@ -21,6 +21,7 @@ Consolidação de :bi:`Patient`
    :caption: Tópicos Relacionados:
 
    reregistration_procedure_040_030_005
+   reregistration_procedure_040_030_006
    reregistration_procedure_040_030_010
    reregistration_procedure_040_030_020
    reregistration_procedure_040_030_040
