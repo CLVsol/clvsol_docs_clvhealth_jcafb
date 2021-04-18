@@ -215,9 +215,9 @@ Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadast
 
             #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_010`"
 
-            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_030`"
-
         #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_005`"
 
             #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_010`"
 
