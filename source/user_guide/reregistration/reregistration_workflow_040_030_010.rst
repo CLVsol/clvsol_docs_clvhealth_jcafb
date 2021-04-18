@@ -16,6 +16,24 @@
 Consolidação de :bi:`Patient` - (L0)
 ====================================
 
+  A Consolidação de :bi:`Patient` no nível **L0** se dá pelo tratamento das reportagens de :bi:`Error (L0)` ou :bi:`Warning (L0)`. Essas reportagens de nível **L0**" sinalizam um Erro ou Advertência ocorrendo no registro :bi:`Patient`, independendo do estado ou condição de qualquer outra Entidade de Cadastro.
+
+  Reportagens de :bi:`Error (L0)`:
+
+    * :doc:`reregistration_workflow_040_030_010_010`
+
+  Reportagens de :bi:`Warning (L0)`:
+
+    * :doc:`reregistration_workflow_040_030_010_020`
+
+    * :doc:`reregistration_workflow_040_030_010_030`
+
+    * :doc:`reregistration_workflow_040_030_010_040`
+
+    * :doc:`reregistration_workflow_040_030_010_045`
+
+    * :doc:`reregistration_workflow_040_030_010_050`
+
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
