@@ -28,6 +28,8 @@ Consolidação de :bi:`Patient` - (L1)
 
     * :doc:`reregistration_workflow_040_030_020_030`
 
+    * :doc:`reregistration_workflow_040_030_020_040`
+
     * :doc:`reregistration_workflow_040_030_020_060`
 
     * :doc:`reregistration_workflow_040_030_020_070`
@@ -45,6 +47,7 @@ Consolidação de :bi:`Patient` - (L1)
    reregistration_workflow_040_030_020_010
    reregistration_workflow_040_030_020_020
    reregistration_workflow_040_030_020_030
+   reregistration_workflow_040_030_020_040
 
    reregistration_workflow_040_030_020_060
    reregistration_workflow_040_030_020_070

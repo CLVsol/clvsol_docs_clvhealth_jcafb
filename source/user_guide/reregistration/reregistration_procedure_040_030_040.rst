@@ -16,7 +16,7 @@
 :bi:`Patient Residence Update`
 ==============================
 
-    * *Workflow*: ":doc:`reregistration_workflow_040_030_010_040`".
+    * *Workflow*: ":doc:`reregistration_workflow_040_030_020_040`".
 
     #. Acessar a *view* :bi:`Patients`:
 
