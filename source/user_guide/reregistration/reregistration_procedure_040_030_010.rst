@@ -16,7 +16,7 @@
 Associar Paciente(s) a um Paciente (Aux)
 ========================================
 
-    * *Workflow*: :doc:`reregistration_workflow_040_030_010`
+    * *Workflow*: :doc:`reregistration_workflow_040_030_020`
 
     #. Acessar a *view* :bi:`Patients`:
 

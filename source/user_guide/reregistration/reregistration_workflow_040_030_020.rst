@@ -20,6 +20,8 @@ Consolidação de :bi:`Patient` - (L1)
 
   Reportagens de :bi:`Error (L1)`:
 
+    * :doc:`reregistration_workflow_040_030_020_010`
+
   Reportagens de :bi:`Warning (L1)`:
 
     * :doc:`reregistration_workflow_040_030_020_060`
@@ -36,6 +38,8 @@ Consolidação de :bi:`Patient` - (L1)
    :maxdepth: 2
    :caption: Conteúdo:
    
+   reregistration_workflow_040_030_020_010
+
    reregistration_workflow_040_030_020_060
    reregistration_workflow_040_030_020_070
 

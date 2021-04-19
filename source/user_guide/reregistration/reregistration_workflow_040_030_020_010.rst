@@ -22,7 +22,7 @@
 
         * *Model Name*: **clv.patient**
         * *Action*: **_patient_verification_patient_aux**
-        * *State*: **Error (L0)**
+        * *State*: **Error (L1)**
         * *Outcome Information*: '**Missing related "Patient (Aux)" register.**'
 
     Esta situação é a desejada quando o registro *Patient* tiver sido "Cancelado" (*Register State* = "*Canceled*"). Neste caso, não é necessária a execução de qualquer procedimento de correção no registro *Patient*.

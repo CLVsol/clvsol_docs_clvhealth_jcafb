@@ -24,8 +24,6 @@ Consolidação de :bi:`Patient` - (L0)
 
     * :doc:`reregistration_workflow_040_030_010_002`
 
-    * :doc:`reregistration_workflow_040_030_010_010`
-
   Reportagens de :bi:`Warning (L0)`:
 
     * :doc:`reregistration_workflow_040_030_010_005`
@@ -53,7 +51,6 @@ Consolidação de :bi:`Patient` - (L0)
    reregistration_workflow_040_030_010_005
    reregistration_workflow_040_030_010_006
    reregistration_workflow_040_030_010_040n
-   reregistration_workflow_040_030_010_010
    reregistration_workflow_040_030_010_020
    reregistration_workflow_040_030_010_030
    reregistration_workflow_040_030_010_040
