@@ -22,7 +22,7 @@
 
         * *Model Name*: **clv.patient**
         * *Action*: **_patient_verification_residence**
-        * *State*: **Warning (L0)**
+        * *State*: **Warning (L1)**
         * *Outcome Information*: '**Missing "Residence".**'
 
     Se, por algum motivo especial não for necessário ou conveniente associar o registro *Patient* a um registro *Residence* do Cadastro Principal, indicar o campo "*Residence is unavailable*"" do registro *Patient* como **marcado** e executar a Ação "*Patient Verification Execute*".
