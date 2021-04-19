@@ -20,6 +20,8 @@
 
     * *Workflow*: ":doc:`reregistration_workflow_040_030_020_045`".
 
+    * *Workflow*: ":doc:`reregistration_workflow_040_030_020_050`".
+
     #. Acessar a *view* :bi:`Patients`:
 
         * Menu de acesso:

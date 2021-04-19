@@ -20,7 +20,7 @@
 
         * *Model Name*: **clv.patient**
         * *Action*: **_patient_verification_residence**
-        * *State*: **Warning (L0)**
+        * *State*: **Warning (L1)**
         * *Outcome Information*: '**Residence "Responsible Empĺoyee" mismatch.**'
 
     Para alterar o *Phase* do  registro *Residence* associado ao registro *Patient*, utilizar o procedimento de correção: :doc:`reregistration_procedure_040_030_040`.

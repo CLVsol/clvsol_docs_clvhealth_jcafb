@@ -32,8 +32,6 @@ Consolidação de :bi:`Patient` - (L0)
 
     * :doc:`reregistration_workflow_040_030_010_040n`
 
-    * :doc:`reregistration_workflow_040_030_010_050`
-
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
@@ -43,4 +41,3 @@ Consolidação de :bi:`Patient` - (L0)
    reregistration_workflow_040_030_010_005
    reregistration_workflow_040_030_010_006
    reregistration_workflow_040_030_010_040n
-   reregistration_workflow_040_030_010_050
