@@ -16,16 +16,14 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: Seleção de Pacientes para o Projeto JCAFB
-.. index:: O Processo de Seleção de Pacientes para o Projeto JCAFB
+.. index:: Procedimentos da Seleção de Pacientes para o Projeto JCAFB
 
-=============================================
-**Seleção de Pacientes para o Projeto JCAFB**
-=============================================
+==============================================================
+**Procedimentos** da Seleção de Pacientes para o Projeto JCAFB
+==============================================================
+
+Os **Procedimentos** da Seleção de Pacientes para o Projeto JCAFB são apresentados em seguida.
 
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
-
-   patient_selection_workflow
-   patient_selection_procedure
