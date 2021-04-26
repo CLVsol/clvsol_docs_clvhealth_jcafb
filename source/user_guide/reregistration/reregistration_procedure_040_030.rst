@@ -25,3 +25,4 @@ Consolidação de :bi:`Patient`
    reregistration_procedure_040_030_010
    reregistration_procedure_040_030_020
    reregistration_procedure_040_030_040
+   reregistration_procedure_040_030_100
