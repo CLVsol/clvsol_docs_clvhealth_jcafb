@@ -386,7 +386,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Patient State` » :bi:`Categories`
 
-        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Criança**"
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Criança**"
 
         #. Executar a Ação ":bi:`Patient Mass Edit`":
 
@@ -396,7 +396,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-        #. Selecionar todos os Pacientes com: :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Idoso**"
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Idoso**"
 
         #. Executar a Ação ":bi:`Patient Mass Edit`":
 
@@ -418,7 +418,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Patient State` » :bi:`Categories` » :bi:`Age Ranges`
 
-        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**3-10 anos**"
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Available**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**3-10 anos**"
 
         #. Executar a Ação ":bi:`Patient Mass Edit`":
 
@@ -428,7 +428,7 @@ Atualizar o *Patient Category* de todos os Pacientes
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**60+ anos**"
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Available**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**60+ anos**"
 
         #. Executar a Ação ":bi:`Patient Mass Edit`":
 
@@ -455,7 +455,7 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:00:16.387`
+            * :bi:`Execution time: 0:00:18.254`
 
 Consolidação das Entidades do Cadastro Auxiliar
 -----------------------------------------------
