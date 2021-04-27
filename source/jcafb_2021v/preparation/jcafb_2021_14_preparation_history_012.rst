@@ -14,7 +14,7 @@
 Preparação do Banco de Dados - JCAFB-2021v-14
 =============================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-31a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-04-27a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -38,22 +38,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-31a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-03-31a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-04-27a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-03-31a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-04-27a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-04-27a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-03-31a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-04-27a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -90,6 +90,115 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-03-31a)
             * "**http://tkl-odoo14-jcafb21-vm**".
 
         #. Salvar o registro editado.
+
+Atualizar o *Patient Category* de todos os Pacientes
+----------------------------------------------------
+
+    Critérios utilizados:
+
+        * **Criança**: todos os Pacientes na faixa etária "3-10 anos".
+
+        * **Idoso**: todos os Pacientes na faixa etária "60+ anos".
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Patient Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Helth` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Patient State` » :bi:`Categories`
+
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Criança**"
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Categories*: **Remove** » **Criança**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" :bi:`Patient State` = "**Unavailable**" » :bi:`Category` = "**Idoso**"
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Categories*: **Remove** » **Idoso**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Patient Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Helth` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Patient State` » :bi:`Categories` » :bi:`Age Ranges`
+
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Available**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**3-10 anos**"
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Categories*: **Set** » **Criança**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Selecionar todos os Pacientes com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Patient State` = "**Available**" » :bi:`Category` = "**Indefinido**" :bi:`Age Range` = "**60+ anos**"
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Categories*: **Set** » **Idoso**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Executar o *Verification Batch* “Current Phase - Default Batch”
+---------------------------------------------------------------
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Executar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:00:18.254`
+
+Consolidação das Entidades do Cadastro Auxiliar
+-----------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_030`"
+
+    **Ações efetivamente executadas**:
+
+        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
+
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_080`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_090`"
 
 Selecionar as Crianças para o Projeto JCAFB-2021v
 -------------------------------------------------
