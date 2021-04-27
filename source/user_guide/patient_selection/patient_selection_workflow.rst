@@ -21,3 +21,5 @@ O **Fluxo de Trabalho** (*Workflow*) da Seleção de Pacientes para o Projeto JC
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
+
+   patient_selection_workflow_010

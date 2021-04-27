@@ -16,16 +16,14 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: Procedimentos da Seleção de Pacientes para o Projeto JCAFB
+.. index:: Atualização de *Patient Category*
 
-==============================================================
-**Procedimentos** da Seleção de Pacientes para o Projeto JCAFB
-==============================================================
+=================================
+Atualização de *Patient Category*
+=================================
 
-Os **Procedimentos** da Seleção de Pacientes para o Projeto JCAFB são apresentados em seguida.
+    Para alterar o parâmetro *Patient Category* do  registro *Patient*, utilizar o procedimento de correção: :doc:`patient_selection_procedure_010`.
 
 .. toctree::
    :maxdepth: 2
    :caption: Conteúdo:
-
-   patient_selection_procedure_010
