@@ -151,29 +151,44 @@ Atualizar o(s) módulo(s) [clv_document, clv_document_jcafb]
 
                 /etc/init.d/odoo start
 
-:red:`(Não Utilizado)` Criar *Survey User Input(s)* para Documento(s)
----------------------------------------------------------------------
+Trascrição das Respostas de um Termo de Consentimento via URL genérica
+----------------------------------------------------------------------
 
-    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Set Survey User Input` para os documentos desejados:
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor [tkl-odoo14-jcafb21-vm] usando uma das URLs:
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+        * [TAA21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para a Análise Físico-Química e Microbiológica da Água: `http://tkl-odoo14-jcafb21-vm/survey/start/taa21 <http://tkl-odoo14-jcafb21-vm/survey/start/taa21>`_
 
-        #. Acessar a *View* *Documents*:
+        * [TAN21] JCAFB 2021 - Termo de Consentimento para a Campanha de Detecção de Anemia: `http://tkl-odoo14-jcafb21-vm/survey/start/tan21 <http://tkl-odoo14-jcafb21-vm/survey/start/tan21>`_
 
-            * Menu de acesso:
+        * [TCR21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames Coproparasitológicos: `http://tkl-odoo14-jcafb21-vm/survey/start/tcr21 <http://tkl-odoo14-jcafb21-vm/survey/start/tcr21>`_
 
-                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+        * [TDH21] JCAFB 2021 - Termo de Consentimento para a Campanha de Detecão de Diabetes, Hipertensão Arterial e Hipercolesterolemia: `http://tkl-odoo14-jcafb21-vm/survey/start/tdh21 <http://tkl-odoo14-jcafb21-vm/survey/start/tdh21>`_
 
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document Type` ou qualquer outro para facilitar a procura pelo(s) Documento(s) desejado(s).
+        * [TID21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames de Urina e Coproparasitológico: `http://tkl-odoo14-jcafb21-vm/survey/start/tid21 <http://tkl-odoo14-jcafb21-vm/survey/start/tid21>`_
 
-        #. Selecionar os Documentos desejados.
+    #. Iniciar a Pesquisa.
 
-        #. Executar a Ação ":bi:`Document Set Survey User Input`":
+Trascrição das Respostas de um Questionário via URL genérica
+------------------------------------------------------------
 
-            #. Utilize o botão :bi:`Set Survey User Input` para executar a Ação.
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor [tkl-odoo14-jcafb21-vm] usando uma das URLs:
 
-:green:`(**)` Trascrição das Respostas de um Questionário ou Termo de Consentimento via Documento associado
------------------------------------------------------------------------------------------------------------
+        * [QAN21] JCAFB 2021 - Questionário para detecção de Anemia: `http://tkl-odoo14-jcafb21-vm/survey/start/qan21 <http://tkl-odoo14-jcafb21-vm/survey/start/qan21>`_
+
+        * [QDH21] JCAFB 2021 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia: `http://tkl-odoo14-jcafb21-vm/survey/start/qdh21 <http://tkl-odoo14-jcafb21-vm/survey/start/qdh21>`_
+
+        * [QMD21] JCAFB 2021 - Questionário - Medicamentos: `http://tkl-odoo14-jcafb21-vm/survey/start/qmd21 <http://tkl-odoo14-jcafb21-vm/survey/start/qmd21>`_
+
+        * [QSC21] JCAFB 2021 - Questionário Socioeconômico Individual (Crianças): `http://tkl-odoo14-jcafb21-vm/survey/start/qsc21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsc21>`_
+
+        * [QSF21] JCAFB 2021 - Questionário Socioeconômico Familiar (Crianças e Idosos): `http://tkl-odoo14-jcafb21-vm/survey/start/qsf21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsf21>`_
+
+        * [QSI21] JCAFB 2021 - Questionário Socioeconômico Individual (Idosos): `http://tkl-odoo14-jcafb21-vm/survey/start/qsi21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsi21>`_
+
+    #. Iniciar a Pesquisa.
+
+Trascrição das Respostas de um Questionário ou Termo de Consentimento via Documento associado
+---------------------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
@@ -195,44 +210,8 @@ Atualizar o(s) módulo(s) [clv_document, clv_document_jcafb]
 
     #. Iniciar a Pesquisa.
 
-:green:`(**)` Trascrição das Respostas de um Termo de Consentimento via URL genérica
-------------------------------------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor [tkl-odoo14-jcafb21-vm] usando uma das URLs:
-
-        * [TAA21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para a Análise Físico-Química e Microbiológica da Água: `http://tkl-odoo14-jcafb21-vm/survey/start/taa21 <http://tkl-odoo14-jcafb21-vm/survey/start/taa21>`_
-
-        * [TAN21] JCAFB 2021 - Termo de Consentimento para a Campanha de Detecção de Anemia: `http://tkl-odoo14-jcafb21-vm/survey/start/tan21 <http://tkl-odoo14-jcafb21-vm/survey/start/tan21>`_
-
-        * [TCR21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames Coproparasitológicos: `http://tkl-odoo14-jcafb21-vm/survey/start/tcr21 <http://tkl-odoo14-jcafb21-vm/survey/start/tcr21>`_
-
-        * [TDH21] JCAFB 2021 - Termo de Consentimento para a Campanha de Detecão de Diabetes, Hipertensão Arterial e Hipercolesterolemia: `http://tkl-odoo14-jcafb21-vm/survey/start/tdh21 <http://tkl-odoo14-jcafb21-vm/survey/start/tdh21>`_
-
-        * [TID21] JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames de Urina e Coproparasitológico: `http://tkl-odoo14-jcafb21-vm/survey/start/tid21 <http://tkl-odoo14-jcafb21-vm/survey/start/tid21>`_
-
-    #. Iniciar a Pesquisa.
-
-:green:`(**)` Trascrição das Respostas de um Questionário via URL genérica
---------------------------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor [tkl-odoo14-jcafb21-vm] usando uma das URLs:
-
-        * [QAN21] JCAFB 2021 - Questionário para detecção de Anemia: `http://tkl-odoo14-jcafb21-vm/survey/start/qan21 <http://tkl-odoo14-jcafb21-vm/survey/start/qan21>`_
-
-        * [QDH21] JCAFB 2021 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia: `http://tkl-odoo14-jcafb21-vm/survey/start/qdh21 <http://tkl-odoo14-jcafb21-vm/survey/start/qdh21>`_
-
-        * [QMD21] JCAFB 2021 - Questionário - Medicamentos: `http://tkl-odoo14-jcafb21-vm/survey/start/qmd21 <http://tkl-odoo14-jcafb21-vm/survey/start/qmd21>`_
-
-        * [QSC21] JCAFB 2021 - Questionário Socioeconômico Individual (Crianças): `http://tkl-odoo14-jcafb21-vm/survey/start/qsc21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsc21>`_
-
-        * [QSF21] JCAFB 2021 - Questionário Socioeconômico Familiar (Crianças e Idosos): `http://tkl-odoo14-jcafb21-vm/survey/start/qsf21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsf21>`_
-
-        * [QSI21] JCAFB 2021 - Questionário Socioeconômico Individual (Idosos): `http://tkl-odoo14-jcafb21-vm/survey/start/qsi21 <http://tkl-odoo14-jcafb21-vm/survey/start/qsi21>`_
-
-    #. Iniciar a Pesquisa.
-
-:green:`(**)` Executar a Ação *Survey User Input Refresh* para as transcrições de Questionários do Projeto JCAFB-2021v
-----------------------------------------------------------------------------------------------------------------------
+Executar a Ação *Survey User Input Refresh* para as transcrições de Questionários do Projeto JCAFB-2021v
+--------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Survey User Input Refresh` para as :bi:`Participations` do Projeto JCAFB-2021v:
 
@@ -254,8 +233,8 @@ Atualizar o(s) módulo(s) [clv_document, clv_document_jcafb]
 
             #. Utilize o botão :bi:`Survey User Input Refresh` para executar a Ação.
 
-:green:`(**)` Executar a Ação *Survey User Input Validate* para as transcrições de Questionários do Projeto JCAFB-2021v
------------------------------------------------------------------------------------------------------------------------
+Executar a Ação *Survey User Input Validate* para as transcrições de Questionários do Projeto JCAFB-2021v
+---------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Survey User Input Validate` para as :bi:`Participations` do Projeto JCAFB-2021v:
 
@@ -277,8 +256,8 @@ Atualizar o(s) módulo(s) [clv_document, clv_document_jcafb]
 
             #. Utilize o botão :bi:`Survey User Input Validate` para executar a Ação.
 
-:green:`(**)` Executar a Ação *Document Type Items Set Up* para *Document Types* do Projeto JCAFB-2021v
--------------------------------------------------------------------------------------------------------
+Executar a Ação *Document Type Items Set Up* para *Document Types* do Projeto JCAFB-2021v
+-----------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Type Items Set Up` para os :bi:`Document Types` do Projeto JCAFB-2021v:
 
@@ -298,8 +277,8 @@ Atualizar o(s) módulo(s) [clv_document, clv_document_jcafb]
 
             #. Utilize o botão :bi:`Items Set Up` para executar a Ação.
 
-:green:`(**)` Executar a Ação *Document Items Refresh* para Documentos do Projeto JCAFB-2021v
----------------------------------------------------------------------------------------------
+Executar a Ação *Document Items Refresh* para Documentos do Projeto JCAFB-2021v
+-------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Items Refresh` para os :bi:`Documents` do Projeto JCAFB-2021v:
 
@@ -346,8 +325,8 @@ Atualizar o(s) módulo(s) [clv_document, clv_document_jcafb]
 
             #. Utilize o botão :bi:`Document Update` para executar a Ação.
 
-:green:`(**)` Executar a Ação *Document Items Update from Survey* para Documentos do Projeto JCAFB-2021v
---------------------------------------------------------------------------------------------------------
+Executar a Ação *Document Items Update from Survey* para Documentos do Projeto JCAFB-2021v
+------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Items Update from Survey` para os :bi:`Documents` do Projeto JCAFB-2021v:
 
@@ -369,8 +348,8 @@ Atualizar o(s) módulo(s) [clv_document, clv_document_jcafb]
 
             #. Utilize o botão :bi:`Update from Survey` para executar a Ação.
 
-:green:`(**)` Executar a Ação *Document Items Ok Set Up* para Documentos do Projeto JCAFB-2021v
------------------------------------------------------------------------------------------------
+Executar a Ação *Document Items Ok Set Up* para Documentos do Projeto JCAFB-2021v
+---------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Items Ok Set Up` para os :bi:`Documents` do Projeto JCAFB-2021v:
 
