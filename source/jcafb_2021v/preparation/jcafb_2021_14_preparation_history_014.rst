@@ -187,7 +187,30 @@ Trascrição das Respostas de um Questionário via URL genérica
 
     #. Iniciar a Pesquisa.
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-10a)
+Trascrição das Respostas de um Questionário ou Termo de Consentimento via Documento associado
+---------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. Acessar a *View* *Documents*:
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+    #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document Type` ou qualquer outro para facilitar a procura pelo(s) Documento(s) desejado(s).
+
+    #. Selecionar os Documentos desejados.
+
+    #. Executar a Ação ":bi:`Document Set Survey User Input`":
+
+        #. Utilize o botão :bi:`Set Survey User Input` para executar a Ação.
+
+    #. Acessar o *link* apresentado no campo ":bi:`Survey URL`".
+
+    #. Iniciar a Pesquisa.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-11a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -213,16 +236,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-10a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-05-10a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-05-11a.sql
 
-            gzip clvhealth_jcafb_2021v_14_2021-05-10a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-05-10a.sql
+            gzip clvhealth_jcafb_2021v_14_2021-05-11a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-05-11a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-05-10a.tar.gz clvhealth_jcafb_2021v_14
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-05-11a.tar.gz clvhealth_jcafb_2021v_14
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-10a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-11a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -242,17 +265,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-10a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-05-10a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-05-10a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-05-10a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-10a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-05-11a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-05-11a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-05-11a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-11a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14_2021-05-10a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-05-10a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-05-10a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-10a
+.. index:: clvhealth_jcafb_2021v_14_2021-05-11a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-05-11a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-05-11a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-11a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-10a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-11a)
 ------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
@@ -276,22 +299,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-10a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-05-10a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14_2021-05-11a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-05-10a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14_2021-05-11a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-05-10a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-05-11a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-10a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-05-11a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
@@ -328,29 +351,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-05-10a)
             * "**http://tkl-odoo14-jcafb21-vm**".
 
         #. Salvar o registro editado.
-
-Trascrição das Respostas de um Questionário ou Termo de Consentimento via Documento associado
----------------------------------------------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-    #. Acessar a *View* *Documents*:
-
-        * Menu de acesso:
-
-            * :bi:`Base` » :bi:`Base` » :bi:`Documents`
-
-    #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document Type` ou qualquer outro para facilitar a procura pelo(s) Documento(s) desejado(s).
-
-    #. Selecionar os Documentos desejados.
-
-    #. Executar a Ação ":bi:`Document Set Survey User Input`":
-
-        #. Utilize o botão :bi:`Set Survey User Input` para executar a Ação.
-
-    #. Acessar o *link* apresentado no campo ":bi:`Survey URL`".
-
-    #. Iniciar a Pesquisa.
 
 Executar a Ação *Survey User Input Refresh* para as transcrições de Questionários do Projeto JCAFB-2021v
 --------------------------------------------------------------------------------------------------------
