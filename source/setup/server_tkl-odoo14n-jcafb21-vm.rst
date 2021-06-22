@@ -389,8 +389,6 @@ Development (2)
 
                 pip3 install pycep-correios
 
-    * tkl-odoo14n-jcafb21-vm_2021-03-29b.rar
-
 Replace the Odoo installation (Odoo 14.0)
 -----------------------------------------
 
