@@ -10,18 +10,15 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2021-14
+.. index:: Migração de Dados - Fase 1
 
-=======================
-CLVhealth-JCAFB_2021-14
-=======================
+==========================
+Migração de Dados - Fase 2
+==========================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
 
-   migration/index_1
-   preparation/index_1
-   maintenance/index_1
-
-   migration/index_2
+   clvsol_filestore_clvhealth_jcafb_init
+   jcafb_2021_14n_migration_history_001
