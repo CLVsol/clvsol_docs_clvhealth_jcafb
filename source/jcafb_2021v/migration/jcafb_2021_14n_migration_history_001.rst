@@ -72,7 +72,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2021v-14n*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_14n"
 
-        * **Execution time: 0:09:09.064**
+        * **Execution time: 0:08:57.460**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -145,78 +145,88 @@ Lista de *Schedules* instalados (10c)
 
         * :blue:`(Enabled - Sync)` clv.global_tag (clv.global_tag)
 
-        * :borange:`(Enabled - Sync)` survey.survey (survey.survey)
-        * :borange:`(Enabled - Sync)` survey.question (survey.question) [1]
-        * :borange:`(Enabled - Sync)` survey.question (survey.question) [2]
-        * :borange:`(Enabled - Sync)` survey.question (survey.question) [3]
-        * :borange:`(Enabled - Sync)` survey.question (survey.question) [4]
-        * :borange:`(Enabled - Sync)` survey.question (survey.question) [5]
-        * :borange:`(Enabled - Sync)` survey.question.answer (survey.label)
-        * :borange:`(Enabled - Sync)` survey.user_input (survey.user_input) [1]
-        * :borange:`(Enabled - Sync)` survey.user_input (survey.user_input) [2]
+        * :blue:`(Enabled - Sync)` survey.survey (survey.survey)
+
+        .. * :borange:`(Enabled - Sync)` survey.question (survey.question) [1]
+
+        * :blue:`(Enabled - Sync)` survey.question (survey.question) [2]
+
+        .. * :borange:`(Enabled - Sync)` survey.question (survey.question) [3]
+
+        .. * :borange:`(Enabled - Sync)` survey.question (survey.question) [4]
+
+        * :blue:`(Enabled - Sync)` survey.question (survey.question) [5]
+        * :blue:`(Enabled - Sync)` survey.question.answer (survey.question.answer)
+
+        .. * :borange:`(Enabled - Sync)` survey.user_input (survey.user_input) [1]
+
+        * :blue:`(Enabled - Sync)` survey.user_input (survey.user_input) [2]
 
         .. * :borange:`(Enabled - Sync)` clv.document (clv.document) [2]
 
-        * :borange:`(Enabled - Sync)` hr.department (hr.department) [rec]
-        * :borange:`(Enabled - Sync)` hr.department (hr.department)
-        * :borange:`(Enabled - Sync)` hr.job (hr.job)
-        * :borange:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
-        * :borange:`(Enabled - Sync)` hr.employee (hr.employee)
+        * :blue:`(Enabled - Sync)` hr.department (hr.department) [rec]
+        * :blue:`(Enabled - Sync)` hr.department (hr.department)
+        * :blue:`(Enabled - Sync)` hr.job (hr.job)
+        * :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
+        * :blue:`(Enabled - Sync)` hr.employee (hr.employee)
 
-        * :borange:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
+        * :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
 
-        * :borange:`(Enabled - Sync)` res.country (res.country)
-        * :borange:`(Enabled - Sync)` res.country.state (res.country.state)
-        * :borange:`(Enabled - Sync)` res.city (res.city)
+        * :blue:`(Enabled - Sync)` res.country (res.country)
+        * :blue:`(Enabled - Sync)` res.country.state (res.country.state)
+        * :blue:`(Enabled - Sync)` res.city (res.city)
 
-        * :borange:`(Enabled - Sync)` clv.address.category (clv.address.category)
-        * :borange:`(Enabled - Sync)` clv.address (clv.address)
+        * :blue:`(Enabled - Sync)` clv.address.category (clv.address.category)
+        * :blue:`(Enabled - Sync)` clv.address (clv.address)
 
-        * :borange:`(Enabled - Sync)` clv.address.history (clv.address.history)
+        * :blue:`(Enabled - Sync)` clv.address.history (clv.address.history)
 
         .. * :borange:`(Enabled - Sync)` clv.address.aux (clv.address.aux)
 
-        * :borange:`(Enabled - Sync)` clv.family.category (clv.family.category)
-        * :borange:`(Enabled - Sync)` clv.family (clv.family)
+        * :blue:`(Enabled - Sync)` clv.family.category (clv.family.category)
+        * :blue:`(Enabled - Sync)` clv.family (clv.family)
 
-        * :borange:`(Enabled - Sync)` clv.family.history (clv.family.history)
+        * :blue:`(Enabled - Sync)` clv.family.history (clv.family.history)
 
-        * :borange:`(Enabled - Sync)` clv.person.category (clv.person.category)
-        * :borange:`(Enabled - Sync)` clv.person.marker (clv.person.marker)
-        * :borange:`(Enabled - Sync)` clv.person (clv.person)
-        * :borange:`(Enabled - Sync)` clv.person.relation [Set Up]
+        * :blue:`(Enabled - Sync)` clv.person.category (clv.person.category)
+        * :blue:`(Enabled - Sync)` clv.person.marker (clv.person.marker)
+        * :blue:`(Enabled - Sync)` clv.person (clv.person)
+        * :blue:`(Enabled - Sync)` clv.person.relation.type (clv.person.relation.type)
+        * :blue:`(Enabled - Sync)` clv.person.relation (clv.person.relation)
 
-        * :borange:`(Enabled - Sync)` clv.person.history (clv.person.history)
+        * :blue:`(Enabled - Sync)` clv.person.history (clv.person.history)
 
         .. * :borange:`(Enabled - Sync)` clv.person.aux (clv.person.aux)
 
-        * :borange:`(Enabled - Sync)` clv.event (clv.event)
-        * :borange:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee)
+        * :blue:`(Enabled - Sync)` clv.event (clv.event)
+        * :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee)
 
-        * :borange:`(Enabled - Sync)` clv.document.category (clv.document.category)
-        * :borange:`(Enabled - Sync)` clv.document.type (clv.document.type)
-        * :borange:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter)
-        * :borange:`(Enabled - Sync)` clv.document (clv.document)
-        * :borange:`(Enabled - Sync)` clv.document.item (clv.document.item) [1]
+        * :blue:`(Enabled - Sync)` clv.document.category (clv.document.category)
+        * :blue:`(Enabled - Sync)` clv.document.type (clv.document.type)
+        * :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter)
+        * :blue:`(Enabled - Sync)` clv.document (clv.document)
+        * :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [1]
 
-        * :borange:`(Enabled - Sync)` clv.lab_test.unit (clv.lab_test.unit)
-        * :borange:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type)
-        * :borange:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
-        * :borange:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [1]
-        * :borange:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2]
-        * :borange:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result)
-        * :borange:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report)
-        * :borange:`(Enabled - Sync)` clv.lab_test.report [Update Result ID]
-        * :borange:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [1]
+        * :blue:`(Enabled - Sync)` clv.lab_test.unit (clv.lab_test.unit)
+        * :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type)
+        * :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
+        * :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [1]
+        * :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2]
+        * :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result)
+        * :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report)
 
-        * :borange:`(Enabled - Sync)` clv.set (clv.set)
-        * :borange:`(Enabled - Sync)` clv.set.element (clv.set.element)
+        .. * :blue:`(Enabled - Sync)` clv.lab_test.report [Update Result ID]
 
-        * :borange:`(Enabled - Sync)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
+        * :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [1]
 
-        * :borange:`(Enabled - Sync)` clv.verification.marker (clv.verification.marker)
+        * :blue:`(Enabled - Sync)` clv.set (clv.set)
+        * :blue:`(Enabled - Sync)` clv.set.element (clv.set.element)
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-28a)
+        * :blue:`(Enabled - Sync)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
+
+        * :blue:`(Enabled - Sync)` clv.verification.marker (clv.verification.marker)
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-29a)
 ---------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e paralizar o *Odoo*:
@@ -242,16 +252,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-28a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-06-28a.sql
+            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-06-29a.sql
 
-            gzip clvhealth_jcafb_2021v_14n_2021-06-28a.sql
-            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-06-28a.sql
+            gzip clvhealth_jcafb_2021v_14n_2021-06-29a.sql
+            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-06-29a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-06-28a.tar.gz clvhealth_jcafb_2021v_14n
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-06-29a.tar.gz clvhealth_jcafb_2021v_14n
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-28a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-29a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -271,17 +281,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-28a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-06-28a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-06-28a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-06-28a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-28a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-06-29a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-06-29a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-06-29a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-29a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14n_2021-06-28a.sql
-.. index:: clvhealth_jcafb_2021v_14n_2021-06-28a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14n_2021-06-28a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-28a
+.. index:: clvhealth_jcafb_2021v_14n_2021-06-29a.sql
+.. index:: clvhealth_jcafb_2021v_14n_2021-06-29a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14n_2021-06-29a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-29a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-28a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-29a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e paralizar o *Odoo*:
@@ -305,22 +315,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-28a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14n_2021-06-28a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14n_2021-06-29a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14n
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14n
-            psql -f clvhealth_jcafb_2021v_14n_2021-06-28a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14n_2021-06-29a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14n
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-06-28a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-06-29a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-28a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-06-29a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
