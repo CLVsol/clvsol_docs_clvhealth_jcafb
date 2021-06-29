@@ -72,7 +72,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2021v-14n*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_14n"
 
-        * **Execution time: 0:08:57.460**
+        * **Execution time: 0:08:59.877**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -226,6 +226,42 @@ Lista de *Schedules* instalados (10c)
 
         * :blue:`(Enabled - Sync)` clv.verification.marker (clv.verification.marker)
 
+:red:`(Não Executado)` Executar o *External Sync Batch* "*Default Batch [10]*"
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Executar o :bi:`External Sync Batch` "**Default Batch [10]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [10]**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * :bi:`Execution time: 0:42:13.568`
+
+Executar o *External Sync Batch* "*Default Batch [10]*" (método alternativo)
+----------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Executar manualmente a "Ação Agendada" "**External Sync Batch: Execute [Default Batch [10]]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**External Sync Batch: Execute [Default Batch [10]]**"
+
+        #. Executar a Ação Agendada "**External Sync Batch: Execute [Default Batch [10]]**", clicando no botão **Rodar Manualmente**.
+
+            * :bi:`Execution time: 0:42:13.568`
+
+.. _Lista de Schedules instalados (30c):
+
 Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-29a)
 ---------------------------------------------------------------------------
 
@@ -367,42 +403,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-06-29a)
             * "**http://tkl-odoo14-jcafb21n-vm**".
 
         #. Salvar o registro editado.
-
-:red:`(Não Executado)` Executar o *External Sync Batch* "*Default Batch [10]*"
-------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Executar o :bi:`External Sync Batch` "**Default Batch [10]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [10]**":
-
-            * Menu de acesso:
-                
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
-
-            * :bi:`Execution time: 0:48:48.849`
-
-Executar o *External Sync Batch* "*Default Batch [10]*" (método alternativo)
-----------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Executar manualmente a "Ação Agendada" "**External Sync Batch: Execute [Default Batch [10]]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Acessar a *View* **Ações Agendadas**:
-
-            * Menu de acesso:
-
-                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
-
-        #. Acessar a Ação Agendada "**External Sync Batch: Execute [Default Batch [10]]**"
-
-        #. Executar a Ação Agendada "**External Sync Batch: Execute [Default Batch [10]]**", clicando no botão **Rodar Manualmente**.
-
-            * :bi:`Execution time: 0:48:48.849`
-
-.. _Lista de Schedules instalados (30c):
 
 Lista de *Schedules* instalados (30c)
 -------------------------------------
