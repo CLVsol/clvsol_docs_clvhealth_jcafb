@@ -189,6 +189,7 @@ Lista de *Schedules* instalados (10c)
 
         * :blue:`(Enabled - Sync)` clv.family.history (clv.family.history)
 
+        * :blue:`(Enabled - Sync)` clv.person.age_range (clv.person.age_range)
         * :blue:`(Enabled - Sync)` clv.person.category (clv.person.category)
         * :blue:`(Enabled - Sync)` clv.person.marker (clv.person.marker)
         * :blue:`(Enabled - Sync)` clv.person (clv.person)
@@ -198,6 +199,17 @@ Lista de *Schedules* instalados (10c)
         * :blue:`(Enabled - Sync)` clv.person.history (clv.person.history)
 
         .. * :borange:`(Enabled - Sync)` clv.person.aux (clv.person.aux)
+
+        * :blue:`(Enabled - Sync)` clv.residence.category (clv.residence.category)
+        * :blue:`(Enabled - Sync)` clv.residence.marker (clv.residence.marker)
+        * :blue:`(Enabled - Sync)` clv.residence (clv.residence)
+
+        * :blue:`(Enabled - Sync)` clv.patient.age_range (clv.patient.age_range)
+        * :blue:`(Enabled - Sync)` clv.patient.category (clv.patient.category)
+        * :blue:`(Enabled - Sync)` clv.patient.marker (clv.patient.marker)
+        * :blue:`(Enabled - Sync)` clv.patient (clv.patient)
+
+        .. * :borange:`(Enabled - Sync)` clv.patient.aux (clv.patient.aux)
 
         * :blue:`(Enabled - Sync)` clv.event (clv.event)
         * :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee)
@@ -392,7 +404,7 @@ Executar o *External Sync Batch* "*Default Batch [50]*" (método alternativo)
 
             * :bi:`Execution time: 1:39:29.438`
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-01a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-02a)
 ---------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e paralizar o *Odoo*:
@@ -418,16 +430,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-01a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-07-01a.sql
+            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-07-02a.sql
 
-            gzip clvhealth_jcafb_2021v_14n_2021-07-01a.sql
-            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-07-01a.sql
+            gzip clvhealth_jcafb_2021v_14n_2021-07-02a.sql
+            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-07-02a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-07-01a.tar.gz clvhealth_jcafb_2021v_14n
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-07-02a.tar.gz clvhealth_jcafb_2021v_14n
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-01a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-02a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -447,17 +459,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-01a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-07-01a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-07-01a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-07-01a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-01a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-07-02a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-07-02a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-07-02a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-02a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14n_2021-07-01a.sql
-.. index:: clvhealth_jcafb_2021v_14n_2021-07-01a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14n_2021-07-01a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-01a
+.. index:: clvhealth_jcafb_2021v_14n_2021-07-02a.sql
+.. index:: clvhealth_jcafb_2021v_14n_2021-07-02a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14n_2021-07-02a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-02a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-01a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-02a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e paralizar o *Odoo*:
@@ -481,22 +493,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-01a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14n_2021-07-01a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14n_2021-07-02a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14n
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14n
-            psql -f clvhealth_jcafb_2021v_14n_2021-07-01a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14n_2021-07-02a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14n
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-07-01a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-07-02a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-01a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-07-02a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -535,66 +547,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-07-01a)
         #. Salvar o registro editado.
 
 .. _Lista de Schedules instalados (20c):
-
-Lista de *Schedules* instalados (20c)
--------------------------------------
-
-    * Lista de *Schedules* instalados:
-
-
-        * :blue:`(Enabled - Sync)` clv.residence.category (clv.residence.category)
-        * :blue:`(Enabled - Sync)` clv.residence.marker (clv.residence.marker)
-        * :blue:`(Enabled - Sync)` clv.residence (clv.residence)
-
-        .. * :borange:`(Enabled - Sync)` clv.residence.history (clv.residence.history)
-
-        .. * :borange:`(Enabled - Sync)` clv.residence.aux (clv.residence.aux)
-
-        * :borange:`(Enabled - Sync)` clv.patient.category (clv.patient.category)
-        * :borange:`(Enabled - Sync)` clv.patient.marker (clv.patient.marker)
-        * :borange:`(Enabled - Sync)` clv.patient (clv.patient)
-
-        .. * :borange:`(Enabled - Sync)` clv.patient.relation.type (clv.patient.relation.type)
-
-        .. * :borange:`(Enabled - Sync)` clv.patient.relation (clv.patient.relation)
-
-        .. * :borange:`(Enabled - Sync)` clv.patient.history (clv.patient.history)
-
-        .. * :borange:`(Enabled - Sync)` clv.patient.aux (clv.patient.aux)
-
-:red:`(Não Executado)` Executar o *External Sync Batch* "*Default Batch [20]*"
-------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Executar o :bi:`External Sync Batch` "**Default Batch [20]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [20]**":
-
-            * Menu de acesso:
-                
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
-
-            * :bi:`Execution time: 0:42:13.568`
-
-Executar o *External Sync Batch* "*Default Batch [20]*" (método alternativo)
-----------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Executar manualmente a "Ação Agendada" "**External Sync Batch: Execute [Default Batch [20]]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Acessar a *View* **Ações Agendadas**:
-
-            * Menu de acesso:
-
-                * **Definições** » **Técnico** » **Automação** » **Ações Agendadas**
-
-        #. Acessar a Ação Agendada "**External Sync Batch: Execute [Default Batch [20]]**"
-
-        #. Executar a Ação Agendada "**External Sync Batch: Execute [Default Batch [20]]**", clicando no botão **Rodar Manualmente**.
-
-            * :bi:`Execution time: 0:42:13.568`
 
 :red:`(Não Executado)` Desabilitar a Ação Agendada *Verification Batch: Execute [Default Batch]*
 ------------------------------------------------------------------------------------------------
