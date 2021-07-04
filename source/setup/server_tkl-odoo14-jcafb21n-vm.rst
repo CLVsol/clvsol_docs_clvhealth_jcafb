@@ -512,7 +512,7 @@ Repositories Installation
 
         ::
 
-            ssh tkl-odoo14-jcafb21-vm -l root
+            ssh tkl-odoo14-jcafb21n-vm -l root
 
         ::
 
@@ -522,7 +522,7 @@ Repositories Installation
 
         ::
 
-            ssh tkl-odoo14-jcafb21-vm -l root
+            ssh tkl-odoo14-jcafb21n-vm -l root
 
         ::
 
@@ -577,7 +577,95 @@ Upgrade the odoo software
             apt-get update
             apt-get -y upgrade
 
-            apt-get install odoo
+            # apt-get install odoo
+
+Atualizar os fontes do projeto
+------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh tkl-odoo14-jcafb21n-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21n-vm
+            #
+
+            su odoo
+
+            cd /opt/odoo/clvsol_odoo_client
+            git pull
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_l10n_brazil
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
 References
 ----------
