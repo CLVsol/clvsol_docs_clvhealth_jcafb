@@ -1023,6 +1023,7 @@ Atualizar o(s) módulo(s) [ver lista]
 
         * clv_base
         * clv_document
+        * clv_event
         * clv_address_jcafb
         * clv_address_aux_jcafb
         * clv_family_jcafb
