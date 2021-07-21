@@ -1271,6 +1271,7 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
+        * clv_residence_community_jcafb
         * clv_patient_community_jcafb
 
     #. [tkl-odoo14-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
@@ -1319,6 +1320,69 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
 
                 /etc/init.d/odoo start
 
+:red:`(Não Executado)` Transferir Documentos associados a um Endereço para a Residência relacionada
+---------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Document Associate from Address to Residence* para os Documentos desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:` » :bi:`Documents`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Documentos desejados com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
+
+        #. Executar a Ação "**Document Associate from Address to Residence**":
+
+            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Documentos associados a uma Família para a Residência relacionada
+---------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Document Associate from Family to Residence* para os Documentos desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:` » :bi:`Documents`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Documentos desejados com: :bi:`Refers to (Model)` = ":bi:`clv.family`"
+
+        #. Executar a Ação "**Document Associate from Family to Residence**":
+
+            #. Utilize o botão *Associate from Family to Residence* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Documentos associados a uma Pessoa para o Paciente relacionado
+------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Document Associate from Person to Patient* para os Documentos desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:` » :bi:`Documents`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Documentos desejados com: :bi:`Refers to (Model)` = ":bi:`clv.person`"
+
+        #. Executar a Ação "**Document Associate from Person to Patient**":
+
+            #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
+
 :red:`(Não Executado)` Executar o *Processing Schedule* "Patient History updt_from Person History"
 --------------------------------------------------------------------------------------------------
 
@@ -1360,26 +1424,5 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
         #. Executar a Ação :bi:`Processing Schedule Execute`:
 
             #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
-
-:red:`(Não Executado)` Transferir Documentos associados e uma Pessoa para o Paciente relacionado
-------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Document Associate from Person to Patient* para os Documentos desejados:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* *Documents*:
-
-            * Menu de acesso:
-
-                * :bi:`Base` » :bi:`Base` » :bi:` » :bi:`Documents`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
-
-        #. Selecionar os Documentos desejados com: :bi:`Refers to (Model)` = ":bi:`clv.person`"
-
-        #. Executar a Ação "**Document Associate from Person to Patient**":
-
-            #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
 
 .. toctree::   :maxdepth: 2
