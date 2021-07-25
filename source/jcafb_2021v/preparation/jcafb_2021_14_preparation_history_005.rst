@@ -1331,7 +1331,7 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
 
             * Menu de acesso:
 
-                * :bi:`Base` » :bi:`Base` » :bi:` » :bi:`Documents`
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
 
         #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
 
@@ -1352,7 +1352,7 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
 
             * Menu de acesso:
 
-                * :bi:`Base` » :bi:`Base` » :bi:` » :bi:`Documents`
+                * :bi:`Base` » :bi:`Base` » :bi:`:`Documents`
 
         #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
 
@@ -1373,13 +1373,160 @@ Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
 
             * Menu de acesso:
 
-                * :bi:`Base` » :bi:`Base` » :bi:` » :bi:`Documents`
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
 
         #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
 
         #. Selecionar os Documentos desejados com: :bi:`Refers to (Model)` = ":bi:`clv.person`"
 
         #. Executar a Ação "**Document Associate from Person to Patient**":
+
+            #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Requisições de Exames associadas a um Endereço para a Residência relacionada
+--------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Request Associate from Address to Residence* para as Requisições de Exames desejadas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Requests*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Requests`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar as Requisições de Exames desejadas com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
+
+        #. Executar a Ação "**Lab Test Request Associate from Address to Residence**":
+
+            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Resultados de Exames associados a um Endereço para a Residência relacionada
+-------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Result Associate from Address to Residence* para os Resultados de Exames desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Results*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Results`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Resultados de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
+
+        #. Executar a Ação "**Lab Test Result Associate from Address to Residence**":
+
+            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Laudos de Exames associados a um Endereço para a Residência relacionada
+---------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Report Associate from Address to Residence* para os Laudos de Exames desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Reports*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Reports`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Laudos de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
+
+        #. Executar a Ação "**Lab Test Report Associate from Address to Residence**":
+
+            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Requisições de Exames associadas a uma Pessoa para o Paciente relacionado
+-----------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Request Associate from Person to Patient* para as Requisições de Exames desejadas:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Requests*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Requests`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar as Requisições de Exames desejadas com: :bi:`Refers to (Model)` = ":bi:`clv.person`"
+
+        #. Executar a Ação "**Lab Test Request Associate from Person to Patient**":
+
+            #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Resultados de Exames associados a uma Pessoa para o Paciente relacionado
+----------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Result Associate from Person to Patient* para os Resultados de Exames desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Results*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Results`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Resultados de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.person`"
+
+        #. Executar a Ação "**Lab Test Result Associate from Person to Patient**":
+
+            #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Laudos de Exames associados a uma Pessoa para o Paciente relacionado
+------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Report Associate from Person to Patient* para os Laudos de Exames desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Reports*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Reports`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Laudos de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.person`"
+
+        #. Executar a Ação "**Lab Test Report Associate from Person to Patient**":
+
+            #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
+
+:red:`(Não Executado)` Transferir Eventos associados a uma Pessoa para o Paciente relacionado
+---------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Event Attendee Associate from Person to Patient* para os Eventos desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Event Attendees*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configurarion` » :bi:`Event` » :bi:`Attendees`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Eventos desejados com: :bi:`Refers to (Model)` = ":bi:`clv.person`"
+
+        #. Executar a Ação "**Event Attendee Associate from Person to Patient**":
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
 
