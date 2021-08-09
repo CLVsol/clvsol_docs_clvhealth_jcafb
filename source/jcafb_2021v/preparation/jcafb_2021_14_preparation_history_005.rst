@@ -1266,8 +1266,347 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-07-13a)
 
         #. Salvar o registro editado.
 
-Habilitar a instalação e instalars o(s) módulo(s) [ver lista]
--------------------------------------------------------------
+Atualizar o(s) módulo(s) [clv_person_jcafb]
+-------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
+
+        * clv_person_jcafb
+
+    #. [tkl-odoo14-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 1)
+                #
+
+                ssh tkl-odoo14-jcafb21-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 2)
+                #
+
+                ssh tkl-odoo14-jcafb21-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_person_jcafb
+            
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Marcar os Endereços visitados durante o Projeto da JCAFB (2017 - 2020)
+----------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Document Related Address Set Marker`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)` » :bi:`Phase` » :bi:`Document Type` » :bi:`Items Ok`
+
+        #. Selecionar todos os Documentos com: :bi:`Refers to (Model)` = ":bi:`clv.address`" »  :bi:`Phase` = ":bi:`JCAFB-2017`" » :bi:`Document Type` = "**QSF17**" » :bi:`Items Ok` = "**true**"
+
+        #. Executar a Ação ":bi:`Document Related Address Set Marker`":
+
+            * Parâmetros utilizados:
+
+                * *Markers*: **Add** » **Selected (JCAFB-2017)**
+
+            #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
+
+        #. Selecionar todos os Documentos com: :bi:`Refers to (Model)` = ":bi:`clv.address`" »  :bi:`Phase` = ":bi:`JCAFB-2018`" » :bi:`Document Type` = "**QSF18**" » :bi:`Items Ok` = "**true**"
+
+        #. Executar a Ação ":bi:`Document Related Address Set Marker`":
+
+            * Parâmetros utilizados:
+
+                * *Markers*: **Add** » **Selected (JCAFB-2018)**
+
+            #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
+
+        #. Selecionar todos os Documentos com: :bi:`Refers to (Model)` = ":bi:`clv.address`" »  :bi:`Phase` = ":bi:`JCAFB-2019`" » :bi:`Document Type` = "**QSF19**" » :bi:`Items Ok` = "**true**"
+
+        #. Executar a Ação ":bi:`Document Related Address Set Marker`":
+
+            * Parâmetros utilizados:
+
+                * *Markers*: **Add** » **Selected (JCAFB-2019)**
+
+            #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
+
+        #. Selecionar todos os Documentos com: :bi:`Refers to (Model)` = ":bi:`clv.address`" »  :bi:`Phase` = ":bi:`JCAFB-2020`" » :bi:`Document Type` = "**TAA20**" » :bi:`Items Ok` = "**true**"
+
+        #. Executar a Ação ":bi:`Document Related Address Set Marker`":
+
+            * Parâmetros utilizados:
+
+                * *Markers*: **Add** » **Selected (JCAFB-2020)**
+
+            #. Utilize o botão :bi:`Related Person Set Marker` para executar a Ação.
+
+Marcar os Endereços que participaram do Projeto da JCAFB (2017 - 2020)
+----------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Address Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Ativar o filtro **Filtros** » **Adicionar Filtro Personalizado** » :bi:`Marker Names` » **contém** » **Selected**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Is Residence`
+
+        #. Selecionar todos os Endereços com: :bi:`Is Residence` = ":bi:`false`"
+
+        #. Executar a Ação ":bi:`Address Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Is Residence*: **Set** **marcado**
+
+                * *Address Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Associar os Endereços a uma Residência
+--------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Address Associate to Residence* para os Endereços:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Addresses*:
+
+            * Menu de acesso:
+
+                * :bi:`Community` » :bi:`Community` » :bi:`Addresses`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Verification State` » :bi:`Verification Outcome Informations`
+
+        #. Selecionar todos os Endereços com: :bi:`Verification State` = ":bi:`Error (L0)`" » :bi:`Verification Outcome Informations` = ":bi:`Missing related "Residence" register.`"
+
+        #. Executar a Ação "**Address Associate to Patient**":
+
+            * Parâmetros utilizados:
+
+                * *Create new Residence*: **marcado**
+
+                * *Address Verification Execute*: **marcado**
+
+                * *Residence Verification Execute*: **marcado**
+
+            #. Utilize o botão *Associate to Residence* para executar a Ação.
+
+Atualizar o *Register State* de todas as Residências
+----------------------------------------------------
+
+    Critérios utilizados:
+
+        * **Done**: todas as Residências.
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação :bi:`Residence Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar todas as Residências
+
+        #. Executar a Ação ":bi:`Residence Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Register State*: **Set** » **Done**
+
+                * *Residence Verification Execute*: **marcado**
+
+                * *Phase*: **nenhuma ação** » **vazio**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-09a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-09a.sql
+
+            gzip clvhealth_jcafb_2021v_14_2021-08-09a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-09a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-09a.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-09a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-09a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-09a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-09a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-09a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2021-08-09a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-08-09a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-08-09a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-09a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-09a)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2021-08-09a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2021-08-09a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-09a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-09a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo14-jcafb21-vm**".
+
+        #. Salvar o registro editado.
+
+Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
+------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
