@@ -1605,11 +1605,13 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-09a)
 
         #. Salvar o registro editado.
 
-Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
-------------------------------------------------------------
+:red:`(Não Executado)` Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
+-----------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
+        * clv_residence_history_community
+        * clv_patient_history_community
         * clv_residence_community_jcafb
         * clv_patient_community_jcafb
 
@@ -1658,6 +1660,48 @@ Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
                 exit
 
                 /etc/init.d/odoo start
+
+:red:`(Não Executado)` Executar o *Processing Schedule* "Patient History updt_from Person History"
+--------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente o *Processing Schedule* **Patient History updt_from Person History**:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* :bi:`Processing Schedules`:
+
+            * Menu de acesso:
+
+                * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
+
+        #. Selecionar o *Processing Schedule* "**Patient History updt_from Person History**"
+
+        #. Executar a Ação :bi:`Processing Schedule Execute`:
+
+            #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
+
+:red:`(Não Executado)` Executar o *Processing Schedule* "Residence History updt_from Address History"
+-----------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+    #. [tkl-odoo14-jcafb21-vm] Executar manualmente o *Processing Schedule* **Residence History updt_from Address History**:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* :bi:`Processing Schedules`:
+
+            * Menu de acesso:
+
+                * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
+
+        #. Selecionar o *Processing Schedule* "**Residence History updt_from Address History**"
+
+        #. Executar a Ação :bi:`Processing Schedule Execute`:
+
+            #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
 :red:`(Não Executado)` Transferir Documentos associados a um Endereço para a Residência relacionada
 ---------------------------------------------------------------------------------------------------
@@ -1868,47 +1912,5 @@ Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
         #. Executar a Ação "**Event Attendee Associate from Person to Patient**":
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
-
-:red:`(Não Executado)` Executar o *Processing Schedule* "Patient History updt_from Person History"
---------------------------------------------------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-    #. [tkl-odoo14-jcafb21-vm] Executar manualmente o *Processing Schedule* **Patient History updt_from Person History**:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* :bi:`Processing Schedules`:
-
-            * Menu de acesso:
-
-                * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
-
-        #. Selecionar o *Processing Schedule* "**Patient History updt_from Person History**"
-
-        #. Executar a Ação :bi:`Processing Schedule Execute`:
-
-            #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
-
-:red:`(Não Executado)` Executar o *Processing Schedule* "Residence History updt_from Address History"
------------------------------------------------------------------------------------------------------
-
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-    #. [tkl-odoo14-jcafb21-vm] Executar manualmente o *Processing Schedule* **Residence History updt_from Address History**:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* :bi:`Processing Schedules`:
-
-            * Menu de acesso:
-
-                * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
-
-        #. Selecionar o *Processing Schedule* "**Residence History updt_from Address History**"
-
-        #. Executar a Ação :bi:`Processing Schedule Execute`:
-
-            #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
 .. toctree::   :maxdepth: 2
