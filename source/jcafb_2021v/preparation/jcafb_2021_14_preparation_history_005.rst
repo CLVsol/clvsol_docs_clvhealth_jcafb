@@ -1605,8 +1605,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-09a)
 
         #. Salvar o registro editado.
 
-:red:`(Não Executado)` Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
------------------------------------------------------------------------------------
+Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
+------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
@@ -1661,8 +1661,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-09a)
 
                 /etc/init.d/odoo start
 
-:red:`(Não Executado)` Atualizar o(s) módulo(s) [ver lista]
------------------------------------------------------------
+Atualizar o(s) módulo(s) [ver lista]
+------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
@@ -1719,6 +1719,497 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-09a)
                 exit
 
                 /etc/init.d/odoo start
+
+Atualizar o(s) módulo(s) [ver lista]
+------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
+
+        * clv_survey
+        * clv_document_jcafb
+        * clv_lab_test_jcafb
+
+    #. [tkl-odoo14-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 1)
+                #
+
+                ssh tkl-odoo14-jcafb21-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 2)
+                #
+
+                ssh tkl-odoo14-jcafb21-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_survey
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Atualizar os parâmetros "*parameter*" das Questoões de todas as Pesquisas
+-------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Lista de Pesquisas:
+
+        * **EAA21**:
+
+            #. [EAA21_01_01]: **parameter_3** (1.1. Código da Requisição de Exames)
+
+            #. [EAA21_01_03]: **parameter_1** (1.3. Código do Resusltado de Exames)
+
+            #. [EAA21_01_05]: **parameter_2** (1.5. Código do Local)
+
+        * **EAN21**:
+
+            #. [EAN21_01_01]: **parameter_3** (1.1. Código da Requisição de Exames)
+
+            #. [EAN21_01_03]: **parameter_1** (1.3. Código do Resusltado de Exames)
+
+            #. [EAN21_01_05]: **parameter_2** (1.5. Código do Código do Paciente)
+
+        * **ECP21**:
+
+            #. [ECP21_01_01]: **parameter_3** (1.1. Código da Requisição de Exames)
+
+            #. [ECP21_01_03]: **parameter_1** (1.3. Código do Resusltado de Exames)
+
+            #. [ECP21_01_05]: **parameter_2** (1.5. Código do Código do Paciente)
+
+
+        * **EDH21**:
+
+            #. [EDH21_01_01]: **parameter_3** (1.1. Código da Requisição de Exames)
+
+            #. [EDH21_01_03]: **parameter_1** (1.3. Código do Resusltado de Exames)
+
+            #. [EDH21_01_05]: **parameter_2** (1.5. Código do Código do Paciente)
+
+        * **EEV21**:
+
+            #. [EEV21_01_01]: **parameter_3** (1.1. Código da Requisição de Exames)
+
+            #. [EEV21_01_03]: **parameter_1** (1.3. Código do Resusltado de Exames)
+
+            #. [EEV21_01_05]: **parameter_2** (1.5. Código do Código do Paciente)
+
+        * **EUR21**:
+
+            #. [EUR21_01_01]: **parameter_3** (1.1. Código da Requisição de Exames)
+
+            #. [EUR21_01_03]: **parameter_1** (1.3. Código do Resusltado de Exames)
+
+            #. [EUR21_01_05]: **parameter_2** (1.5. Código do Código do Paciente)
+
+        * **QAN17**:
+
+            #. [QAN17_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QAN17_01_04]: **parameter_3** (1.4. Código da Requisição de Exames)
+
+            #. [QAN17_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QAN18**:
+
+            #. [QAN18_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QAN18_01_04]: **parameter_3** (1.4. Código da Requisição de Exames)
+
+            #. [QAN18_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QAN19**:
+
+            #. [QAN19_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QAN19_01_04]: **parameter_3** (1.4. Código da Requisição de Exames)
+
+            #. [QAN19_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QAN20**:
+
+            #. [QAN20_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QAN20_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QAN21**:
+
+            #. [QAN21_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QAN21_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QDH17**:
+
+            #. [QDH17_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QDH17_01_04]: **parameter_3** (1.4. Código da Requisição de Exames)
+
+            #. [QDH17_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QDH18**:
+
+            #. [QDH18_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QDH18_01_04]: **parameter_3** (1.4. Código da Requisição de Exames)
+
+            #. [QDH18_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QDH19**:
+
+            #. [QDH19_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QDH19_01_04]: **parameter_3** (1.4. Código da Requisição de Exames)
+
+            #. [QDH19_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QDH20**:
+
+            #. [QDH20_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QDH20_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QDH21**:
+
+            #. [QDH21_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QDH21_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QMD17**:
+
+            #. [QMD17_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QMD17_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QMD18**:
+
+            #. [QMD18_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QMD18_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QMD19**:
+
+            #. [QMD19_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QMD19_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QMD20**:
+
+            #. [QMD20_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QMD20_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QMD21**:
+
+            #. [QMD21_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QMD21_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSC17**:
+
+            #. [QSC17_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC17_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSC18**:
+
+            #. [QSC18_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC18_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSC19**:
+
+            #. [QSC19_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC19_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSC20**:
+
+            #. [QSC20_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC20_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSC21**:
+
+            #. [QSC21_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC21_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSF17**:
+
+            #. [QSF17_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSF17_02_02]: **parameter_2** (2.2. Código do Endereço)
+
+        * **QSC18**:
+
+            #. [QSC18_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC18_02_02]: **parameter_2** (2.2. Código do Endereço)
+
+        * **QSC19**:
+
+            #. [QSC19_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC19_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSC20**:
+
+            #. [QSC20_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC20_02_02]: **parameter_2** (2.2. Código da Família)
+
+        * **QSC21**:
+
+            #. [QSC21_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSC21_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSI17**:
+
+            #. [QSI17_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSI17_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSI18**:
+
+            #. [QSI18_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSI18_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSI19**:
+
+            #. [QSI19_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSI19_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSI20**:
+
+            #. [QSI20_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSI20_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **QSI21**:
+
+            #. [QSI21_01_01]: **parameter_1** (1.1. Código do Questionário)
+
+            #. [QSI21_02_02]: **parameter_2** (2.2. Código do Paciente)
+
+        * **TAA21**:
+
+            #. [TAA21_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TAA21_02_02]: **parameter_2** (2.2. Código do Endereço/Residência)
+
+        * **TAN21**:
+
+            #. [TAN21_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TAN21_02_02]: **parameter_2** (2.2. Código do Indivíduo)
+
+        * **TCP17**:
+
+            #. [TCP17_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TCP17_02_02]: **parameter_2** (2.2. Código do Indivíduo)
+
+        * **TCR17**:
+
+            #. [TCR17_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TCR17_02_02]: **parameter_2** (2.2. Código do Indivíduo)
+
+        * **TCR21**:
+
+            #. [TCR21_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TCR21_02_02]: **parameter_2** (2.2. Código do Indivíduo)
+
+        * **TDH21**:
+
+            #. [TDH21_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TDH21_02_02]: **parameter_2** (2.2. Código do Indivíduo)
+
+        * **TID17**:
+
+            #. [TID17_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TID17_02_02]: **parameter_2** (2.2. Código do Indivíduo)
+
+        * **TID21**:
+
+            #. [TID21_01_01]: **parameter_1** (1.1. Código do Termo de Consentimento)
+
+            #. [TID21_02_02]: **parameter_2** (2.2. Código do Indivíduo)
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-17a.sql
+
+            gzip clvhealth_jcafb_2021v_14_2021-08-17a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-17a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-17a.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-17a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-17a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-17a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2021-08-17a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-08-17a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-08-17a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2021-08-17a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2021-08-17a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-17a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo14-jcafb21-vm**".
+
+        #. Salvar o registro editado.
 
 :red:`(Não Executado)` Executar o *Processing Schedule* "Patient History updt_from Person History"
 --------------------------------------------------------------------------------------------------
@@ -1992,202 +2483,5 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-09a)
         #. Executar a Ação "**Event Attendee Associate from Person to Patient**":
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-13a)
---------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo14-jcafb21-vm
-            #
-
-            ssh tkl-odoo14-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo14-jcafb21-vm
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-13a.sql
-
-            gzip clvhealth_jcafb_2021v_14_2021-08-13a.sql
-            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-13a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-13a.tar.gz clvhealth_jcafb_2021v_14
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-13a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo14-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-13a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-13a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-13a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-13a.tar.gz
-
-.. index:: clvhealth_jcafb_2021v_14_2021-08-13a.sql
-.. index:: clvhealth_jcafb_2021v_14_2021-08-13a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14_2021-08-13a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-13a
-
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-13a)
-------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo14-jcafb21-vm
-            #
-
-            ssh tkl-odoo14-jcafb21-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo14-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14_2021-08-13a.sql.gz
-
-            dropdb -i clvhealth_jcafb_2021v_14
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
-            psql -f clvhealth_jcafb_2021v_14_2021-08-13a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2021v_14
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-13a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-13a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo14-jcafb21-vm
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo14-jcafb21-vm**".
-
-        #. Salvar o registro editado.
-
-:red:`(Não Executado)` Atualizar o(s) módulo(s) [ver lista]
------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
-
-        * clv_survey
-        * clv_document_jcafb
-        * clv_lab_test_jcafb
-
-    #. [tkl-odoo14-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
-
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21-vm** e executar o *Odoo* no modo manual:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21-vm (session 1)
-                #
-
-                ssh tkl-odoo14-jcafb21-vm -l root
-
-                /etc/init.d/odoo stop
-
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21-vm** e executar o **install.py**:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21-vm (session 2)
-                #
-
-                ssh tkl-odoo14-jcafb21-vm -l odoo
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_survey
-
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21-vm (session 1)
-                #
-
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-                ^C
-
-                exit
-
-                /etc/init.d/odoo start
 
 .. toctree::   :maxdepth: 2
