@@ -2211,8 +2211,29 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
         #. Salvar o registro editado.
 
-:red:`(Não Executado)` Executar o *Processing Schedule* "Patient History updt_from Person History"
---------------------------------------------------------------------------------------------------
+Associar as referências para as Participações
+---------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Survey User Input Get Reference* para as :bi:`Paritipations`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Paritipations*:
+
+            * Menu de acesso:
+
+                * :bi:`Pesquisas` » :bi:`Participations` » :bi:`Paritipations`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Survey User Input State`
+
+        #. Selecionar as Participações desejadas com: :bi:`Survey User Input State` = ":bi:`Validated`"
+
+        #. Executar a Ação "**Survey User Input Get Reference**":
+
+            #. Utilize o botão *Survey User Input Get Reference* para executar a Ação.
+
+Executar o *Processing Schedule* "Patient History updt_from Person History"
+---------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
@@ -2232,8 +2253,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
-:red:`(Não Executado)` Executar o *Processing Schedule* "Residence History updt_from Address History"
------------------------------------------------------------------------------------------------------
+Executar o *Processing Schedule* "Residence History updt_from Address History"
+------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
@@ -2253,8 +2274,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
-:red:`(Não Executado)` Transferir Documentos associados a um Endereço para a Residência relacionada
----------------------------------------------------------------------------------------------------
+Transferir Documentos associados a um Endereço para a Residência relacionada
+----------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Document Associate from Address to Residence* para os Documentos desejados:
 
@@ -2274,8 +2295,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
 
-:red:`(Não Executado)` Transferir Documentos associados a uma Família para a Residência relacionada
----------------------------------------------------------------------------------------------------
+Transferir Documentos associados a uma Família para a Residência relacionada
+----------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Document Associate from Family to Residence* para os Documentos desejados:
 
@@ -2295,8 +2316,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão *Associate from Family to Residence* para executar a Ação.
 
-:red:`(Não Executado)` Transferir Documentos associados a uma Pessoa para o Paciente relacionado
-------------------------------------------------------------------------------------------------
+Transferir Documentos associados a uma Pessoa para o Paciente relacionado
+-------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Document Associate from Person to Patient* para os Documentos desejados:
 
@@ -2316,8 +2337,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
 
-:red:`(Não Executado)` Executar o *Processing Schedule* "Copy QSF from Residence to Patient"
---------------------------------------------------------------------------------------------
+Executar o *Processing Schedule* "Copy QSF from Residence to Patient"
+---------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
 
@@ -2337,8 +2358,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
-:red:`(Não Executado)` Transferir Requisições de Exames associadas a um Endereço para a Residência relacionada
---------------------------------------------------------------------------------------------------------------
+Transferir Requisições de Exames associadas a um Endereço para a Residência relacionada
+---------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Request Associate from Address to Residence* para as Requisições de Exames desejadas:
 
@@ -2358,50 +2379,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
 
-:red:`(Não Executado)` Transferir Resultados de Exames associados a um Endereço para a Residência relacionada
--------------------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Result Associate from Address to Residence* para os Resultados de Exames desejados:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* *Lab Test Results*:
-
-            * Menu de acesso:
-
-                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Results`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
-
-        #. Selecionar os Resultados de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
-
-        #. Executar a Ação "**Lab Test Result Associate from Address to Residence**":
-
-            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
-
-:red:`(Não Executado)` Transferir Laudos de Exames associados a um Endereço para a Residência relacionada
----------------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Report Associate from Address to Residence* para os Laudos de Exames desejados:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
-
-        #. Acessar a *View* *Lab Test Reports*:
-
-            * Menu de acesso:
-
-                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Reports`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
-
-        #. Selecionar os Laudos de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
-
-        #. Executar a Ação "**Lab Test Report Associate from Address to Residence**":
-
-            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
-
-:red:`(Não Executado)` Transferir Requisições de Exames associadas a uma Pessoa para o Paciente relacionado
------------------------------------------------------------------------------------------------------------
+Transferir Requisições de Exames associadas a uma Pessoa para o Paciente relacionado
+------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Request Associate from Person to Patient* para as Requisições de Exames desejadas:
 
@@ -2421,8 +2400,29 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
 
-:red:`(Não Executado)` Transferir Resultados de Exames associados a uma Pessoa para o Paciente relacionado
-----------------------------------------------------------------------------------------------------------
+Transferir Resultados de Exames associados a um Endereço para a Residência relacionada
+--------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Result Associate from Address to Residence* para os Resultados de Exames desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Results*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Results`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Resultados de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
+
+        #. Executar a Ação "**Lab Test Result Associate from Address to Residence**":
+
+            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
+
+Transferir Resultados de Exames associados a uma Pessoa para o Paciente relacionado
+-----------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Result Associate from Person to Patient* para os Resultados de Exames desejados:
 
@@ -2442,8 +2442,29 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
 
-:red:`(Não Executado)` Transferir Laudos de Exames associados a uma Pessoa para o Paciente relacionado
-------------------------------------------------------------------------------------------------------
+Transferir Laudos de Exames associados a um Endereço para a Residência relacionada
+----------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Report Associate from Address to Residence* para os Laudos de Exames desejados:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* *Lab Test Reports*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Reports`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar os Laudos de Exames desejados com: :bi:`Refers to (Model)` = ":bi:`clv.address`"
+
+        #. Executar a Ação "**Lab Test Report Associate from Address to Residence**":
+
+            #. Utilize o botão *Associate from Address to Residence* para executar a Ação.
+
+Transferir Laudos de Exames associados a uma Pessoa para o Paciente relacionado
+-------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Lab Test Report Associate from Person to Patient* para os Laudos de Exames desejados:
 
@@ -2463,8 +2484,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
 
-:red:`(Não Executado)` Transferir Eventos associados a uma Pessoa para o Paciente relacionado
----------------------------------------------------------------------------------------------
+Transferir Eventos associados a uma Pessoa para o Paciente relacionado
+----------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21-vm] Executar a Ação *Event Attendee Associate from Person to Patient* para os Eventos desejados:
 
@@ -2483,5 +2504,147 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17a)
         #. Executar a Ação "**Event Attendee Associate from Person to Patient**":
 
             #. Utilize o botão *Associate from Person to Patient* para executar a Ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17b)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-17b.sql
+
+            gzip clvhealth_jcafb_2021v_14_2021-08-17b.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-08-17b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-17b.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-17b.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-08-17b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-17b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17b.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2021-08-17b.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-08-17b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-08-17b
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17b
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-08-17b)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2021-08-17b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2021-08-17b.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-08-17b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-08-17b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo14-jcafb21-vm**".
+
+        #. Salvar o registro editado.
 
 .. toctree::   :maxdepth: 2
