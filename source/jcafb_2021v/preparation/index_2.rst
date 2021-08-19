@@ -10,19 +10,14 @@
 .. role:: blue
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2021-14
+.. index:: Preparação de Dados - Fase 1
 
-=======================
-CLVhealth-JCAFB_2021-14
-=======================
+============================
+Preparação de Dados - Fase 2
+============================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
 
-   migration/index_1
-   preparation/index_1
-   maintenance/index_1
-
-   migration/index_2
-   preparation/index_2
+   jcafb_2021_14n_preparation_history_011
