@@ -610,6 +610,29 @@ Executar o *External Sync Batch* "*Default Batch [60]*" (método alternativo)
 
             * :bi:`Execution time: 0:06:57.129`
 
+Marcar o *Active Log* de todos os Objetos
+-----------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Global Log Client Mass Edit` para todos os Objetos:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Acessar a *View* *Global Log Clients*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Global Logs` » :bi:`Global Log Clients`
+
+        #. Selecionar todos os :bi:`Global Log Clients`
+
+        #. Executar a Ação ":bi:`Global Log Client Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Active Log*: **Set** **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
 Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-08-19a)
 ---------------------------------------------------------------------------
 
