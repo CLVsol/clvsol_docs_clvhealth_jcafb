@@ -19,6 +19,8 @@
     * *Workflow*: ":doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_010`".
     * *Workflow*: ":doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_020`".
     * *Workflow*: ":doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_030`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_080`".
+    * *Workflow*: ":doc:`/reference_guide/reregistration_patient/reregistration_patient_workflow_030_020_020_090`".
 
     #. Acessar a *view* :bi:`Patients (Aux)`:
 
