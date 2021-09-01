@@ -504,8 +504,8 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Employee Summary Set Up` para executar a Ação.
 
-:borange:`(**)` Substituir uma Criança do Projeto JCAFB-2021v
--------------------------------------------------------------
+Substituir uma Criança do Projeto JCAFB-2021v
+---------------------------------------------
 
     #. **Selecionar uma nova Criança para o Projeto JCAFB-2021v:**
 
@@ -629,8 +629,8 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
     #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Pacientes, Residências e Grupo Responsável) no processo de substitução da Criança.**
 
-:borange:`(**)` Substituir um Idoso do Projeto JCAFB-2021v
-----------------------------------------------------------
+Substituir um Idoso do Projeto JCAFB-2021v
+------------------------------------------
 
     #. **Selecionar um novo Idoso para o Projeto JCAFB-2021v:**
 
@@ -754,8 +754,8 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
     #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Pacientes, Residências e Grupo Responsável) no processo de substitução do Idoso.**
 
-:borange:`(**)` Executar o *Verification Batch* “Current Phase - Default Batch”
--------------------------------------------------------------------------------
+Executar o *Verification Batch* “Current Phase - Default Batch”
+---------------------------------------------------------------
 
     #. Executar o *Verification Batch* “Current Phase - Default Batch”:
 
@@ -773,8 +773,8 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
             * :bi:`Execution time: 0:00:17.934`
 
-:borange:`(**)` Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
-----------------------------------------------------------------------------------------------------------
+Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
+------------------------------------------------------------------------------------------
 
     * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
 
@@ -794,8 +794,8 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
             #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_070`"
 
-:borange:`(**)` Atualizar o *Register State* dos Pacientes já recadastrados
----------------------------------------------------------------------------
+Atualizar o *Register State* dos Pacientes já recadastrados
+-----------------------------------------------------------
 
     #. Executar a Ação ":bi:`Patient Mass Edit`":
 
@@ -807,8 +807,8 @@ Criar os Sumários para os Grupos de Campo do Projeto JCAFB-2021v
 
         #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-:borange:`(**)` Atualizar o *Register State* das Residências já recadastrados
------------------------------------------------------------------------------
+Atualizar o *Register State* das Residências já recadastrados
+-------------------------------------------------------------
 
     #. Executar a Ação ":bi:`Residence Mass Edit`":
 
