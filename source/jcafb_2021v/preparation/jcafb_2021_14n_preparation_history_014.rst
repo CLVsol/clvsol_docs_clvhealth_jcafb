@@ -660,29 +660,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-08-31b)
 
             #. Utilize o botão :bi:`Survey User Input Validate` para executar a Ação.
 
-:red:`(Não Utilizado)` :borange:`(**)` Executar a Ação *Survey User Input Get Reference* para as transcrições de Questionários do Projeto JCAFB-2021v
------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Survey User Input Get Reference` para as :bi:`Participations` do Projeto JCAFB-2021v:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Acessar a *View* *Participations*:
-
-            * Menu de acesso:
-
-                * :bi:`Pesquisas` » :bi:`Participations` » :bi:`Participations`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Status` » :bi:`Survey User Input State`
-
-        #. Pesquisar Pesquisa *for* **21**
-
-        #. Selecionar todas as :bi:`Participations` com: :bi:`Status` = "**Concluído**" » :bi:`Survey User Input State` = ":bi:`New`"
-
-        #. Executar a Ação ":bi:`Survey User Input Get Reference`":
-
-            #. Utilize o botão :bi:`Survey User Input Get Reference` para executar a Ação.
-
 :borange:`(**)` Executar a Ação *Document Type Items Set Up* para *Document Types* do Projeto JCAFB-2021v
 ---------------------------------------------------------------------------------------------------------
 
@@ -802,31 +779,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-08-31b)
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-:red:`(Não Utilizado)` Executar a Ação *Document Items Edit* para um Documento do Projeto JCAFB-2021v
------------------------------------------------------------------------------------------------------
-
-    * **Observação**: A Ação :bi:`Document Items Edit` não está operacional. :red:`Redefinir o uso dessa Ação para editar automaticamente o Questíonário referente ao Documento.`
-
-    #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Document Items Edit` para um determinado :bi:`Document` do Projeto JCAFB-2021v:
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Acessar a *View* *Documents*:
-
-            * Menu de acesso:
-
-                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
-
-        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
-
-        #. Abrir o Documento desejado.
-
-        #. Executar a Ação ":bi:`Document Items Edit`":
-
-            #. Utilize o botão :bi:`Document Update` para executar a Ação.
-
 :borange:`(**)` Executar a Ação *Lab Test Type Criteria Set Up* para *Lab Test Types* do Projeto JCAFB-2021v
 ------------------------------------------------------------------------------------------------------------
 
@@ -870,5 +822,129 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-08-31b)
         #. Executar a Ação ":bi:`Lab Test Result Criteria Refresh`":
 
             #. Utilize o botão :bi:`Criteria Refresh` para executar a Ação.
+
+:borange:`(**)` Executar a Ação *Lab Test Result Items Update from Survey* para Resultados de Exames do Projeto JCAFB-2021v
+---------------------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Lab Test Result Items Update from Survey` para os :bi:`Lab Test Results` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Acessar a *View* *Lab Test Results*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test` » :bi:`Results`
+
+        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Register State`
+
+        #. Selecionar todos os :bi:`Lab Test Results` com: :bi:`Phase` = "**JCAFB-2021v**" » :bi:`Register State` = ":bi:`Revised`"
+
+        #. Executar a Ação ":bi:`Lab Test Result Items Update from Survey`":
+
+            #. Utilize o botão :bi:`Update from Survey` para executar a Ação.
+
+:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
+----------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
+
+        * clv_lab_test
+
+    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 1)
+                #
+
+                ssh tkl-odoo14-jcafb21n-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 2)
+                #
+
+                ssh tkl-odoo14-jcafb21n-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_lab_test
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+:red:`(Não Utilizado)` :borange:`(**)` Executar a Ação *Survey User Input Get Reference* para as transcrições de Questionários do Projeto JCAFB-2021v
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Survey User Input Get Reference` para as :bi:`Participations` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Acessar a *View* *Participations*:
+
+            * Menu de acesso:
+
+                * :bi:`Pesquisas` » :bi:`Participations` » :bi:`Participations`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Status` » :bi:`Survey User Input State`
+
+        #. Pesquisar Pesquisa *for* **21**
+
+        #. Selecionar todas as :bi:`Participations` com: :bi:`Status` = "**Concluído**" » :bi:`Survey User Input State` = ":bi:`New`"
+
+        #. Executar a Ação ":bi:`Survey User Input Get Reference`":
+
+            #. Utilize o botão :bi:`Survey User Input Get Reference` para executar a Ação.
+
+:red:`(Não Utilizado)` Executar a Ação *Document Items Edit* para um Documento do Projeto JCAFB-2021v
+-----------------------------------------------------------------------------------------------------
+
+    * **Observação**: A Ação :bi:`Document Items Edit` não está operacional. :red:`Redefinir o uso dessa Ação para editar automaticamente o Questíonário referente ao Documento.`
+
+    #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Document Items Edit` para um determinado :bi:`Document` do Projeto JCAFB-2021v:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Acessar a *View* *Documents*:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
+
+        #. Ativar o filtro **Filtros** » :bi:`Has User Input`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Document State`
+
+        #. Abrir o Documento desejado.
+
+        #. Executar a Ação ":bi:`Document Items Edit`":
+
+            #. Utilize o botão :bi:`Document Update` para executar a Ação.
 
 .. toctree::   :maxdepth: 2
