@@ -3091,4 +3091,496 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-09-02a)
 
         #. Salvar o registro editado.
 
+Atualizar os fontes do projeto
+------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo/clvsol_odoo_client
+            git pull
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_l10n_brazil
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+Atualizar o(s) módulo(s) [ver lista]
+------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
+
+        * clv_summary_jcafb
+
+    #. [tkl-odoo14-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 1)
+                #
+
+                ssh tkl-odoo14-jcafb21-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 2)
+                #
+
+                ssh tkl-odoo14-jcafb21-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_summary_jcafb
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Atualizar o parâmetro "*description*" de todas os Tipos de Pesquisas
+--------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Lista de Tipos de Pesquisas:
+
+        * **QAN17**:
+
+            #. **description**: "JCAFB 2017 - Questionário para detecção de Anemia"
+
+        * **QAN18**:
+
+            #. **description**: "JCAFB 2018 - Questionário para detecção de Anemia"
+
+        * **QAN19**:
+
+            #. **description**: "JCAFB 2019 - Questionário para detecção de Anemia"
+
+        * **QAN20**:
+
+            #. **description**: "JCAFB 2020 - Questionário para detecção de Anemia"
+
+        * **QAN21**:
+
+            #. **description**: "JCAFB 2021 - Questionário para detecção de Anemia"
+
+        * **QDH17**:
+
+            #. **description**: "JCAFB 2017 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **QDH18**:
+
+            #. **description**: "JCAFB 2018 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **QDH19**:
+
+            #. **description**: "JCAFB 2019 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **QDH20**:
+
+            #. **description**: "JCAFB 2020 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **QDH21**:
+
+            #. **description**: "JCAFB 2021 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **QMD17**:
+
+            #. **description**: "JCAFB 2017 - Questionário - Medicamentos"
+
+        * **QMD18**:
+
+            #. **description**: "JCAFB 2018 - Questionário - Medicamentos"
+
+        * **QMD19**:
+
+            #. **description**: "JCAFB 2019 - Questionário - Medicamentos"
+
+        * **QMD20**:
+
+            #. **description**: "JCAFB 2020 - Questionário - Medicamentos"
+
+        * **QMD21**:
+
+            #. **description**: "JCAFB 2021 - Questionário - Medicamentos"
+
+        * **QSC17**:
+
+            #. **description**: "JCAFB 2017 - Questionário Socioeconômico Individual (Crianças)"
+
+        * **QSC18**:
+
+            #. **description**: "JCAFB 2018 - Questionário Socioeconômico Individual (Crianças)"
+
+        * **QSC19**:
+
+            #. **description**: "JCAFB 2019 - Questionário Socioeconômico Individual (Crianças)"
+
+        * **QSC20**:
+
+            #. **description**: "JCAFB 2020 - Questionário Socioeconômico Individual (Crianças)"
+
+        * **QSC21**:
+
+            #. **description**: "JCAFB 2021 - Questionário Socioeconômico Individual (Crianças)"
+
+        * **QSF17**:
+
+            #. **description**: "JCAFB 2017 - Questionário Socioeconômico Familiar (Crianças e Idosos)"
+
+        * **QSC18**:
+
+            #. **description**: "JCAFB 2018 - Questionário Socioeconômico Familiar (Crianças e Idosos)"
+
+        * **QSC19**:
+
+            #. **description**: "JCAFB 2019 - Questionário Socioeconômico Familiar (Crianças e Idosos)"
+
+        * **QSC20**:
+
+            #. **description**: "JCAFB 2020 - Questionário Socioeconômico Familiar (Crianças e Idosos)"
+
+        * **QSC21**:
+
+            #. **description**: "JCAFB 2021 - Questionário Socioeconômico Familiar (Crianças e Idosos)"
+
+        * **QSI17**:
+
+            #. **description**: "JCAFB 2017 - Questionário Socioeconômico Individual (Idosos)"
+
+        * **QSI18**:
+
+            #. **description**: "JCAFB 2018 - Questionário Socioeconômico Individual (Idosos)"
+
+        * **QSI19**:
+
+            #. **description**: "JCAFB 2019 - Questionário Socioeconômico Individual (Idosos)"
+
+        * **QSI20**:
+
+            #. **description**: "JCAFB 2020 - Questionário Socioeconômico Individual (Idosos)"
+
+        * **QSI21**:
+
+            #. **description**: "JCAFB 2021 - Questionário Socioeconômico Individual (Idosos)"
+
+        * **TAA20**:
+
+            #. **description**: "JCAFB 2020 - Termo de Consentimento Livre e Esclarecido para a Análise Físico-Química e Microbiológica da Água"
+
+        * **TAA21**:
+
+            #. **description**: "JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para a Análise Físico-Química e Microbiológica da Água"
+
+        * **TAN18**:
+
+            #. **description**: "JCAFB 2018 - Termo de Consentimento para a Campanha de Detecção de Anemia"
+
+        * **TAN19**:
+
+            #. **description**: "JCAFB 2019 - Termo de Consentimento para a Campanha de Detecção de Anemia"
+
+        * **TAN20**:
+
+            #. **description**: "JCAFB 2020 - Termo de Consentimento para a Campanha de Detecção de Anemia"
+
+        * **TAN21**:
+
+            #. **description**: "JCAFB 2021 - Termo de Consentimento para a Campanha de Detecção de Anemia"
+
+        * **TCP17**:
+
+            #. **description**: "JCAFB 2017 - TERMO DE CONSENTIMENTO PARA A CAMPANHA DE DETECÇÃO DE DIABETES, HIPERTENSÃO ARTERIAL E HIPERCOLESTEROLEMIA"
+
+        * **TCR17**:
+
+            #. **description**: "JCAFB 2017 - TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO PARA REALIZAÇÃO DE EXAMES COPROPARASITOLÓGICOS, DETECÇÃO DE ANEMIA E QUESTIONÁRIO SOCIOECONÔMICO"
+
+        * **TCR18**:
+
+            #. **description**: "JCAFB 2018 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames Coproparasitológicos"
+
+        * **TCR19**:
+
+            #. **description**: "JCAFB 2019 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames Coproparasitológicos"
+
+        * **TCR20**:
+
+            #. **description**: "JCAFB 2020 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames Coproparasitológicos"
+
+        * **TCR21**:
+
+            #. **description**: "JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames Coproparasitológicos"
+
+        * **TDH18**:
+
+            #. **description**: "JCAFB 2018 - Termo de Consentimento para a Campanha de Detecão de Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **TDH19**:
+
+            #. **description**: "JCAFB 2019 - Termo de Consentimento para a Campanha de Detecão de Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **TDH20**:
+
+            #. **description**: "JCAFB 2020 - Termo de Consentimento para a Campanha de Detecão de Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **TDH21**:
+
+            #. **description**: "JCAFB 2021 - Termo de Consentimento para a Campanha de Detecão de Diabetes, Hipertensão Arterial e Hipercolesterolemia"
+
+        * **TID17**:
+
+            #. **description**: "JCAFB 2017 - TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO PARA REALIZAÇÃO DE EXAME DE URINA, COPROPARASITOLÓGICO, DETECÇÃO DE ANEMIA E QUESTIONÁRIO SOCIOECONÔMICO"
+
+        * **TID18**:
+
+            #. **description**: "JCAFB 2018 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames de Urina e Coproparasitológico"
+
+        * **TID19**:
+
+            #. **description**: "JCAFB 2019 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames de Urina e Coproparasitológico"
+
+        * **TID20**:
+
+            #. **description**: "JCAFB 2020 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames de Urina e Coproparasitológico"
+
+        * **TID21**:
+
+            #. **description**: "JCAFB 2021 - Termo de Consentimento Livre e Esclarecido para Realização de Questionário Socioeconômico e de Exames de Urina e Coproparasitológico"
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-09-04a)
+--------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-09-04a.sql
+
+            gzip clvhealth_jcafb_2021v_14_2021-09-04a.sql
+            pg_dump clvhealth_jcafb_2021v_14 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14_2021-09-04a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-09-04a.tar.gz clvhealth_jcafb_2021v_14
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-09-04a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-09-04a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14_2021-09-04a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-09-04a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-09-04a.tar.gz
+
+.. index:: clvhealth_jcafb_2021v_14_2021-09-04a.sql
+.. index:: clvhealth_jcafb_2021v_14_2021-09-04a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14_2021-09-04a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14_2021-09-04a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-09-04a)
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            ssh tkl-odoo14-jcafb21-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo14-jcafb21-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2021v_14_2021-09-04a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2021v_14
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14
+            psql -f clvhealth_jcafb_2021v_14_2021-09-04a.sql -d clvhealth_jcafb_2021v_14 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2021v_14
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14_2021-09-04a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14_2021-09-04a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo14-jcafb21-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21-vm <https://tkl-odoo14-jcafb21-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo14-jcafb21-vm**".
+
+        #. Salvar o registro editado.
+
 .. toctree::   :maxdepth: 2
