@@ -1073,4 +1073,80 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-05a)
 
         #. Salvar o registro editado.
 
+Recadastrar um Paciente selecionado para o Projeto JCAFB-2021v (Mudança para Endereço Conhecido)
+------------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+    #. **Desselecionar a antiga Residência do Paciente a ser recadastrado:**
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar a Residência a ser desselecionada.
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Register State*: **Set** » **Revised**
+
+                * *State*: **Set** » **Unselected**
+
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+    #. **Executar o Recadastramento** (Mudança para um Endereço Conhecido) **do Paciente** Selecionado para o Projeto JCAFB-2021v, considerando as informações do novo Endereço apresentadas para o mesmo.
+
+        #. Usar como referência: :doc:`/user_guide/reregistration/reregistration_workflow_020_010_050`", considerando:
+
+            * Os :bi:`Patient State` e :bi:`Patient (Aux) State` do Paciente **serão mantidos** como :bi:`Selected`.
+
+    #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Paciente, antiga residência, nova Residência e Grupo Responsável) no processo de Recadastramento do Paciente.**
+
+Atualizar o *Register State* dos Pacientes já recadastrados
+-----------------------------------------------------------
+
+    #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+        * Parâmetros utilizados:
+
+            * *Register State*: **Set** » **Done**
+
+            * *Patient Verification Execute*: **marcado**
+
+        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Register State* das Residências já recadastrados
+-------------------------------------------------------------
+
+    #. Executar a Ação ":bi:`Residence Mass Edit`":
+
+        * Parâmetros utilizados:
+
+            * *Register State*: **Set** » **Done**
+
+            * *Residence Verification Execute*: **marcado**
+
+        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Register State* dos Pacientes (Aux) já recadastrados
+-----------------------------------------------------------------
+
+    #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+        * Parâmetros utilizados:
+
+            * *Register State*: **Set** » **Done**
+
+            * *Patient (Aux) Verification Execute*: **marcado**
+
+        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
