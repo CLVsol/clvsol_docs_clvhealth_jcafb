@@ -615,12 +615,26 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-04a)
 
         #. Salvar o registro editado.
 
-Substituir uma Criança do Projeto JCAFB-2021v
----------------------------------------------
+Substituir um Paciente do Projeto JCAFB-2021v (Recusa em Participar)
+--------------------------------------------------------------------
 
-    #. **Selecionar uma nova Criança para o Projeto JCAFB-2021v:**
+    #. **Conectar-se**, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+    #. **Identificar o Paciente e a Residência que serão substituidos:**
+
+        #. Utilizar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Utilizar a *View* *Residences*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+    #. **Selecionar um novo Paciente para o Projeto JCAFB-2021v:**
 
         #. Acessar a *View* *Patients*:
 
@@ -632,7 +646,7 @@ Substituir uma Criança do Projeto JCAFB-2021v
 
         #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
 
-        #. Selecionar o primeiro Paciente listado com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Patient State` = :bi:`Available`
+        #. Selecionar o primeiro Paciente listado com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = "**Categoria do Paciente em substituição**" » :bi:`Patient State` = :bi:`Available`
 
         #. Executar a Ação ":bi:`Patient Mass Edit`":
 
@@ -660,6 +674,8 @@ Substituir uma Criança do Projeto JCAFB-2021v
 
             #. Utilize o botão *Associate to Residence* para executar a Ação.
 
+        #. Verificar se a Categoria da Residência está corretamente informada. Caso um novo registro para a Residência tenha sido criado, a Categoria precisa ser manualmente indicada.
+
         #. Executar a Ação "**Patient Residence Update**":
 
             * Parâmetros utilizados:
@@ -670,9 +686,7 @@ Substituir uma Criança do Projeto JCAFB-2021v
 
             #. Utilize o botão *Residence Update* para executar a Ação.
 
-    #. **Desselecionar uma Criança do Projeto JCAFB-2021v:**
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+    #. **Desselecionar o Paciente substituido do Projeto JCAFB-2021v:**
 
         #. Acessar a *View* *Patients*:
 
@@ -680,9 +694,7 @@ Substituir uma Criança do Projeto JCAFB-2021v
 
                 * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
 
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
-
-        #. Selecionar o Paciente a ser substituido com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Criança`" » :bi:`Patient State` = :bi:`Selected`
+        #. Selecionar o Paciente a ser substituido (identificado anteriormente).
 
         #. Executar a Ação ":bi:`Patient Mass Edit`":
 
@@ -710,7 +722,7 @@ Substituir uma Criança do Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-        #. Voltar ao Registro da Criança desselecionada.
+        #. Voltar ao Registro do Paciente desselecionado.
 
         #. Acessar a *Tab* *Lab Test Requests*.
 
@@ -726,7 +738,7 @@ Substituir uma Criança do Projeto JCAFB-2021v
 
             #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
-        #. Voltar ao Registro da Criança desselecionada.
+        #. Voltar ao Registro do Paciente desselecionado.
 
         #. Executar a Ação "**Patient Residence Update**":
 
@@ -739,134 +751,6 @@ Substituir uma Criança do Projeto JCAFB-2021v
             #. Utilize o botão *Residence Update* para executar a Ação.
 
     #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Pacientes, Residências e Grupo Responsável) no processo de substitução da Criança.**
-
-Substituir um Idoso do Projeto JCAFB-2021v
-------------------------------------------
-
-    #. **Selecionar um novo Idoso para o Projeto JCAFB-2021v:**
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Acessar a *View* *Patients*:
-
-            * Menu de acesso:
-
-                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
-
-        #. Ativar a classificação dos Pacientes pelo campo :bi:`Ramdon ID`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
-
-        #. Selecionar o primeiro Paciente listado com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Patient State` = :bi:`Available`
-
-        #. Executar a Ação ":bi:`Patient Mass Edit`":
-
-            * Parâmetros utilizados:
-
-                * *Register State*: **Set** » **Revised**
-
-                * *State*: **Set** » **Selected**
-
-                * *Patient Verification Execute*: **marcado**
-
-                * *Responsible Empĺoyee*: **Set** » **Nome do Grupo responsável pela Idoso**
-
-            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
-
-        #. Executar a Ação "**Patient Associate to Residence**":
-
-            * Parâmetros utilizados:
-
-                * *Create new Residence*: **marcado**
-
-                * *Residence Verification Execute*: **marcado**
-
-                * *Patient Verification Execute*: **marcado**
-
-            #. Utilize o botão *Associate to Residence* para executar a Ação.
-
-        #. Executar a Ação "**Patient Residence Update**":
-
-            * Parâmetros utilizados:
-
-                * *Residence Verification Execute*: **marcado**
-
-                * *Patient Verification Execute*: **marcado**
-
-            #. Utilize o botão *Residence Update* para executar a Ação.
-
-    #. **Desselecionar uma Idoso do Projeto JCAFB-2021v:**
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
-
-        #. Acessar a *View* *Patients*:
-
-            * Menu de acesso:
-
-                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
-
-        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
-
-        #. Selecionar o Paciente a ser substituido com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = ":bi:`Idoso`" » :bi:`Patient State` = :bi:`Selected`
-
-        #. Executar a Ação ":bi:`Patient Mass Edit`":
-
-            * Parâmetros utilizados:
-
-                * *Register State*: **Set** » **Revised**
-
-                * *State*: **Set** » **Unselected**
-
-                * *Patient Verification Execute*: **marcado**
-
-            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
-
-        #. Acessar a *Tab* *Documents*.
-
-        #. Acessar a *View* *Documents* a partir da *Tab* *Documents*.
-
-        #. Selecionar os Documentos apresentados com: :bi:`Phase` = "**JCAFB-20201v**".
-
-        #. Executar a Ação ":bi:`Document Mass Edit`":
-
-            * Parâmetros utilizados:
-
-                * *Refers to*: **Set** » **Registro do novo Idoso selecionada**
-
-            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
-
-        #. Voltar ao Registro do Idoso desselecionada.
-
-        #. Acessar a *Tab* *Lab Test Requests*.
-
-        #. Acessar a *View* *Lab Test Requests* a partir da *Tab* *Lab Test Requests*.
-
-        #. Selecionar as Requisições de Exames apresentadas com: :bi:`Phase` = "**JCAFB-20201v**".
-
-        #. Executar a Ação ":bi:`Lab Test Request Mass Edit`":
-
-            * Parâmetros utilizados:
-
-                * *Refers to*: **Set** » **Registro do novo Idoso selecionada**
-
-            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
-
-        #. Voltar ao Registro do Idoso desselecionada.
-
-        #. Executar a Ação "**Patient Residence Update**":
-
-            * Parâmetros utilizados:
-
-                * *Residence Verification Execute*: **marcado**
-
-                * *Patient Verification Execute*: **marcado**
-
-            #. Utilize o botão *Residence Update* para executar a Ação.
-
-    #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Pacientes, Residências e Grupo Responsável) no processo de substitução do Idoso.**
-
-Executar o *Verification Batch* “Current Phase - Default Batch”
----------------------------------------------------------------
 
     #. Executar o *Verification Batch* “Current Phase - Default Batch”:
 
@@ -882,56 +766,17 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:00:19.050`
+            * :bi:`Execution time: 0:00:17.966`
 
-Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
-------------------------------------------------------------------------------------------
+    #. **Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)**:
 
-    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
+        * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
 
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
 
-    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_030`"
+        #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_030`"
 
-    **Ações efetivamente executadas**:
-
-        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
-
-        Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
-
-        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020`"
-
-            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_020`"
-
-            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_070`"
-
-Atualizar o *Register State* dos Pacientes já recadastrados
------------------------------------------------------------
-
-    #. Executar a Ação ":bi:`Patient Mass Edit`":
-
-        * Parâmetros utilizados:
-
-            * *Register State*: **Set** » **Done**
-
-            * *Patient Verification Execute*: **marcado**
-
-        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
-
-Atualizar o *Register State* das Residências já recadastrados
--------------------------------------------------------------
-
-    #. Executar a Ação ":bi:`Residence Mass Edit`":
-
-        * Parâmetros utilizados:
-
-            * *Register State*: **Set** » **Done**
-
-            * *Residence Verification Execute*: **marcado**
-
-        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
-
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-05a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-09a)
 ---------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e paralizar o *Odoo*:
@@ -957,16 +802,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-05a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-09-05a.sql
+            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-09-09a.sql
 
-            gzip clvhealth_jcafb_2021v_14n_2021-09-05a.sql
-            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-09-05a.sql
+            gzip clvhealth_jcafb_2021v_14n_2021-09-09a.sql
+            pg_dump clvhealth_jcafb_2021v_14n -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_14n_2021-09-09a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-09-05a.tar.gz clvhealth_jcafb_2021v_14n
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-09-09a.tar.gz clvhealth_jcafb_2021v_14n
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-05a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-09a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -986,17 +831,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-05a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-09-05a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-09-05a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-09-05a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-05a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-09-09a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_14n_2021-09-09a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-09-09a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-09a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_14n_2021-09-05a.sql
-.. index:: clvhealth_jcafb_2021v_14n_2021-09-05a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_14n_2021-09-05a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-05a
+.. index:: clvhealth_jcafb_2021v_14n_2021-09-09a.sql
+.. index:: clvhealth_jcafb_2021v_14n_2021-09-09a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_14n_2021-09-09a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-09a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-05a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-09a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e paralizar o *Odoo*:
@@ -1020,22 +865,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-05a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14n_2021-09-05a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14n_2021-09-09a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14n
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14n
-            psql -f clvhealth_jcafb_2021v_14n_2021-09-05a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14n_2021-09-09a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14n
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-09-05a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-09-09a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-05a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-09a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -1108,7 +953,202 @@ Recadastrar um Paciente selecionado para o Projeto JCAFB-2021v (Mudança para En
 
             * Os :bi:`Patient State` e :bi:`Patient (Aux) State` do Paciente **serão mantidos** como :bi:`Selected`.
 
-    #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Paciente, antiga residência, nova Residência e Grupo Responsável) no processo de Recadastramento do Paciente.**
+    #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Paciente, antiga Residência, nova Residência e Grupo Responsável) no processo de Recadastramento do Paciente.**
+
+Recadastrar um Paciente selecionado para o Projeto JCAFB-2021v (Mudança para Endereço Desconhecido)
+---------------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+    #. **Desselecionar a antiga Residência do Paciente a ser recadastrado:**
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar a Residência a ser desselecionada.
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Register State*: **Set** » **Revised**
+
+                * *State*: **Set** » **Unselected**
+
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+    #. **Executar o Recadastramento** (Mudança para um Endereço Desconhecido) **do Paciente** Selecionado para o Projeto JCAFB-2021v.
+
+        #. Usar como referência: :doc:`/user_guide/reregistration/reregistration_workflow_020_010_070`", considerando:
+
+            * Os :bi:`Patient State` e :bi:`Patient (Aux) State` do Paciente **serão marcados** como :bi:`Unselected`.
+
+    #. **Selecionar um novo Paciente para o Projeto JCAFB-2021v:**
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar a classificação dos Pacientes pelo campo :bi:`Ramdon ID`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
+
+        #. Selecionar o primeiro Paciente listado com: :bi:`Phase` = "**JCAFB-20201v**" » :bi:`Category` = "**Categoria do Paciente em substituição**" » :bi:`Patient State` = :bi:`Available`
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Register State*: **Set** » **Revised**
+
+                * *State*: **Set** » **Selected**
+
+                * *Patient Verification Execute*: **marcado**
+
+                * *Responsible Empĺoyee*: **Set** » **Nome do Grupo responsável pela Criança**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Executar a Ação "**Patient Associate to Residence**":
+
+            * Parâmetros utilizados:
+
+                * *Create new Residence*: **marcado**
+
+                * *Residence Verification Execute*: **marcado**
+
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão *Associate to Residence* para executar a Ação.
+
+        #. Executar a Ação "**Patient Residence Update**":
+
+            * Parâmetros utilizados:
+
+                * *Residence Verification Execute*: **marcado**
+
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão *Residence Update* para executar a Ação.
+
+    #. **Desselecionar o Paciente do Projeto JCAFB-2021v (Finalização):**
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Categories` » :bi:`Patient State`
+
+        #. Selecionar o Paciente a ser substituido:
+
+        #. Acessar a *Tab* *Documents*.
+
+        #. Acessar a *View* *Documents* a partir da *Tab* *Documents*.
+
+        #. Selecionar os Documentos apresentados com: :bi:`Phase` = "**JCAFB-20201v**".
+
+        #. Executar a Ação ":bi:`Document Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Refers to*: **Set** » **Registro do novo Paciente selecionado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. Voltar ao Registro do Paciente desselecionado.
+
+        #. Acessar a *Tab* *Lab Test Requests*.
+
+        #. Acessar a *View* *Lab Test Requests* a partir da *Tab* *Lab Test Requests*.
+
+        #. Selecionar as Requisições de Exames apresentadas com: :bi:`Phase` = "**JCAFB-20201v**".
+
+        #. Executar a Ação ":bi:`Lab Test Request Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Refers to*: **Set** » **Registro do novo Paciente selecionado**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+    #. **Criar/Reprocessar os Sumários para todas as entidades envolvidas (Pacientes, Residências e Grupo Responsável) no processo de Recadastramento do Paciente.**
+
+Atualizar o *Register State* dos Pacientes já recadastrados
+-----------------------------------------------------------
+
+    #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+        * Parâmetros utilizados:
+
+            * *Register State*: **Set** » **Done**
+
+            * *Patient Verification Execute*: **marcado**
+
+        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Register State* das Residências já recadastrados
+-------------------------------------------------------------
+
+    #. Executar a Ação ":bi:`Residence Mass Edit`":
+
+        * Parâmetros utilizados:
+
+            * *Register State*: **Set** » **Done**
+
+            * *Residence Verification Execute*: **marcado**
+
+        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Executar o *Verification Batch* “Current Phase - Default Batch”
+---------------------------------------------------------------
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Executar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:00:18.923`
+
+Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
+------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_030`"
+
+    **Ações efetivamente executadas**:
+
+        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
+
+        Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
+
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_020`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_070`"
 
 Atualizar o *Register State* dos Pacientes já recadastrados
 -----------------------------------------------------------
