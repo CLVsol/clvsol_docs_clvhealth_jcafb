@@ -3448,6 +3448,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-09-12a)
     #. [tkl-odoo14-jcafb21-vm] Lista de Módulos:
 
         * clv_document_jcafb
+        * clv_lab_test_jcafb
 
     #. [tkl-odoo14-jcafb21-vm] **Executar** a atualização do(s) Módulo(s):
 
@@ -3478,6 +3479,9 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14* (2021-09-12a)
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
                 python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_document_jcafb
+
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" 
+                --db "clvhealth_jcafb_2021v_13" -m clv_lab_test_jcafb
 
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21-vm** ao modo desejado:
 
