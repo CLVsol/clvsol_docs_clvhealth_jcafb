@@ -353,6 +353,24 @@ Development (2)
 
             pip3 install erppeek
 
+    #. To install xlutils, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlutils
+
+        ::
+
+            pip3 install xlutils
+            Collecting xlutils
+              Downloading https://files.pythonhosted.org/packages/c7/55/e22ac73dbb316cabb5db28bef6c87044a95914f713a6e81b593f8a0d2f79/xlutils-2.0.0-py2.py3-none-any.whl (55kB)
+                100% |████████████████████████████████| 61kB 1.8MB/s 
+            Requirement already satisfied: xlwt>=0.7.4 in /usr/lib/python3/dist-packages (from xlutils) (1.3.0)
+            Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.1.0)
+            Installing collected packages: xlutils
+            Successfully installed xlutils-2.0.0
+
+
 Development (3)
 ---------------
 
