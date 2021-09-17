@@ -595,8 +595,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-16a)
 
         #. Salvar o registro editado.
 
-Executar a Ação *Survey User Input Refresh* para os Documentos
---------------------------------------------------------------
+:borange:`(Opcional)` Executar a Ação *Survey User Input Refresh* para os Documentos
+------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Survey User Input Refresh` para os :bi:`Documentos` do Projeto JCAFB-2021v:
 
@@ -645,8 +645,8 @@ Executar a Ação *Survey User Input Validate* para os Documentos
 
             #. Utilize o botão :bi:`Survey User Input Validate` para executar a Ação.
 
-Executar a Ação *Survey User Input Refresh* para os Resultados de Exames
-------------------------------------------------------------------------
+:borange:`(Opcional)` Executar a Ação *Survey User Input Refresh* para os Resultados de Exames
+----------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Survey User Input Refresh` para os :bi:`Resultados de Exames` do Projeto JCAFB-2021v:
 
@@ -695,8 +695,8 @@ Executar a Ação *Survey User Input Validate* para os Resultados de Exames
 
             #. Utilize o botão :bi:`Survey User Input Validate` para executar a Ação.
 
-Executar a Ação *Survey User Input Refresh* para as transcrições de Questionários
----------------------------------------------------------------------------------
+:borange:`(Opcional)` Executar a Ação *Survey User Input Refresh* para as transcrições de Questionários
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Executar a Ação :bi:`Survey User Input Refresh` para as :bi:`Participations` do Projeto JCAFB-2021v:
 
