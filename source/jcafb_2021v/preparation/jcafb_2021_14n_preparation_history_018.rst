@@ -97,6 +97,153 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-16a)
 
         #. Salvar o registro editado.
 
+:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
+----------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
+
+        * clv_lab_test_jcafb
+
+    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 1)
+                #
+
+                ssh tkl-odoo14-jcafb21n-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 2)
+                #
+
+                ssh tkl-odoo14-jcafb21n-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_lab_test_jcafb
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
+----------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
+
+        * clv_lab_test_sync_jcafb
+
+    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 1)
+                #
+
+                ssh tkl-odoo14-jcafb21n-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 2)
+                #
+
+                ssh tkl-odoo14-jcafb21n-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_lab_test_sync_jcafb
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo14-jcafb21n-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+:borange:`(**)` Atualizar os "*Templates File Names*" de todas os Tipos de Exames
+---------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Lista de Tipos de Exames:
+
+        * **EAN21**:
+
+            #. **Template File Name (Result)**: "Resultado_EAN21_template.xls"
+
+            #. **Template File Name (Report)**: "Laudo_EAN21_template.xls"
+
+        * **EDH21**:
+
+            #. **Template File Name (Result)**: "Resultado_EDH21_template.xls"
+
+            #. **Template File Name (Report)**: "Laudo_EDH21_template.xls"
+
+        * **EAA21**:
+
+            #. **Template File Name (Result)**: "Resultado_EAA21_template.xls"
+
+            #. **Template File Name (Report)**: "Laudo_EAA21_template.xls"
+
+        * **ECP21**:
+
+            #. **Template File Name (Result)**: "Resultado_ECP21_template.xls"
+
+            #. **Template File Name (Report)**: "Laudo_ECP21_template.xls"
+
+        * **EEV21**:
+
+            #. **Template File Name (Result)**: "Resultado_EEV21_template.xls"
+
+            #. **Template File Name (Report)**: "Laudo_EEV21_template.xls"
+
+        * **EUR21**:
+
+            #. **Template File Name (Result)**: "Resultado_EUR21_template.xls"
+
+            #. **Template File Name (Report)**: "Laudo_EUR21_template.xls"
+
 Executar a Ação *Lab Test Type Criteria Set Up* para *Lab Test Types* do Projeto JCAFB-2021v
 --------------------------------------------------------------------------------------------
 
@@ -164,153 +311,6 @@ Executar a Ação *Lab Test Result Items Update from Survey* para Resultados de 
 
             #. Utilize o botão :bi:`Update from Survey` para executar a Ação.
 
-:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
-----------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
-
-        * clv_lab_test_jcafb
-
-    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
-
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l root
-
-                /etc/init.d/odoo stop
-
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 2)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l odoo
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_lab_test_jcafb
-
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-                ^C
-
-                exit
-
-                /etc/init.d/odoo start
-
-:borange:`(**)` Atualizar os "*Templates File Names*" de todas os Tipos de Exames
----------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Tipos de Exames:
-
-        * **EAN21**:
-
-            #. **Template File Name (Result)**: "Resultado_EAN21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EAN21_template.xls"
-
-        * **EDH21**:
-
-            #. **Template File Name (Result)**: "Resultado_EDH21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EDH21_template.xls"
-
-        * **EAA21**:
-
-            #. **Template File Name (Result)**: "Resultado_EAA21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EAA21_template.xls"
-
-        * **ECP21**:
-
-            #. **Template File Name (Result)**: "Resultado_ECP21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_ECP21_template.xls"
-
-        * **EEV21**:
-
-            #. **Template File Name (Result)**: "Resultado_EEV21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EEV21_template.xls"
-
-        * **EUR21**:
-
-            #. **Template File Name (Result)**: "Resultado_EUR21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EUR21_template.xls"
-
-:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
-----------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
-
-        * clv_lab_test_type_sync
-
-    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
-
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l root
-
-                /etc/init.d/odoo stop
-
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 2)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l odoo
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_lab_test_type_sync
-
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-                ^C
-
-                exit
-
-                /etc/init.d/odoo start
-
 :borange:`(**)` Executar o *External Sync Schedule* "clv.lab_test.type (clv.lab_test.type)"
 -------------------------------------------------------------------------------------------
 
@@ -349,6 +349,64 @@ Executar a Ação *Lab Test Result Items Update from Survey* para Resultados de 
         #. Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**clv.lab_test.type (clv.lab_test.type)**".
 
         #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.lab_test.type (clv.lab_test.type)**":
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
+
+            * :bi:`Execution time: 0:03:50.013`
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo padrão:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21n-vm
+            # 
+
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+:borange:`(**)` Executar o *External Sync Schedule* "clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)"
+-------------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo14-jcafb21n-vm] Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.lab_test.export_xls.param**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.lab_test.export_xls.param**":
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
+
+            * Parâmetros alterados:
+                * *External Synchronization*: **Set** "**Updated**"
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
+
+        ::
+
+            # ***** tkl-odoo14-jcafb21n-vm
+            #
+
+            ssh tkl-odoo14-jcafb21n-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. [tkl-odoo14-jcafb21n-vm] Executar o :bi:`External Sync Schedule` "**clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo14-jcafb21n-vm <https://tkl-odoo14-jcafb21n-vm>`_
+
+        #. Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)**".
+
+        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)**":
 
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
