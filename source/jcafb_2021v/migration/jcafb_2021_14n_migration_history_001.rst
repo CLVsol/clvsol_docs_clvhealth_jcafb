@@ -336,6 +336,7 @@ Lista de *Schedules* instalados (10c)
         #. :blue:`(Enabled - Sync)` clv.lab_test.unit (clv.lab_test.unit)
         #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type)
         #. :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
+        #. :blue:`(Enabled - Sync)` clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)
         #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [1]
         #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2]
         #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result)
