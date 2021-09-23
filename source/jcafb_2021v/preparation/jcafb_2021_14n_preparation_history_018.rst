@@ -203,47 +203,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-16a)
 
                 /etc/init.d/odoo start
 
-:borange:`(**)` Atualizar os "*Templates File Names*" de todas os Tipos de Exames
----------------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Tipos de Exames:
-
-        * **EAN21**:
-
-            #. **Template File Name (Result)**: "Resultado_EAN21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EAN21_template.xls"
-
-        * **EDH21**:
-
-            #. **Template File Name (Result)**: "Resultado_EDH21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EDH21_template.xls"
-
-        * **EAA21**:
-
-            #. **Template File Name (Result)**: "Resultado_EAA21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EAA21_template.xls"
-
-        * **ECP21**:
-
-            #. **Template File Name (Result)**: "Resultado_ECP21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_ECP21_template.xls"
-
-        * **EEV21**:
-
-            #. **Template File Name (Result)**: "Resultado_EEV21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EEV21_template.xls"
-
-        * **EUR21**:
-
-            #. **Template File Name (Result)**: "Resultado_EUR21_template.xls"
-
-            #. **Template File Name (Report)**: "Laudo_EUR21_template.xls"
-
 Executar a Ação *Lab Test Type Criteria Set Up* para *Lab Test Types* do Projeto JCAFB-2021v
 --------------------------------------------------------------------------------------------
 
@@ -353,7 +312,7 @@ Executar a Ação *Lab Test Result Items Update from Survey* para Resultados de 
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
 
-            * :bi:`Execution time: 0:03:50.013`
+            * :bi:`Execution time: 0:00:04.330`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo padrão:
 
@@ -411,7 +370,7 @@ Executar a Ação *Lab Test Result Items Update from Survey* para Resultados de 
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
 
-            * :bi:`Execution time: 0:03:50.013`
+            * :bi:`Execution time: 0:00:02.002`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo padrão:
 
