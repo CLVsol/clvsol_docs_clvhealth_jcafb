@@ -20,7 +20,7 @@
 JCAFB-2021v-14n (Tratamento de Resultados de Exames)
 ====================================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-16a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-10-01a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo14-jcafb21n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo14-jcafb21n-vm** e paralizar o *Odoo*:
@@ -44,22 +44,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-16a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_14n_2021-09-16a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_14n_2021-10-01a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_14n
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_14n
-            psql -f clvhealth_jcafb_2021v_14n_2021-09-16a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_14n_2021-10-01a.sql -d clvhealth_jcafb_2021v_14n -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_14n
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-09-16a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_14n_2021-10-01a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-09-16a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_14n_2021-10-01a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
 
@@ -96,218 +96,6 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-14n* (2021-09-16a)
             * "**http://tkl-odoo14-jcafb21n-vm**".
 
         #. Salvar o registro editado.
-
-:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
-----------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
-
-        * clv_lab_test_jcafb
-
-    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
-
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l root
-
-                /etc/init.d/odoo stop
-
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 2)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l odoo
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_lab_test_jcafb
-
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-                ^C
-
-                exit
-
-                /etc/init.d/odoo start
-
-:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
-----------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
-
-        * clv_lab_test_sync_jcafb
-
-    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
-
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l root
-
-                /etc/init.d/odoo stop
-
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 2)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l odoo
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_lab_test_sync_jcafb
-
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-                ^C
-
-                exit
-
-                /etc/init.d/odoo start
-
-:borange:`(**)` Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
-----------------------------------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
-
-        * clv_lab_test_verification_jcafb
-
-    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
-
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l root
-
-                /etc/init.d/odoo stop
-
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 2)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l odoo
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_14" -m clv_lab_test_verification_jcafb
-            
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-                ^C
-
-                exit
-
-                /etc/init.d/odoo start
-
-:borange:`(**)` Atualizar o(s) módulo(s) [ver lista]
-----------------------------------------------------
-
-    #. [tkl-odoo14-jcafb21n-vm] Lista de Módulos:
-
-        * clv_survey
-
-    #. [tkl-odoo14-jcafb21n-vm] **Executar** a atualização do(s) Módulo(s):
-
-        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o *Odoo* no modo manual:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l root
-
-                /etc/init.d/odoo stop
-
-                su odoo
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo14-jcafb21n-vm** e executar o **install.py**:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 2)
-                #
-
-                ssh tkl-odoo14-jcafb21n-vm -l odoo
-
-                cd /opt/odoo/clvsol_clvhealth_jcafb/project
-                
-                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_survey
-
-        #. Retornar a execução do *Odoo* do servidor **tkl-odoo14-jcafb21n-vm** ao modo desejado:
-
-            ::
-
-                # ***** tkl-odoo14-jcafb21n-vm (session 1)
-                #
-
-                cd /opt/odoo
-                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-                ^C
-
-                exit
-
-                /etc/init.d/odoo start
 
 Executar a Ação *Lab Test Type Criteria Set Up* para *Lab Test Types* do Projeto JCAFB-2021v
 --------------------------------------------------------------------------------------------
