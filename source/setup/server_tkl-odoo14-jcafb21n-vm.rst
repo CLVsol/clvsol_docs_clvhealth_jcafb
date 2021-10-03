@@ -370,6 +370,11 @@ Development (2)
             Installing collected packages: xlutils
             Successfully installed xlutils-2.0.0
 
+    #. To install yaml, use the following commands (as root):
+
+        ::
+
+            pip3 install pyyaml
 
 Development (3)
 ---------------
