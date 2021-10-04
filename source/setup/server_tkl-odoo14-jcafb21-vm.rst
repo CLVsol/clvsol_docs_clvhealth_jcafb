@@ -429,6 +429,12 @@ Development
 
                 pip3 install pycep-correios
 
+    #. To install yaml, use the following commands (as root):
+
+        ::
+
+            pip3 install pyyaml
+
 Replace the Odoo installation (Odoo 14.0)
 -----------------------------------------
 
