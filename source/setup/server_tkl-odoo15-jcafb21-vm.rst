@@ -525,11 +525,12 @@ Repositories Installation
 
             cd /opt/odoo
             # git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-            # git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 14.0
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0_dev
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
@@ -570,7 +571,9 @@ Repositories Installation
         ::
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_jcafb
+            
+            # addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
 
     #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
 
@@ -621,9 +624,9 @@ Remote access to the server
         ::
 
             cd /opt/odoo/clvsol_clvhealth_jcafb/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_14n"
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_15"
 
-            dropdb -i clvhealth_jcafb_2021v_14n
+            dropdb -i clvhealth_jcafb_2021v_15
 
 Upgrade the odoo software
 -------------------------
