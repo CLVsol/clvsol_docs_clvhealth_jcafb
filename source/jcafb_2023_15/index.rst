@@ -16,19 +16,12 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: Procedimentos [JCAFB21v]
+.. index:: CLVhealth-JCAFB_2023-15
 
-========================
-Procedimentos [JCAFB21v]
-========================
+=======================
+CLVhealth-JCAFB_2023-15
+=======================
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 3
    :caption: Conteúdo:
-
-   reregistration/reregistration_cadastro_procedure
-   reregistration/reregistration_procedure
-   reregistration_patient/reregistration_patient_cadastro_procedure
-   reregistration_patient/reregistration_patient_procedure
-   survey/survey_procedure
-   verification/verification_procedure

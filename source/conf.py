@@ -18,14 +18,14 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-project = 'CLVhealth-JCAFB-2021'
+project = 'CLVhealth-JCAFB'
 copyright = '2020, Carlos Eduardo Vercelino - CLVsol'
 author = 'Carlos Eduardo Vercelino - CLVsol'
 
 # The short X.Y version.
-version = '14.0'
+version = '15.0'
 # The full version, including alpha/beta/rc tags.
-release = '14.0.5.0'
+release = '15.0.6.0'
 
 
 # -- General configuration ---------------------------------------------------

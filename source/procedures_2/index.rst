@@ -16,19 +16,12 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: Procedimentos [JCAFB21v]
+.. index:: Procedimentos [JCAFB23]
 
-========================
-Procedimentos [JCAFB21v]
-========================
+=======================
+Procedimentos [JCAFB23]
+=======================
 
 .. toctree::
    :maxdepth: 5
    :caption: Conteúdo:
-
-   reregistration/reregistration_cadastro_procedure
-   reregistration/reregistration_procedure
-   reregistration_patient/reregistration_patient_cadastro_procedure
-   reregistration_patient/reregistration_patient_procedure
-   survey/survey_procedure
-   verification/verification_procedure
