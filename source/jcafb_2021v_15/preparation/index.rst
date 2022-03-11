@@ -16,15 +16,14 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2021v-15
+.. index:: Preparação de Dados  [CLVhealth-JCAFB_2021v-15]
 
-========================
-CLVhealth-JCAFB_2021v-15
-========================
+===============================================
+Preparação de Dados  [CLVhealth-JCAFB_2021v-15]
+===============================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
 
-   migration/index
-   preparation/index
+   jcafb_2021v_15_preparation_history_010
