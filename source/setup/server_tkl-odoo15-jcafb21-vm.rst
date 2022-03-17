@@ -526,7 +526,7 @@ Repositories Installation
             cd /opt/odoo
             # git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
+            git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
             # git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0_dev
