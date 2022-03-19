@@ -16,37 +16,15 @@
 .. role:: borange
 .. role:: bi
 
-======
-Índice
-======
+.. index:: Migração de Dados [CLVhealth-JCAFB_2022v-15]
 
-* :ref:`genindex`
-
-.. toctree::
-   :maxdepth: 7
-   :caption: JCAFB-2023:
-
-   user_guide_2/index
-   reference_guide_2/index
-   procedures_2/index
-   jcafb_2021v_15/index
-   jcafb_2022v_15/index
-   jcafb_2023_15/index
+============================================
+Migração de Dados [CLVhealth-JCAFB_2022v-15]
+============================================
 
 .. toctree::
-   :maxdepth: 7
-   :caption: JCAFB-2021v:
+   :maxdepth: 3
+   :caption: Conteúdo:
 
-   user_guide/index
-   reference_guide/index
-   procedures/index
-   jcafb_2021v/index
-
-.. toctree::
-   :maxdepth: 7
-   :caption: Geral:
-
-   setup/index
-   this_documentation/index
-
-   todo
+   clvsol_filestore_clvhealth_jcafb_init
+   jcafb_2022v_15_migration_history_001

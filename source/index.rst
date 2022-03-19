@@ -30,6 +30,7 @@ Documentação do *CLVhealth-JCAFB*
    reference_guide_2/index
    procedures_2/index
    jcafb_2021v_15/index
+   jcafb_2022v_15/index
    jcafb_2023_15/index
 
 .. toctree::
