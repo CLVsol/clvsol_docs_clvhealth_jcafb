@@ -306,6 +306,15 @@ Lista de *Schedules* instalados (00-21v-15)
 
         #. :blue:`(Enabled - Sync)` clv.patient_aux (clv.patient_aux)
 
+        #. :blue:`(Enabled - Sync)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
+        #. :blue:`(Enabled - Sync)` clv.partner_entity.contact_information_pattern (clv.partner_entity.contact_information_pattern)
+
+        #. :blue:`(Enabled - Sync)` clv.verification.marker (clv.verification.marker)
+        #. :blue:`(Enabled - Sync)` clv.verification.outcome (clv.verification.outcome) [1]
+        #. :blue:`(Enabled - Sync)` clv.verification.outcome (clv.verification.outcome) [2]
+        #. :blue:`(Enabled - Sync)` clv.verification.outcome (clv.verification.outcome) [3]
+        #. :blue:`(Enabled - Sync)` clv.verification.outcome (clv.verification.outcome) [4]
+
 Executar o *External Sync Batch* "*Default Batch [00]*"
 -------------------------------------------------------
 
