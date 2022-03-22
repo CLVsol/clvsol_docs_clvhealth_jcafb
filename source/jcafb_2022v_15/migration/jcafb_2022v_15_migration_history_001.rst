@@ -183,7 +183,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2022v-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2022v_15"
 
-        * **Execution time: 0:06:02.639**
+        * **Execution time: 0:05:44.773**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
@@ -201,7 +201,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2022v-15*
 
             /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-19a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb22-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb22-vm** e paralizar o *Odoo*:
@@ -227,16 +227,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-19a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-03-19a.sql
+            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-03-22a.sql
 
-            gzip clvhealth_jcafb_2022v_15_2022-03-19a.sql
-            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-03-19a.sql
+            gzip clvhealth_jcafb_2022v_15_2022-03-22a.sql
+            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-03-22a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-19a.tar.gz clvhealth_jcafb_2022v_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz clvhealth_jcafb_2022v_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-19a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
@@ -256,17 +256,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-19a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-03-19a.sql
-        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-03-19a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-19a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-19a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-03-22a.sql
+        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-03-22a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
 
-.. index:: clvhealth_jcafb_2022v_15_2022-03-19a.sql
-.. index:: clvhealth_jcafb_2022v_15_2022-03-19a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2022v_15_2022-03-19a
-.. index:: clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-19a
+.. index:: clvhealth_jcafb_2022v_15_2022-03-22a.sql
+.. index:: clvhealth_jcafb_2022v_15_2022-03-22a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2022v_15_2022-03-22a
+.. index:: clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-19a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb22-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb22-vm** e paralizar o *Odoo*:
@@ -290,22 +290,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-19a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2022v_15_2022-03-19a.sql.gz
+            # gzip -d clvhealth_jcafb_2022v_15_2022-03-22a.sql.gz
 
             dropdb -i clvhealth_jcafb_2022v_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2022v_15
-            psql -f clvhealth_jcafb_2022v_15_2022-03-19a.sql -d clvhealth_jcafb_2022v_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2022v_15_2022-03-22a.sql -d clvhealth_jcafb_2022v_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2022v_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-19a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-19a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
