@@ -183,7 +183,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2021v-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_15"
 
-        * **Execution time: 0:05:54.324**
+        * **Execution time: 0:06:40.471**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb21-vm** ao modo desejado:
 
@@ -293,7 +293,7 @@ Lista de *Schedules* instalados (00-21v-15)
 
         #. :blue:`(Enabled - Sync)` clv.residence.category (clv.residence.category)
         #. :blue:`(Enabled - Sync)` clv.residence.marker (clv.residence.marker)
-        #. :blue:`(Enabled - Sync)` clv.residence (clv.residence)
+        #. :blue:`(Enabled - Sync)` clv.residence (clv.residence) [1]
 
         #. :blue:`(Enabled - Sync)` clv.residence.history (clv.residence.history)
 
@@ -305,6 +305,10 @@ Lista de *Schedules* instalados (00-21v-15)
         #. :blue:`(Enabled - Sync)` clv.patient.history (clv.patient.history)
 
         #. :blue:`(Enabled - Sync)` clv.patient_aux (clv.patient_aux)
+
+        #. :blue:`(Enabled - Sync)` clv.address.category (clv.address.category)
+        #. :blue:`(Enabled - Sync)` clv.address.marker (clv.address.marker)
+        #. :blue:`(Enabled - Sync)` clv.address (clv.address)
 
         #. :blue:`(Enabled - Sync)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
         #. :blue:`(Enabled - Sync)` clv.partner_entity.contact_information_pattern (clv.partner_entity.contact_information_pattern)
@@ -328,7 +332,7 @@ Executar o *External Sync Batch* "*Default Batch [00]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:40:03.496`
+            * :bi:`Execution time: 0:44:28.342`
 
 Lista de *Schedules* instalados (02-21v-15)
 -------------------------------------------
@@ -348,6 +352,8 @@ Lista de *Schedules* instalados (02-21v-15)
         #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [2]
         #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [2]
 
+        #. :blue:`(Enabled - Sync)` clv.residence (clv.residence) [2]
+
 Executar o *External Sync Batch* "*Default Batch [02]*"
 -------------------------------------------------------
 
@@ -361,7 +367,7 @@ Executar o *External Sync Batch* "*Default Batch [02]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:29:24.699`
+            * :bi:`Execution time: 0:30:03.560`
 
 Lista de *Schedules* instalados (04-21v-15)
 -------------------------------------------
@@ -387,7 +393,7 @@ Executar o *External Sync Batch* "*Default Batch [04]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:00:50.567`
+            * :bi:`Execution time: 0:00:47.348`
 
 Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-18a)
 --------------------------------------------------------------------------
