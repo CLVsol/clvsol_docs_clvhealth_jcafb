@@ -183,7 +183,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2022v-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2022v_15"
 
-        * **Execution time: 0:05:44.773**
+        * **Execution time: 0:08:16.101**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
