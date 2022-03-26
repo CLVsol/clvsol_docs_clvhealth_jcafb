@@ -55,7 +55,7 @@ Upgrade the odoo software
 
         ::
 
-            # ***** tkl-odoo15-jcafb22-vm
+            # ***** tkl-odoo15-jcafb21-vm
             #
 
             su odoo
@@ -90,11 +90,11 @@ Upgrade the odoo software
             # cd /opt/odoo/clvsol_odoo_addons_history_jcafb
             # git pull
 
-            # cd /opt/odoo/clvsol_odoo_addons_verification
-            # git pull
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
 
-            # cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
-            # git pull
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
 
             # cd /opt/odoo/clvsol_odoo_addons_summary
             # git pull
@@ -183,7 +183,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2022v-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2022v_15"
 
-        * **Execution time: 0:11:09.388**
+        * **Execution time: 0:10:28.342**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
