@@ -263,34 +263,34 @@ Lista de *Schedules* instalados (00-21v-15)
         #. :blue:`(Enabled - Sync)` clv.file_system.directory (clv.file_system.directory) [rec]
         #. :blue:`(Enabled - Sync)` clv.file_system.directory (clv.file_system.directory)
 
-        .. #. :blue:`(Enabled - Sync)` clv.global_tag (clv.global_tag)
+        #. :blue:`(Enabled - Sync)` clv.global_tag (clv.global_tag)
 
-        .. #. :blue:`(Enabled - Sync)` clv.set (clv.set)
-        .. #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [1]
+        #. :blue:`(Enabled - Sync)` clv.set (clv.set)
+        #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [1]
 
-        .. #. :blue:`(Enabled - Sync)` hr.department (hr.department) [rec]
-        .. #. :blue:`(Enabled - Sync)` hr.department (hr.department)
-        .. #. :blue:`(Enabled - Sync)` hr.job (hr.job)
-        .. #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
-        .. #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [1]
+        #. :blue:`(Enabled - Sync)` hr.department (hr.department) [rec]
+        #. :blue:`(Enabled - Sync)` hr.department (hr.department)
+        #. :blue:`(Enabled - Sync)` hr.job (hr.job)
+        #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
+        #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [1]
 
-        .. #. :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
+        #. :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
 
-        .. #. :blue:`(Enabled - Sync)` clv.event (clv.event)
-        .. #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [1]
+        #. :blue:`(Enabled - Sync)` clv.event (clv.event)
+        #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [1]
 
-        .. #. :blue:`(Enabled - Sync)` clv.document.category (clv.document.category)
-        .. #. :blue:`(Enabled - Sync)` clv.document.marker (clv.document.marker)
-        .. #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [1]
-        .. #. :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter)
-        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [1]
-        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [2]
+        #. :blue:`(Enabled - Sync)` clv.document.category (clv.document.category)
+        #. :blue:`(Enabled - Sync)` clv.document.marker (clv.document.marker)
+        #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [1]
+        #. :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter)
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [1]
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [2]
 
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [1]
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [1]
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [1]
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [1]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [1]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
+        #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [1]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [1]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [1]
 
         .. #. :blue:`(Enabled - Sync)` res.country (res.country)
         .. #. :blue:`(Enabled - Sync)` res.country.state (res.country.state)
@@ -511,16 +511,16 @@ Lista de *Schedules* instalados (02-21v-15)
 
         #. :blue:`(Enabled - Sync)` survey.user_input (survey.user_input) [3]
 
-        .. #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [2]
+        #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [2]
 
-        .. #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [2]
+        #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [2]
 
-        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [3]
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [3]
 
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [2]
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2]
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [2]
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [2]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [2]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [2]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [2]
 
         .. #. :blue:`(Enabled - Sync)` clv.residence (clv.residence) [2]
 
@@ -552,11 +552,11 @@ Lista de *Schedules* instalados (04-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        .. #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [2]
+        #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [2]
 
-        .. #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [2]
+        #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [2]
 
-        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [4]
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [4]
 
 Executar o *External Sync Batch* "*Default Batch [04]*"
 -------------------------------------------------------
@@ -749,11 +749,11 @@ Lista de *Schedules* instalados (20-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [1]
-        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [2]
-        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [3]
-        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [4]
-        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [5]
+        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [1]
+        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [2]
+        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [3]
+        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [4]
+        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [5]
 
 Executar o *External Sync Batch* "*Default Batch [20]*"
 -------------------------------------------------------
@@ -775,8 +775,8 @@ Lista de *Schedules* instalados (30-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [1]
-        .. #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [2]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [1]
+        #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [2]
 
 Executar o *External Sync Batch* "*Default Batch [30]*"
 -------------------------------------------------------
