@@ -183,9 +183,9 @@ Criar uma nova instância do *CLVhealth-JCAFB-2021v-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_15"
 
-        * **Execution time: 0:01:27.058**
+        * **Execution time: 0:02:36.864**
 
-        * **Execution time: 0:10:28.342** (Compĺeto)
+        * **Execution time: 0:10:57.233** (Compĺeto)
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb21-vm** ao modo desejado:
 
@@ -246,51 +246,51 @@ Lista de *Schedules* instalados (00-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled - Sync)` clv.global_settings (current_filestore_path) [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.global_settings (current_filestore_path) [Sync]
 
-        #. :blue:`(Enabled - Sync)` res.users [Migration]
-        #. :blue:`(Enabled - Sync)` res.users (res.users)
+        .. #. :blue:`(Enabled - Sync)` res.users [Migration]
+        .. #. :blue:`(Enabled - Sync)` res.users (res.users)
 
-        #. :blue:`(Enabled - Sync)` clv.phase (clv.phase)
-        #. :blue:`(Enabled - Sync)` clv.global_settings (current_phase_id) [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.phase (clv.phase)
+        .. #. :blue:`(Enabled - Sync)` clv.global_settings (current_phase_id) [Sync]
 
-        #. :blue:`(Enabled - Sync)` survey.survey (survey.survey)
-        #. :blue:`(Enabled - Sync)` survey.question (survey.question) [2]
-        #. :blue:`(Enabled - Sync)` survey.question (survey.question) [5]
-        #. :blue:`(Enabled - Sync)` survey.question.answer (survey.question.answer)
-        #. :blue:`(Enabled - Sync)` survey.user_input (survey.user_input) [2]
+        .. #. :blue:`(Enabled - Sync)` survey.survey (survey.survey)
+        .. #. :blue:`(Enabled - Sync)` survey.question (survey.question) [2]
+        .. #. :blue:`(Enabled - Sync)` survey.question (survey.question) [5]
+        .. #. :blue:`(Enabled - Sync)` survey.question.answer (survey.question.answer)
+        .. #. :blue:`(Enabled - Sync)` survey.user_input (survey.user_input) [2]
 
-        #. :blue:`(Enabled - Sync)` clv.file_system.directory (clv.file_system.directory) [rec]
-        #. :blue:`(Enabled - Sync)` clv.file_system.directory (clv.file_system.directory)
+        .. #. :blue:`(Enabled - Sync)` clv.file_system.directory (clv.file_system.directory) [rec]
+        .. #. :blue:`(Enabled - Sync)` clv.file_system.directory (clv.file_system.directory)
 
-        #. :blue:`(Enabled - Sync)` clv.global_tag (clv.global_tag)
+        .. #. :blue:`(Enabled - Sync)` clv.global_tag (clv.global_tag)
 
-        #. :blue:`(Enabled - Sync)` clv.set (clv.set)
-        #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [1]
+        .. #. :blue:`(Enabled - Sync)` clv.set (clv.set)
+        .. #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [1]
 
-        #. :blue:`(Enabled - Sync)` hr.department (hr.department) [rec]
-        #. :blue:`(Enabled - Sync)` hr.department (hr.department)
-        #. :blue:`(Enabled - Sync)` hr.job (hr.job)
-        #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
-        #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [1]
+        .. #. :blue:`(Enabled - Sync)` hr.department (hr.department) [rec]
+        .. #. :blue:`(Enabled - Sync)` hr.department (hr.department)
+        .. #. :blue:`(Enabled - Sync)` hr.job (hr.job)
+        .. #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [rec]
+        .. #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [1]
 
-        #. :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
+        .. #. :blue:`(Enabled - Sync)` hr.employee.history (hr.employee.history)
 
-        #. :blue:`(Enabled - Sync)` clv.event (clv.event)
-        #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [1]
+        .. #. :blue:`(Enabled - Sync)` clv.event (clv.event)
+        .. #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [1]
 
-        #. :blue:`(Enabled - Sync)` clv.document.category (clv.document.category) [Sync]
-        #. :blue:`(Enabled - Sync)` clv.document.marker (clv.document.marker) [Sync]
-        #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [1] [Inc]
-        #. :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter) [Sync]
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [1] [Inc]
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [2] [Inc]
+        .. #. :blue:`(Enabled - Sync)` clv.document.category (clv.document.category) [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.document.marker (clv.document.marker) [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [1] [Inc]
+        .. #. :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter) [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [1] [Inc]
+        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [2] [Inc]
 
-        #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [1]
-        #. :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
-        #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [1]
-        #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [1]
-        #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [1]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [1] [Inc]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter) [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [1] [Inc]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [1] [Inc]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [1] [Inc]
 
         .. #. :blue:`(Enabled - Sync)` res.country (res.country)
         .. #. :blue:`(Enabled - Sync)` res.country.state (res.country.state)
@@ -358,11 +358,11 @@ Executar o *External Sync Batch* "*Default Batch [00]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:13:17.419`
+            * :bi:`Execution time: 0:26:45.205`
             
             * :bi:`Execution time: 1:03:08.221` (Completo)
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-25a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-27a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb21-vm** e paralizar o *Odoo*:
@@ -388,16 +388,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-25a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-25a.sql
+            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-27a.sql
 
-            gzip clvhealth_jcafb_2021v_15_2022-03-25a.sql
-            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-25a.sql
+            gzip clvhealth_jcafb_2021v_15_2022-03-27a.sql
+            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-27a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-25a.tar.gz clvhealth_jcafb_2021v_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-27a.tar.gz clvhealth_jcafb_2021v_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-25a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-27a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb21-vm** ao modo desejado:
 
@@ -417,17 +417,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-25a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-25a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-25a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-25a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-25a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-27a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-27a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-27a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-27a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_15_2022-03-25a.sql
-.. index:: clvhealth_jcafb_2021v_15_2022-03-25a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_15_2022-03-25a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-25a
+.. index:: clvhealth_jcafb_2021v_15_2022-03-27a.sql
+.. index:: clvhealth_jcafb_2021v_15_2022-03-27a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_15_2022-03-27a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-27a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-25a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-27a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb21-vm** e paralizar o *Odoo*:
@@ -451,22 +451,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-25a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_15_2022-03-25a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_15_2022-03-27a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_15
-            psql -f clvhealth_jcafb_2021v_15_2022-03-25a.sql -d clvhealth_jcafb_2021v_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_15_2022-03-27a.sql -d clvhealth_jcafb_2021v_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-25a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-27a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-25a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-27a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb21-vm** ao modo desejado:
 
@@ -509,18 +509,18 @@ Lista de *Schedules* instalados (02-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled - Sync)` survey.user_input (survey.user_input) [3]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input (survey.user_input) [3]
 
-        #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [2]
+        .. #. :blue:`(Enabled - Sync)` clv.set.element (clv.set.element) [2]
 
-        #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [2]
+        .. #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [2]
 
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [3] [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [3] [Sync]
 
-        #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [2]
-        #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2]
-        #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [2]
-        #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [2]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.report (clv.lab_test.report) [2] [Sync]
 
         .. #. :blue:`(Enabled - Sync)` clv.residence (clv.residence) [2]
 
@@ -552,11 +552,11 @@ Lista de *Schedules* instalados (04-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [2]
+        .. #. :blue:`(Enabled - Sync)` hr.employee (hr.employee) [2]
 
-        #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [2]
+        .. #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [2]
 
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [4] [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.document (clv.document) [4] [Sync]
 
 Executar o *External Sync Batch* "*Default Batch [04]*"
 -------------------------------------------------------
@@ -578,14 +578,14 @@ Lista de *Schedules* instalados (10-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [4]
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [5]
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [6]
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [7]
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [8]
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [9]
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [10]
-        #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [11]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [4]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [5]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [6]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [7]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [8]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [9]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [10]
+        .. #. :blue:`(Enabled - Sync)` survey.user_input.line (survey.user_input.line) [11]
 
 Executar o *External Sync Batch* "*Default Batch [10]*"
 -------------------------------------------------------
@@ -749,11 +749,11 @@ Lista de *Schedules* instalados (20-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [1]
-        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [2]
-        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [3]
-        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [4]
-        #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [5]
+        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [1]
+        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [2]
+        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [3]
+        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [4]
+        .. #. :blue:`(Enabled - Sync)` clv.document.item (clv.document.item) [5]
 
 Executar o *External Sync Batch* "*Default Batch [20]*"
 -------------------------------------------------------
@@ -775,8 +775,8 @@ Lista de *Schedules* instalados (30-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [1]
-        #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [2]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [1] [Sync]
+        .. #. :blue:`(Enabled - Sync)` clv.lab_test.criterion (clv.lab_test.criterion) [2] [Sync]
 
 Executar o *External Sync Batch* "*Default Batch [30]*"
 -------------------------------------------------------
