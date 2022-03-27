@@ -279,12 +279,12 @@ Lista de *Schedules* instalados (00-21v-15)
         #. :blue:`(Enabled - Sync)` clv.event (clv.event)
         #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [1]
 
-        #. :blue:`(Enabled - Sync)` clv.document.category (clv.document.category)
-        #. :blue:`(Enabled - Sync)` clv.document.marker (clv.document.marker)
-        #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [1]
-        #. :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter)
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [1]
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [2]
+        #. :blue:`(Enabled - Sync)` clv.document.category (clv.document.category) [Sync]
+        #. :blue:`(Enabled - Sync)` clv.document.marker (clv.document.marker) [Sync]
+        #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [1] [Inc]
+        #. :blue:`(Enabled - Sync)` clv.document.type.parameter (clv.document.type.parameter) [Sync]
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [1] [Inc]
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [2] [Inc]
 
         #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [1]
         #. :blue:`(Enabled - Sync)` clv.lab_test.type.parameter (clv.lab_test.type.parameter)
@@ -515,7 +515,7 @@ Lista de *Schedules* instalados (02-21v-15)
 
         #. :blue:`(Enabled - Sync)` clv.event.attendee (clv.event.attendee) [2]
 
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [3]
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [3] [Sync]
 
         #. :blue:`(Enabled - Sync)` clv.lab_test.type (clv.lab_test.type) [2]
         #. :blue:`(Enabled - Sync)` clv.lab_test.request (clv.lab_test.request) [2]
@@ -556,7 +556,7 @@ Lista de *Schedules* instalados (04-21v-15)
 
         #. :blue:`(Enabled - Sync)` clv.document.type (clv.document.type) [2]
 
-        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [4]
+        #. :blue:`(Enabled - Sync)` clv.document (clv.document) [4] [Sync]
 
 Executar o *External Sync Batch* "*Default Batch [04]*"
 -------------------------------------------------------
