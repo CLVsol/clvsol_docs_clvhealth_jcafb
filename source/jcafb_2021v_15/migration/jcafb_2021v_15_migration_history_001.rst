@@ -78,6 +78,9 @@ Upgrade the odoo software
             cd /opt/odoo/clvsol_odoo_addons_jcafb
             git pull
 
+            cd /opt/odoo/clvsol_odoo_addons_log_jcafb
+            git pull
+
             cd /opt/odoo/clvsol_odoo_addons_l10n_br
             git pull
 
