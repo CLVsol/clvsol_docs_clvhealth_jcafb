@@ -249,10 +249,10 @@ Lista de *Schedules* instalados (00-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        .. #. :blue:`(Enabled - Sync)` clv.global_settings (current_filestore_path) [Sync]
+        #. :blue:`(Enabled - Sync)` clv.global_settings (current_filestore_path) [Sync]
 
-        .. #. :blue:`(Enabled - Sync)` res.users [Migration]
-        .. #. :blue:`(Enabled - Sync)` res.users (res.users)
+        #. :blue:`(Enabled - Sync)` res.users [Migration]
+        #. :blue:`(Enabled - Sync)` res.users (res.users) [Rec]
 
         .. #. :blue:`(Enabled - Sync)` clv.phase (clv.phase)
         .. #. :blue:`(Enabled - Sync)` clv.global_settings (current_phase_id) [Sync]
