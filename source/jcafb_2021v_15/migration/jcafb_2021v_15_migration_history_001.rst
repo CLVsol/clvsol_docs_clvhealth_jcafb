@@ -282,12 +282,12 @@ Lista de *Schedules* instalados (00-21v-15)
         #. :blue:`(Enabled)` clv.event (clv.event) [Sync]
         #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [1] [Inc]
 
-        .. #. :blue:`(Enabled)` clv.document.category (clv.document.category) [Sync]
-        .. #. :blue:`(Enabled)` clv.document.marker (clv.document.marker) [Sync]
-        .. #. :blue:`(Enabled)` clv.document.type (clv.document.type) [1] [Inc]
-        .. #. :blue:`(Enabled)` clv.document.type.parameter (clv.document.type.parameter) [Sync]
-        .. #. :blue:`(Enabled)` clv.document (clv.document) [1] [Inc]
-        .. #. :blue:`(Enabled)` clv.document (clv.document) [2] [Inc]
+        #. :blue:`(Enabled)` clv.document.category (clv.document.category) [Sync]
+        #. :blue:`(Enabled)` clv.document.marker (clv.document.marker) [Sync]
+        #. :blue:`(Enabled)` clv.document.type (clv.document.type) [1] [Inc]
+        #. :blue:`(Enabled)` clv.document.type.parameter (clv.document.type.parameter) [Sync]
+        #. :blue:`(Enabled)` clv.document (clv.document) [1] [Inc]
+        #. :blue:`(Enabled)` clv.document (clv.document) [2] [Inc]
 
         .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [1] [Inc]
         .. #. :blue:`(Enabled)` clv.lab_test.type.parameter (clv.lab_test.type.parameter) [Sync]
@@ -365,7 +365,7 @@ Executar o *External Sync Batch* "*Default Batch [00]*"
             
             * :bi:`Execution time: 1:03:08.221` (Completo)
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-28a)
+Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-29a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb21-vm** e paralizar o *Odoo*:
@@ -391,16 +391,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-28a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-28a.sql
+            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-29a.sql
 
-            gzip clvhealth_jcafb_2021v_15_2022-03-28a.sql
-            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-28a.sql
+            gzip clvhealth_jcafb_2021v_15_2022-03-29a.sql
+            pg_dump clvhealth_jcafb_2021v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2021v_15_2022-03-29a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-28a.tar.gz clvhealth_jcafb_2021v_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-29a.tar.gz clvhealth_jcafb_2021v_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-28a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-29a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb21-vm** ao modo desejado:
 
@@ -420,17 +420,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-28a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-28a.sql
-        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-28a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-28a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-28a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-29a.sql
+        * /opt/odoo/clvhealth_jcafb_2021v_15_2022-03-29a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-29a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-29a.tar.gz
 
-.. index:: clvhealth_jcafb_2021v_15_2022-03-28a.sql
-.. index:: clvhealth_jcafb_2021v_15_2022-03-28a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2021v_15_2022-03-28a
-.. index:: clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-28a
+.. index:: clvhealth_jcafb_2021v_15_2022-03-29a.sql
+.. index:: clvhealth_jcafb_2021v_15_2022-03-29a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2021v_15_2022-03-29a
+.. index:: clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-29a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-28a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-29a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb21-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb21-vm** e paralizar o *Odoo*:
@@ -454,22 +454,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2021v-15* (2022-03-28a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2021v_15_2022-03-28a.sql.gz
+            # gzip -d clvhealth_jcafb_2021v_15_2022-03-29a.sql.gz
 
             dropdb -i clvhealth_jcafb_2021v_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2021v_15
-            psql -f clvhealth_jcafb_2021v_15_2022-03-28a.sql -d clvhealth_jcafb_2021v_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2021v_15_2022-03-29a.sql -d clvhealth_jcafb_2021v_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2021v_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-28a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2021v_15_2022-03-29a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-28a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2021v_15_2022-03-29a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb21-vm** ao modo desejado:
 
@@ -518,7 +518,8 @@ Lista de *Schedules* instalados (02-21v-15)
 
         #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [2] [Sync]
 
-        .. #. :blue:`(Enabled)` clv.document (clv.document) [3] [Sync]
+        #. :blue:`(Enabled)` clv.document.type (clv.document.type) [2]
+        #. :blue:`(Enabled)` clv.document (clv.document) [3] [Sync]
 
         .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
         .. #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
@@ -555,10 +556,6 @@ Lista de *Schedules* instalados (04-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        .. #. :blue:`(Enabled)` clv.document.type (clv.document.type) [2]
-
-        .. #. :blue:`(Enabled)` clv.document (clv.document) [4] [Sync]
-
 Executar o *External Sync Batch* "*Default Batch [04]*"
 -------------------------------------------------------
 
@@ -572,7 +569,7 @@ Executar o *External Sync Batch* "*Default Batch [04]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:00:57.972`
+            * :bi:`Execution time: 0:00:00.000`
 
 Lista de *Schedules* instalados (10-21v-15)
 -------------------------------------------
