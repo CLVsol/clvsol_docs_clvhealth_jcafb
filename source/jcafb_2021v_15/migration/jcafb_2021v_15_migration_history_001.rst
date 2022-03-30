@@ -289,11 +289,11 @@ Lista de *Schedules* instalados (00-21v-15)
         #. :blue:`(Enabled)` clv.document (clv.document) [1] [Inc]
         #. :blue:`(Enabled)` clv.document (clv.document) [2] [Inc]
 
-        .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [1] [Inc]
-        .. #. :blue:`(Enabled)` clv.lab_test.type.parameter (clv.lab_test.type.parameter) [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [1] [Inc]
-        .. #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [1] [Inc]
-        .. #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [1] [Inc]
+        #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [1] [Inc]
+        #. :blue:`(Enabled)` clv.lab_test.type.parameter (clv.lab_test.type.parameter) [Sync]
+        #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [1] [Inc]
+        #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [1] [Inc]
+        #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [1] [Inc]
 
         .. #. :blue:`(Enabled)` res.country (res.country)
         .. #. :blue:`(Enabled)` res.country.state (res.country.state)
@@ -521,10 +521,10 @@ Lista de *Schedules* instalados (02-21v-15)
         #. :blue:`(Enabled)` clv.document.type (clv.document.type) [2]
         #. :blue:`(Enabled)` clv.document (clv.document) [3] [Sync]
 
-        .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [2] [Sync]
+        #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
+        #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
+        #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
+        #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [2] [Sync]
 
         .. #. :blue:`(Enabled)` clv.residence (clv.residence) [2]
 
@@ -605,11 +605,11 @@ Lista de *Schedules* instalados (20-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        .. #. :blue:`(Enabled)` clv.document.item (clv.document.item) [1]
-        .. #. :blue:`(Enabled)` clv.document.item (clv.document.item) [2]
-        .. #. :blue:`(Enabled)` clv.document.item (clv.document.item) [3]
-        .. #. :blue:`(Enabled)` clv.document.item (clv.document.item) [4]
-        .. #. :blue:`(Enabled)` clv.document.item (clv.document.item) [5]
+        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [1]
+        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [2]
+        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [3]
+        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [4]
+        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [5]
 
 Executar o *External Sync Batch* "*Default Batch [20]*"
 -------------------------------------------------------
@@ -631,8 +631,8 @@ Lista de *Schedules* instalados (30-21v-15)
 
     * Lista de *Schedules* instalados:
 
-        .. #. :blue:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [1] [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [2] [Sync]
+        #. :blue:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [1] [Sync]
+        #. :blue:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [2] [Sync]
 
 Executar o *External Sync Batch* "*Default Batch [30]*"
 -------------------------------------------------------
