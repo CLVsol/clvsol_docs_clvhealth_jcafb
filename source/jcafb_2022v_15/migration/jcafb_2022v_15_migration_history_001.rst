@@ -41,7 +41,7 @@ Upgrade the odoo software
             # apt-get install odoo
 
 :borange:`(**)` Atualizar os fontes do projeto
-----------------------------------------------
+-------------------------------------------2--
 
     #. **Atualizar** os fontes do projeto
 
@@ -186,7 +186,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2022v-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2022v_15"
 
-        * **Execution time: 0:10:28.342**
+        * **Execution time: 0:01:58.668**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
@@ -204,7 +204,183 @@ Criar uma nova instância do *CLVhealth-JCAFB-2022v-15*
 
             /etc/init.d/odoo start
 
-Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
+Criar o *External Sync Host* "https://192.168.25.203"
+-----------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb22-vm <https://tkl-odoo15-jcafb22-vm>`_
+
+    #. Criar o *External Sync Host* **https://192.168.25.203**:
+
+        * Menu de acesso:
+            
+            * *External Sync* > *Configuration* > *Hosts* > Criar
+
+        * Parâmetros utilizados:
+            
+            * External Host Name: "**https://192.168.25.203**"
+            * External Database Name: "**clvhealth_jcafb_2021v_14n**"
+            * External User: "**admin**"
+            * External User Password: "*******"
+
+Configurar todos os "*External Sync Schedules*"
+-----------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb22-vm <https://tkl-odoo15-jcafb22-vm>`_
+
+    #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit (2)`, todos os :bi:`External Sync Schedules`:
+
+        * Lista de *Schedules*:
+
+            * Todos os :bi:`External Sync Schedules`
+
+        * Menu de acesso:
+            
+            * :bi:`External Sync` » :bi:`Confituration` » :bi:`External Sync` » :bi:`Batch Members` » **Ação** » :bi:`External Sync Schedule Mass Edit (2)`
+
+        * Parâmetros alterados:
+            
+            * *External Host*: "**https://192.168.25.203**"
+            * *Max Task Registers*: "**300.000**"
+
+Desabilitar os "*External Sync Batch Members*" não necessários
+--------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb22-vm <https://tkl-odoo15-jcafb22-vm>`_
+
+    #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit (2)`, os :bi:`External Sync Batch Members` não necessários:
+
+        * Lista de *Schedules*:
+
+            * Marcar os :bi:`External Sync Batch Members` não necessários e que se deseja desabilitar.
+
+        * Menu de acesso:
+            
+            * :bi:`External Sync` » :bi:`Confituration` » :bi:`External Sync` » :bi:`Batch Members` » **Ação** » :bi:`External Sync Batch Member Mass Edit`
+
+        * Parâmetros alterados:
+            
+            * *Enabled*: "**desabilitado**"
+
+Lista de *Schedules* instalados (00-21v-15)
+-------------------------------------------
+
+    * Lista de *Schedules* instalados:
+
+        #. :blue:`(Enabled)` clv.global_settings (current_filestore_path) [Sync]
+
+        #. :blue:`(Enabled)` res.users [Migration]
+        #. :blue:`(Enabled)` res.users (res.users) [Rec]
+
+        #. :blue:`(Enabled)` clv.phase (clv.phase) [Sync]
+        #. :red:`(Disabled)` clv.global_settings (current_phase_id) [Sync]
+
+        #. :red:`(Disabled)` clv.file_system.directory (clv.file_system.directory) [Rec]
+        #. :red:`(Disabled)` clv.file_system.directory (clv.file_system.directory) [Sync]
+
+        #. :red:`(Disabled)` clv.global_tag (clv.global_tag) [Sync]
+
+        #. :red:`(Disabled)` clv.set (clv.set) [Sync]
+        #. :red:`(Disabled)` clv.set.element (clv.set.element) [1] [Inc]
+
+        #. :blue:`(Enabled)` hr.department (hr.department) [1] [Rec]
+        #. :blue:`(Enabled)` hr.department (hr.department) [2] [Sync]
+        #. :blue:`(Enabled)` hr.job (hr.job) [Sync]
+        #. :blue:`(Enabled)` hr.employee (hr.employee) [1] [Rec]
+        #. :blue:`(Enabled)` hr.employee (hr.employee) [2] [Sync]
+
+        #. :blue:`(Enabled)` hr.employee.history (hr.employee.history) [Sync]
+
+        .. #. :blue:`(Enabled)` survey.survey (survey.survey) [Sync]
+        .. #. :blue:`(Enabled)` survey.question (survey.question) [1] [Sync]
+        .. #. :blue:`(Enabled)` survey.question (survey.question) [2] [Sync]
+        .. #. :blue:`(Enabled)` survey.question.answer (survey.question.answer) [Sync]
+        .. #. :blue:`(Enabled)` survey.user_input (survey.user_input) [1] [Inc]
+
+        .. #. :blue:`(Enabled)` clv.event (clv.event) [Sync]
+        .. #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [1] [Inc]
+
+        .. #. :blue:`(Enabled)` clv.document.category (clv.document.category) [Sync]
+        .. #. :blue:`(Enabled)` clv.document.marker (clv.document.marker) [Sync]
+        .. #. :blue:`(Enabled)` clv.document.type (clv.document.type) [1] [Inc]
+        .. #. :blue:`(Enabled)` clv.document.type.parameter (clv.document.type.parameter) [Sync]
+        .. #. :blue:`(Enabled)` clv.document (clv.document) [1] [Inc]
+        .. #. :blue:`(Enabled)` clv.document (clv.document) [2] [Inc]
+
+        .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [1] [Inc]
+        .. #. :blue:`(Enabled)` clv.lab_test.type.parameter (clv.lab_test.type.parameter) [Sync]
+        .. #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [1] [Inc]
+        .. #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [1] [Inc]
+        .. #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [1] [Inc]
+
+        .. #. :blue:`(Enabled)` res.country (res.country)
+        .. #. :blue:`(Enabled)` res.country.state (res.country.state)
+        .. #. :blue:`(Enabled)` res.city (res.city)
+
+        .. #. :blue:`(Enabled)` clv.residence.category (clv.residence.category)
+        .. #. :blue:`(Enabled)` clv.residence.marker (clv.residence.marker)
+        .. #. :blue:`(Enabled)` clv.residence (clv.residence) [1]
+
+        .. #. :blue:`(Enabled)` clv.residence.history (clv.residence.history) [1]
+
+        .. #. :blue:`(Enabled)` clv.patient.age_range (clv.patient.age_range)
+        .. #. :blue:`(Enabled)` clv.patient.category (clv.patient.category)
+        .. #. :blue:`(Enabled)` clv.patient.marker (clv.patient.marker)
+        .. #. :blue:`(Enabled)` clv.patient (clv.patient) [1]
+
+        .. #. :blue:`(Enabled)` clv.patient.history (clv.patient.history) [1]
+
+        .. #. :blue:`(Enabled)` clv.patient_aux (clv.patient_aux)
+
+        .. #. :blue:`(Enabled)` clv.address.category (clv.address.category)
+        .. #. :blue:`(Enabled)` clv.address.marker (clv.address.marker)
+        .. #. :blue:`(Enabled)` clv.address (clv.address)
+
+        .. #. :blue:`(Enabled)` clv.address.history (clv.address.history)
+
+        .. #. :blue:`(Enabled)` clv.family.category (clv.family.category)
+        .. #. :blue:`(Enabled)` clv.family (clv.family)
+
+        .. #. :blue:`(Enabled)` clv.family.history (clv.family.history)
+
+        .. #. :blue:`(Enabled)` clv.person.age_range (clv.person.age_range)
+        .. #. :blue:`(Enabled)` clv.person.category (clv.person.category)
+        .. #. :blue:`(Enabled)` clv.person.marker (clv.person.marker)
+        .. #. :blue:`(Enabled)` clv.person (clv.person)
+
+        .. #. :blue:`(Enabled)` clv.person.relation.type (clv.person.relation.type)
+        .. #. :blue:`(Enabled)` clv.person.relation (clv.person.relation)
+
+        .. #. :blue:`(Enabled)` clv.person.history (clv.person.history)
+
+        .. #. :blue:`(Enabled)` clv.address_aux (clv.address_aux)
+
+        .. #. :blue:`(Enabled)` clv.person_aux (clv.person_aux)
+
+        .. #. :blue:`(Enabled)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
+        .. #. :blue:`(Enabled)` clv.partner_entity.contact_information_pattern (clv.partner_entity.contact_information_pattern)
+
+        .. #. :blue:`(Enabled)` clv.verification.marker (clv.verification.marker)
+        .. #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [1]
+        .. #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [2]
+        .. #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [3]
+        .. #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [4]
+
+Executar o *External Sync Batch* "*Default Batch [00]*"
+-------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb22-vm] Executar o :bi:`External Sync Batch` "**Default Batch [00]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb22-vm <https://tkl-odoo15-jcafb22-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [00]**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * :bi:`Execution time: 0:02:00.861`
+            
+Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-04-01a)
 --------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb22-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb22-vm** e paralizar o *Odoo*:
@@ -230,16 +406,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-03-22a.sql
+            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-04-01a.sql
 
-            gzip clvhealth_jcafb_2022v_15_2022-03-22a.sql
-            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-03-22a.sql
+            gzip clvhealth_jcafb_2022v_15_2022-04-01a.sql
+            pg_dump clvhealth_jcafb_2022v_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2022v_15_2022-04-01a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz clvhealth_jcafb_2022v_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-04-01a.tar.gz clvhealth_jcafb_2022v_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-04-01a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
@@ -259,17 +435,17 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-03-22a.sql
-        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-03-22a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-04-01a.sql
+        * /opt/odoo/clvhealth_jcafb_2022v_15_2022-04-01a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-04-01a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-04-01a.tar.gz
 
-.. index:: clvhealth_jcafb_2022v_15_2022-03-22a.sql
-.. index:: clvhealth_jcafb_2022v_15_2022-03-22a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2022v_15_2022-03-22a
-.. index:: clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a
+.. index:: clvhealth_jcafb_2022v_15_2022-04-01a.sql
+.. index:: clvhealth_jcafb_2022v_15_2022-04-01a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2022v_15_2022-04-01a
+.. index:: clvsol_filestore_clvhealth_jcafb_2022v_15_2022-04-01a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-04-01a)
 -------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb22-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb22-vm** e paralizar o *Odoo*:
@@ -293,22 +469,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2022v_15_2022-03-22a.sql.gz
+            # gzip -d clvhealth_jcafb_2022v_15_2022-04-01a.sql.gz
 
             dropdb -i clvhealth_jcafb_2022v_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2022v_15
-            psql -f clvhealth_jcafb_2022v_15_2022-03-22a.sql -d clvhealth_jcafb_2022v_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2022v_15_2022-04-01a.sql -d clvhealth_jcafb_2022v_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2022v_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2022v_15_2022-04-01a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-03-22a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2022v_15_2022-04-01a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb22-vm** ao modo desejado:
 
@@ -345,5 +521,49 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2022v-15* (2022-03-22a)
             * "**http://tkl-odoo15-jcafb22-vm**".
 
         #. Salvar o registro editado.
+
+Lista de *Schedules* instalados (02-21v-15)
+-------------------------------------------
+
+    * Lista de *Schedules* instalados:
+
+        #. :red:`(Disabled)` clv.set.element (clv.set.element) [2] [Sync]
+
+        .. #. :blue:`(Enabled)` survey.user_input (survey.user_input) [2] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [2] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.document.type (clv.document.type) [2]
+        .. #. :blue:`(Enabled)` clv.document (clv.document) [3] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
+        .. #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
+        .. #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
+        .. #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [2] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.residence (clv.residence) [2]
+
+        .. #. :blue:`(Enabled)` clv.residence.history (clv.residence.history) [2]
+
+        .. #. :blue:`(Enabled)` clv.patient (clv.patient) [2]
+
+        .. #. :blue:`(Enabled)` clv.patient.history (clv.patient.history) [2]
+
+Executar o *External Sync Batch* "*Default Batch [02]*"
+-------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb22-vm] Executar o :bi:`External Sync Batch` "**Default Batch [02]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb22-vm <https://tkl-odoo15-jcafb22-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [02]**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * :bi:`Execution time: 0:25:00.499`
+
+            * :bi:`Execution time: 0:40:10.547` (Completo)
 
 .. toctree::   :maxdepth: 2
