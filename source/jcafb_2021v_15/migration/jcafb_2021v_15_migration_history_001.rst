@@ -186,7 +186,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2021v-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_15"
 
-        * **Execution time: 0:03:30.665**
+        * **Execution time: 0:03:56.440**
 
         * **Execution time: 0:11:45.210** (Compĺeto)
 
@@ -361,7 +361,7 @@ Executar o *External Sync Batch* "*Default Batch [00]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:30:58.888`
+            * :bi:`Execution time: 0:32:42.911`
             
             * :bi:`Execution time: 1:03:08.221` (Completo)
 
