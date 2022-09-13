@@ -322,7 +322,7 @@ Lista de *Schedules* instalados (00-21v-15)
         #. :blue:`(Enabled)` clv.address.marker (clv.address.marker)
         #. :blue:`(Enabled)` clv.address (clv.address)
 
-        .. #. :blue:`(Enabled)` clv.address.history (clv.address.history)
+        #. :blue:`(Enabled)` clv.address.history (clv.address.history)
 
         .. #. :blue:`(Enabled)` clv.family.category (clv.family.category)
         .. #. :blue:`(Enabled)` clv.family (clv.family)
