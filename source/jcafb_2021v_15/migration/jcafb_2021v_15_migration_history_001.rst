@@ -329,13 +329,13 @@ Lista de *Schedules* instalados (00-21v-15)
 
         #. :blue:`(Enabled)` clv.family.history (clv.family.history)
 
-        .. #. :blue:`(Enabled)` clv.person.age_range (clv.person.age_range)
-        .. #. :blue:`(Enabled)` clv.person.category (clv.person.category)
-        .. #. :blue:`(Enabled)` clv.person.marker (clv.person.marker)
-        .. #. :blue:`(Enabled)` clv.person (clv.person)
+        #. :blue:`(Enabled)` clv.person.age_range (clv.person.age_range)
+        #. :blue:`(Enabled)` clv.person.category (clv.person.category)
+        #. :blue:`(Enabled)` clv.person.marker (clv.person.marker)
+        #. :blue:`(Enabled)` clv.person (clv.person)
 
-        .. #. :blue:`(Enabled)` clv.person.relation.type (clv.person.relation.type)
-        .. #. :blue:`(Enabled)` clv.person.relation (clv.person.relation)
+        #. :blue:`(Enabled)` clv.person.relation.type (clv.person.relation.type)
+        #. :blue:`(Enabled)` clv.person.relation (clv.person.relation)
 
         .. #. :blue:`(Enabled)` clv.person.history (clv.person.history)
 
