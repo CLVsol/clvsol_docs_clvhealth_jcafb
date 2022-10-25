@@ -14,3 +14,4 @@ Administração do *CLVhealth-JCAFB*
    server_tkl-odoo14-jcafb21n-vm
    server_tkl-odoo15-jcafb21-vm
    server_tkl-odoo15-jcafb22-vm
+   server_tkl-odoo15-jcafb23-vm
