@@ -543,11 +543,11 @@ Development (3)
 Replace the Odoo installation (Odoo 15.0)
 -----------------------------------------
 
-    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root):
+    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
 
         ::
 
-            ssh tkl-odoo15-mfmng-vm -l root
+            ssh tkl-odoo15-jcafb23-vm -l root
 
         ::
 
@@ -555,8 +555,13 @@ Replace the Odoo installation (Odoo 15.0)
 
         ::
 
-            # wget -O - https://nightly.odoo.com/odoo.key | apt-key --keyring /usr/share/keyrings/odoo.gpg add -
-            echo "deb [signed-by=/usr/share/keyrings/odoo.gpg] http://nightly.odoo.com/15.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+            apt install gnupg2
+
+            wget https://nightly.odoo.com/odoo.key
+
+            cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
+
+            echo "deb http://nightly.odoo.com/15.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
 
             apt-get update
 
@@ -568,7 +573,7 @@ Replace the Odoo installation (Odoo 15.0)
 
         ::
 
-            ssh tkl-odoo15-mfmng-vm -l root
+            ssh tkl-odoo15-jcafb23-vm -l root
 
         ::
 
