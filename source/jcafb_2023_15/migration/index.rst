@@ -16,14 +16,12 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2023-15
+.. index:: Migração de Dados [CLVhealth-JCAFB_2023v-15]
 
-=======================
-CLVhealth-JCAFB_2023-15
-=======================
+============================================
+Migração de Dados [CLVhealth-JCAFB_2023v-15]
+============================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
-
-   migration/index
