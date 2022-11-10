@@ -41,7 +41,7 @@ Upgrade the odoo software
             # apt-get install odoo
 
 :borange:`(**)` Atualizar os fontes do projeto
-----------------------------------------------
+-------------------------------------------3--
 
     #. **Atualizar** os fontes do projeto
 
@@ -186,7 +186,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2023-15*
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2023_15"
 
-        * **Execution time: 0:01:58.668**
+        * **Execution time: 0:02:18.318**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
 
@@ -261,8 +261,8 @@ Desabilitar os "*External Sync Batch Members*" não necessários
             
             * *Enabled*: "**desabilitado**"
 
-Lista de *Schedules* instalados (00-21v-15)
--------------------------------------------
+Lista de *Schedules* instalados (00-23-15)
+------------------------------------------
 
     * Lista de *Schedules* instalados:
 
@@ -290,11 +290,11 @@ Lista de *Schedules* instalados (00-21v-15)
 
         #. :blue:`(Enabled)` hr.employee.history (hr.employee.history) [Sync]
 
-        .. #. :blue:`(Enabled)` survey.survey (survey.survey) [Sync]
-        .. #. :blue:`(Enabled)` survey.question (survey.question) [1] [Sync]
-        .. #. :blue:`(Enabled)` survey.question (survey.question) [2] [Sync]
-        .. #. :blue:`(Enabled)` survey.question.answer (survey.question.answer) [Sync]
-        .. #. :blue:`(Enabled)` survey.user_input (survey.user_input) [1] [Inc]
+        #. :blue:`(Enabled)` survey.survey (survey.survey) [Sync]
+        #. :blue:`(Enabled)` survey.question (survey.question) [1] [Sync]
+        #. :blue:`(Enabled)` survey.question (survey.question) [2] [Sync]
+        #. :blue:`(Enabled)` survey.question.answer (survey.question.answer) [Sync]
+        #. :red:`(Disabled)` survey.user_input (survey.user_input) [1] [Inc]
 
         .. #. :blue:`(Enabled)` clv.event (clv.event) [Sync]
         .. #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [1] [Inc]
@@ -378,10 +378,81 @@ Executar o *External Sync Batch* "*Default Batch [00]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:02:00.861`
+            * :bi:`Execution time: 0:06:54.958`
             
-Criar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-04-02a)
---------------------------------------------------------------------------
+Lista de *Schedules* instalados (02-23-15)
+------------------------------------------
+
+    * Lista de *Schedules* instalados:
+
+        #. :red:`(Disabled)` clv.set.element (clv.set.element) [2] [Sync]
+
+        #. :red:`(Disabled)` survey.user_input (survey.user_input) [2] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [2] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.document.type (clv.document.type) [2]
+        .. #. :blue:`(Enabled)` clv.document (clv.document) [3] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
+        .. #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
+        .. #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
+        .. #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [2] [Sync]
+
+        .. #. :blue:`(Enabled)` clv.residence (clv.residence) [2]
+
+        .. #. :blue:`(Enabled)` clv.residence.history (clv.residence.history) [2]
+
+        .. #. :blue:`(Enabled)` clv.patient (clv.patient) [2]
+
+        .. #. :blue:`(Enabled)` clv.patient.history (clv.patient.history) [2]
+
+:red:`(Não Executado)` Executar o *External Sync Batch* "*Default Batch [02]*"
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar o :bi:`External Sync Batch` "**Default Batch [02]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [02]**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * :bi:`Execution time: 0:00:00.000`
+
+Lista de *Schedules* instalados (10-23-15)
+------------------------------------------
+
+    * Lista de *Schedules* instalados:
+
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [1] [Sync]
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [2] [Sync]
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [3] [Sync]
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [4] [Sync]
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [5] [Sync]
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [6] [Sync]
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [7] [Sync]
+        #. :red:`(Disabled)` survey.user_input.line (survey.user_input.line) [8] [Sync]
+
+:red:`(Não Executado)` Executar o *External Sync Batch* "*Default Batch [10]*"
+------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar o :bi:`External Sync Batch` "**Default Batch [10]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [10]**":
+
+            * Menu de acesso:
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * :bi:`Execution time: 0:00:00.000`
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-10a)
+-------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb23-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23-vm** e paralizar o *Odoo*:
 
@@ -406,16 +477,16 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-04-02a)
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2023_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2023_15_2022-04-02a.sql
+            pg_dump clvhealth_jcafb_2023_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2023_15_2022-11-10a.sql
 
-            gzip clvhealth_jcafb_2023_15_2022-04-02a.sql
-            pg_dump clvhealth_jcafb_2023_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2023_15_2022-04-02a.sql
+            gzip clvhealth_jcafb_2023_15_2022-11-10a.sql
+            pg_dump clvhealth_jcafb_2023_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2023_15_2022-11-10a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-04-02a.tar.gz clvhealth_jcafb_2023_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz clvhealth_jcafb_2023_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-04-02a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
 
@@ -435,18 +506,18 @@ Criar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-04-02a)
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2023_15_2022-04-02a.sql
-        * /opt/odoo/clvhealth_jcafb_2023_15_2022-04-02a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-04-02a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-04-02a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2023_15_2022-11-10a.sql
+        * /opt/odoo/clvhealth_jcafb_2023_15_2022-11-10a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz
 
-.. index:: clvhealth_jcafb_2023_15_2022-04-02a.sql
-.. index:: clvhealth_jcafb_2023_15_2022-04-02a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2023_15_2022-04-02a
-.. index:: clvsol_filestore_clvhealth_jcafb_2023_15_2022-04-02a
+.. index:: clvhealth_jcafb_2023_15_2022-11-10a.sql
+.. index:: clvhealth_jcafb_2023_15_2022-11-10a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2023_15_2022-11-10a
+.. index:: clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-10a
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-04-02a)
--------------------------------------------------------------------------------
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-10a)
+-----------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb23-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23-vm** e paralizar o *Odoo*:
 
@@ -469,22 +540,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-04-02a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2023_15_2022-04-02a.sql.gz
+            # gzip -d clvhealth_jcafb_2023_15_2022-11-10a.sql.gz
 
             dropdb -i clvhealth_jcafb_2023_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
-            psql -f clvhealth_jcafb_2023_15_2022-04-02a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2023_15_2022-11-10a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2023_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-04-02a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-04-02a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
 
@@ -521,49 +592,5 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-04-02a)
             * "**http://tkl-odoo15-jcafb23-vm**".
 
         #. Salvar o registro editado.
-
-Lista de *Schedules* instalados (02-21v-15)
--------------------------------------------
-
-    * Lista de *Schedules* instalados:
-
-        #. :red:`(Disabled)` clv.set.element (clv.set.element) [2] [Sync]
-
-        .. #. :blue:`(Enabled)` survey.user_input (survey.user_input) [2] [Sync]
-
-        .. #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [2] [Sync]
-
-        .. #. :blue:`(Enabled)` clv.document.type (clv.document.type) [2]
-        .. #. :blue:`(Enabled)` clv.document (clv.document) [3] [Sync]
-
-        .. #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
-        .. #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [2] [Sync]
-
-        .. #. :blue:`(Enabled)` clv.residence (clv.residence) [2]
-
-        .. #. :blue:`(Enabled)` clv.residence.history (clv.residence.history) [2]
-
-        .. #. :blue:`(Enabled)` clv.patient (clv.patient) [2]
-
-        .. #. :blue:`(Enabled)` clv.patient.history (clv.patient.history) [2]
-
-Executar o *External Sync Batch* "*Default Batch [02]*"
--------------------------------------------------------
-
-    #. [tkl-odoo15-jcafb23-vm] Executar o :bi:`External Sync Batch` "**Default Batch [02]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
-
-        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [02]**":
-
-            * Menu de acesso:
-                
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
-
-            * :bi:`Execution time: 0:25:00.499`
-
-            * :bi:`Execution time: 0:40:10.547` (Completo)
 
 .. toctree::   :maxdepth: 2
