@@ -1,0 +1,184 @@
+.. raw:: html
+
+    <style> .red {color:red} </style>
+    <style> .bred {font-weight: bold; color:red} </style>
+    <style> .green {color:green} </style>
+    <style> .blue {color:blue} </style>
+    <style> .bmaroon {font-weight: bold; color:maroon} </style>
+    <style> .borange {font-weight: bold; color:orange} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
+
+.. role:: red
+.. role:: bred
+.. role:: green
+.. role:: blue
+.. role:: bmaroon
+.. role:: borange
+.. role:: bi
+
+===========================================
+JCAFB-2023-15 (Recadastramento pré Jornada)
+===========================================
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-10a)
+-----------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            ssh tkl-odoo15-jcafb23-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb23-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2023_15_2022-11-10a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2023_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
+            psql -f clvhealth_jcafb_2023_15_2022-11-10a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2023_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-10a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb23-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb23-vm**".
+
+        #. Salvar o registro editado.
+
+Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
+------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Lista de Módulos:
+
+        * clv_partner_entity
+        * clv_residence
+        * clv_patient
+        * clv_patient_aux
+
+        * clv_l10n_br_base
+        * clv_l10n_br_zip
+
+        * clv_partner_entity_l10n_br
+        * clv_residence_l10n_br
+        * clv_patient_l10n_br
+        * clv_patient_aux_l10n_br
+
+        * clv_global_log
+
+        * clv_partner_entity_log_jcafb
+        * clv_residence_log_jcafb
+        * clv_patient_log_jcafb
+        * clv_patient_aux_log_jcafb
+
+    #. [tkl-odoo15-jcafb23-vm] **Executar** a instalação do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb23-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 1)
+                #
+
+                ssh tkl-odoo15-jcafb23-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo15-jcafb23-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 2)
+                #
+
+                ssh tkl-odoo15-jcafb23-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2023_15"
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2023-15*
+----------------------------------------------------------------
+
+    #. Acessar a *View* *Global Settings*:
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Global Settings` » :bi:`Global Settings`
+
+        #. Configurar o parâmetro :bi:`Phase` » :bi:`Phase`: **JCAFB-2023**
+
+        #. Configurar o parâmetro :bi:`Patient` » :bi:`Reference Date`: **31/01/2023**
+
+.. toctree::   :maxdepth: 2
