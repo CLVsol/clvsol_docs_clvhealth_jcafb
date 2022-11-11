@@ -122,6 +122,17 @@ Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
         * clv_patient_log_jcafb
         * clv_patient_aux_log_jcafb
 
+        * clv_verification
+        * clv_verification_jcafb
+        * clv_verification_log_jcafb
+        * clv_partner_entity_verification_jcafb
+        * clv_residence_verification_jcafb
+        * clv_patient_verification_jcafb
+        * clv_patient_aux_verification_jcafb
+
+        * clv_processing
+        * clv_processing_jcafb
+
     #. [tkl-odoo15-jcafb23-vm] **Executar** a instalação do(s) Módulo(s):
 
         #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb23-vm** e executar o *Odoo* no modo manual:
@@ -180,5 +191,104 @@ Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2023-15*
         #. Configurar o parâmetro :bi:`Phase` » :bi:`Phase`: **JCAFB-2023**
 
         #. Configurar o parâmetro :bi:`Patient` » :bi:`Reference Date`: **31/01/2023**
+
+Atualizar o *Verification Domain Filter* dos *Verification Schedules* (Current Phase)
+-------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+    #. Atualizar o *Verification Domain Filter* dos *Verification Schedules*:
+
+        * *Verification Schedules*:
+
+            .. * "Current Phase - clv.address [_address_verification_exec]"
+
+            .. * "Current Phase - clv.address_aux [_address_aux_verification_exec]"
+
+            .. * "Current Phase - clv.family [_family_verification_exec]"
+
+            * "Current Phase - clv.patient [_patient_verification_exec]"
+
+            * "Current Phase - clv.patient_aux [_patient_aux_verification_exec]"
+
+            .. * "Current Phase - clv.person [_person_verification_exec]"
+
+            .. * "Current Phase - clv.person_aux [_person_aux_verification_exec]"
+
+            * "Current Phase - clv.residence [_residence_verification_exec]"
+
+        * Atualização:
+
+            * De: "**[('phase_id', '=', 0)]**"
+
+            * Para: "**[('phase_id', '=', 7)]**" (JCAFB-2023)
+
+:red:`(Não Executado)` Executar o Cadastramento/Recadastramento (Preparação dos Pacientes (Aux))
+------------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+    #. Utilizar como fonte de dados para o Cadastramento/Recadastramento:
+
+        * Workbook: "**JCAFB02021v - clv.patient - Recadastramento (pré Jornada).xlsx**"
+
+        * Planilha: "**Recadastramento (pré Jornada) 1**"
+
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_020`"
+
+    **Método Alternativo Executado**:
+
+        #. [mint20] Copiar manualmente, se necessário, o arquivo "**JCAFB02021v - clv.patient - Recadastramento (pré Jornada).xls**":
+
+            * de: **/home/mint20/Downloads**
+
+            * para: **sftp://odoo@tkl-odoo15-jcafb23-vm/opt/odoo/clvsol_filestore/clvhealth_jcafb** 
+
+        #. [tkl-odoo15-jcafb23-vm] Executar manualmente os *Processing Schedule* **Reregistration Import XLS - Patient (1)** e **Reregistration Import XLS - Patient (2)**:
+
+            #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+            #. Acessar a *View* :bi:`Processing Schedules`:
+
+                * Menu de acesso:
+
+                    * :bi:`Processing` » :bi:`Processing` » :bi:`Schedules`
+
+            #. Selecionar o *Processing Schedule* "**Reregistration Import XLS - Patient (1)**"
+
+            #. Executar a Ação :bi:`Processing Schedule Execute`:
+
+                #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
+
+                * :bi:`Execution time: 0:00:04.532`
+
+            #. Selecionar o *Processing Schedule* "**Reregistration Import XLS - Patient (2)**"
+
+            #. Executar a Ação :bi:`Processing Schedule Execute`:
+
+                #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
+
+                * :bi:`Execution time: 0:00:04.489`
+
+:red:`(Não Executado)` Executar o *Verification Batch* “Current Phase - Default Batch”
+--------------------------------------------------------------------------------------
+
+    #. Executar o *Verification Batch* “Current Phase - Default Batch”:
+
+        #. Acessar a *view* :bi:`Verification Batches`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification` » :bi:`Batches`
+
+        #. Selecionar o :bi:`Verification Batch` ":bi:`Current Phase - Default Batch`"
+
+        #. Executar a Ação :bi:`Verification Batch Exec`:
+
+            #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
+
+            * :bi:`Execution time: 0:00:04.419`
 
 .. toctree::   :maxdepth: 2
