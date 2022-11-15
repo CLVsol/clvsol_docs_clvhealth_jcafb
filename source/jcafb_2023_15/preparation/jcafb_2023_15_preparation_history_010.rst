@@ -192,6 +192,59 @@ Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2023-15*
 
         #. Configurar o parâmetro :bi:`Patient` » :bi:`Reference Date`: **31/01/2023**
 
+Criar as Faixas de Idades de Pacientes para a JCAFB-2023
+--------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+    #. Criar as Faixas de Idades de Pacientes para a **JCAFB-2023**:
+
+        * Menu de acesso:
+            
+            * :bi:`Health` » :bi:`Configuration` » :bi:`Patient` » :bi:`Age Ranges`
+
+        * Faixas de Idades criadas:
+            
+            * **0-2 anos**
+
+                * *Name*: **0-1 anos**
+
+                * *From*: **0**
+
+                * *To*: **1**
+
+            * **2-9 anos**
+
+                * *Name*: **2-9 anoss**
+
+                * *From*: **2**
+
+                * *To*: **9**
+
+            * **10-17 anos**
+
+                * *Name*: **10-17 anos**
+
+                * *From*: **10**
+
+                * *To*: **17**
+
+            * **18-59 anos**
+
+                * *Name*: **18-59 anos**
+
+                * *From*: **18**
+
+                * *To*: **59**
+
+            * **60+ anos**
+
+                * *Name*: **60+ anos**
+
+                * *From*: **60**
+
+                * *To*: **120**
+
 Atualizar o *Verification Domain Filter* dos *Verification Schedules* (Current Phase)
 -------------------------------------------------------------------------------------
 
@@ -545,5 +598,67 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
             * :bi:`Execution time: 0:00:35.243`
+
+Atualisar *Patient (Aux) Age Ranges* para todos os Pacientes (Aux) (método alternativo)
+---------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar manualmente a "Ação Agendada" "**Patient (Aux): Compute Age Reference**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient (Aux): Compute Age Reference**"
+
+        #. Executar a Ação Agendada "**Patient (Aux): Compute Age Reference**", clicando no botão **Rodar Manualmente**.
+
+    #. :red:`(Não Necessário)` [tkl-odoo15-jcafb23-vm] Executar manualmente a "Ação Agendada" "**Patient (Aux): Update Age Range**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient (Aux): Update Age Range**"
+
+        #. Executar a Ação Agendada "**Patient (Aux): Update Age Range**", clicando no botão **Rodar Manualmente**.
+
+Atualisar *Patient Age Ranges* para todos os Pacientes (método alternativo)
+---------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar manualmente a "Ação Agendada" "**Patient: Compute Age Reference**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient: Compute Age Reference**"
+
+        #. Executar a Ação Agendada "**Patient: Compute Age Reference**", clicando no botão **Rodar Manualmente**.
+
+    #. :red:`(Não Necessário)` [tkl-odoo15-jcafb23-vm] Executar manualmente a "Ação Agendada" "**Patient: Update Age Range**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient: Update Age Range**"
+
+        #. Executar a Ação Agendada "**Patient: Update Age Range**", clicando no botão **Rodar Manualmente**.
 
 .. toctree::   :maxdepth: 2
