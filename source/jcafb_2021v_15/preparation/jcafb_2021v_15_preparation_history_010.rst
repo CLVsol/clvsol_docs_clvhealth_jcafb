@@ -20,4 +20,21 @@
 JCAFB-2021v-15 (Exportação de Dados)
 ====================================
 
+Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2021v-15*
+-----------------------------------------------------------------
+
+    #. Acessar a *View* *Global Settings*:
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Global Settings` » :bi:`Global Settings`
+
+        #. :red:`(Não Executado)` Configurar o parâmetro :bi:`Phase` » :bi:`Phase`: **JCAFB-2021v**
+
+        #. Configurar o parâmetro :bi:`Person` » :bi:`Reference Date`: **31/01/2021**
+
+        #. Configurar o parâmetro :bi:`Patient` » :bi:`Reference Date`: **31/01/2021**
+
 .. toctree::   :maxdepth: 2
+
+24/09/1981
