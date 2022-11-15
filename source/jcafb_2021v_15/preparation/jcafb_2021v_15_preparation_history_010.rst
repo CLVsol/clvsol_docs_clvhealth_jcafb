@@ -35,6 +35,97 @@ Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2021v-15*
 
         #. Configurar o parâmetro :bi:`Patient` » :bi:`Reference Date`: **31/01/2021**
 
-.. toctree::   :maxdepth: 2
+Atualisar *Patient (Aux) Age Ranges* para todos os Pacientes (Aux) (método alternativo)
+---------------------------------------------------------------------------------------
 
-24/09/1981
+    #. [tkl-odoo15-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Patient (Aux): Compute Age Reference**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient (Aux): Compute Age Reference**"
+
+        #. Executar a Ação Agendada "**Patient (Aux): Compute Age Reference**", clicando no botão **Rodar Manualmente**.
+
+    #. :red:`(Não Necessário)` [tkl-odoo15-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Patient (Aux): Update Age Range**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient (Aux): Update Age Range**"
+
+        #. Executar a Ação Agendada "**Patient (Aux): Update Age Range**", clicando no botão **Rodar Manualmente**.
+
+Atualisar *Patient Age Ranges* para todos os Pacientes (método alternativo)
+---------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Patient: Compute Age Reference**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient: Compute Age Reference**"
+
+        #. Executar a Ação Agendada "**Patient: Compute Age Reference**", clicando no botão **Rodar Manualmente**.
+
+    #. :red:`(Não Necessário)` [tkl-odoo15-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Patient: Update Age Range**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient: Update Age Range**"
+
+        #. Executar a Ação Agendada "**Patient: Update Age Range**", clicando no botão **Rodar Manualmente**.
+
+Atualisar *Person Age Ranges* para todas as Pessoas (método alternativo)
+------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Person: Compute Age Reference**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Person: Compute Age Reference**"
+
+        #. Executar a Ação Agendada "**Person: Compute Age Reference**", clicando no botão **Rodar Manualmente**.
+
+    #. :red:`(Não Necessário)` [tkl-odoo15-jcafb21-vm] Executar manualmente a "Ação Agendada" "**Person: Update Age Range**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Person: Update Age Range**"
+
+        #. Executar a Ação Agendada "**Person: Update Age Range**", clicando no botão **Rodar Manualmente**.
+
+.. toctree::   :maxdepth: 2
