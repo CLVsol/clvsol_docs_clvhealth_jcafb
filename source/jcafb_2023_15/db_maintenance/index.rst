@@ -16,16 +16,12 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2023-15
-
-=======================
-CLVhealth-JCAFB_2023-15
-=======================
+============================================
+Manutenção do Banco de Dados - JCAFB-2023-15
+============================================
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Conteúdo:
+   :maxdepth: 2
+   :caption: Contents:
 
-   migration/index
-   preparation/index
-   db_maintenance/index
+   jcafb_2023_15_maintenance_history_201
