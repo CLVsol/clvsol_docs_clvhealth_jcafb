@@ -113,7 +113,7 @@ Manutenção do Banco de Dados - JCAFB-2023-15
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-[clvheatlh-jcafb-2023-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-14a)
+[clvheatlh-jcafb-2023-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-21c)
 ------------------------------------------------------------------------------------------------------------
 
     #. [clvheatlh-jcafb-2023-aws-tst] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2023-aws-tst** e paralizar o *Odoo*:
@@ -137,22 +137,22 @@ Manutenção do Banco de Dados - JCAFB-2023-15
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2023_15_2022-11-14a.sql.gz
+            gzip -d clvhealth_jcafb_2023_15_2022-11-21c.sql.gz
 
             dropdb -i clvhealth_jcafb_2023_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
-            psql -f clvhealth_jcafb_2023_15_2022-11-14a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2023_15_2022-11-21c.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2023_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-14a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-21c.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-14a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-21c.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2023-aws-tst** ao modo desejado:
 
