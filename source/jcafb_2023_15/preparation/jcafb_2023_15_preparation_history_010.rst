@@ -820,8 +820,8 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-21c)
 
             * :bi:`Execution time: 0:00:04.419`
 
-Atualizar o(s) módulo(s) [clv_processing_jcafb]
------------------------------------------------
+:borange:`(**)` Atualizar o(s) módulo(s) [clv_processing_jcafb]
+---------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb23-vm] Lista de Módulos:
 
@@ -912,7 +912,7 @@ Executar o Cadastramento/Recadastramento (Preparação dos Pacientes (Aux))
 
                 #. Utilize o botão :bi:`Processing Schedule Execute` para executar a Ação.
 
-                * :bi:`Execution time: 0:00:34.392`
+                * :bi:`Execution time: 0:00:34.303`
 
 Executar o *Verification Batch* “Current Phase - Default Batch”
 ---------------------------------------------------------------
@@ -931,10 +931,10 @@ Executar o *Verification Batch* “Current Phase - Default Batch”
 
             #. Utilize o botão :bi:`Verification Batch Exec` para executar a Ação.
 
-            * :bi:`Execution time: 0:00:35.243`
+            * :bi:`Execution time: 0:00:37.151`
 
-Atualisar *Patient (Aux) Age Ranges* para todos os Pacientes (Aux) (método alternativo)
----------------------------------------------------------------------------------------
+:borange:`(**)` Atualisar *Patient (Aux) Age Ranges* para todos os Pacientes (Aux) (método alternativo)
+-------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb23-vm] Executar manualmente a "Ação Agendada" "**Patient (Aux): Compute Age Reference**":
 
@@ -964,8 +964,8 @@ Atualisar *Patient (Aux) Age Ranges* para todos os Pacientes (Aux) (método alte
 
         #. Executar a Ação Agendada "**Patient (Aux): Update Age Range**", clicando no botão **Rodar Manualmente**.
 
-Atualisar *Patient Age Ranges* para todos os Pacientes (método alternativo)
----------------------------------------------------------------------------
+:borange:`(**)` Atualisar *Patient Age Ranges* para todos os Pacientes (método alternativo)
+-------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb23-vm] Executar manualmente a "Ação Agendada" "**Patient: Compute Age Reference**":
 
@@ -994,5 +994,111 @@ Atualisar *Patient Age Ranges* para todos os Pacientes (método alternativo)
         #. Acessar a Ação Agendada "**Patient: Update Age Range**"
 
         #. Executar a Ação Agendada "**Patient: Update Age Range**", clicando no botão **Rodar Manualmente**.
+
+Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
+------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Lista de Módulos:
+
+        * clv_event
+        * clv_document
+        * clv_lab_test
+
+        * clv_event_jcafb
+        * clv_document_jcafb
+        * clv_lab_test_jcafb
+        * clv_residence_jcafb
+        * clv_residence_jcafb
+        * clv_patient_aux_jcafb
+
+        * clv_document_log_jcafb
+        * clv_lab_test_log_jcafb
+
+    #. [tkl-odoo15-jcafb23-vm] **Executar** a instalação do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb23-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 1)
+                #
+
+                ssh tkl-odoo15-jcafb23-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo15-jcafb23-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 2)
+                #
+
+                ssh tkl-odoo15-jcafb23-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2023_15"
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
+------------------------------------------------------------------------------------------
+
+    * Referência :doc:`/user_guide/reregistration/reregistration_workflow`"
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm-vm <https://tkl-odoo15-jcafb23-vm-vm>`_
+
+    #. Aplicar o descrito em :doc:`/user_guide/reregistration/reregistration_workflow_030`"
+
+    **Ações efetivamente executadas**:
+
+        Durante o processo de Consolidadação pode ser necessário a execução da verificação de **todas as entidades dos Cadastros já envolvidas no processo de recadastramento**. Essa verificação pode ser feita através do *Verification Batch* “**Current Phase - Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_020`".
+
+        Opcionalmente pode ser necessário a execução da verificação de **todas as entidades dos Cadastros**. Essa verificação pode ser feita através do *Verification Batch* “**Default Batch**”, usando o procedimento: ":doc:`/procedures/verification/verification_procedure_010`".
+
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_005`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_006`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_010_010`"
+
+        #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_005`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_010`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_020`"
+
+            #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_030`"
+
+            .. #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_050`"
+
+            .. #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_060`"
+
+            .. #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_070`"
+
+        .. #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_030`"
 
 .. toctree::   :maxdepth: 2
