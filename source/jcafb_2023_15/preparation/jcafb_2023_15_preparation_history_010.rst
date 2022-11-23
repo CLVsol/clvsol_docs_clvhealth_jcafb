@@ -1060,6 +1060,32 @@ Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
 
                 /etc/init.d/odoo start
 
+Atualizar o Próximo Número das Sequências
+-----------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar a Ação :bi:`Employee History Update` para todos os Funcionários:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* *Sequências*:
+
+            * Menu de acesso:
+
+                * **Configurações** » :bi:`Técnico` » :bi:`Sequências e Identificadores` » :bi:`Sequências`
+
+        #. Lista de Sequências (Códigos seqüenciais):
+
+            * clv.address.code
+            * clv.document.code
+            * hr.employee.code
+            * clv.event.code
+            * clv.lab_test.request.code
+            * clv.lab_test.report.code
+            * clv.lab_test.result.code
+            * clv.person.code
+
+        #. Atualizar o **Proximo Número** das Sequências listadas para **10.001**.
+
 Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
 ------------------------------------------------------------------------------------------
 
