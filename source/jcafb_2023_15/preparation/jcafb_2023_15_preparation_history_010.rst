@@ -732,7 +732,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-21c)
 
             /etc/init.d/odoo start
 
-    #. :red:`(Não Executado)` [tkl-odoo15-jcafb23-vm] Configurar o parâmetro "**web.base.url**":
+    #. [tkl-odoo15-jcafb23-vm] Configurar o parâmetro "**web.base.url**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
 
