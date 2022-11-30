@@ -752,4 +752,242 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-21c)
 
         #. Salvar o registro editado.
 
+Criar a Pesquisa "[EAN23]"
+--------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EAN21]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[EAN21]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[EAN23]**
+                * *New Survey Code*: **EAN23**
+                * *New Survey Description*: **<p>JCAFB 2023 - Exames para detecção de Anemia</p>**
+                * *Phase*: **JCAFB-2023**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+Criar a Pesquisa "[EDH23]"
+--------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EDH21]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[EDH21]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[EDH23]**
+                * *New Survey Code*: **EDH23**
+                * *New Survey Description*: **<p>JCAFB 2023- Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia</p>**
+                * *Phase*: **JCAFB-2023**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+Criar a Pesquisa "[ECP23]"
+--------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[ECP21]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[ECP21]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[ECP23]**
+                * *New Survey Code*: **ECP23**
+                * *New Survey Description*: **<p>JCAFB 2023 - Laboratório - Parasitologia</p>**
+                * *Phase*: **JCAFB-2023**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+Criar a Pesquisa "[EUR23]"
+--------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EUR21]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* *Lab Test Types*:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[EUR21]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[EUR23]**
+                * *New Survey Code*: **EUR23**
+                * *New Survey Description*: **<p>JCAFB 2023 - Laboratório - Urinálise</p>**
+                * *Phase*: **JCAFB-2023**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+Criar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-29a)
+-------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            ssh tkl-odoo15-jcafb23-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb23-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2023_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2023_15_2022-11-29a.sql
+
+            gzip clvhealth_jcafb_2023_15_2022-11-29a.sql
+            pg_dump clvhealth_jcafb_2023_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2023_15_2022-11-29a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-29a.tar.gz clvhealth_jcafb_2023_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-29a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2023_15_2022-11-29a.sql
+        * /opt/odoo/clvhealth_jcafb_2023_15_2022-11-29a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-29a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-29a.tar.gz
+
+.. index:: clvhealth_jcafb_2023_15_2022-11-29a.sql
+.. index:: clvhealth_jcafb_2023_15_2022-11-29a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2023_15_2022-11-29a
+.. index:: clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-29a
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-11-29a)
+-----------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            ssh tkl-odoo15-jcafb23-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb23-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2023_15_2022-11-29a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2023_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
+            psql -f clvhealth_jcafb_2023_15_2022-11-29a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2023_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2022-11-29a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2022-11-29a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb23-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb23-vm**".
+
+        #. Salvar o registro editado.
+
 .. toctree::   :maxdepth: 2
