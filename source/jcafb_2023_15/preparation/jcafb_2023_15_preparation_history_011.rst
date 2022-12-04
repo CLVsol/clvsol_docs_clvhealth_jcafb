@@ -1098,6 +1098,230 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2022-12-02a)
 
         #. Salvar o registro editado.
 
+Redefinir as Faixas de Idades de Pacientes para a JCAFB-2023
+------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+    #. Criar as Faixas de Idades de Pacientes para a **JCAFB-2023**:
+
+        * Menu de acesso:
+            
+            * :bi:`Health` » :bi:`Configuration` » :bi:`Patient` » :bi:`Age Ranges`
+
+        * Faixas de Idades criadas:
+            
+            * **0-1 anos**
+
+                * *Name*: **0-1 anos**
+
+                * *From*: **0**
+
+                * *To*: **1**
+
+            * **2 anos**
+
+                * *Name*: **2 anos**
+
+                * *From*: **2**
+
+                * *To*: **2**
+
+            * **3-5 anos**
+
+                * *Name*: **3-5 anos**
+
+                * *From*: **3**
+
+                * *To*: **5**
+
+            * **6-7 anos**
+
+                * *Name*: **6-7 anos**
+
+                * *From*: **6**
+
+                * *To*: **7**
+
+            * **8-9 anos**
+
+                * *Name*: **8-9 anos**
+
+                * *From*: **8**
+
+                * *To*: **9**
+
+            * **10-17 anos**
+
+                * *Name*: **10-17 anos**
+
+                * *From*: **10**
+
+                * *To*: **17**
+
+            * **18-59 anos**
+
+                * *Name*: **18-59 anos**
+
+                * *From*: **18**
+
+                * *To*: **59**
+
+            * **60+ anos**
+
+                * *Name*: **60+ anos**
+
+                * *From*: **60**
+
+                * *To*: **120**
+
+Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
+------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Lista de Módulos:
+
+        * clv_pool
+
+        * clv_document_pool_jcafb
+        * clv_patient_pool_jcafb
+
+    #. [tkl-odoo15-jcafb23-vm] **Executar** a instalação do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb23-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 1)
+                #
+
+                ssh tkl-odoo15-jcafb23-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo15-jcafb23-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 2)
+                #
+
+                ssh tkl-odoo15-jcafb23-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2023_15"
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
+Configurar as permissões do usuário de referência da JCAFB-2023
+---------------------------------------------------------------
+
+    #. Configurar as permissões do usuário de referência:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* *Users*:
+
+            * Menu de acesso:
+
+                * :bi:`Configurações` » :bi:`Usuários e Empresas` » :bi:`Usuários`
+
+        #. Selecionar o usuário de referência.
+
+        #. Configurar as permissões:
+
+            * User Type
+
+                * Tipos de usuário: **Utilizador Interno**
+
+            * Marketing
+
+                * Inquéritos: **Administrador**
+
+            * *Human Resources*
+            
+                * Funcionários: **Administrador**
+
+            * *Administration*
+            
+                * Administração:
+
+            * *Other*:
+
+                * *Employee*: :bi:`Manager (Employee)`
+                * *External Sync*:
+                * *File System*: :bi:`Manager (File System)`
+                * *Global Tag*: :bi:`Manager (Global Tag)`
+                * *Patient (Aux)*: :bi:`Manager (Patient (Aux))`
+                * *Patient*: :bi:`Manager (Patient)`
+                * *Phase*: :bi:`User (Phase)`
+                * *Processing*:
+                * *Residence*: :bi:`Manager (Residence)`
+                * *Set*: :bi:`Manager (Set)`
+                * *Survey*:  :bi:`Manager (Survey)`
+                * *Verification*: :bi:`Manager (Verification)`
+
+            * *Base*:
+
+                * :bi:`Log User (Base)`,
+                * :bi:`Manager (Base)` ​
+                * :bi:`Register User (Base)`,
+                * :bi:`Super User (Base)`,
+                * :bi:`User (Base)`,
+
+            * *Technical*:
+
+                * **Acesso a endereços privados**
+                * **Acesso para exportar recurso**
+                * **Mail Template Editor**
+
+            * *Extra Rights*:
+
+                * **Criação de Contato**
+
+Atualizar as permissões dos Coordenadores da JCAFB-2023
+-------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23-vm] Executar a Ação *Employee User Groups Update* para os Coordenadores da JCAFB-2023:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23-vm <https://tkl-odoo15-jcafb23-vm>`_
+
+        #. Acessar a *View* **Funcionários**:
+
+            * Menu de acesso:
+
+                * **Funcionários** » **Funcionários** » **Funcionários**
+
+        #. Selecionar os **Coordenadores** da JCAFB-2023
+
+        #. Executar a Ação "**Employee User Groups Update**":
+
+            #. Selecionar o :bi:`Reference Employee`: Usuário de referência (selecionado no ítem anterior).
+
+            #. Selecionar o parâmetro :bi:`Access Rights:` » :bi:`Set`.
+
+            #. Precionar o botão :bi:`Get Reference Employee Access Rights`.
+
+            #. Utilize o botão :bi:`Update` para executar a Ação.
+
 Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadastro Auxiliar)
 ------------------------------------------------------------------------------------------
 
@@ -1138,5 +1362,31 @@ Executar o Cadastramento/Recadastramento (Consolidação das Entidades do Cadast
             .. #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_020_070`"
 
         .. #. :doc:`/user_guide/reregistration/reregistration_workflow_030_020_030`"
+
+Atualizar o *Register State* dos Pacientes já recadastrados
+-----------------------------------------------------------
+
+    #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+        * Parâmetros utilizados:
+
+            * *Register State*: **Set** » **Done**
+
+            * *Patient Verification Execute*: **marcado**
+
+        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+Atualizar o *Register State* dos Pacientes (Aux) já recadastrados
+-----------------------------------------------------------------
+
+    #. Executar a Ação ":bi:`Patient (Aux) Mass Edit`":
+
+        * Parâmetros utilizados:
+
+            * *Register State*: **Set** » **Done**
+
+            * *Patient (Aux) Verification Execute*: **marcado**
+
+        #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
 
 .. toctree::   :maxdepth: 2
