@@ -1183,6 +1183,8 @@ Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
         * clv_pool
 
         * clv_document_pool_jcafb
+        * clv_lab_test_pool_jcafb
+        * clv_residence_pool_jcafb
         * clv_patient_pool_jcafb
 
     #. [tkl-odoo15-jcafb23-vm] **Executar** a instalação do(s) Módulo(s):
