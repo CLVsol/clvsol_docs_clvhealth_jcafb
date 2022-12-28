@@ -16,3 +16,4 @@ Administração do *CLVhealth-JCAFB*
    server_tkl-odoo15-jcafb22-vm
    server_tkl-odoo15-jcafb23-vm
    server_clvheatlh-jcafb-2023-aws-tst
+   server_clvheatlh-jcafb-2023-aws-pro
