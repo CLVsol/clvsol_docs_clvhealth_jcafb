@@ -2134,7 +2134,7 @@ Manutenção do Banco de Dados - JCAFB-2023-15
 
         #. Alterar o campo **Valor** para:
 
-            * "**http://clvheatlh-jcafb-2023-aws-pro.tklapp.com**".
+            * "**http://44.210.61.227**".
 
         #. Salvar o registro editado.
 
@@ -2276,7 +2276,7 @@ Manutenção do Banco de Dados - JCAFB-2023-15
 
         #. Alterar o campo **Valor** para:
 
-            * "**http://clvheatlh-jcafb-2023-aws-pro.tklapp.com**".
+            * "**http://44.210.61.227**".
 
         #. Salvar o registro editado.
 
