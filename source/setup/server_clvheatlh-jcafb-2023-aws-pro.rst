@@ -29,13 +29,13 @@ Server preparation (1)
 
     #. Create, via TrunKey Hub, a new Key Pair:
 
-        * Region: **Sao Paulo (South America)**
+        * Region: **Virginia (East USA)**
         * Label: **clvheatlh-jcafb-2023-aws-pro**
         * Private Key File: **clvheatlh-jcafb-2023-aws-pro.pem**
 
-    #. :red:`(Not Used)` Create, via TrunKey Hub, a new Elastic IP:
+    #. Create, via TrunKey Hub, a new Elastic IP:
 
-        * Region: **Sao Paulo (South America)**
+        * Region: **Virginia (East USA)**
         * Label: **clvheatlh-jcafb-2023-aws-pro**
 
     #. Create, via TrunKey Hub, the Amazon EC2 instance clvheatlh-jcafb-2023-aws-pro-aws:
@@ -50,8 +50,8 @@ Server preparation (1)
 
         * Instance:
 
-            * Region: **Sao Paulo (South America)**
-            * Size: **T2.Micro ($0.027/hour)**
+            * Region: **Virginia (East USA)**
+            * Size: **T2.Medium ($0.052/hour)**
 
         * Root account:
 
@@ -65,13 +65,13 @@ Server preparation (1)
 
         * Advanced configuration:
 
-            * Root file system size (GB): **16**
+            * Root file system size (GB): **32**
             * Availability Zone: **Automatic**
             * Install Security Updates: **Enabled**
             * Configure Security Alerts: **Enabled**
-            * Auto-associate Elastic IP: **None**
+            * Auto-associate Elastic IP: **clvheatlh-jcafb-2023-aws-pro**
 
-        * Security Group: **turnkey-odoo-2bca** (Inbound)::
+        * Security Group: **turnkey-odoo-a3e5** (Inbound)::
 
             Port (Service)   Source
             -------------------------------------
@@ -465,22 +465,23 @@ Development (3)
                 # limit_time_real = 120
                 limit_time_real = 72000
 
-    #. :red:`(Not Used)` Configure Odoo Server workers
+    #. Configure Odoo Server workers
 
         #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
             * `Sample odoo.conf file  <https://gist.github.com/Guidoom/d5db0a76ce669b139271a528a8a2a27f>`_
             * `How to Speed up Odoo <https://www.rosehosting.com/blog/how-to-speed-up-odoo/>`_
             * `What is a “worker” in Odoo? <https://stackoverflow.com/questions/35918633/what-is-a-worker-in-odoo>`_
+            * `System configuration <https://www.odoo.com/documentation/16.0/administration/install/deploy.html>`_
 
             ::
 
-                workers = 2
+                workers = 0
 
             ::
 
-                # workers = 2
-                workers = 5
+                # workers = 0
+                workers = 3
 
     #. Configure "server_wide_modules"
 
@@ -644,12 +645,14 @@ Repositories Installation
             git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log_jcafb --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_l10n_brazil --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_l10n_br --branch 15.0_dev
@@ -659,8 +662,6 @@ Repositories Installation
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 14.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
             # git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
             # git clone https://github.com/OCA/partner-contact oca_partner-contact --branch 13.0
@@ -687,7 +688,7 @@ Repositories Installation
         ::
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb
             
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
 
