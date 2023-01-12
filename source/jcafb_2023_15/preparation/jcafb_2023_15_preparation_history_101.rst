@@ -104,11 +104,10 @@ Atualizar o(s) módulo(s) [ver lista]
 
         .. * clv_lab_test
 
-        .. * clv_lab_test_jcafb
-
+        * clv_lab_test_jcafb
         * clv_lab_test_pool_jcafb
 
-        .. * clv_lab_test_log_jcafb
+        * clv_lab_test_log_jcafb
 
     #. [tkl-odoo15-jcafb23n-vm] **Executar** a atualização do(s) Módulo(s):
 
