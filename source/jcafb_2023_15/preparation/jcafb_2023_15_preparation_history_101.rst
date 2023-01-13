@@ -20,7 +20,77 @@
 JCAFB-2023-15 (Atualização 1)
 =============================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-01-05b)
+Criar uma nova instância do *CLVhealth-JCAFB-2023-15*
+-----------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23n-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb23n-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            ssh tkl-odoo15-jcafb23n-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb23n-vm] Excluir a instância do *CLVhealth-JCAFB-2023-15* existente:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            cd /opt/odoo
+            dropdb -i clvhealth_jcafb_2023_15
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2023_15
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo manual:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo15-jcafb23n-vm** e executar o **install.py**:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm (session 2)
+            #
+
+            ssh tkl-odoo15-jcafb23n-vm -l odoo
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2023_15"
+
+        * **Execution time: 0:07:18.565**
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm (session 1)
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-01-13a)
 -----------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb23n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23n-vm** e paralizar o *Odoo*:
@@ -44,22 +114,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-01-05b)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2023_15_2023-01-05b.sql.gz
+            # gzip -d clvhealth_jcafb_2023_15_2023-01-13a.sql.gz
 
             dropdb -i clvhealth_jcafb_2023_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
-            psql -f clvhealth_jcafb_2023_15_2023-01-05b.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2023_15_2023-01-13a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2023_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2023-01-05b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2023-01-13a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2023-01-05b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2023-01-13a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo desejado:
 
@@ -106,6 +176,10 @@ Atualizar o(s) módulo(s) [ver lista]
 
         * clv_lab_test_jcafb
         * clv_lab_test_pool_jcafb
+
+        * clv_residence_jcafb
+        * clv_patient_jcafb
+        * clv_patient_aux_jcafb
 
         * clv_lab_test_log_jcafb
 
