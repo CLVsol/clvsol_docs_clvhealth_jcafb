@@ -20,6 +20,99 @@
 JCAFB-2023-15 (Atualização 1)
 =============================
 
+Atualizar os fontes do projeto (2023-01-14a)
+--------------------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh tkl-odoo15-jcafb23n-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo/clvsol_odoo_client
+            git pull
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_l10n_brazil
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_log
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_log_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            # cd /opt/odoo/clvsol_odoo_addons_l10n_br_jcafb
+            # git pull
+
+            # cd /opt/odoo/clvsol_odoo_addons_history
+            # git pull
+
+            # cd /opt/odoo/clvsol_odoo_addons_history_jcafb
+            # git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
+
+            # cd /opt/odoo/clvsol_odoo_addons_summary
+            # git pull
+
+            # cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
+            # git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git pull
+
+            # cd /opt/odoo/clvsol_odoo_addons_report
+            # git pull
+
+            # cd /opt/odoo/clvsol_odoo_addons_report_jcafb
+            # git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
 Criar uma nova instância do *CLVhealth-JCAFB-2023-15*
 -----------------------------------------------------
 
@@ -90,7 +183,7 @@ Criar uma nova instância do *CLVhealth-JCAFB-2023-15*
 
             /etc/init.d/odoo start
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-01-13a)
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-01-14a)
 -----------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb23n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23n-vm** e paralizar o *Odoo*:
@@ -114,22 +207,22 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-01-13a)
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2023_15_2023-01-13a.sql.gz
+            # gzip -d clvhealth_jcafb_2023_15_2023-01-14a.sql.gz
 
             dropdb -i clvhealth_jcafb_2023_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
-            psql -f clvhealth_jcafb_2023_15_2023-01-13a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2023_15_2023-01-14a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2023_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2023-01-13a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2023-01-14a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2023-01-13a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2023-01-14a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo desejado:
 
