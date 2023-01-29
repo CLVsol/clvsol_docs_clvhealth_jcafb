@@ -402,4 +402,57 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-01-28b)
 
         #. Salvar o registro editado.
 
+Atualizar o(s) módulo(s) [ver lista]
+------------------------------------
+
+    #. [tkl-odoo15-jcafb23n-vm] Lista de Módulos:
+
+        * clv_partner_entity_verification_jcafb
+
+    #. [tkl-odoo15-jcafb23n-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb23n-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23n-vm (session 1)
+                #
+
+                ssh tkl-odoo15-jcafb23n-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo15-jcafb23n-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23n-vm (session 2)
+                #
+
+                ssh tkl-odoo15-jcafb23n-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_partner_entity_verification_jcafb
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb23n-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
 .. toctree::   :maxdepth: 2
