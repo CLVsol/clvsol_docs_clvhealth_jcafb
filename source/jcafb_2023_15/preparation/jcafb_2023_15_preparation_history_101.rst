@@ -408,6 +408,9 @@ Atualizar o(s) módulo(s) [ver lista]
     #. [tkl-odoo15-jcafb23n-vm] Lista de Módulos:
 
         * clv_partner_entity_verification_jcafb
+        * clv_patient_verification_jcafb
+        * clv_patient_aux_verification_jcafb
+        * clv_residence_verification_jcafb
 
     #. [tkl-odoo15-jcafb23n-vm] **Executar** a atualização do(s) Módulo(s):
 
@@ -438,6 +441,12 @@ Atualizar o(s) módulo(s) [ver lista]
                 cd /opt/odoo/clvsol_clvhealth_jcafb/project
                 
                 python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_partner_entity_verification_jcafb
+
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_patient_verification_jcafb
+
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_patient_aux_verification_jcafb
+
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2021v_13" -m clv_residence_verification_jcafb
 
         #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo desejado:
 
