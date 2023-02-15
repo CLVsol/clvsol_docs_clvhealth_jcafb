@@ -113,7 +113,6 @@ Atualizar os fontes do projeto (2023-01-27a)
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-Criar uma nova instância do *CLVhealth-JCAFB-2023-15*
 -----------------------------------------------------
 
     #. [tkl-odoo15-jcafb23n-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb23n-vm** e paralizar o *Odoo*:
@@ -825,5 +824,159 @@ Atualizar o(s) módulo(s) [ver lista]
                 exit
 
                 /etc/init.d/odoo start
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-02-15a)
+-----------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23n-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            ssh tkl-odoo15-jcafb23n-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb23n-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2023_15_2023-02-15a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2023_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
+            psql -f clvhealth_jcafb_2023_15_2023-02-15a.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2023_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2023-02-15a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2023-02-15a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb23n-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23n-vm <https://tkl-odoo15-jcafb23n-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb23n-vm**".
+
+        #. Salvar o registro editado.
+
+Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-02-15b)
+-----------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb23n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb23n-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            ssh tkl-odoo15-jcafb23n-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb23n-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2023_15_2023-02-15b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2023_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2023_15
+            psql -f clvhealth_jcafb_2023_15_2023-02-15b.sql -d clvhealth_jcafb_2023_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2023_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2023_15_2023-02-15b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2023_15_2023-02-15b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb23n-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb23n-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb23n-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb23n-vm <https://tkl-odoo15-jcafb23n-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb23n-vm**".
+
+        #. Salvar o registro editado.
 
 .. toctree::   :maxdepth: 2
