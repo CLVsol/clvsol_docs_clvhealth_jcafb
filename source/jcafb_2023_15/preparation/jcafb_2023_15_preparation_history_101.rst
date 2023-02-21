@@ -1064,6 +1064,9 @@ Habilitar a instalação e instalar o(s) módulo(s) "clv_patient_rec"
 
         * clv_patient_rec
         * clv_patient_rec_l10n_br
+        * clv_patient_rec_jcafb
+        * clv_patient_rec_log_jcafb
+        * clv_patient_rec_verification_jcafb
 
     #. [tkl-odoo15-jcafb23n-vm] **Executar** a instalação do(s) Módulo(s):
 
