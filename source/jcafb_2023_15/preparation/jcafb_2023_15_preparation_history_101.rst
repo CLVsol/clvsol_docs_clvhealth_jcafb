@@ -1120,6 +1120,7 @@ Atualizar o(s) módulo(s) [ver lista]
     #. [tkl-odoo15-jcafb23n-vm] Lista de Módulos:
 
         * clv_patient_aux
+        * clv_patient_aux_log_jcafb
 
     #. [tkl-odoo15-jcafb23n-vm] **Executar** a atualização do(s) Módulo(s):
 
