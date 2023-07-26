@@ -668,7 +668,13 @@ Repositories Installation
 
         ::
 
-            pip3 install pycep-correios
+            # pip3 install pycep-correios
+            # Não utilizar versões > 5.1.0
+            #   'pycep-correios' is now 'brazilcep' 
+            #   (This package has been renamed. Use pip install brazilcep instead.)
+            #   https://pypi.org/project/pycep-correios/
+            #   (New package: https://pypi.org/project/brazilcep/)
+            pip3 install pycep-correios==5.1.0
 
 Remote access to the server
 ---------------------------
