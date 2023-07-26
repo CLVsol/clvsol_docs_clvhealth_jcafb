@@ -16,15 +16,12 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2024-15
+.. index:: Preparação de Dados  [CLVhealth-JCAFB_2024-15]
 
-=======================
-CLVhealth-JCAFB_2024-15
-=======================
+==============================================
+Preparação de Dados  [CLVhealth-JCAFB_2024-15]
+==============================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
-
-   migration/index
-   preparation/index
