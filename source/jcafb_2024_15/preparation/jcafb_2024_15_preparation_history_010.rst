@@ -187,7 +187,7 @@ Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-03-02c)
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2024_15_2023-07-26a.sql.gz
+            # gzip -d clvhealth_jcafb_2024_15_2023-07-26a.sql.gz
 
             dropdb -i clvhealth_jcafb_2024_15
 
