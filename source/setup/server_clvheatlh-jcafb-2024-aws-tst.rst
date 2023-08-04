@@ -51,7 +51,7 @@ Server preparation (1)
         * Instance:
 
             * Region: **Virginia (East USA)**
-            * Size: **T2.Medium ($0.052/hour)**
+            * Size: **T2.Medium ($0.013/hour)**
 
         * Root account:
 
@@ -71,7 +71,7 @@ Server preparation (1)
             * Configure Security Alerts: **Enabled**
             * Auto-associate Elastic IP: **clvheatlh-jcafb-2024-aws-tst**
 
-        * Security Group: **turnkey-odoo-a3e5** (Inbound)::
+        * Security Group: **turnkey-odoo-5697** (Inbound)::
 
             Port (Service)   Source
             -------------------------------------
@@ -626,7 +626,13 @@ Replace the Odoo installation (Odoo 15.0)
 
             ::
 
-                pip3 install pycep-correios
+                # pip3 install pycep-correios
+                # Não utilizar versões > 5.1.0
+                #   'pycep-correios' is now 'brazilcep' 
+                #   (This package has been renamed. Use pip install brazilcep instead.)
+                #   https://pypi.org/project/pycep-correios/
+                #   (New package: https://pypi.org/project/brazilcep/)
+                pip3 install pycep-correios==5.1.0
 
 Repositories Installation
 -------------------------
