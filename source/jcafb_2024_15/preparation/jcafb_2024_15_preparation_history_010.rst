@@ -20,8 +20,8 @@
 JCAFB-2024-15 (Preparação pré Jornada [1])
 ==========================================
 
-Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-03-02c)
------------------------------------------------------------------------------
+[tkl-odoo15-jcafb24-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2023-15* (2023-03-02c)
+-----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb24-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb24-vm** e paralizar o *Odoo*:
 
