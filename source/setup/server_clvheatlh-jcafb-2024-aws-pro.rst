@@ -40,7 +40,7 @@ Server preparation (1)
 
     #. Create, via TrunKey Hub, the Amazon EC2 instance clvheatlh-jcafb-2024-aws-pro-aws:
 
-        * Launch to Amazon EC2: **16.1**
+        * Launch to Amazon EC2: **17.1**
 
         * Basics:
 
@@ -55,7 +55,7 @@ Server preparation (1)
 
         * Root account:
 
-            * Root password: "*******"
+            * Root password: "*******" :red:`(It is not working for version 17.1)`
             * SSH key-pair: **clvheatlh-jcafb-2024-aws-pro**
 
         * Application settings:
@@ -82,6 +82,30 @@ Server preparation (1)
             12320(Web Shell) 0.0.0.0/0  (enabled)
             12321(Webmin)    0.0.0.0/0  (enabled)
             12322(Adminer)   0.0.0.0/0  (enabled)
+
+    #. Prepare the **private key** "**clvheatlh-jcafb-2024-aws-pro.pem**" for use:
+
+        #. Make a copy of the file "**clvheatlh-jcafb-2024-aws-pro.pem**":
+
+            ::
+
+                cp /home/mint20/Downloads/clvheatlh-jcafb-2024-aws-pro.pem /home/mint20/.ssh/clvheatlh-jcafb-2024-aws-pro.pem
+
+                chmod 600 /home/mint20/.ssh/clvheatlh-jcafb-2024-aws-pro.pem
+
+    #. Setup the "**Root password**":
+
+        #. Log into the server using ssh using the privater key (as root):
+
+            ::
+
+                ssh -i /home/mint20/.ssh/clvheatlh-jcafb-2024-aws-pro.pem clvheatlh-jcafb-2024-aws-pro -l root
+
+        #. Update **root** password:
+
+            ::
+
+                passwd root
 
 Development (1)
 ---------------
