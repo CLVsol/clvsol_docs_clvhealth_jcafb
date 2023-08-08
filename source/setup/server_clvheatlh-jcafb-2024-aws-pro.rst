@@ -151,11 +151,11 @@ Development (1)
 
             ::
 
-                odoo:x:110:118::/var/lib/odoo:/usr/sbin/nologin
+                odoo:x:109:117::/var/lib/odoo:/usr/sbin/nologin
 
             ::
 
-                odoo:x:110:118::/var/lib/odoo:/bin/bash
+                odoo:x:109:117::/var/lib/odoo:/bin/bash
 
     #. To create the **/opt/odoo** directory, use the following commands (as root):
 
@@ -169,7 +169,7 @@ Development (1)
 
             chown -R odoo:odoo /opt/odoo
 
-    #. :red:`(Not Used)` Edit the file "**/etc/odoo/odoo.conf**" (as root):
+    #. Edit the file "**/etc/odoo/odoo.conf**" (as root):
 
         ::
 
@@ -239,7 +239,7 @@ Development (1)
 
             pip3 install num2words
 
-    #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
+    #. :red:`(Not Used - Failed)` Delete the 'Turnkeylinux Example ' database, using the following procedure:
 
         #. Open a web browser and type in the Odoo URL, in my case: https://clvheatlh-jcafb-2024-aws-pro.tklapp.com.
 
@@ -247,7 +247,7 @@ Development (1)
 
         #. Clik on 'Delete' (Delete the 'Turnkeylinux Example ' database).
 
-    #. :red:`(Not Used)` Delete the 'Turnkeylinux Example ' database, using the following procedure:
+    #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
 
         #. Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2024-aws-pro** e paralizar o *Odoo*:
 
@@ -387,7 +387,7 @@ Development (2)
 
             exit
 
-    #. :red:`(Not Used)` To install pip3 (for python 3.5), use the following commands (as root):
+    #. To install pip3 (for python 3.5), use the following commands (as root):
 
         ::
 
@@ -566,7 +566,7 @@ Development (3)
 Replace the Odoo installation (Odoo 15.0)
 -----------------------------------------
 
-    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root):
+    #. :red:`(Not Used)` To replace the Odoo installation (Odoo 15.0), use the following commands (as root):
 
         ::
 
@@ -587,7 +587,7 @@ Replace the Odoo installation (Odoo 15.0)
 
             # apt-get remove odoo
 
-    #. :red:`(Not Used)` To replace the Odoo installation (Odoo 15.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
+    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
 
         ::
 
@@ -612,6 +612,29 @@ Replace the Odoo installation (Odoo 15.0)
             apt-get install odoo
 
             # apt-get remove odoo
+
+    #. Set the **odoo** user password (Linux):
+
+        #. To set the **odoo** user password (Linux), use the following commands (as root):
+
+            ::
+
+                ssh tkl-odoo15-jcafb24-vm -l root
+
+            ::
+
+                passwd odoo
+
+
+        #. Edit the file "**/etc/password**" (as root):
+
+            ::
+
+                odoo:x:109:117::/var/lib/odoo:/usr/sbin/nologin
+
+            ::
+
+                odoo:x:109:117::/var/lib/odoo:/bin/bash
 
     #. To stop and start the Odoo server, use the following commands (as root):
 
