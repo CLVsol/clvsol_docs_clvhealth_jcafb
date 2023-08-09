@@ -37,10 +37,11 @@ Server preparation (1)
 
         * Region: **Virginia (East USA)**
         * Label: **clvheatlh-jcafb-2024-aws-tst**
+        * IP address: **44.215.174.44**
 
     #. Create, via TrunKey Hub, the Amazon EC2 instance clvheatlh-jcafb-2024-aws-tst-aws:
 
-        * Launch to Amazon EC2: **16.1**
+        * Launch to Amazon EC2: **17.1**
 
         * Basics:
 
@@ -55,7 +56,7 @@ Server preparation (1)
 
         * Root account:
 
-            * Root password: "*******"
+            * Root password: "*******" :red:`(It is not working for version 17.1)`
             * SSH key-pair: **clvheatlh-jcafb-2024-aws-tst**
 
         * Application settings:
@@ -71,7 +72,7 @@ Server preparation (1)
             * Configure Security Alerts: **Enabled**
             * Auto-associate Elastic IP: **clvheatlh-jcafb-2024-aws-tst**
 
-        * Security Group: **turnkey-odoo-5697** (Inbound)::
+        * Security Group: **turnkey-odoo-9985** (Inbound)::
 
             Port (Service)   Source
             -------------------------------------
@@ -82,6 +83,30 @@ Server preparation (1)
             12320(Web Shell) 0.0.0.0/0  (enabled)
             12321(Webmin)    0.0.0.0/0  (enabled)
             12322(Adminer)   0.0.0.0/0  (enabled)
+
+    #. Prepare the **private key** "**clvheatlh-jcafb-2024-aws-tst.pem**" for use:
+
+        #. Make a copy of the file "**clvheatlh-jcafb-2024-aws-tst.pem**":
+
+            ::
+
+                cp /home/mint20/Downloads/clvheatlh-jcafb-2024-aws-tst.pem /home/mint20/.ssh/clvheatlh-jcafb-2024-aws-tst.pem
+
+                chmod 600 /home/mint20/.ssh/clvheatlh-jcafb-2024-aws-tst.pem
+
+    #. Setup the "**Root password**":
+
+        #. Log into the server using ssh using the privater key (as root):
+
+            ::
+
+                ssh -i /home/mint20/.ssh/clvheatlh-jcafb-2024-aws-tst.pem clvheatlh-jcafb-2024-aws-tst -l root
+
+        #. Update **root** password:
+
+            ::
+
+                passwd root
 
 Development (1)
 ---------------
@@ -127,11 +152,11 @@ Development (1)
 
             ::
 
-                odoo:x:110:118::/var/lib/odoo:/usr/sbin/nologin
+                odoo:x:109:117::/var/lib/odoo:/usr/sbin/nologin
 
             ::
 
-                odoo:x:110:118::/var/lib/odoo:/bin/bash
+                odoo:x:109:117::/var/lib/odoo:/bin/bash
 
     #. To create the **/opt/odoo** directory, use the following commands (as root):
 
@@ -145,7 +170,7 @@ Development (1)
 
             chown -R odoo:odoo /opt/odoo
 
-    #. :red:`(Not Used)` Edit the file "**/etc/odoo/odoo.conf**" (as root):
+    #. Edit the file "**/etc/odoo/odoo.conf**" (as root):
 
         ::
 
@@ -199,31 +224,7 @@ Development (1)
             su odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-    #. :red:`(Not Used)` Install **basic dependencies** needed by Odoo, using the following commands (as root):
-
-        * Extracted from LOGFILE: **/var/log/odoo/odoo-server.log**:
-
-            ::
-
-                2021-02-02 17:44:13,204 11461 WARNING ? odoo.addons.base.models.res_currency: The num2words python library is not installed, amount-to-text features won't be fully available. 
-
-        ::
-
-            ssh clvheatlh-jcafb-2024-aws-tst -l root
-
-        ::
-
-            pip3 install num2words
-
     #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
-
-        #. Open a web browser and type in the Odoo URL, in my case: https://clvheatlh-jcafb-2024-aws-tst.tklapp.com.
-
-        #. Click on 'Manage Databases'.
-
-        #. Clik on 'Delete' (Delete the 'Turnkeylinux Example ' database).
-
-    #. :red:`(Not Used)` Delete the 'Turnkeylinux Example ' database, using the following procedure:
 
         #. Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2024-aws-tst** e paralizar o *Odoo*:
 
@@ -264,8 +265,6 @@ Development (1)
             apt-get -y upgrade
             apt-get autoremove
 
-    #. :red:`(Not Used)` Reinitialize the Server.
-
 Server preparation (2)
 ----------------------
 
@@ -286,14 +285,6 @@ Server preparation (2)
 
         * Geographic area: **America**
         * Time Zone: **Sao Paulo**
-
-    #. :red:`(Not Used)` Set the time and date manually, executing the following command:
-
-        ::
-
-            date -set="STRING"
-
-        * STRING: **19 JUL 2018 15:06:00**
 
     #. Enable **Connecting through SSH tunnel**:
 
@@ -363,7 +354,7 @@ Development (2)
 
             exit
 
-    #. :red:`(Not Used)` To install pip3 (for python 3.5), use the following commands (as root):
+    #. To install pip3 (for python 3.5), use the following commands (as root):
 
         ::
 
@@ -374,42 +365,6 @@ Development (2)
         ::
 
             pip3 install erppeek
-
-    #. :red:`(Not Used)` To install xlrd 1.1.0, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlrd
-            pip3 install xlwt
-            pip3 install xlutils
-
-        ::
-
-            root@clvheatlh-jcafb-2024-aws-tst .../clvsol_clvhealth_jcafb/project# pip3 install xlrd
-            Requirement already satisfied: xlrd in /usr/lib/python3/dist-packages (1.1.0)
-            root@clvheatlh-jcafb-2024-aws-tst .../clvsol_clvhealth_jcafb/project# pip3 install xlwt
-            Collecting xlwt
-              Downloading https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl (99kB
-                100% |████████████████████████████████| 102kB 1.3MB/s 
-            odoo 12.0.post20200609 requires pyldap, which is not installed.
-            odoo 12.0.post20200609 requires qrcode, which is not installed.
-            odoo 12.0.post20200609 requires vobject, which is not installed.
-            Installing collected packages: xlwt
-            Successfully installed xlwt-1.3.0
-            root@clvheatlh-jcafb-2024-aws-tst .../clvsol_clvhealth_jcafb/project# pip3 install xlutils
-            Collecting xlutils
-              Downloading https://files.pythonhosted.org/packages/c7/55/e22ac73dbb316cabb5db28bef6c87044a95914f713a6e81b593f8a0d2f79/xlutils-2.0.0-py2.py3-none-any.whl (55kB)
-                100% |████████████████████████████████| 61kB 1.0MB/s 
-            Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.1.0)
-            Requirement already satisfied: xlwt>=0.7.4 in /usr/local/lib/python3.7/dist-packages (from xlutils) (1.3.0)
-            Installing collected packages: xlutils
-            Successfully installed xlutils-2.0.0
-
-        **To Verify**:
-
-            * :red:`odoo 12.0.post20200609 requires pyldap, which is not installed.`
-            * :red:`odoo 12.0.post20200609 requires qrcode, which is not installed.`
-            * :red:`odoo 12.0.post20200609 requires vobject, which is not installed.`
 
     #. To install xlutils, execute the following commands (as root):
 
@@ -439,7 +394,7 @@ Development (2)
             pip3 install pyyaml
             Collecting pyyaml
               Downloading PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (661 kB)
-                 |████████████████████████████████| 661 kB 2.0 MB/s 
+                 |████████████████████████████████| 661 kB 2.0 MB/s
             Installing collected packages: pyyaml
             Successfully installed pyyaml-6.0
 
@@ -498,72 +453,10 @@ Development (3)
                 # server_wide_modules = base,web
                 server_wide_modules = None
 
-    #. :red:`(Not Used)` Configure "osv_memory_age_limit"
-
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as root):
-
-            * `[14.0] DeprecationWarning: The osv-memory-age-limit <https://github.com/odoo/odoo/issues/60681>`_
-
-            ::
-
-                osv_memory_age_limit = 1.0
-
-            ::
-
-                # osv_memory_age_limit = 1.0
-                osv_memory_age_limit = False
-
-    #. :red:`(Not Used)` To install Jinja2-2.11.2, execute the following commands (as root):
-
-        * Issue:
-
-            ::
-
-                2021-01-27 14:41:47,921 3811 WARNING clvhealth_jcafb_2021v_14 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
-                from collections import MutableSet, MutableMapping, MutableSequence
- 
-        ::
-
-            pip3 install -U Jinja2
-
-        ::
-
-            root@clvheatlh-jcafb-2024-aws-tst ~# pip3 install -U Jinja2
-            Collecting Jinja2
-              Downloading https://files.pythonhosted.org/packages/30/9e/f663a2aa66a09d838042ae1a2c5659828bb9b41ea3a6efa20a20fd92b121/Jinja2-2.11.2-py2.py3-none-any.whl (125kB)
-                100% |████████████████████████████████| 133kB 1.2MB/s 
-            Requirement already satisfied, skipping upgrade: MarkupSafe>=0.23 in /usr/lib/python3/dist-packages (from Jinja2) (1.1.0)
-            Installing collected packages: Jinja2
-              Found existing installation: Jinja2 2.10
-                Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
-                Can't uninstall 'Jinja2'. No files were found to uninstall.
-            Successfully installed Jinja2-2.11.2
-
 Replace the Odoo installation (Odoo 15.0)
 -----------------------------------------
 
-    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2024-aws-tst -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-        ::
-
-            # wget -O - https://nightly.odoo.com/odoo.key | apt-key --keyring /usr/share/keyrings/odoo.gpg add -
-            echo "deb [signed-by=/usr/share/keyrings/odoo.gpg] http://nightly.odoo.com/15.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
-
-            apt-get update
-
-            apt-get install odoo
-
-            # apt-get remove odoo
-
-    #. :red:`(Not Used)` To replace the Odoo installation (Odoo 15.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
+    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
 
         ::
 
@@ -588,6 +481,31 @@ Replace the Odoo installation (Odoo 15.0)
             apt-get install odoo
 
             # apt-get remove odoo
+
+    #. Set the **odoo** user password (Linux):
+
+        #. To set the **odoo** user password (Linux), use the following commands (as root):
+
+            ::
+
+                ssh tkl-odoo15-jcafb24-vm -l root
+
+            ::
+
+                passwd odoo
+
+
+        #. Edit the file "**/etc/password**" (as root):
+
+            ::
+
+                odoo:x:109:117::/var/lib/odoo:/usr/sbin/nologin
+
+            ::
+
+                odoo:x:109:117::/var/lib/odoo:/bin/bash
+
+    #. Set the **postgres** user password (PostgreSQL Database Server) using Webmin.
 
     #. To stop and start the Odoo server, use the following commands (as root):
 
@@ -646,7 +564,6 @@ Repositories Installation
         ::
 
             cd /opt/odoo
-            # git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0_dev
@@ -665,12 +582,6 @@ Repositories Installation
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export_jcafb --branch 15.0_dev
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
-            # git clone https://github.com/OCA/partner-contact oca_partner-contact --branch 13.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
@@ -696,28 +607,6 @@ Repositories Installation
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
             addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb
             
-            # addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_l10n_br_jcafb,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
-
-    #. :red:`(Not Used)` To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2024-aws-tst -l root
-
-        ::
-
-            pip3 install erpbrasil.base
-
-    #. :red:`(Not Used)` To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2024-aws-tst -l root
-
-        ::
-
-            pip3 install pycep-correios
-
 Remote access to the server
 ---------------------------
 
