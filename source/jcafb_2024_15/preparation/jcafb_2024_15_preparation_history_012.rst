@@ -97,6 +97,59 @@ JCAFB-2024-15 (Preparação pré Jornada [3])
 
         #. Salvar o registro editado.
 
+[tkl-odoo15-jcafb24-vm] Atualizar o(s) módulo(s) [ver lista]
+------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Lista de Módulos:
+
+        * clv_patient_history
+
+    #. [tkl-odoo15-jcafb24-vm] **Executar** a atualização do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb24-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb24-vm (session 1)
+                #
+
+                ssh tkl-odoo15-jcafb24-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo15-jcafb24-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb24-vm (session 2)
+                #
+
+                ssh tkl-odoo15-jcafb24-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2024_15" -m clv_patient_history
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb24-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb24-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
 [tkl-odoo15-jcafb24-vm] Atualizar o *Patient History* de todos os Pacientes
 ---------------------------------------------------------------------------
 
@@ -307,5 +360,74 @@ JCAFB-2024-15 (Preparação pré Jornada [3])
             * "**http://tkl-odoo15-jcafb24-vm**".
 
         #. Salvar o registro editado.
+
+[tkl-odoo15-jcafb24-vm] Atualizar o *Residence History* de todas as Residências
+-------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Residence History Update` para todas as Residẽncias:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar todas as Residências (**176**)
+
+        #. Executar a Ação ":bi:`Residence History Update`":
+
+            * Parâmetros utilizados:
+
+                * *Sign out date*: **29/12/2022**
+                * *Sign in date*: **29/12/2022**
+
+            #. Utilize o botão :bi:`Residence History Update` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Remover a Fase das Residências
+------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Residence Mass Edit` para as Residências associadas à **JCAB-2023**:
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+                * **Health** » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar as Residências associadas à **JCAFB-2023** (**176**)
+
+        #. Executar a Ação ":bi:`Residence Mass Edit`":
+
+            * Parâmetros utilizados:
+                * *Phase*: :bi:`Remove`
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Atualizar o *Residence History* de todas as Residências
+-------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Residence History Update` para todas as Residẽncias:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar todas as Residências (**176**)
+
+        #. Executar a Ação ":bi:`Residence History Update`":
+
+            * Parâmetros utilizados:
+
+                * *Sign out date*: **15/08/2023**
+                * *Sign in date*: **29/12/2022**
+
+            #. Utilize o botão :bi:`Residence History Update` para executar a Ação.
 
 .. toctree::   :maxdepth: 2
