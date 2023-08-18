@@ -566,7 +566,7 @@ Repositories Installation
             cd /opt/odoo
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification --branch 15.0_dev
