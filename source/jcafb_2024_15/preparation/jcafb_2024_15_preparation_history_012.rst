@@ -572,17 +572,4 @@ JCAFB-2024-15 (Preparação pré Jornada [3])
 
         #. Salvar o registro editado.
 
-[tkl-odoo15-jcafb24-vm] Atualizar o "*Global Settings*" para a *CLVhealth-JCAFB-2024-15*
-----------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Global Settings*:
-
-        * Menu de acesso:
-
-            * :bi:`Base` » :bi:`Global Settings` » :bi:`Global Settings`
-
-        #. Configurar o parâmetro :bi:`Phase` » :bi:`Phase`: **JCAFB-2024**
-
-        #. Configurar o parâmetro :bi:`Patient` » :bi:`Reference Date`: **31/01/2024**
-
 .. toctree::   :maxdepth: 2
