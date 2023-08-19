@@ -598,7 +598,6 @@ Repositories Installation
         ::
 
             cd /opt/odoo
-            # git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0
@@ -606,23 +605,17 @@ Repositories Installation
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process_jcafb --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process_jcafb --branch 15.0
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary_jcafb --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
             git clone https://github.com/MostlyOpen/clvsol_l10n_brazil --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_l10n_br --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export_jcafb --branch 15.0_dev
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br_jcafb --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 14.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 13.0
-            # git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 13.0
-            # git clone https://github.com/OCA/partner-contact oca_partner-contact --branch 13.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
