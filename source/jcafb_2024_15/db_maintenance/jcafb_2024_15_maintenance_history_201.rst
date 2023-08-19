@@ -174,7 +174,7 @@ Manutenção do Banco de Dados - JCAFB-2024-15
 
         #. Salvar o registro editado.
 
-[clvheatlh-jcafb-2024-aws-tst] Atualizar os fontes do projeto (2023-08-18a)
+[clvheatlh-jcafb-2024-aws-tst] Atualizar os fontes do projeto (2023-08-19b)
 ---------------------------------------------------------------------------
 
     #. **Atualizar** os fontes do projeto
@@ -209,14 +209,20 @@ Manutenção do Banco de Dados - JCAFB-2024-15
             cd /opt/odoo/clvsol_odoo_addons_summary
             git pull
 
-            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
-            git pull
+            # cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            # git pull
+            cd /opt/odoo
+            rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
 
             cd /opt/odoo/clvsol_odoo_addons_process
             git pull
 
-            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
-            git pull
+            # cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            # git pull
+            cd /opt/odoo
+            rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
 
             cd /opt/odoo/clvsol_odoo_addons_sync
             git pull
@@ -253,7 +259,7 @@ Manutenção do Banco de Dados - JCAFB-2024-15
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-[clvheatlh-jcafb-2024-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2024-15* (2023-08-18b)
+[clvheatlh-jcafb-2024-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2024-15* (2023-08-19b)
 ------------------------------------------------------------------------------------------------------------
 
     #. [clvheatlh-jcafb-2024-aws-tst] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2024-aws-tst** e paralizar o *Odoo*:
@@ -277,22 +283,22 @@ Manutenção do Banco de Dados - JCAFB-2024-15
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2024_15_2023-08-18b.sql.gz
+            gzip -d clvhealth_jcafb_2024_15_2023-08-19b.sql.gz
 
             dropdb -i clvhealth_jcafb_2024_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2024_15
-            psql -f clvhealth_jcafb_2024_15_2023-08-18b.sql -d clvhealth_jcafb_2024_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2024_15_2023-08-19b.sql -d clvhealth_jcafb_2024_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2024_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2024_15_2023-08-18b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2024_15_2023-08-19b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2024_15_2023-08-18b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2024_15_2023-08-19b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2024-aws-tst** ao modo desejado:
 
@@ -330,7 +336,7 @@ Manutenção do Banco de Dados - JCAFB-2024-15
 
         #. Salvar o registro editado.
 
-[clvheatlh-jcafb-2024-aws-pro] Atualizar os fontes do projeto (2023-08-18a)
+[clvheatlh-jcafb-2024-aws-pro] Atualizar os fontes do projeto (2023-08-19b)
 ---------------------------------------------------------------------------
 
     #. **Atualizar** os fontes do projeto
@@ -365,14 +371,20 @@ Manutenção do Banco de Dados - JCAFB-2024-15
             cd /opt/odoo/clvsol_odoo_addons_summary
             git pull
 
-            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
-            git pull
+            # cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            # git pull
+            cd /opt/odoo
+            rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
 
             cd /opt/odoo/clvsol_odoo_addons_process
             git pull
 
-            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
-            git pull
+            # cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            # git pull
+            cd /opt/odoo
+            rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
 
             cd /opt/odoo/clvsol_odoo_addons_sync
             git pull
@@ -409,7 +421,7 @@ Manutenção do Banco de Dados - JCAFB-2024-15
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-[clvheatlh-jcafb-2024-aws-pro] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2024-15* (2023-08-18b)
+[clvheatlh-jcafb-2024-aws-pro] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2024-15* (2023-08-19b)
 ------------------------------------------------------------------------------------------------------------
 
     #. [clvheatlh-jcafb-2024-aws-pro] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2024-aws-pro** e paralizar o *Odoo*:
@@ -433,22 +445,22 @@ Manutenção do Banco de Dados - JCAFB-2024-15
             #
 
             cd /opt/odoo
-            gzip -d clvhealth_jcafb_2024_15_2023-08-18b.sql.gz
+            gzip -d clvhealth_jcafb_2024_15_2023-08-19b.sql.gz
 
             dropdb -i clvhealth_jcafb_2024_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2024_15
-            psql -f clvhealth_jcafb_2024_15_2023-08-18b.sql -d clvhealth_jcafb_2024_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2024_15_2023-08-19b.sql -d clvhealth_jcafb_2024_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2024_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2024_15_2023-08-18b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2024_15_2023-08-19b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2024_15_2023-08-18b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2024_15_2023-08-19b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2024-aws-pro** ao modo desejado:
 
