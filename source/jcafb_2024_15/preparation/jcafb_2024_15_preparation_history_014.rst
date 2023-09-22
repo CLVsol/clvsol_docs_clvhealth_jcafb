@@ -345,10 +345,10 @@ JCAFB-2024-15 (Preparação pré Jornada [5])
 
         #. Salvar o registro editado.
 
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EAN24]"
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QSF24]"
 --------------------------------------------------
 
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EAN23]**":
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QSF23]**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
 
@@ -357,182 +357,15 @@ JCAFB-2024-15 (Preparação pré Jornada [5])
             * Menu de acesso:
                 * **Pesquisas** » **Pesquisas**
 
-        #. Abrir o Formulário da Pesquisa "**[EAN23]**".
+        #. Abrir o Formulário da Pesquisa "**[QSF23]**".
 
         #. Executar a Ação ":bi:`Survey Duplicate`":
 
             * Parâmetros utilizados:
-                * *New Survey Title*: **[EAN24]**
-                * *New Survey Code*: **EAN24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Exames para detecção de Anemia</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[ECP24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[ECP23]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[ECP23]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[ECP24]**
-                * *New Survey Code*: **ECP24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Laboratório - Parasitologia</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EDH24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EDH23]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[EDH23]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[EDH24]**
-                * *New Survey Code*: **EDH24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EEV24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EEV21]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[EEV21]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[EEV24]**
-                * *New Survey Code*: **EEV24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Laboratório - Pesquisa de Enterobius vermicularis</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EUR24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EUR23]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[EUR23]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[EUR24]**
-                * *New Survey Code*: **EUR24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Laboratório - Urinálise</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QAN24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QAN23]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[QAN23]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[QAN24]**
-                * *New Survey Code*: **QAN24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Questionário para Detecção de Anemia</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QDH24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QDH23]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[QDH23]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[QDH24]**
-                * *New Survey Code*: **QDH24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QMD24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QMD23]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[QMD23]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[QMD24]**
-                * *New Survey Code*: **QMD24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Questionário - Medicamentos</p>**
+                * *New Survey Title*: **[QSF24]**
+                * *New Survey Code*: **QSF24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Questionário Socioeconômico Familiar</p>**
+                * *New Access Token*: **qsf24**
                 * *Phase*: **JCAFB-2024**
 
             #. Utilize o botão :bi:`Duplicate` para executar a Ação.
@@ -557,30 +390,7 @@ JCAFB-2024-15 (Preparação pré Jornada [5])
                 * *New Survey Title*: **[QSC24]**
                 * *New Survey Code*: **QSC24**
                 * *New Survey Description*: **<p>JCAFB 2024 - Questionário Socioeconômico Individual (Crianças)</p>**
-                * *Phase*: **JCAFB-2024**
-
-            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
-
-[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QSF24]"
---------------------------------------------------
-
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QSF23]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
-
-        #. Acessar a *View* **Pesquisas**:
-
-            * Menu de acesso:
-                * **Pesquisas** » **Pesquisas**
-
-        #. Abrir o Formulário da Pesquisa "**[QSF23]**".
-
-        #. Executar a Ação ":bi:`Survey Duplicate`":
-
-            * Parâmetros utilizados:
-                * *New Survey Title*: **[QSF24]**
-                * *New Survey Code*: **QSF24**
-                * *New Survey Description*: **<p>JCAFB 2024 - Questionário Socioeconômico Familiar</p>**
+                * *New Access Token*: **qsc24**
                 * *Phase*: **JCAFB-2024**
 
             #. Utilize o botão :bi:`Duplicate` para executar a Ação.
@@ -605,6 +415,207 @@ JCAFB-2024-15 (Preparação pré Jornada [5])
                 * *New Survey Title*: **[QSI24]**
                 * *New Survey Code*: **QSI24**
                 * *New Survey Description*: **<p>JCAFB 2024 - Questionário Socioeconômico Individual (Idosos)</p>**
+                * *New Access Token*: **qsi24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QMD24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QMD23]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QMD23]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[QMD24]**
+                * *New Survey Code*: **QMD24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Questionário - Medicamentos</p>**
+                * *New Access Token*: **qmd24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EAN24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EAN23]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[EAN23]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[EAN24]**
+                * *New Survey Code*: **EAN24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Exames para detecção de Anemia</p>**
+                * *New Access Token*: **ean24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[ECP24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[ECP23]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[ECP23]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[ECP24]**
+                * *New Survey Code*: **ECP24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Laboratório - Parasitologia</p>**
+                * *New Access Token*: **ecp24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EDH24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EDH23]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[EDH23]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[EDH24]**
+                * *New Survey Code*: **EDH24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Exames - Diabetes, Hipertensão Arterial e Hipercolesterolemia</p>**
+                * *New Access Token*: **edh24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EEV24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EEV21]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[EEV21]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[EEV24]**
+                * *New Survey Code*: **EEV24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Laboratório - Pesquisa de Enterobius vermicularis</p>**
+                * *New Access Token*: **eev24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[EUR24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[EUR23]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[EUR23]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[EUR24]**
+                * *New Survey Code*: **EUR24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Laboratório - Urinálise</p>**
+                * *New Access Token*: **eur24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QAN24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QAN23]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QAN23]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[QAN24]**
+                * *New Survey Code*: **QAN24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Questionário para Detecção de Anemia</p>**
+                * *New Access Token*: **qan24**
+                * *Phase*: **JCAFB-2024**
+
+            #. Utilize o botão :bi:`Duplicate` para executar a Ação.
+
+[tkl-odoo15-jcafb24-vm] Criar a Pesquisa "[QDH24]"
+--------------------------------------------------
+
+    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Survey Duplicate` para a Pesquisa "**[QDH23]**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+
+        #. Acessar a *View* **Pesquisas**:
+
+            * Menu de acesso:
+                * **Pesquisas** » **Pesquisas**
+
+        #. Abrir o Formulário da Pesquisa "**[QDH23]**".
+
+        #. Executar a Ação ":bi:`Survey Duplicate`":
+
+            * Parâmetros utilizados:
+                * *New Survey Title*: **[QDH24]**
+                * *New Survey Code*: **QDH24**
+                * *New Survey Description*: **<p>JCAFB 2024 - Questionário - Diabetes, Hipertensão Arterial e Hipercolesterolemia</p>**
+                * *New Access Token*: **qdh24**
                 * *Phase*: **JCAFB-2024**
 
             #. Utilize o botão :bi:`Duplicate` para executar a Ação.
