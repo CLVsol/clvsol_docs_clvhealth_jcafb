@@ -436,7 +436,8 @@ Development (3)
             ::
 
                 # workers = 0
-                workers = 3
+                # workers = 3
+                workers = 2
 
     #. Configure "server_wide_modules"
 
