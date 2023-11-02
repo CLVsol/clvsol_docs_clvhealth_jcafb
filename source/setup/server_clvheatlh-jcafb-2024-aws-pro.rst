@@ -52,7 +52,7 @@ Server preparation (1)
         * Instance:
 
             * Region: **Virginia (East USA)**
-            * Size: **T2.Medium ($0.013/hour)**
+            * Size: **T2.Micro ($0.013/hour)**
 
         * Root account:
 
