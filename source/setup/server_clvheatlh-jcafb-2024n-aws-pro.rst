@@ -33,7 +33,7 @@ Server preparation (1)
         * Label: **clvheatlh-jcafb-2024n-aws-pro**
         * Private Key File: **clvheatlh-jcafb-2024n-aws-pro.pem**
 
-    #. Create, via TrunKey Hub, a new Elastic IP:
+    #. :red:`(Not used)` Create, via TrunKey Hub, a new Elastic IP:
 
         * Region: **Virginia (East USA)**
         * Label: **clvheatlh-jcafb-2024-aws-pro**
@@ -52,7 +52,7 @@ Server preparation (1)
         * Instance:
 
             * Region: **Virginia (East USA)**
-            * Size: **T2.Medium ($0.013/hour)**
+            * Size: **T2.Medium ($0.052/hour)** (RAM: 4 GB CPU: 2 vCPU NET: Low to Mod)
 
         * Root account:
 
@@ -66,11 +66,11 @@ Server preparation (1)
 
         * Advanced configuration:
 
-            * Root file system size (GB): **32**
+            * Root file system size (GB): **30**
             * Availability Zone: **Automatic**
             * Install Security Updates: **Enabled**
             * Configure Security Alerts: **Enabled**
-            * Auto-associate Elastic IP: **clvheatlh-jcafb-2024n-aws-pro**
+            * Auto-associate Elastic IP: **None**
 
         * Security Group: **turnkey-odoo-ecaf** (Inbound)::
 
@@ -377,7 +377,7 @@ Development (2)
             pip3 install xlutils
             Collecting xlutils
               Downloading xlutils-2.0.0-py2.py3-none-any.whl (55 kB)
-                 |████████████████████████████████| 55 kB 1.7 MB/s 
+                 |████████████████████████████████| 55 kB 4.4 MB/s 
             Requirement already satisfied: xlwt>=0.7.4 in /usr/lib/python3/dist-packages (from xlutils) (1.3.0)
             Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.2.0)
             Installing collected packages: xlutils
@@ -393,10 +393,10 @@ Development (2)
 
             pip3 install pyyaml
             Collecting pyyaml
-              Downloading PyYAML-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (661 kB)
-                 |████████████████████████████████| 661 kB 2.0 MB/s
+              Downloading PyYAML-6.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+                 |████████████████████████████████| 738 kB 19.0 MB/s 
             Installing collected packages: pyyaml
-            Successfully installed pyyaml-6.0
+            Successfully installed pyyaml-6.0.1
 
 Development (3)
 ---------------
@@ -436,8 +436,7 @@ Development (3)
             ::
 
                 # workers = 0
-                # workers = 3
-                workers = 2
+                workers = 3
 
     #. Configure "server_wide_modules"
 
