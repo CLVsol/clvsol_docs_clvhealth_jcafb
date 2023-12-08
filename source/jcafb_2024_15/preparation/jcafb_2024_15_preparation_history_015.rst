@@ -385,4 +385,35 @@ JCAFB-2024-15 (Preparação pré Jornada [6])
 .. index:: filestore_clvhealth_jcafb_2024_15_2023-12-01b
 .. index:: clvsol_filestore_clvhealth_jcafb_2024_15_2023-12-01b
 
+[clvheatlh-jcafb-2024n-aws-pro] :borange:`(**)` Atualisar *Patient Age Ranges* para todos os Pacientes (método alternativo)
+---------------------------------------------------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2024n-aws-pro] Executar manualmente a "Ação Agendada" "**Patient: Compute Age Reference**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2024n-aws-pro <https://clvheatlh-jcafb-2024n-aws-pro>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient: Compute Age Reference**"
+
+        #. Executar a Ação Agendada "**Patient: Compute Age Reference**", clicando no botão **Rodar Manualmente**.
+
+    #. :red:`(Não Necessário)` [clvheatlh-jcafb-2024n-aws-pro] Executar manualmente a "Ação Agendada" "**Patient: Update Age Range**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2024n-aws-pro <https://clvheatlh-jcafb-2024n-aws-pro>`_
+
+        #. Acessar a *View* **Ações Agendadas**:
+
+            * Menu de acesso:
+
+                * **Configurações** » **Técnico** » **Automação** » **Ações Agendadas**
+
+        #. Acessar a Ação Agendada "**Patient: Update Age Range**"
+
+        #. Executar a Ação Agendada "**Patient: Update Age Range**", clicando no botão **Rodar Manualmente**.
+
 .. toctree::   :maxdepth: 2
