@@ -574,7 +574,7 @@ Repositories Installation
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process_jcafb --branch 15.0
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary_jcafb --branch 15.0_dev
             git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
