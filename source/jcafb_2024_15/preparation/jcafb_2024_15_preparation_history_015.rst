@@ -732,12 +732,77 @@ JCAFB-2024-15 (Preparação pré Jornada [6])
             * *Survey Type*: **[QSI24]**
             * *Phase*: **JCAFB-2024**
 
-[tkl-odoo15-jcafb24-vm] Criar os Documentos para as Crianças selecionadas para o Projeto JCAFB-2024
----------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb24-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2024-15* (2023-12-10a)
+-------------------------------------------------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Document Set Up [Patient]` para as Crianças selecionadas para o Projeto JCAFB-2024:
+    #. [tkl-odoo15-jcafb24-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb24-vm** e paralizar o *Odoo*:
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+        ::
+
+            # ***** tkl-odoo15-jcafb24-vm
+            #
+
+            ssh tkl-odoo15-jcafb24-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb24-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb24-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2024_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2024_15_2023-12-10a.sql
+
+            gzip clvhealth_jcafb_2024_15_2023-12-10a.sql
+            pg_dump clvhealth_jcafb_2024_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2024_15_2023-12-10a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2024_15_2023-12-10a.tar.gz clvhealth_jcafb_2024_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2024_15_2023-12-10a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb24-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb24-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2024_15_2023-12-10a.sql
+        * /opt/odoo/clvhealth_jcafb_2024_15_2023-12-10a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2024_15_2023-12-10a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2024_15_2023-12-10a.tar.gz
+
+.. index:: clvhealth_jcafb_2024_15_2023-12-10a.sql
+.. index:: clvhealth_jcafb_2024_15_2023-12-10a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2024_15_2023-12-10a
+.. index:: clvsol_filestore_clvhealth_jcafb_2024_15_2023-12-10a
+
+[clvheatlh-jcafb-2024n-aws-pro] Criar os Documentos para as Crianças selecionadas para o Projeto JCAFB-2024
+-----------------------------------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2024n-aws-pro] Executar a Ação :bi:`Document Set Up [Patient]` para as Crianças selecionadas para o Projeto JCAFB-2024:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2024n-aws-pro <https://clvheatlh-jcafb-2024n-aws-pro>`_
 
         #. Acessar a *View* *Patients*:
 
@@ -763,12 +828,12 @@ JCAFB-2024-15 (Preparação pré Jornada [6])
 
             #. Utilize o botão :bi:`Document Set Up` para executar a Ação.
 
-[tkl-odoo15-jcafb24-vm] Criar os Documentos para os Idosos selecionados para o Projeto JCAFB-2024
--------------------------------------------------------------------------------------------------
+[clvheatlh-jcafb-2024n-aws-pro] Criar os Documentos para os Idosos selecionados para o Projeto JCAFB-2024
+---------------------------------------------------------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb24-vm] Executar a Ação :bi:`Document Set Up [Patient]` para os Idosos selecionados para o Projeto JCAFB-2024:
+    #. [clvheatlh-jcafb-2024n-aws-pro] Executar a Ação :bi:`Document Set Up [Patient]` para os Idosos selecionados para o Projeto JCAFB-2024:
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb24-vm <https://tkl-odoo15-jcafb24-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2024n-aws-pro <https://clvheatlh-jcafb-2024n-aws-pro>`_
 
         #. Acessar a *View* *Patients*:
 
