@@ -3986,4 +3986,51 @@ Manutenção do Banco de Dados - JCAFB-2024-15
 
         #. Salvar o registro editado.
 
+[clvheatlh-jcafb-2024-aws-tst] Reinicializar o *PostgreSQL* (2024-01-08a)
+-------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2024-aws-tst] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2024-aws-tst** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2024-aws-tst
+            #
+
+            ssh clvheatlh-jcafb-2024-aws-tst -l root
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/postgresql start
+
+            # /etc/init.d/postgresql restart
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2024-aws-tst] Executar os comandos de reinicializaçãpo do PostgreSQL:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2024-aws-tst
+            #
+
+            /etc/init.d/postgresql stop
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2024-aws-tst** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2024-aws-tst
+            #
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
 .. toctree::   :maxdepth: 2
