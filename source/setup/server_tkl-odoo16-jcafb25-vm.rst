@@ -24,7 +24,7 @@ Criação do Servidor Local "tkl-odoo16-jcafb25-vm"
 
         * Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
-        * ISO file: "**turnkey-odoo-17.1-bullseye-amd64.iso**".
+        * ISO file: "**turnkey-odoo-18.0-bookworm-amd64.iso**".
 
 VM preparation (1)
 ------------------
@@ -153,11 +153,11 @@ Development (1)
 
             ::
 
-                odoo:x:109:117::/var/lib/odoo:/usr/sbin/nologin
+                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
 
             ::
 
-                odoo:x:109:117::/var/lib/odoo:/bin/bash
+                odoo:x:105:114::/var/lib/odoo:/bin/bash
 
     #. To create the **/opt/odoo** directory, use the following commands (as root):
 
@@ -191,11 +191,11 @@ Development (1)
 
         ::
 
-            logfile = /var/log/odoo/odoo-server.log
+            logfile = 
 
         ::
 
-            # logfile = /var/log/odoo/odoo-server.log
+            # logfile = 
             logfile = False
 
     #. Setup the file "**/etc/odoo/odoo-man.conf**" (Group: odoo Owner: odoo) permissions, using the following commands (as root):
@@ -223,31 +223,9 @@ Development (1)
         ::
 
             su odoo
+
+            cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. :red:`(Not Used)` Install **basic dependencies** needed by Odoo, using the following commands (as root):
-
-        * Extracted from LOGFILE: **/var/log/odoo/odoo-server.log**:
-
-            ::
-
-                2022-03-06 20:38:48,513 1272 WARNING ? odoo.addons.base.models.res_currency: The num2words python library is not installed, amount-to-text features won't be fully available. 
-
-        ::
-
-            ssh tkl-odoo16-jcafb25-vm -l root
-
-        ::
-
-            pip3 install num2words
-
-    #. :red:`(Not Used - Failed)` Delete the 'Turnkeylinux Example ' database, using the following procedure:
-
-        #. Open a web browser and type in the Odoo URL, in my case: http://tkl-odoo16-jcafb25-vm.
-
-        #. Click on 'Manage Databases'.
-
-        #. Clik on 'Delete' (Delete the 'Turnkeylinux Example ' database).
 
     #. Delete the 'Turnkeylinux Example' database, using the following procedure:
 
@@ -323,7 +301,7 @@ VM preparation (2)
 
             date -set="STRING"
 
-        * STRING: **19 JUL 2018 15:06:00**
+        * STRING: **09 MAY 2024 20:22:00**
 
     #. Enable **Connecting through SSH tunnel**:
 
@@ -335,11 +313,11 @@ VM preparation (2)
 
             ::
 
-                AllowTcpForwarding no
+                #AllowTcpForwarding yes
 
             ::
 
-                # AllowTcpForwarding no
+                #AllowTcpForwarding yes
                 AllowTcpForwarding yes
 
         #. To stop and start the sshd service, use the following commands (as root):
