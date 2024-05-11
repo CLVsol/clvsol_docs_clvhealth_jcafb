@@ -26,8 +26,8 @@ Criação do Servidor Local "tkl-odoo15-jcafb25-vm"
 
         * ISO file: "**turnkey-odoo-18.0-bookworm-amd64.iso**".
 
-:bmaroon:`(Not Implemented)` VM preparation (1)
------------------------------------------------
+VM preparation (1)
+------------------
 
     #. Create a new Virtual Machine using the following parameters:
 
@@ -398,7 +398,43 @@ Development (2)
             Get:3 http://deb.debian.org/debian bookworm/main amd64 python3-setuptools all 66.1.1-1 [521 kB]
             Get:4 http://deb.debian.org/debian bookworm/main amd64 python3-wheel all 0.38.4-2 [30.8 kB]
             Get:5 http://deb.debian.org/debian bookworm/main amd64 python3-pip all 23.0.1+dfsg-1 [1325 kB]
-            Fetched 2084 kB in 1s (4019 kB/s)     
+            Fetched 2084 kB in 0s (4384 kB/s)     
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 3c1315f] saving uncommitted changes in /etc prior to apt run
+             5 files changed, 5 insertions(+), 4 deletions(-)
             debconf: delaying package configuration, since apt-utils is not installed
             Selecting previously unselected package python3-lib2to3.
             (Reading database ... 89630 files and directories currently installed.)
@@ -422,12 +458,12 @@ Development (2)
             Setting up python3-wheel (0.38.4-2) ...
             Setting up python3-pip (23.0.1+dfsg-1) ...
             Processing triggers for man-db (2.11.2-2) ...
-            Enumerating objects: 1891, done.
-            Counting objects: 100% (1891/1891), done.
+            Enumerating objects: 1889, done.
+            Counting objects: 100% (1889/1889), done.
             Delta compression using up to 8 threads
-            Compressing objects: 100% (1205/1205), done.
-            Writing objects: 100% (1891/1891), done.
-            Total 1891 (delta 80), reused 1855 (delta 66), pack-reused 0
+            Compressing objects: 100% (1203/1203), done.
+            Writing objects: 100% (1889/1889), done.
+            Total 1889 (delta 79), reused 1855 (delta 66), pack-reused 0
 
     #. :red:`(Failed - Not Used)` To install erppeek (for python 3.5), use the following commands (as root):
 
@@ -690,7 +726,173 @@ Replace the Odoo installation (Odoo 15.0)
 
             apt-get install odoo
 
+        ::
+
+            apt-get install odoo
+            Reading package lists... Done
+            Building dependency tree... Done
+            Reading state information... Done
+            The following packages were automatically installed and are no longer required:
+              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form
+            Use 'apt autoremove' to remove them.
+            The following additional packages will be installed:
+              python3-mock python3-pbr
+            Suggested packages:
+              python-mock-doc
+            Recommended packages:
+              python3-ldap
+            The following packages will be REMOVED:
+              odoo-16
+            The following NEW packages will be installed:
+              odoo python3-mock python3-pbr
+            0 upgraded, 3 newly installed, 1 to remove and 0 not upgraded.
+            Need to get 198 MB of archives.
+            After this operation, 3824 kB disk space will be freed.
+            Do you want to continue? [Y/n] Y
+            Get:1 http://deb.debian.org/debian bookworm/main amd64 python3-pbr all 5.10.0-2 [61.4 kB]
+            Get:2 http://deb.debian.org/debian bookworm/main amd64 python3-mock all 4.0.3-4 [64.0 kB]
+            Get:3 http://nightly.odoo.com/15.0/nightly/deb ./ odoo 15.0.20240511 [198 MB]
+            Fetched 198 MB in 36s (5509 kB/s)                                                                                                                                                            
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 68ef016] saving uncommitted changes in /etc prior to apt run
+             3 files changed, 3 insertions(+)
+             create mode 100644 apt/sources.list.d/odoo.list
+             create mode 100644 apt/trusted.gpg.d/odoo.gpg
+            debconf: delaying package configuration, since apt-utils is not installed
+            (Reading database ... 90696 files and directories currently installed.)
+            Removing odoo-16 (16.0.0+dfsg.2-2~bpo12+1) ...
+            Selecting previously unselected package python3-pbr.
+            (Reading database ... 50111 files and directories currently installed.)
+            Preparing to unpack .../python3-pbr_5.10.0-2_all.deb ...
+            Unpacking python3-pbr (5.10.0-2) ...
+            Selecting previously unselected package python3-mock.
+            Preparing to unpack .../python3-mock_4.0.3-4_all.deb ...
+            Unpacking python3-mock (4.0.3-4) ...
+            Selecting previously unselected package odoo.
+            Preparing to unpack .../odoo_15.0.20240511_all.deb ...
+            Unpacking odoo (15.0.20240511) ...
+            Setting up python3-pbr (5.10.0-2) ...
+            Setting up python3-mock (4.0.3-4) ...
+            Setting up odoo (15.0.20240511) ...
+
+            Configuration file '/etc/odoo/odoo.conf'
+             ==> Modified (by you or by a script) since installation.
+             ==> Package distributor has shipped an updated version.
+               What would you like to do about it ?  Your options are:
+                Y or I  : install the package maintainer's version
+                N or O  : keep your currently-installed version
+                  D     : show the differences between the versions
+                  Z     : start a shell to examine the situation
+             The default action is to keep your current version.
+            *** odoo.conf (Y/I/N/O/D/Z) [default=N] ? N
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 69b022a] committing changes in /etc made by "apt-get install odoo"
+             7 files changed, 10 insertions(+), 6 deletions(-)
+             mode change 100755 => 100644 init.d/odoo
+             create mode 100644 logrotate.d/odoo
+            Enumerating objects: 1910, done.
+            Counting objects: 100% (1910/1910), done.
+            Delta compression using up to 8 threads
+            Compressing objects: 100% (1207/1207), done.
+            Writing objects: 100% (1910/1910), done.
+            Total 1910 (delta 93), reused 1887 (delta 82), pack-reused 0
+
+        ::
+
             # apt-get remove odoo
+
+    #. Set the **odoo** user password (Linux):
+
+        #. To set the **odoo** user password (Linux), use the following commands (as root):
+
+            ::
+
+                ssh tkl-odoo15-jcafb25-vm -l root
+
+            ::
+
+                passwd odoo
+
+
+        #. Edit the file "**/etc/password**" (as root):
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/bin/bash
+
+    #. Set "**/etc/init.d/odoo**" file Permitions:
+
+        * Allow executing file as program: **marked**.
 
     #. To stop and start the Odoo server, use the following commands (as root):
 
@@ -900,12 +1102,12 @@ Remote access to the server
         ::
 
             cd /opt/odoo/clvsol_clvhealth_jcafb/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025_16"
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025_15"
 
-            dropdb -i clvhealth_jcafb_2025_16
+            dropdb -i clvhealth_jcafb_2025_15
 
-Upgrade the odoo software
--------------------------
+:bmaroon:`(Not Implemented)` Upgrade the odoo software
+------------------------------------------------------
 
     #. Upgrade the odoo software:
 
