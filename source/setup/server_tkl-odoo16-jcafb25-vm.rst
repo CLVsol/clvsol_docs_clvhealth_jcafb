@@ -348,8 +348,8 @@ VM preparation (2)
 
                 ssh -L 33335:127.0.0.1:5432 root@tkl-odoo16-jcafb25-vm
 
-:bmaroon:`(Not Implemented)` Development (2)
---------------------------------------------
+Development (2)
+---------------
 
     #. To configure **Git**, use the following commands (as root):
 
@@ -663,14 +663,14 @@ Development (3)
                 Can't uninstall 'Jinja2'. No files were found to uninstall.
             Successfully installed Jinja2-2.11.2
 
-:red:`(Not Used)` Replace the Odoo installation (Odoo 16.0)
+:red:`(Not Used)` Replace the Odoo installation (Odoo 15.0)
 -----------------------------------------------------------
 
-    #. To replace the Odoo installation (Odoo 16.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
+    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
 
         ::
 
-            ssh tkl-odoo16-jcafb25-vm -l root
+            ssh tkl-odoo15-jcafb25-vm -l root
 
         ::
 
@@ -684,19 +684,185 @@ Development (3)
 
             cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
 
-            echo "deb http://nightly.odoo.com/16.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
+            echo "deb http://nightly.odoo.com/15.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
 
             apt-get update
 
             apt-get install odoo
 
+        ::
+
+            apt-get install odoo
+            Reading package lists... Done
+            Building dependency tree... Done
+            Reading state information... Done
+            The following packages were automatically installed and are no longer required:
+              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form
+            Use 'apt autoremove' to remove them.
+            The following additional packages will be installed:
+              python3-mock python3-pbr
+            Suggested packages:
+              python-mock-doc
+            Recommended packages:
+              python3-ldap
+            The following packages will be REMOVED:
+              odoo-16
+            The following NEW packages will be installed:
+              odoo python3-mock python3-pbr
+            0 upgraded, 3 newly installed, 1 to remove and 0 not upgraded.
+            Need to get 198 MB of archives.
+            After this operation, 3824 kB disk space will be freed.
+            Do you want to continue? [Y/n] Y
+            Get:1 http://deb.debian.org/debian bookworm/main amd64 python3-pbr all 5.10.0-2 [61.4 kB]
+            Get:2 http://deb.debian.org/debian bookworm/main amd64 python3-mock all 4.0.3-4 [64.0 kB]
+            Get:3 http://nightly.odoo.com/15.0/nightly/deb ./ odoo 15.0.20240511 [198 MB]
+            Fetched 198 MB in 36s (5509 kB/s)                                                                                                                                                            
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 68ef016] saving uncommitted changes in /etc prior to apt run
+             3 files changed, 3 insertions(+)
+             create mode 100644 apt/sources.list.d/odoo.list
+             create mode 100644 apt/trusted.gpg.d/odoo.gpg
+            debconf: delaying package configuration, since apt-utils is not installed
+            (Reading database ... 90696 files and directories currently installed.)
+            Removing odoo-16 (16.0.0+dfsg.2-2~bpo12+1) ...
+            Selecting previously unselected package python3-pbr.
+            (Reading database ... 50111 files and directories currently installed.)
+            Preparing to unpack .../python3-pbr_5.10.0-2_all.deb ...
+            Unpacking python3-pbr (5.10.0-2) ...
+            Selecting previously unselected package python3-mock.
+            Preparing to unpack .../python3-mock_4.0.3-4_all.deb ...
+            Unpacking python3-mock (4.0.3-4) ...
+            Selecting previously unselected package odoo.
+            Preparing to unpack .../odoo_15.0.20240511_all.deb ...
+            Unpacking odoo (15.0.20240511) ...
+            Setting up python3-pbr (5.10.0-2) ...
+            Setting up python3-mock (4.0.3-4) ...
+            Setting up odoo (15.0.20240511) ...
+
+            Configuration file '/etc/odoo/odoo.conf'
+             ==> Modified (by you or by a script) since installation.
+             ==> Package distributor has shipped an updated version.
+               What would you like to do about it ?  Your options are:
+                Y or I  : install the package maintainer's version
+                N or O  : keep your currently-installed version
+                  D     : show the differences between the versions
+                  Z     : start a shell to examine the situation
+             The default action is to keep your current version.
+            *** odoo.conf (Y/I/N/O/D/Z) [default=N] ? N
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 69b022a] committing changes in /etc made by "apt-get install odoo"
+             7 files changed, 10 insertions(+), 6 deletions(-)
+             mode change 100755 => 100644 init.d/odoo
+             create mode 100644 logrotate.d/odoo
+            Enumerating objects: 1910, done.
+            Counting objects: 100% (1910/1910), done.
+            Delta compression using up to 8 threads
+            Compressing objects: 100% (1207/1207), done.
+            Writing objects: 100% (1910/1910), done.
+            Total 1910 (delta 93), reused 1887 (delta 82), pack-reused 0
+
+        ::
+
             # apt-get remove odoo
+
+    #. Set the **odoo** user password (Linux):
+
+        #. To set the **odoo** user password (Linux), use the following commands (as root):
+
+            ::
+
+                ssh tkl-odoo15-jcafb25-vm -l root
+
+            ::
+
+                passwd odoo
+
+
+        #. Edit the file "**/etc/password**" (as root):
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/bin/bash
+
+    #. Set "**/etc/init.d/odoo**" file Permitions:
+
+        * Allow executing file as program: **marked**.
 
     #. To stop and start the Odoo server, use the following commands (as root):
 
         ::
 
-            ssh tkl-odoo16-jcafb25-vm -l root
+            ssh tkl-odoo15-jcafb25-vm -l root
 
         ::
 
@@ -711,8 +877,8 @@ Development (3)
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-Repositories Installation
--------------------------
+:bmaroon:`(Not Implemented)` Repositories Installation
+------------------------------------------------------
 
     #. To install all "**modules**", use the following commands (as odoo):
 
