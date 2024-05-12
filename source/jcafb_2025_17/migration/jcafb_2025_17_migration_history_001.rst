@@ -27,8 +27,8 @@ Desabilitar a instalação de todos os módulos
 
     #. [tkl-odoo17-jcafb25-vm] Desabilitar a instalação de todos os módulos
 
-Criar uma nova instância do *CLVhealth-JCAFB-2025-17*
-------------------------------------------------------
+:bmaroon:`(Not Implemented)` Criar uma nova instância do *CLVhealth-JCAFB-2025-17*
+----------------------------------------------------------------------------------
 
     #. [tkl-odoo17-jcafb25-vm] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo17-jcafb25-vm** e paralizar o *Odoo*:
 
