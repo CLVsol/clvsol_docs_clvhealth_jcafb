@@ -109,8 +109,8 @@ Shrinking VM Disk Images
 
         Open up VMWare Workstation and edit the virtual machine.  Select the hard disk, then there's a button on the right that says Utilities.  Under that drop-down menu is an option, "Compact".  Presto-chango, you are done.
 
-:bmaroon:`(Not Implemented)` Development (1)
---------------------------------------------
+Development (1)
+---------------
 
     #. Notes on the installation:
 
@@ -1064,8 +1064,8 @@ Remote access to the server
 
             dropdb -i clvhealth_jcafb_2025_16
 
-Upgrade the odoo software
--------------------------
+:bmaroon:`(Not Implemented)` Upgrade the odoo software
+------------------------------------------------------
 
     #. Upgrade the odoo software:
 
