@@ -877,8 +877,8 @@ Development (3)
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-:bmaroon:`(Not Implemented)` Repositories Installation
-------------------------------------------------------
+Repositories Installation
+-------------------------
 
     #. To install all "**modules**", use the following commands (as odoo):
 
@@ -891,22 +891,22 @@ Development (3)
             cd /opt/odoo
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process_jcafb --branch 15.0
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log_jcafb --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary_jcafb --branch 15.0
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
-            # git clone https://github.com/MostlyOpen/clvsol_l10n_brazil --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_l10n_br --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync_jcafb --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export --branch 15.0_dev
-            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export_jcafb --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process_jcafb --branch 15.0
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log_jcafb --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary_jcafb --branch 15.0
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
+            git clone https://github.com/MostlyOpen/clvsol_l10n_brazil --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_l10n_br --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync_jcafb --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export_jcafb --branch 15.0_dev
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
@@ -930,9 +930,7 @@ Development (3)
         ::
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            
-            # addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb
             
     #. :red:`(Failed - Not Used)` To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
 
@@ -1072,8 +1070,8 @@ Remote access to the server
 
             dropdb -i clvhealth_jcafb_2025_16
 
-Upgrade the odoo software
--------------------------
+:bmaroon:`(Not Implemented)` Upgrade the odoo software
+------------------------------------------------------
 
     #. Upgrade the odoo software:
 
