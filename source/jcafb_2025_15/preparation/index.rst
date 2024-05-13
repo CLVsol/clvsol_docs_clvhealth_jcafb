@@ -28,3 +28,4 @@ Preparação de Dados  [CLVhealth-JCAFB_2025-15]
 
    jcafb_2025_15_preparation_history_010
    jcafb_2025_15_preparation_history_011
+   jcafb_2025_15_preparation_history_012
