@@ -136,8 +136,8 @@ JCAFB-2025-15 (Preparação pré Jornada [2])
 
             * :bi:`Description`: "**Terceiro ano do ciclo de Itapirapuã Paulista**"
 
-[tkl-odoo15-jcafb25-vm] Atualizar/Remover a Fase dos Funcionários
------------------------------------------------------------------
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Atualizar/Remover a Fase dos Funcionários
+----------------------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -312,7 +312,7 @@ JCAFB-2025-15 (Preparação pré Jornada [2])
 
             /etc/init.d/odoo start
 
-    #. [tkl-odoo15-jcafb25-vm] Configurar o parâmetro "**web.base.url**":
+    #. :red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Configurar o parâmetro "**web.base.url**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
