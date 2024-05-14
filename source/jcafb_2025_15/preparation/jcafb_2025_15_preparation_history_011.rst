@@ -20,8 +20,8 @@
 JCAFB-2025-15 (Preparação pré Jornada [2])
 ==========================================
 
-[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-11a)
------------------------------------------------------------------------------------------------------
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-11a)
+----------------------------------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
 
@@ -136,8 +136,8 @@ JCAFB-2025-15 (Preparação pré Jornada [2])
 
             * :bi:`Description`: "**Terceiro ano do ciclo de Itapirapuã Paulista**"
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Atualizar/Remover a Fase dos Funcionários
-----------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Atualizar/Remover a Fase dos Funcionários
+-----------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
