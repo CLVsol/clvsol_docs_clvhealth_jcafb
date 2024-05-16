@@ -17,7 +17,7 @@
 .. role:: bi
 
 ==========================================
-JCAFB-2025-15 (Preparação pré Jornada [5])
+JCAFB-2025-15 (Preparação pré Jornada [4])
 ==========================================
 
 :bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-15a)
