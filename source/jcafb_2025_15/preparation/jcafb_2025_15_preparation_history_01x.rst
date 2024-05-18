@@ -121,21 +121,6 @@ JCAFB-2025-15 (Preparação pré Jornada [2])
 
             #. Utilize o botão :bi:`Employee History Update` para executar a Ação.
 
-[tkl-odoo15-jcafb25-vm] Criar a "*Phase*" (**2025**) para a *CLVhealth-JCAFB-2025-15*
-----------------------------------------------------------------------------------------
-
-    #. Acessar a *View* *Global Settings*:
-
-        * Menu de acesso:
-
-            * :bi:`Base` » :bi:`Configurations` » :bi:`Phases`
-
-        #. Criar um novo Registro:
-
-            * :bi:`Phase`: "**JCAFB-2025**"
-
-            * :bi:`Description`: "**Terceiro ano do ciclo de Itapirapuã Paulista**"
-
 [tkl-odoo15-jcafb25-vm] Atualizar/Remover a Fase dos Funcionários
 -----------------------------------------------------------------
 
