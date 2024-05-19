@@ -20,8 +20,8 @@
 JCAFB-2025-15 (Preparação pré Jornada [5])
 ==========================================
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-15a)
-----------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-19a)
+-----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
 
@@ -44,22 +44,22 @@ JCAFB-2025-15 (Preparação pré Jornada [5])
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025_15_2024-05-15a.sql.gz
+            # gzip -d clvhealth_jcafb_2025_15_2024-05-19a.sql.gz
 
             dropdb -i clvhealth_jcafb_2025_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
-            psql -f clvhealth_jcafb_2025_15_2024-05-15a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2025_15_2024-05-19a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2025_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-15a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-19a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-15a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-19a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
 
@@ -97,8 +97,8 @@ JCAFB-2025-15 (Preparação pré Jornada [5])
 
         #. Salvar o registro editado.
 
-[tkl-odoo15-jcafb25-vm] Executar a Ação "Document Code Pool Item Setup" para "(Global) Document Code Pool"
-----------------------------------------------------------------------------------------------------------
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Executar a Ação "Document Code Pool Item Setup" para "(Global) Document Code Pool"
+---------------------------------------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Document Code Pool Item Setup` para :bi:`(Global) Document Code Pool`:
 
