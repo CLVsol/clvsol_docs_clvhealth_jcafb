@@ -97,8 +97,8 @@ JCAFB-2025-15 (Preparação pré Jornada [5])
 
         #. Salvar o registro editado.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Executar a Ação "Document Code Pool Item Setup" para "(Global) Document Code Pool"
----------------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Executar a Ação "Document Code Pool Item Setup" para "(Global) Document Code Pool"
+----------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Document Code Pool Item Setup` para :bi:`(Global) Document Code Pool`:
 
@@ -349,7 +349,7 @@ JCAFB-2025-15 (Preparação pré Jornada [5])
 
             #. Utilize o botão :bi:`Code Pool Item Get` para executar a Ação.
 
-[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-16a)
+[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-19b)
 -------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
@@ -375,16 +375,16 @@ JCAFB-2025-15 (Preparação pré Jornada [5])
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-05-16a.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-05-19b.sql
 
-            gzip clvhealth_jcafb_2025_15_2024-05-16a.sql
-            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-05-16a.sql
+            gzip clvhealth_jcafb_2025_15_2024-05-19b.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-05-19b.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-16a.tar.gz clvhealth_jcafb_2025_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-19b.tar.gz clvhealth_jcafb_2025_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-16a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-19b.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
 
@@ -404,17 +404,17 @@ JCAFB-2025-15 (Preparação pré Jornada [5])
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2025_15_2024-05-16a.sql
-        * /opt/odoo/clvhealth_jcafb_2025_15_2024-05-16a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-16a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-16a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-05-19b.sql
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-05-19b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-19b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-19b.tar.gz
 
-.. index:: clvhealth_jcafb_2025_15_2024-05-16a.sql
-.. index:: clvhealth_jcafb_2025_15_2024-05-16a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2025_15_2024-05-16a
-.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-16a
+.. index:: clvhealth_jcafb_2025_15_2024-05-19b.sql
+.. index:: clvhealth_jcafb_2025_15_2024-05-19b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025_15_2024-05-19b
+.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-19b
 
-[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-16a)
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-19b)
 -----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
@@ -438,22 +438,22 @@ JCAFB-2025-15 (Preparação pré Jornada [5])
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025_15_2024-05-16a.sql.gz
+            # gzip -d clvhealth_jcafb_2025_15_2024-05-19b.sql.gz
 
             dropdb -i clvhealth_jcafb_2025_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
-            psql -f clvhealth_jcafb_2025_15_2024-05-16a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2025_15_2024-05-19b.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2025_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-16a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-19b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-16a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-19b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
 
