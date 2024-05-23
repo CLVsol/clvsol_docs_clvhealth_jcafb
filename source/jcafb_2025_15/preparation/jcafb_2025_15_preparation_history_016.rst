@@ -250,8 +250,8 @@ JCAFB-2025-15 (Preparação pré Jornada [7])
 .. index:: filestore_clvhealth_jcafb_2025_15_2024-05-22a
 .. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-22a
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-22a)
-----------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-22a)
+-----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
 
@@ -327,6 +327,48 @@ JCAFB-2025-15 (Preparação pré Jornada [7])
 
         #. Salvar o registro editado.
 
+[tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Person (Aux)`
+-----------------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Person (Aux)`:
+
+        #. Acessar a *view* :bi:`Sreet Pattern Matches`:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity` » :bi:`Sreet Pattern Matches`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar todas os :bi:`Sreet Pattern Matches` referentes a "**clv.patient_aux**" (**797**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Person (Aux)`
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Person (Aux)`:
+
+        #. Acessar a *view* :bi:`Contact Information Pattern Matches`:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity` » :bi:`Contact Information Pattern Matches`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar todas os :bi:`Contact Information Pattern Matches` referentes a "**clv.patient_aux**" (**797**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
 [tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes (Aux)**
 ------------------------------------------------------------
 
@@ -364,6 +406,22 @@ JCAFB-2025-15 (Preparação pré Jornada [7])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
+    #. :red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Verification Outcomes` referentes a registros com :bi:`Action` = **_patient_verification_patient_aux**: 
+
+        #. Acessar a *view* :bi:`Verification Outcomes`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification Outcomes`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Action`
+
+        #. Selecionar todas os :bi:`Verification Outcomes` com :bi:`Action` = **_patient_verification_patient_aux** (**1646**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
 [tkl-odoo15-jcafb25-vm] Executar a Verificação de todos os Pacientes
 --------------------------------------------------------------------
 
@@ -383,5 +441,147 @@ JCAFB-2025-15 (Preparação pré Jornada [7])
             * Parâmetros utilizados:
 
             #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-22b)
+-------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-05-22b.sql
+
+            gzip clvhealth_jcafb_2025_15_2024-05-22b.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-05-22b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-22b.tar.gz clvhealth_jcafb_2025_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-22b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-05-22b.sql
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-05-22b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-22b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-22b.tar.gz
+
+.. index:: clvhealth_jcafb_2025_15_2024-05-22b.sql
+.. index:: clvhealth_jcafb_2025_15_2024-05-22b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025_15_2024-05-22b
+.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-22b
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-22b)
+----------------------------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2025_15_2024-05-22b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-05-22b.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-05-22b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-22b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. :red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb25-vm**".
+
+        #. Salvar o registro editado.
 
 .. toctree::   :maxdepth: 2
