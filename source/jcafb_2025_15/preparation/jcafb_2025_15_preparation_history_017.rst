@@ -306,4 +306,102 @@ JCAFB-2025-15 (Preparação pré Jornada [8])
 
         #. Salvar o registro editado.
 
+:red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Residence`
+--------------------------------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Residence`:
+
+        #. Acessar a *view* :bi:`Sreet Pattern Matches`:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity` » :bi:`Sreet Pattern Matches`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar todas os :bi:`Sreet Pattern Matches` referentes a "**clv.residence**" (**332**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Residence`
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Residence`:
+
+        #. Acessar a *view* :bi:`Contact Information Pattern Matches`:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity` » :bi:`Contact Information Pattern Matches`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Refers to (Model)`
+
+        #. Selecionar todas os :bi:`Contact Information Pattern Matches` referentes a "**clv.residence**" (**327**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Excluir todas as **Residence History**
+--------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todas as **Residence History**:
+
+        #. Acessar a *view* **Residence History**:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residence Histories`
+
+        #. Selecionar todas as :bi:`Residence History` (**447**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Excluir todas as **Residências**
+--------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todas as **Residências**:
+
+        #. Acessar a *view* **Contatos**:
+
+            * Menu de acesso:
+
+                * **Contatos** » **Contatos**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address Type` caso já não esteja ativado.
+
+        #. Selecionar todas as :bi:`Residences` (**332**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todas as :bi:`Verification Outcomes` referentes a registros de :bi:`Residence`:
+
+        #. Acessar a *view* :bi:`Verification Outcomes`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification Outcomes`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Model Name`
+
+        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.residence**" (**1646**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
