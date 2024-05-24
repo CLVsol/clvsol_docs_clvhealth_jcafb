@@ -327,12 +327,12 @@ JCAFB-2025-15 (Preparação pré Jornada [7])
 
         #. Salvar o registro editado.
 
-[tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Person (Aux)`
------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Patient (Aux)`
+------------------------------------------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
-    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Person (Aux)`:
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Sreet Pattern Matches` referentes a registros de :bi:`Patient (Aux)`:
 
         #. Acessar a *view* :bi:`Sreet Pattern Matches`:
 
@@ -348,12 +348,12 @@ JCAFB-2025-15 (Preparação pré Jornada [7])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-[tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Person (Aux)`
------------------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Patient (Aux)`
+--------------------------------------------------------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
-    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Person (Aux)`:
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Contact Information Pattern Matches` referentes a registros de :bi:`Patient (Aux)`:
 
         #. Acessar a *view* :bi:`Contact Information Pattern Matches`:
 
@@ -390,7 +390,7 @@ JCAFB-2025-15 (Preparação pré Jornada [7])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:`Person (Aux)`:
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:`Patient (Aux)`:
 
         #. Acessar a *view* :bi:`Verification Outcomes`:
 
