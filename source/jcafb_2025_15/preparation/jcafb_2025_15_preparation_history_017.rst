@@ -705,8 +705,8 @@ JCAFB-2025-15 (Preparação pré Jornada [8])
 .. index:: filestore_clvhealth_jcafb_2025_15_2024-05-25a
 .. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-25a
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-25a)
-----------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-25a)
+-----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
 
@@ -908,8 +908,8 @@ JCAFB-2025-15 (Preparação pré Jornada [8])
 .. index:: filestore_clvhealth_jcafb_2025_15_2024-05-26a
 .. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-05-26a
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-26a)
-----------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-26a)
+-----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
 
