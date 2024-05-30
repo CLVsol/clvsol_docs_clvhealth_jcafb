@@ -27,3 +27,4 @@ Migração de Dados [CLVhealth-JCAFB_2025n-15]
    :caption: Conteúdo:
 
    clvsol_filestore_clvhealth_jcafb_init
+   jcafb_2025n_15_migration_history_001
