@@ -27,6 +27,7 @@ Documentação do *CLVhealth-JCAFB*
    :caption: JCAFB-2025:
 
    jcafb_2025_15/index
+   jcafb_2025n_15/index
    jcafb_2025_16/index
    jcafb_2025_17/index
 
