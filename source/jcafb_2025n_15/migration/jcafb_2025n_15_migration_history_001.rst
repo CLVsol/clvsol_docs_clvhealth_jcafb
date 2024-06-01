@@ -3,7 +3,9 @@
     <style> .red {color:red} </style>
     <style> .bred {font-weight: bold; color:red} </style>
     <style> .green {color:green} </style>
+    <style> .bgreen {font-weight: bold; color:green} </style>
     <style> .blue {color:blue} </style>
+    <style> .bblue {font-weight: bold; color:blue} </style>
     <style> .bmaroon {font-weight: bold; color:maroon} </style>
     <style> .borange {font-weight: bold; color:orange} </style>
     <style> .bi {font-weight: bold; font-style: italic} </style>
@@ -11,7 +13,9 @@
 .. role:: red
 .. role:: bred
 .. role:: green
+.. role:: bgreen
 .. role:: blue
+.. role:: bblue
 .. role:: bmaroon
 .. role:: borange
 .. role:: bi
@@ -128,154 +132,158 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-[tkl-odoo15-jcafb25n-vm] Habilitar a instalação do(s) módulo(s) [ver lista] (2024-05-30a)
+[tkl-odoo15-jcafb25n-vm] Habilitar a instalação do(s) módulo(s) [ver lista] (2024-06-01a)
 -----------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25n-vm] Lista de Módulos:
 
+        * (:bblue:`mantidos`)
+        * (:bgreen:`adicionados`)
+        * (:bred:`excluídos`)
+
         #. Odoo Addons:
 
-            * mail
-            * hr
-            * contacts
-            * base_address_city
-            * base_address_extended
-            * survey
+            * :bblue:`mail`
+            * :bblue:`hr`
+            * :bblue:`contacts`
+            * :bblue:`base_address_city`
+            * :bblue:`base_address_extended`
+            * :bblue:`survey`
 
         #. CLVsol Odoo Addons:
 
-            * clv_base
-            * clv_phase
-            * clv_file_system
-            * clv_global_tag
-            * clv_set
-            * clv_pool
-            * clv_employee
-            * clv_employee_history
-            * clv_survey
-            * clv_event
-            * clv_document
-            * clv_document_survey
-            * clv_lab_test
-            * clv_lab_test_survey
-            * clv_partner_entity
-            * clv_residence
-            * clv_residence_history
-            * clv_patient
-            * clv_patient_history
-            * clv_patient_aux
-            * clv_patient_rec
+            * :bblue:`clv_base`
+            * :bblue:`clv_phase`
+            * :bblue:`clv_file_system`
+            * :bblue:`clv_global_tag`
+            * :bblue:`clv_set`
+            * :bblue:`clv_pool`
+            * :bblue:`clv_employee`
+            * :bblue:`clv_employee_history`
+            * :bblue:`clv_survey`
+            * :bblue:`clv_event`
+            * :bblue:`clv_document`
+            * :bblue:`clv_document_survey`
+            * :bblue:`clv_lab_test`
+            * :bblue:`clv_lab_test_survey`
+            * :bblue:`clv_partner_entity`
+            * :bblue:`clv_residence`
+            * :bblue:`clv_residence_history`
+            * :bblue:`clv_patient`
+            * :bblue:`clv_patient_history`
+            * :bblue:`clv_patient_aux`
+            * :bblue:`clv_patient_rec`
 
         #. CLVsol l10n-brazil:
 
-            * clv_l10n_br_base
-            * clv_l10n_br_zip
+            * :bblue:`clv_l10n_br_base`
+            * :bblue:`clv_l10n_br_zip`
 
         #. CLVsol Odoo Addons - Brazilian Localization:
 
-            * clv_partner_entity_l10n_br
-            * clv_residence_l10n_br
-            * clv_patient_l10n_br
-            * clv_patient_aux_l10n_br
-            * clv_patient_rec_l10n_br
+            * :bblue:`clv_partner_entity_l10n_br`
+            * :bblue:`clv_residence_l10n_br`
+            * :bblue:`clv_patient_l10n_br`
+            * :bblue:`clv_patient_aux_l10n_br`
+            * :bblue:`clv_patient_rec_l10n_br`
 
         #. CLVsol Odoo Addons - JCAFB customizations:
 
-            * clv_base_jcafb
-            * clv_employee_jcafb
-            * clv_event_jcafb
-            * clv_document_jcafb
-            * clv_document_pool_jcafb
-            * clv_lab_test_jcafb
-            * clv_lab_test_pool_jcafb
-            * clv_residence_jcafb
-            * clv_residence_pool_jcafb
-            * clv_patient_jcafb
-            * clv_patient_pool_jcafb
-            * clv_patient_aux_jcafb
-            * clv_patient_rec_jcafb
+            * :bblue:`clv_base_jcafb`
+            * :bblue:`clv_employee_jcafb`
+            * :bblue:`clv_event_jcafb`
+            * :bblue:`clv_document_jcafb`
+            * :bblue:`clv_document_pool_jcafb`
+            * :bblue:`clv_lab_test_jcafb`
+            * :bblue:`clv_lab_test_pool_jcafb`
+            * :bblue:`clv_residence_jcafb`
+            * :bblue:`clv_residence_pool_jcafb`
+            * :bblue:`clv_patient_jcafb`
+            * :bblue:`clv_patient_pool_jcafb`
+            * :bblue:`clv_patient_aux_jcafb`
+            * :bblue:`clv_patient_rec_jcafb`
 
-        #.  CLVsol Odoo Addons - Log:
+        #. CLVsol Odoo Addons - Log:
 
-            * clv_global_log
+            * :bblue:`clv_global_log`
 
         #. CLVsol Odoo Addons - Log - JCAFB customizations:
 
-            * clv_document_log_jcafb
-            * clv_lab_test_log_jcafb
-            * clv_partner_entity_log_jcafb
-            * clv_residence_log_jcafb
-            * clv_patient_log_jcafb
-            * clv_patient_aux_log_jcafb
-            * clv_patient_rec_log_jcafb
+            * :bblue:`clv_document_log_jcafb`
+            * :bblue:`clv_lab_test_log_jcafb`
+            * :bblue:`clv_partner_entity_log_jcafb`
+            * :bblue:`clv_residence_log_jcafb`
+            * :bblue:`clv_patient_log_jcafb`
+            * :bblue:`clv_patient_aux_log_jcafb`
+            * :bblue:`clv_patient_rec_log_jcafb`
 
         #. CLVsol Odoo Addons - Summary:
 
-            * clv_summary
+            * :bblue:`clv_summary`
 
         #. CLVsol Odoo Addons - Summary - JCAFB customizations:
 
-            * clv_summary_jcafb
-            * clv_employee_summary_jcafb
-            * clv_residence_summary_jcafb
-            * clv_patient_summary_jcafb
-            * clv_patient_aux_summary_jcafb
+            * :bblue:`clv_summary_jcafb`
+            * :bblue:`clv_employee_summary_jcafb`
+            * :bblue:`clv_residence_summary_jcafb`
+            * :bblue:`clv_patient_summary_jcafb`
+            * :bblue:`clv_patient_aux_summary_jcafb`
 
         #. CLVsol Odoo Addons - Verification:
 
-            * clv_verification
+            * :bblue:`clv_verification`
 
         #. CLVsol Odoo Addons - Verification - JCAFB customizations:
 
-            * clv_verification_jcafb
-            * clv_verification_log_jcafb
-            * clv_partner_entity_verification_jcafb
-            * clv_patient_rec_verification_jcafb
-            * clv_residence_verification_jcafb
-            * clv_patient_verification_jcafb
-            * clv_patient_aux_verification_jcafb
-            * clv_lab_test_verification_jcafb
+            * :bblue:`clv_verification_jcafb`
+            * :bblue:`clv_verification_log_jcafb`
+            * :bblue:`clv_partner_entity_verification_jcafb`
+            * :bblue:`clv_patient_rec_verification_jcafb`
+            * :bblue:`clv_residence_verification_jcafb`
+            * :bblue:`clv_patient_verification_jcafb`
+            * :bblue:`clv_patient_aux_verification_jcafb`
+            * :bblue:`clv_lab_test_verification_jcafb`
 
         #. CLVsol Odoo Addons - Export:
 
-            * clv_export
-            * clv_document_export
-            * clv_lab_test_export
-            * clv_patient_export
+            * :bblue:`clv_export`
+            * :bblue:`clv_document_export`
+            * :bblue:`clv_lab_test_export`
+            * :bblue:`clv_patient_export`
 
         #. CLVsol Odoo Addons - Export - JCAFB customizations:
 
-            * clv_export_jcafb
-            * clv_document_export_jcafb
-            * clv_lab_test_export_jcafb
-            * clv_patient_export_jcafb
+            * :bblue:`clv_export_jcafb`
+            * :bblue:`clv_document_export_jcafb`
+            * :bblue:`clv_lab_test_export_jcafb`
+            * :bblue:`clv_patient_export_jcafb`
 
         #. CLVsol Odoo Addons - Process:
 
-            * clv_processing
+            * :bblue:`clv_processing`
 
         #. CLVsol Odoo Addons - Process - JCAFB customizations:
 
-            * clv_processing_jcafb
+            * :bblue:`clv_processing_jcafb`
 
         #. CLVsol Odoo Addons - Sync:
 
-            * clv_external_sync
-            * clv_base_sync
-            * clv_phase_sync
-            * clv_file_system_sync
-            * clv_global_tag_sync
-            * clv_set_sync
-            * clv_employee_sync
-            * clv_employee_history_sync
-            * clv_survey_sync
+            * :bblue:`clv_external_sync`
+            * :bblue:`clv_base_sync`
+            * :bblue:`clv_phase_sync`
+            * :bblue:`clv_file_system_sync`
+            * :bblue:`clv_global_tag_sync`
+            * :bblue:`clv_set_sync`
+            * :bblue:`clv_employee_sync`
+            * :bblue:`clv_employee_history_sync`
+            * :bblue:`clv_survey_sync`
 
         #. CLVsol Odoo Addons - Sync - JCAFB customizations:
 
-            * clv_external_sync_jcafb
-            * clv_employee_sync_jcafb
+            * :bblue:`clv_external_sync_jcafb`
+            * :bblue:`clv_employee_sync_jcafb`
 
-[tkl-odoo15-jcafb25n-vm] Criar uma nova instância do *CLVhealth-JCAFB-2025n-15* (2024-05-30a)
+[tkl-odoo15-jcafb25n-vm] Criar uma nova instância do *CLVhealth-JCAFB-2025n-15* (2024-06-01a)
 ---------------------------------------------------------------------------------------------
 
     #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
@@ -327,7 +335,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025n_15"
 
-        * **Execution time: 0:11:25.901**
+        * **Execution time: 0:12:03.715**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
 
@@ -345,12 +353,12 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
             /etc/init.d/odoo start
 
-[tkl-odoo15-jcafb25n-vm] Criar o *External Sync Host* "https://192.168.25.210"
-------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25n-vm] Criar o *External Sync Host* "https://192.168.25.213" [tkl-odoo15-jcafb25-vm-17]
+---------------------------------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
 
-    #. Criar o *External Sync Host* **https://192.168.25.210**:
+    #. Criar o *External Sync Host* **https://192.168.25.213**:
 
         * Menu de acesso:
             
@@ -358,10 +366,10 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
         * Parâmetros utilizados:
             
-            * External Host Name: "**https://192.168.25.210**"
+            * External Host Name: "**https://192.168.25.213**"
             * External Database Name: "**clvhealth_jcafb_2025_15**"
             * External User: "**admin**"
-            * External User Password: "*******"
+            * External User Password: "*******":bblue``
 
 [tkl-odoo15-jcafb25n-vm] Configurar todos os "*External Sync Schedules*"
 ------------------------------------------------------------------------
@@ -380,10 +388,10 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
         * Parâmetros alterados:
             
-            * *External Host*: "**https://192.168.25.210**"
-            * *Max Task Registers*: "**300.000**"
+            * *External Host*: "**https://192.168.25.213**"
+            * *Max Task Registers*: "**300.000**":bblue``
 
-[tkl-odoo15-jcafb25n-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-30a)
+[tkl-odoo15-jcafb25n-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01a)
 --------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
@@ -409,16 +417,16 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-05-30a.sql
+            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-01a.sql
 
-            gzip clvhealth_jcafb_2025n_15_2024-05-30a.sql
-            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-05-30a.sql
+            gzip clvhealth_jcafb_2025n_15_2024-06-01a.sql
+            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-01a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-05-30a.tar.gz clvhealth_jcafb_2025n_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01a.tar.gz clvhealth_jcafb_2025n_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-05-30a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
 
@@ -438,17 +446,17 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-05-30a.sql
-        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-05-30a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-05-30a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-05-30a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-01a.sql
+        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-01a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01a.tar.gz
 
-.. index:: clvhealth_jcafb_2025n_15_2024-05-30a.sql
-.. index:: clvhealth_jcafb_2025n_15_2024-05-30a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2025n_15_2024-05-30a
-.. index:: clvsol_filestore_clvhealth_jcafb_2025n_15_2024-05-30a
+.. index:: clvhealth_jcafb_2025n_15_2024-06-01a.sql
+.. index:: clvhealth_jcafb_2025n_15_2024-06-01a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025n_15_2024-06-01a
+.. index:: clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01a
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25n-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-05-30a)
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25n-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01a)
 -----------------------------------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
@@ -472,22 +480,22 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025n_15_2024-05-30a.sql.gz
+            # gzip -d clvhealth_jcafb_2025n_15_2024-06-01a.sql.gz
 
             dropdb -i clvhealth_jcafb_2025n_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025n_15
-            psql -f clvhealth_jcafb_2025n_15_2024-05-30a.sql -d clvhealth_jcafb_2025n_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2025n_15_2024-06-01a.sql -d clvhealth_jcafb_2025n_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2025n_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-05-30a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-05-30a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
 
@@ -567,7 +575,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
 
-            * :bi:`Execution time: 0:00:01.312`
+            * :bi:`Execution time: 0:00:06.997`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
 
@@ -581,7 +589,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
             exit
 
-            /etc/init.d/odoo start
+            /etc/init.d/odoo start:bblue``
 
 :borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "res.users [Migration]"
 ----------------------------------------------------------------------------------------------------
@@ -625,7 +633,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
 
-            * :bi:`Execution time: 0:02:47.018`
+            * :bi:`Execution time: 0:02:45.094`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
 
@@ -639,7 +647,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
             exit
 
-            /etc/init.d/odoo start
+            /etc/init.d/odoo start:bblue``
 
 :borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "res.users (res.users) [Rec]"
 ----------------------------------------------------------------------------------------------------------
@@ -683,7 +691,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
 
-            * :bi:`Execution time: 0:02:47.018`
+            * :bi:`Execution time: 0:00:10.616`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
 
@@ -697,7 +705,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
             exit
 
-            /etc/init.d/odoo start
+            /etc/init.d/odoo start:bblue``
 
 :borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "clv.phase (clv.phase) [Sync]"
 -----------------------------------------------------------------------------------------------------------
@@ -741,7 +749,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
 
-            * :bi:`Execution time: 0:00:01.221`
+            * :bi:`Execution time: 0:00:01.083`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
 
@@ -755,7 +763,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
             exit
 
-            /etc/init.d/odoo start
+            /etc/init.d/odoo start:bblue``
 
 :borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "clv.global_settings (current_phase_id) [Sync]"
 ----------------------------------------------------------------------------------------------------------------------------
@@ -799,7 +807,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * Menu de acesso:
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
 
-            * :bi:`Execution time: 0:00:01.312`
+            * :bi:`Execution time: 0:00:01.215`
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
 
@@ -813,7 +821,149 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
             exit
 
+            /etc/init.d/odoo start:bblue``
+
+[tkl-odoo15-jcafb25n-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01b)
+--------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            #
+
+            ssh tkl-odoo15-jcafb25n-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25n-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-01b.sql
+
+            gzip clvhealth_jcafb_2025n_15_2024-06-01b.sql
+            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-01b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz clvhealth_jcafb_2025n_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
             /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-01b.sql
+        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-01b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
+
+.. index:: clvhealth_jcafb_2025n_15_2024-06-01b.sql
+.. index:: clvhealth_jcafb_2025n_15_2024-06-01b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025n_15_2024-06-01b
+.. index:: clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25n-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01b)
+-----------------------------------------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            #
+
+            ssh tkl-odoo15-jcafb25n-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25n-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2025n_15_2024-06-01b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025n_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025n_15
+            psql -f clvhealth_jcafb_2025n_15_2024-06-01b.sql -d clvhealth_jcafb_2025n_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025n_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. :red:`(Not Used)` [tkl-odoo15-jcafb25n-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb25n-vm**".
+
+        #. Salvar o registro editado.
 
 [tkl-odoo15-jcafb25n-vm] Desabilitar os "*External Sync Batch Members*" não necessários
 ---------------------------------------------------------------------------------------
