@@ -456,8 +456,8 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 .. index:: filestore_clvhealth_jcafb_2025n_15_2024-06-01a
 .. index:: clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01a
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25n-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01a)
------------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25n-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01a)
+------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
 
@@ -533,297 +533,22 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
         #. Salvar o registro editado.
 
-:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "clv.global_settings (current_filestore_path) [Sync])"
------------------------------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25n-vm] Executar o *External Sync Batch* "*Default Batch [00]*"
+--------------------------------------------------------------------------------
 
-    #. :red:`(Not Used)` Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.model**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.model**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
-
-            * Parâmetros alterados:
-                * *External Synchronization*: **Set** "**Updated**"
-
-    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e executar o *Odoo* no modo manual:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            #
-
-            ssh tkl-odoo15-jcafb25n-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. Executar o :bi:`External Sync Schedule` "**clv.global_settings (current_filestore_path) [Sync])**":
+    #. Executar o :bi:`External Sync Batch` "**Default Batch [00]**":
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
 
-        #. :red:`(Not Used)` Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**clv.global_settings (current_filestore_path) [Sync])**".
-
-        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.global_settings (current_filestore_path) [Sync])**":
+        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [00]**":
 
             * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
-
-            * :bi:`Execution time: 0:00:06.997`
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            # 
-
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start:bblue``
-
-:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "res.users [Migration]"
-----------------------------------------------------------------------------------------------------
-
-    #. :red:`(Not Used)` Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**res.users**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**res.model**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
-
-            * Parâmetros alterados:
-                * *External Synchronization*: **Set** "**Updated**"
-
-    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e executar o *Odoo* no modo manual:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            #
-
-            ssh tkl-odoo15-jcafb25n-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. Executar o :bi:`External Sync Schedule` "**res.users [Migration]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. :red:`(Not Used)` Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**res.users [Migration]**".
-
-        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**res.users [Migration]**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
-
-            * :bi:`Execution time: 0:02:45.094`
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            # 
-
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start:bblue``
-
-:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "res.users (res.users) [Rec]"
-----------------------------------------------------------------------------------------------------------
-
-    #. :red:`(Not Used)` Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**res.users**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**res.users**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
-
-            * Parâmetros alterados:
-                * *External Synchronization*: **Set** "**Updated**"
-
-    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e executar o *Odoo* no modo manual:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            #
-
-            ssh tkl-odoo15-jcafb25n-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. Executar o :bi:`External Sync Schedule` "**res.users (res.users) [Rec]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. :red:`(Not Used)` Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**res.users (res.users) [Rec]**".
-
-        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**res.users (res.users) [Rec]**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
-
-            * :bi:`Execution time: 0:00:10.616`
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            # 
-
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start:bblue``
-
-:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "clv.phase (clv.phase) [Sync]"
------------------------------------------------------------------------------------------------------------
-
-    #. :red:`(Not Used)` Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.phase**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.phase**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
-
-            * Parâmetros alterados:
-                * *External Synchronization*: **Set** "**Updated**"
-
-    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e executar o *Odoo* no modo manual:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            #
-
-            ssh tkl-odoo15-jcafb25n-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. Executar o :bi:`External Sync Schedule` "**clv.phase (clv.phase) [Sync]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. :red:`(Not Used)` Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**clv.phase (clv.phase) [Sync]**".
-
-        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.phase (clv.phase) [Sync]**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
-
-            * :bi:`Execution time: 0:00:01.083`
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            # 
-
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start:bblue``
-
-:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "clv.global_settings (current_phase_id) [Sync]"
-----------------------------------------------------------------------------------------------------------------------------
-
-    #. :red:`(Not Used)` Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.model**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.model**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
-
-            * Parâmetros alterados:
-                * *External Synchronization*: **Set** "**Updated**"
-
-    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e executar o *Odoo* no modo manual:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            #
-
-            ssh tkl-odoo15-jcafb25n-vm -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. Executar o :bi:`External Sync Schedule` "**clv.global_settings (current_phase_id) [Sync]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. :red:`(Not Used)` Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**clv.global_settings (current_phase_id) [Sync]**".
-
-        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**clv.global_settings (current_phase_id) [Sync]**":
-
-            * Menu de acesso:
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
-
-            * :bi:`Execution time: 0:00:01.215`
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
-
-        ::
-
-            # ***** tkl-odoo15-jcafb25n-vm
-            # 
-
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start:bblue``
-
-[tkl-odoo15-jcafb25n-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01b)
+                
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
+
+            * :bi:`Execution time: 0:14:02.627`
+            
+[tkl-odoo15-jcafb25n-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-03a)
 --------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
@@ -849,16 +574,16 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-01b.sql
+            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-03a.sql
 
-            gzip clvhealth_jcafb_2025n_15_2024-06-01b.sql
-            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-01b.sql
+            gzip clvhealth_jcafb_2025n_15_2024-06-03a.sql
+            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-06-03a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz clvhealth_jcafb_2025n_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-03a.tar.gz clvhealth_jcafb_2025n_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-03a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
 
@@ -878,17 +603,17 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-01b.sql
-        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-01b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-03a.sql
+        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-06-03a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-03a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-03a.tar.gz
 
-.. index:: clvhealth_jcafb_2025n_15_2024-06-01b.sql
-.. index:: clvhealth_jcafb_2025n_15_2024-06-01b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2025n_15_2024-06-01b
-.. index:: clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b
+.. index:: clvhealth_jcafb_2025n_15_2024-06-03a.sql
+.. index:: clvhealth_jcafb_2025n_15_2024-06-03a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025n_15_2024-06-03a
+.. index:: clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-03a
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25n-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-01b)
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25n-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-06-03a)
 -----------------------------------------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25n-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e paralizar o *Odoo*:
@@ -912,22 +637,22 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025n_15_2024-06-01b.sql.gz
+            # gzip -d clvhealth_jcafb_2025n_15_2024-06-03a.sql.gz
 
             dropdb -i clvhealth_jcafb_2025n_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025n_15
-            psql -f clvhealth_jcafb_2025n_15_2024-06-01b.sql -d clvhealth_jcafb_2025n_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2025n_15_2024-06-03a.sql -d clvhealth_jcafb_2025n_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2025n_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-06-03a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-01b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-06-03a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
 
@@ -964,6 +689,135 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * "**http://tkl-odoo15-jcafb25n-vm**".
 
         #. Salvar o registro editado.
+
+:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "Schedule Name"
+--------------------------------------------------------------------------------------------
+
+    #. :red:`(Not Used)` Marcar como :bi:`Updated` o :bi:`External Synchronization` de todos os :bi:`External Syncs` do *Model* "**clv.model**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
+
+        #. Configurar, com a ajuda da ação :bi:`External Sync Mass Edit`, todos os :bi:`External Syncs` do *Model* "**clv.model**":
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Syncs` » **Ação** » :bi:`External Sync Mass Edit`
+
+            * Parâmetros alterados:
+                * *External Synchronization*: **Set** "**Updated**"
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25n-vm** e executar o *Odoo* no modo manual:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            #
+
+            ssh tkl-odoo15-jcafb25n-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. Executar o :bi:`External Sync Schedule` "**Schedule Name**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
+
+        #. :red:`(Not Used)` Atualizar os :bi:`Object Fields` do :bi:`External Sync Schedule` "**Schedule Name**".
+
+        #. Executar a ação :bi:`External Sync Schedule Exec` para o "**Schedule Name**":
+
+            * Menu de acesso:
+                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Schedules` » **Ação** » :bi:`External Sync Schedule Exec`
+
+            * :bi:`Execution time: xxx`
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo padrão:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25n-vm
+            # 
+
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start:bblue``
+
+:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar individualmente os *External Sync Schedules*
+----------------------------------------------------------------------------------------------
+
+    * **Default Batch [00]**:
+
+        #. **clv.global_settings (current_filestore_path) [Sync])**
+
+        #. **res.users [Migration]**
+
+        #. **res.users (res.users) [Rec]**
+
+        #. **clv.phase (clv.phase) [Sync]**
+
+        #. **clv.global_settings (current_phase_id) [Sync]**
+
+        #. **clv.file_system.directory (clv.file_system.directory) [Rec]**
+
+        #. **clv.file_system.directory (clv.file_system.directory) [Sync]**
+
+        #. **clv.global_tag (clv.global_tag) [Sync]**
+
+        #. **clv.set (clv.set) [Sync]**
+
+        #. **clv.set.element (clv.set.element) [1] [Inc]**
+
+        #. **hr.department (hr.department) [1] [Rec]**
+
+        #. **hr.department (hr.department) [2] [Sync]**
+
+        #. **hr.job (hr.job) [Sync]**
+
+        #. **hr.employee (hr.employee) [1] [Rec]**
+
+        #. **hr.employee (hr.employee) [2] [Sync]**
+
+        #. **hr.employee.history.history (hr.employee.history.history) [Sync]**
+
+        #. **survey.survey (survey.survey) [Sync]**
+
+        #. **survey.question (survey.question) [1] [Sync]**
+
+        #. **survey.question (survey.question) [2] [Sync]**
+
+        #. **survey.question.answer (survey.question.answer) [Sync]**
+
+        #. **survey.user_input (survey.user_input) [1] [Inc]**
+
+    * **Default Batch [02]**:
+
+        #. **clv.set.element (clv.set.element) [2] [Sync]**
+
+        #. **survey.user_input (survey.user_input) [2] [Sync]**
+
+    * **Default Batch [10]**:
+
+        #. **survey.user_input.line (survey.user_input.line) [1] [Sync]**
+
+        #. **survey.user_input.line (survey.user_input.line) [2] [Sync]**
+
+        #. **survey.user_input.line (survey.user_input.line) [3] [Sync]**
+
+        #. **survey.user_input.line (survey.user_input.line) [4] [Sync]**
+
+        #. **survey.user_input.line (survey.user_input.line) [5] [Sync]**
+
+        #. **survey.user_input.line (survey.user_input.line) [6] [Sync]**
+
+        #. **survey.user_input.line (survey.user_input.line) [7] [Sync]**
+
+        #. **survey.user_input.line (survey.user_input.line) [8] [Sync]**
 
 [tkl-odoo15-jcafb25n-vm] Desabilitar os "*External Sync Batch Members*" não necessários
 ---------------------------------------------------------------------------------------
@@ -1054,21 +908,6 @@ Lista de *Schedules* instalados (00-25n-15)
         .. #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [3]
         .. #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [4]
 
-[tkl-odoo15-jcafb25n-vm] Executar o *External Sync Batch* "*Default Batch [00]*"
---------------------------------------------------------------------------------
-
-    #. Executar o :bi:`External Sync Batch` "**Default Batch [00]**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25n-vm <https://tkl-odoo15-jcafb25n-vm>`_
-
-        #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [00]**":
-
-            * Menu de acesso:
-                
-                * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
-
-            * :bi:`Execution time: 0:07:12.952`
-            
 Lista de *Schedules* instalados (02-25n-15)
 -------------------------------------------
 
