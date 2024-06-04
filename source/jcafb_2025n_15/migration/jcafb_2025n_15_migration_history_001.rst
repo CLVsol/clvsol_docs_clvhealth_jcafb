@@ -132,7 +132,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-[tkl-odoo15-jcafb25n-vm] Habilitar a instalação do(s) módulo(s) [ver lista] (2024-06-01a)
+[tkl-odoo15-jcafb25n-vm] Habilitar a instalação do(s) módulo(s) [ver lista] (2024-06-04a)
 -----------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25n-vm] Lista de Módulos:
@@ -278,10 +278,16 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * :bblue:`clv_employee_history_sync`
             * :bblue:`clv_survey_sync`
 
+            * :bgreen:`clv_event_sync`
+            * :bgreen:`clv_event_sync_jcafb`
+
         #. CLVsol Odoo Addons - Sync - JCAFB customizations:
 
             * :bblue:`clv_external_sync_jcafb`
             * :bblue:`clv_employee_sync_jcafb`
+
+            * :bgreen:`clv_document_sync`
+            * :bgreen:`clv_document_sync_jcafb`
 
 [tkl-odoo15-jcafb25n-vm] Criar uma nova instância do *CLVhealth-JCAFB-2025n-15* (2024-06-01a)
 ---------------------------------------------------------------------------------------------
@@ -690,6 +696,64 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
         #. Salvar o registro editado.
 
+:borange:`(**)` [tkl-odoo15-jcafb25n-vm] Habilitar a instalação e instalar o(s) módulo(s) [ver lista]
+-----------------------------------------------------------------------------------------------------
+
+    #. Lista de Módulos:
+
+        * clv_event_sync
+        * clv_event_sync_jcafb
+
+        * clv_document_sync
+        * clv_document_sync_jcafb
+
+    #. **Executar** a instalação do(s) Módulo(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo15-jcafb25n-vm** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb25n-vm (session 1)
+                #
+
+                ssh tkl-odoo15-jcafb25n-vm -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo15-jcafb25n-vm** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb25n-vm (session 2)
+                #
+
+                ssh tkl-odoo15-jcafb25n-vm -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025n_15"
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25n-vm** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo15-jcafb25n-vm (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
 :borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar o *External Sync Schedule* "Schedule Name"
 --------------------------------------------------------------------------------------------
 
@@ -751,73 +815,111 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 :borange:`(**)` [tkl-odoo15-jcafb25n-vm] Executar individualmente os *External Sync Schedules*
 ----------------------------------------------------------------------------------------------
 
+    * (:bblue:`mantidos`)
+    * (:bgreen:`adicionados`)
+    * (:bred:`excluídos`)
+
     * **Default Batch [00]**:
 
-        #. **clv.global_settings (current_filestore_path) [Sync])**
+        #. :bblue:`clv.global_settings (current_filestore_path) [Sync])`
 
-        #. **res.users [Migration]**
+        #. :bblue:`res.users [Migration]`
 
-        #. **res.users (res.users) [Rec]**
+        #. :bblue:`res.users (res.users) [Rec]`
 
-        #. **clv.phase (clv.phase) [Sync]**
+        #. :bblue:`clv.phase (clv.phase) [Sync]`
 
-        #. **clv.global_settings (current_phase_id) [Sync]**
+        #. :bblue:`clv.global_settings (current_phase_id) [Sync]`
 
-        #. **clv.file_system.directory (clv.file_system.directory) [Rec]**
+        #. :bblue:`clv.file_system.directory (clv.file_system.directory) [Rec]`
 
-        #. **clv.file_system.directory (clv.file_system.directory) [Sync]**
+        #. :bblue:`clv.file_system.directory (clv.file_system.directory) [Sync]`
 
-        #. **clv.global_tag (clv.global_tag) [Sync]**
+        #. :bblue:`clv.global_tag (clv.global_tag) [Sync]`
 
-        #. **clv.set (clv.set) [Sync]**
+        #. :bblue:`clv.set (clv.set) [Sync]`
 
-        #. **clv.set.element (clv.set.element) [1] [Inc]**
+        #. :bblue:`clv.set.element (clv.set.element) [1] [Inc]`
 
-        #. **hr.department (hr.department) [1] [Rec]**
+        #. :bblue:`hr.department (hr.department) [1] [Rec]`
 
-        #. **hr.department (hr.department) [2] [Sync]**
+        #. :bblue:`hr.department (hr.department) [2] [Sync]`
 
-        #. **hr.job (hr.job) [Sync]**
+        #. :bblue:`hr.job (hr.job) [Sync]`
 
-        #. **hr.employee (hr.employee) [1] [Rec]**
+        #. :bblue:`hr.employee (hr.employee) [1] [Rec]`
 
-        #. **hr.employee (hr.employee) [2] [Sync]**
+        #. :bblue:`hr.employee (hr.employee) [2] [Sync]`
 
-        #. **hr.employee.history.history (hr.employee.history.history) [Sync]**
+        #. :bblue:`hr.employee.history.history (hr.employee.history.history) [Sync]`
 
-        #. **survey.survey (survey.survey) [Sync]**
+        #. :bblue:`survey.survey (survey.survey) [Sync]`
 
-        #. **survey.question (survey.question) [1] [Sync]**
+        #. :bblue:`survey.question (survey.question) [1] [Sync]`
 
-        #. **survey.question (survey.question) [2] [Sync]**
+        #. :bblue:`survey.question (survey.question) [2] [Sync]`
 
-        #. **survey.question.answer (survey.question.answer) [Sync]**
+        #. :bblue:`survey.question.answer (survey.question.answer) [Sync]`
 
-        #. **survey.user_input (survey.user_input) [1] [Inc]**
+        #. :bblue:`survey.user_input (survey.user_input) [1] [Inc]`
+
+        #. :bgreen:`clv.event (clv.event) [Sync]`
+
+        #. :bgreen:`clv.event.attendee (clv.event.attendee) [1] [Inc]`
+
+        #. :bgreen:`clv.document.category (clv.document.category) [Sync]`
+
+        #. :bgreen:`clv.document.marker (clv.document.marker) [Sync]`
+
+        #. :bgreen:`clv.document.type (clv.document.type) [1] [Inc]`
+
+        #. :bgreen:`clv.document.type.parameter (clv.document.type.parameter) [Sync]`
+
+        #. :bgreen:`clv.document (clv.document) [1] [Inc]`
+
+        #. :bgreen:`clv.document (clv.document) [2] [Inc]`
 
     * **Default Batch [02]**:
 
-        #. **clv.set.element (clv.set.element) [2] [Sync]**
+        #. :bblue:`clv.set.element (clv.set.element) [2] [Sync]`
 
-        #. **survey.user_input (survey.user_input) [2] [Sync]**
+        #. :bblue:`survey.user_input (survey.user_input) [2] [Sync]`
+
+        #. :bgreen:`clv.event.attendee (clv.event.attendee) [2] [Sync]`
+
+        #. :bgreen:`clv.document.type (clv.document.type) [2] [Sync]`
+
+        #. :bgreen:`clv.document (clv.document) [3] [Sync]`
 
     * **Default Batch [10]**:
 
-        #. **survey.user_input.line (survey.user_input.line) [1] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [1] [Sync]`
 
-        #. **survey.user_input.line (survey.user_input.line) [2] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [2] [Sync]`
 
-        #. **survey.user_input.line (survey.user_input.line) [3] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [3] [Sync]`
 
-        #. **survey.user_input.line (survey.user_input.line) [4] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [4] [Sync]`
 
-        #. **survey.user_input.line (survey.user_input.line) [5] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [5] [Sync]`
 
-        #. **survey.user_input.line (survey.user_input.line) [6] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [6] [Sync]`
 
-        #. **survey.user_input.line (survey.user_input.line) [7] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [7] [Sync]`
 
-        #. **survey.user_input.line (survey.user_input.line) [8] [Sync]**
+        #. :bblue:`survey.user_input.line (survey.user_input.line) [8] [Sync]`
+
+    * **Default Batch [20]**:
+
+        #. :bgreen:`clv.document.item (clv.document.item) [1] [Sync]`
+
+        #. :bgreen:`clv.document.item (clv.document.item) [2] [Sync]`
+
+        #. :bgreen:`clv.document.item (clv.document.item) [3] [Sync]`
+
+        #. :bgreen:`clv.document.item (clv.document.item) [4] [Sync]`
+
+        #. :bgreen:`clv.document.item (clv.document.item) [5] [Sync]`
 
 [tkl-odoo15-jcafb25n-vm] Desabilitar os "*External Sync Batch Members*" não necessários
 ---------------------------------------------------------------------------------------
