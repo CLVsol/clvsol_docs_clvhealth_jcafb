@@ -279,15 +279,19 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
             * :bblue:`clv_survey_sync`
 
             * :bgreen:`clv_event_sync`
-            * :bgreen:`clv_event_sync_jcafb`
+            * :bgreen:`clv_document_sync`
+            * :bgreen:`clv_document_survey_sync`
+            * :bgreen:`clv_lab_test_sync`
+            * :bgreen:`clv_lab_test_survey_sync`
 
         #. CLVsol Odoo Addons - Sync - JCAFB customizations:
 
             * :bblue:`clv_external_sync_jcafb`
             * :bblue:`clv_employee_sync_jcafb`
 
-            * :bgreen:`clv_document_sync`
+            * :bgreen:`clv_event_sync_jcafb`
             * :bgreen:`clv_document_sync_jcafb`
+            * :bgreen:`clv_lab_test_sync_jcafb`
 
 [tkl-odoo15-jcafb25n-vm] Criar uma nova instância do *CLVhealth-JCAFB-2025n-15* (2024-06-01a)
 ---------------------------------------------------------------------------------------------
@@ -706,6 +710,11 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
         * clv_document_sync
         * clv_document_sync_jcafb
+        * clv_document_survey_sync
+
+        * clv_lab_test_sync
+        * clv_lab_test_survey_sync
+        * clv_lab_test_sync_jcafb
 
     #. **Executar** a instalação do(s) Módulo(s):
 
@@ -879,6 +888,18 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
 
         #. :bgreen:`clv.document (clv.document) [2] [Inc]`
 
+        #. :bgreen:`clv.lab_test.type (clv.lab_test.type) [1] [Inc]`
+
+        #. :bgreen:`clv.lab_test.type.parameter (clv.lab_test.type.parameter) [Sync]`
+
+        #. :bred:`clv.lab_test.request (clv.lab_test.request) [1] [Inc]`
+
+        #. :bgreen:`clv.lab_test.result (clv.lab_test.result) [1] [Inc]`
+
+        #. :bred:`clv.lab_test.report (clv.lab_test.report) [1] [Inc]`
+
+        #. :bgreen:`clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)`
+
     * **Default Batch [02]**:
 
         #. :bblue:`clv.set.element (clv.set.element) [2] [Sync]`
@@ -890,6 +911,14 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
         #. :bgreen:`clv.document.type (clv.document.type) [2] [Sync]`
 
         #. :bgreen:`clv.document (clv.document) [3] [Sync]`
+
+        #. :bgreen:`clv.lab_test.type (clv.lab_test.type) [2] [Sync]`
+
+        #. :bred:`clv.lab_test.request (clv.lab_test.request) [2] [Sync]`
+
+        #. :bgreen:`clv.lab_test.result (clv.lab_test.result) [2] [Sync]`
+
+        #. :bred:`clv.lab_test.report (clv.lab_test.report) [2] [Sync]`
 
     * **Default Batch [10]**:
 
@@ -920,6 +949,12 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2025n-15]
         #. :bgreen:`clv.document.item (clv.document.item) [4] [Sync]`
 
         #. :bgreen:`clv.document.item (clv.document.item) [5] [Sync]`
+
+    * **Default Batch [30]**:
+
+        #. :bgreen:`clv.lab_test.criterion (clv.lab_test.criterion) [1] [Sync]`
+
+        #. :bgreen:`clv.lab_test.criterion (clv.lab_test.criterion) [2] [Sync]`
 
 [tkl-odoo15-jcafb25n-vm] Desabilitar os "*External Sync Batch Members*" não necessários
 ---------------------------------------------------------------------------------------
