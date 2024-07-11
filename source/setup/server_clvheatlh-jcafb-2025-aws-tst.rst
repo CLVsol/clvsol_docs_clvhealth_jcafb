@@ -16,11 +16,11 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: Criação do Servidor de Produção na AWS clvheatlh-jcafb-2025-aws-tst
+.. index:: Criação do Servidor de Testes na AWS clvheatlh-jcafb-2025-aws-tst
 
-=====================================================================
-Criação do Servidor de Produção na AWS "clvheatlh-jcafb-2025-aws-tst"
-=====================================================================
+===================================================================
+Criação do Servidor de Testes na AWS "clvheatlh-jcafb-2025-aws-tst"
+===================================================================
 
     This project will help you create a server to host the **Odoo 15 (CLVhealth-JCAFB)**, based on an `Odoo <https://www.odoo.com/>`_  appliance, in the AWS infrastructure.
 
@@ -33,7 +33,7 @@ Server preparation (1)
         * Label: **clvheatlh-jcafb-2025-aws-tst**
         * Private Key File: **clvheatlh-jcafb-2025-aws-tst.pem**
 
-    #. Create, via TrunKey Hub, a new Elastic IP:
+    #. Create, via AWS Console, a new Elastic IP:
 
         * Region: **Virginia (East USA)**
         * Label: **clvheatlh-jcafb-2025-aws-tst**
@@ -56,7 +56,7 @@ Server preparation (1)
 
         * Root account:
 
-            * Root password: "*******" :red:`(It is not working for version 17.1)`
+            * Root password: "*******" :red:`(It is not working for version 18.0)`
             * SSH key-pair: **clvheatlh-jcafb-2025-aws-tst**
 
         * Application settings:
@@ -66,13 +66,13 @@ Server preparation (1)
 
         * Advanced configuration:
 
-            * Root file system size (GB): **32**
+            * Root file system size (GB): **30**
             * Availability Zone: **Automatic**
             * Install Security Updates: **Enabled**
             * Configure Security Alerts: **Enabled**
-            * Auto-associate Elastic IP: **clvheatlh-jcafb-2025-aws-tst**
+            * Auto-associate Elastic IP: **None**
 
-        * Security Group: **turnkey-odoo-9985** (Inbound)::
+        * Security Group: **turnkey-odoo-4a73** (Inbound)::
 
             Port (Service)   Source
             -------------------------------------
@@ -80,7 +80,6 @@ Server preparation (1)
             22(SSH)          0.0.0.0/0
             80(HTTP)         0.0.0.0/0
             443(HTTPS)       0.0.0.0/0
-            12320(Web Shell) 0.0.0.0/0  (enabled)
             12321(Webmin)    0.0.0.0/0  (enabled)
             12322(Adminer)   0.0.0.0/0  (enabled)
 
