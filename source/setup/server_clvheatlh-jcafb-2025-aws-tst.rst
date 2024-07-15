@@ -37,7 +37,7 @@ Server preparation (1)
 
         * Region: **Virginia (East USA)**
         * Label: **clvheatlh-jcafb-2025-aws-tst**
-        * IP address: **44.215.174.44**
+        * IP address: **54.86.57.170**
 
     #. Create, via TrunKey Hub, the Amazon EC2 instance clvheatlh-jcafb-2025-aws-tst-aws:
 
