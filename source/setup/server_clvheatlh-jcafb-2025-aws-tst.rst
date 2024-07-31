@@ -585,6 +585,22 @@ Development (3)
                 # workers = 3
                 workers = 2
 
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            * `Sample odoo.conf file  <https://gist.github.com/Guidoom/d5db0a76ce669b139271a528a8a2a27f>`_
+            * `How to Speed up Odoo <https://www.rosehosting.com/blog/how-to-speed-up-odoo/>`_
+            * `What is a “worker” in Odoo? <https://stackoverflow.com/questions/35918633/what-is-a-worker-in-odoo>`_
+            * `System configuration <https://www.odoo.com/documentation/16.0/administration/install/deploy.html>`_
+
+            ::
+
+                max_cron_threads = 2
+
+            ::
+
+                # max_cron_threads = 2
+                max_cron_threads = 1
+
     #. Configure "server_wide_modules"
 
         #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
