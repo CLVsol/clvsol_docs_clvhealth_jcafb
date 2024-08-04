@@ -497,4 +497,237 @@ Manutenção do Banco de Dados - JCAFB-2025-15 [1]
 
         #. Salvar o registro editado.
 
+[clvheatlh-jcafb-2024-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-08-04a)
+------------------------------------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2024-aws-tst] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2024-aws-tst** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2024-aws-tst
+            #
+
+            ssh clvheatlh-jcafb-2024-aws-tst -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2024-aws-tst] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2024-aws-tst
+            #
+
+            cd /opt/odoo
+            gzip -d clvhealth_jcafb_2025_15_2024-08-04a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+            # dropdb -i clvhealth_jcafb_2024_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-08-04a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            # rm -rf clvhealth_jcafb_2024_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-08-04a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-08-04a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2024-aws-tst** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2024-aws-tst
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [clvheatlh-jcafb-2024-aws-tst] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2024-aws-tst <https://clvheatlh-jcafb-2024-aws-tst>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**https://44.215.174.44**".
+
+        #. Salvar o registro editado.
+
+[clvheatlh-jcafb-2025-aws-tst] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-08-04a)
+------------------------------------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2025-aws-tst] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2025-aws-tst** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2025-aws-tst
+            #
+
+            ssh clvheatlh-jcafb-2025-aws-tst -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2025-aws-tst] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2025-aws-tst
+            #
+
+            cd /opt/odoo
+            gzip -d clvhealth_jcafb_2025_15_2024-08-04a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-08-04a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-08-04a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-08-04a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2025-aws-tst** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2025-aws-tst
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [clvheatlh-jcafb-2025-aws-tst] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2025-aws-tst <https://clvheatlh-jcafb-2025-aws-tst>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**https://54.86.57.170**".
+
+        #. Salvar o registro editado.
+
+[clvheatlh-jcafb-2025-aws-pro] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-08-04a)
+------------------------------------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2025-aws-pro] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2025-aws-pro** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2025-aws-pro
+            #
+
+            ssh clvheatlh-jcafb-2025-aws-pro -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2025-aws-pro] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2025-aws-pro
+            #
+
+            cd /opt/odoo
+            gzip -d clvhealth_jcafb_2025_15_2024-08-04a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-08-04a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-08-04a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-08-04a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2025-aws-pro** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2025-aws-pro
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [clvheatlh-jcafb-2025-aws-pro] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2025-aws-pro <https://clvheatlh-jcafb-2025-aws-pro>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**https://34.224.24.169**".
+
+        #. Salvar o registro editado.
+
 .. toctree::   :maxdepth: 2
