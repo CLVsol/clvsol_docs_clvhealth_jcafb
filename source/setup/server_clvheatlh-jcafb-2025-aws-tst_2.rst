@@ -151,11 +151,11 @@ Development (1)
 
             ::
 
-                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
+                odoo:x:109:117::/var/lib/odoo:/usr/sbin/nologin
 
             ::
 
-                odoo:x:105:114::/var/lib/odoo:/bin/bash
+                odoo:x:109:117::/var/lib/odoo:/bin/bash
 
     #. To create the **/opt/odoo** directory, use the following commands (as root):
 
@@ -189,11 +189,11 @@ Development (1)
 
         ::
 
-            logfile = 
+            logfile = /var/log/odoo/odoo-server.log 
 
         ::
 
-            # logfile = 
+            # logfile = /var/log/odoo/odoo-server.log 
             logfile = False
 
     #. Setup the file "**/etc/odoo/odoo-man.conf**" (Group: odoo Owner: odoo) permissions, using the following commands (as root):
@@ -295,11 +295,11 @@ Server preparation (2)
 
             ::
 
-                #AllowTcpForwarding yes
+                AllowTcpForwarding no
 
             ::
 
-                #AllowTcpForwarding yes
+                # AllowTcpForwarding no
                 AllowTcpForwarding yes
 
         #. To restart the SSH service, use the following commands (as root):
@@ -410,9 +410,6 @@ Development (2)
             Installing collected packages: erppeek
             Successfully installed erppeek-1.7.1
 
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
-
     #. To install xlutils, execute the following commands (as root):
 
         ::
@@ -430,7 +427,7 @@ Development (2)
             Installing collected packages: xlutils
             Successfully installed xlutils-2.0.0
 
-    #. :red:`(Failed - Not Used)` To install yaml, use the following commands (as root):
+    #. To install yaml, use the following commands (as root):
 
         ::
 
@@ -440,10 +437,10 @@ Development (2)
 
             pip3 install pyyaml
             Collecting pyyaml
-              Downloading PyYAML-6.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
-                 |████████████████████████████████| 738 kB 21.6 MB/s 
+              Downloading PyYAML-6.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (737 kB)
+                 |████████████████████████████████| 737 kB 22.1 MB/s 
             Installing collected packages: pyyaml
-            Successfully installed pyyaml-6.0.1
+            Successfully installed pyyaml-6.0.2
 
 Development (3)
 ---------------
@@ -483,7 +480,6 @@ Development (3)
             ::
 
                 # workers = 0
-                # workers = 3
                 workers = 2
 
     #. Configure "server_wide_modules"
@@ -547,11 +543,11 @@ Replace the Odoo installation (Odoo 15.0)
 
             ::
 
-                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
+                odoo:x:109:117::/var/lib/odoo:/usr/sbin/nologin
 
             ::
 
-                odoo:x:105:114::/var/lib/odoo:/bin/bash
+                odoo:x:109:117::/var/lib/odoo:/bin/bash
 
     #. Set the **postgres** user password (PostgreSQL Database Server) using Webmin.
 
