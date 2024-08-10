@@ -514,6 +514,20 @@ JCAFB-2025-15 (Preparação pré Jornada [10])
 
         #. Salvar o registro editado.
 
+:red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Atualisar a Pesquisa "[QAN25]"
+------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Pesquisas**:
+
+        * Menu de acesso:
+            * **Pesquisas** » **Pesquisas**
+
+    #. Abrir o Formulário da Pesquisa "**[QAN25]**".
+
+    #. Executar as atualizações que forem necessárias.
+
 :red:`(Not Used)` [tkl-odoo15-jcafb25-vm] Criar o *Lab Test Type* "**EAN25**"
 -----------------------------------------------------------------------------
 
