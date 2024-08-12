@@ -16,11 +16,11 @@
 .. role:: borange
 .. role:: bi
 
-===========================================
-JCAFB-2025-15 (Preparação pré Jornada [21])
-===========================================
+=============================================
+JCAFB-2025-15 (Preparação pré Jornada II [1])
+=============================================
 
-[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-08-12a)
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-08-12b)
 -----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
@@ -44,22 +44,22 @@ JCAFB-2025-15 (Preparação pré Jornada [21])
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025_15_2024-08-12a.sql.gz
+            # gzip -d clvhealth_jcafb_2025_15_2024-08-12b.sql.gz
 
             dropdb -i clvhealth_jcafb_2025_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
-            psql -f clvhealth_jcafb_2025_15_2024-08-12a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2025_15_2024-08-12b.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2025_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-08-12a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-08-12b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-08-12a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-08-12b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
 
