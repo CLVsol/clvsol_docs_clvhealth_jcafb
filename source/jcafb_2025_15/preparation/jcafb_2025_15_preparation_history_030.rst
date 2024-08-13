@@ -97,6 +97,39 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
         #. Salvar o registro editado.
 
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Sets**
+------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Set Elements**:
+
+        #. Acessar a *view* **Set Elements**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Set`» :bi:`Elements`
+
+        #. Selecionar todos os :bi:`Set Elements` (**2036**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. :red:`(Não Executado)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Sets**:
+
+        #. Acessar a *view* **Sets**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Sets`
+
+        #. Selecionar todos os :bi:`Sets` (**44**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
 :bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todas as **Participations**
 ----------------------------------------------------------------------------------------
 
@@ -116,6 +149,39 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Document Code Pools**
+---------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Document Code Pool Items**:
+
+        #. Acessar a *view* **Document Code Pool Items**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Pools`» :bi:`Document Code Pool Items`
+
+        #. Selecionar todos os :bi:`Document Code Pool Items` (**3014**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. :red:`(Não Executado)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Document Codes**:
+
+        #. Acessar a *view* **Document Code Pools**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Pools`» :bi:`Document Code Pool`
+
+        #. Selecionar todos os :bi:`Document Codes` (**19**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
 :bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Documents**
 -----------------------------------------------------------------------------------
 
@@ -127,7 +193,7 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             * Menu de acesso:
 
-                * **Base** » :bi:`Base` » :bi:`Documents`
+                * :bi:`Base` » :bi:`Base` » :bi:`Documents`
 
         #. Selecionar todos os :bi:`Documents` (**950**)
 
@@ -135,11 +201,316 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-Erro de Validação
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Result Code Pools**
+----------------------------------------------------------------------------------------------------
 
-The operation cannot be completed: outro modelo requer que o registro seja excluído. Se possível, arquive-o em vez disso.
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
-Modelo: Document Code Pool Item (clv.document.code_pool.item), Restringir: clv_document_code_pool_item_document_id_fkey
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Result Code Pool Items**:
+
+        #. Acessar a *view* **Lab Test Result Code Pool Items**:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Configuration` » :bi:`Pools`» :bi:`Lab Test Result Code Pool Items`
+
+        #. Selecionar todos os :bi:`Lab Test Result Code Pool Items` (**1903**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. :red:`(Não Executado)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Result Codes**:
+
+        #. Acessar a *view* **Lab Test Result Code Pools**:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Pools`» :bi:`Lab Test Result Code Pool`
+
+        #. Selecionar todos os :bi:`Lab Test Result Codes` (**19**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Results**
+------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Results**:
+
+        #. Acessar a *view* **Lab Test Results**:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Lab Test`» :bi:`Results`
+
+        #. Selecionar todos os :bi:`Lab Test Results` (**609**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os arquivos de **Resultados de Exames**
+----------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os arquivos presentes no diretório "**/opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/results**" do Servidor.
+
+    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os :bi:`File System Files` do :bi:`File System Directory` "**Lab Test Result Files**":
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Base` » :bi:`File System` » :bi:`Files`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Directory`
+
+        #. Selecionar todas os :bi:`File System Files` referentes a "**Lab Test Result Files**" (**289**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os arquivos de **Laudos de Exames**
+------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os arquivos presentes no diretório "**/opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/reports**" do Servidor.
+
+    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os :bi:`File System Files` do :bi:`File System Directory` "**Lab Test Report Files**":
+
+        * Menu de acesso:
+
+            * :bi:`Base` » :bi:`Base` » :bi:`File System` » :bi:`Files`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Directory`
+
+        #. Selecionar todas os :bi:`File System Files` referentes a "**Lab Test Report Files**" (**290**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Pattern Matches**
+-------------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Pattern Matches**:
+
+        #. Acessar a *view* **Contact Information Pattern Matches**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity`:bi:`Contact Information Pattern Matches`
+
+        #. Selecionar todos os :bi:`Contact Information Pattern Matches` (**1920**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Patterns**
+------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Patterns**:
+
+        #. Acessar a *view* **Contact Information Patterns**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity`:bi:`Contact Information Patterns`
+
+        #. Selecionar todos os :bi:`Contact Information Patterns` (**570**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Street Pattern Matches**
+------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Street Pattern Matches**:
+
+        #. Acessar a *view* **Street Pattern Matches**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity`:bi:`Street Pattern Matches`
+
+        #. Selecionar todos os :bi:`Street Pattern Matches` (**1926**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Street Patterns**
+-----------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Street Patterns**:
+
+        #. Acessar a *view* **Street Patterns**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Partner Entity`:bi:`Street Patterns`
+
+        #. Selecionar todos os :bi:`Street Patterns` (**72**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Histories**
+---------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Histories**:
+
+        #. Acessar a *view* **Residence Histories**:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence`» :bi:`Residence Histories`
+
+        #. Selecionar todos os :bi:`Residence Histories` (**447**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Histories**
+---------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Histories**:
+
+        #. Acessar a *view* **Patient Histories**:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient`» :bi:`Patient Histories`
+
+        #. Selecionar todos os :bi:`Patient Histories` (**1268**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Code Pools**
+----------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Code Pool Items**:
+
+        #. Acessar a *view* **Residence Code Pool Items**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Pools`» :bi:`Residence Code Pool Items`
+
+        #. Selecionar todos os :bi:`Residence Code Pool Items` (**342**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. :red:`(Não Executado)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Codes**:
+
+        #. Acessar a *view* **Residence Code Pools**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Pools`» :bi:`Residence Code Pool`
+
+        #. Selecionar todos os :bi:`Residence Codes` (**1**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todas as **Residences**
+------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todas as **Residences**:
+
+        #. Acessar a *view* **Contatos**:
+
+            * Menu de acesso:
+
+                * **Contatos** » **Contatos**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address Type` caso já não esteja ativado.
+
+        #. Selecionar todas as :bi:`Residences` (**344**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:`Patient`:
+
+        #. Acessar a *view* :bi:`Verification Outcomes`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification Outcomes`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Model Name`
+
+        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.residence**" (**344**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Code Pools**
+--------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Code Pool Items**:
+
+        #. Acessar a *view* **Patient Code Pool Items**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Pools`» :bi:`Patient Code Pool Items`
+
+        #. Selecionar todos os :bi:`Patient Code Pool Items` (**1587**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. :red:`(Não Executado)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Codes**:
+
+        #. Acessar a *view* **Patient Code Pools**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Pools`» :bi:`Patient Code Pool`
+
+        #. Selecionar todos os :bi:`Patient Codes` (**10**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
 
 :bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes**
 -----------------------------------------------------------------------------------
@@ -156,7 +527,7 @@ Modelo: Document Code Pool Item (clv.document.code_pool.item), Restringir: clv_d
 
         #. Ativar o filtro **Agrupar por** » :bi:`Address Type` caso já não esteja ativado.
 
-        #. Selecionar todos os :bi:`Patient` (**821**)
+        #. Selecionar todos os :bi:`Patient` (**819**)
 
         #. Executar a Ação **Excluir**:
 
@@ -172,7 +543,65 @@ Modelo: Document Code Pool Item (clv.document.code_pool.item), Restringir: clv_d
 
         #. Ativar o filtro **Agrupar por** » :bi:`Model Name`
 
-        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.patient**" (**1646**)
+        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.patient**" (**3315**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes (Rec)**
+-----------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes (Rec)**:
+
+        #. Acessar a *view* **Contatos**:
+
+            * Menu de acesso:
+
+                * **Contatos** » **Contatos**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Address Type` caso já não esteja ativado.
+
+        #. Selecionar todos os :bi:`Patient (Rec)` (**819**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os :bi:`Verification Outcomes` referentes a registros de :bi:`Patient (Rec)`:
+
+        #. Acessar a *view* :bi:`Verification Outcomes`:
+
+            * Menu de acesso:
+
+                * :bi:`Verification` » :bi:`Verification` » :bi:`Verification Outcomes`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Model Name`
+
+        #. Selecionar todas os :bi:`Verification Outcomes` referentes a "**clv.patient_rec**" (**822**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Global Logs**
+-------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Global Logs**:
+
+        :bmaroon:`IMPORTANTE:` **É possivel excluir somente 20.000 registros de cada vez! Repetir essa ação até que todos os registros tenham sido excluídos.**
+
+        #. Acessar a *view* **Global Logs**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Global Logs` » :bi:`Global Logs`
+
+        #. Selecionar todos os :bi:`Global Logs` (**1079332**)
 
         #. Executar a Ação **Excluir**:
 
