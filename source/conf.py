@@ -77,27 +77,42 @@ on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if on_rtd:
 
     # html_theme = 'default'
-    html_theme = 'sphinx_rtd_theme'
+    # html_theme = 'sphinx_rtd_theme'
+    html_theme = 'alabaster'
 
     # html_theme_options = {}
+    # html_theme_options = {
+    #     'canonical_url': '',
+    #     'logo_only': False,
+    #     'display_version': True,
+    #     # 'prev_next_buttons_location': 'bottom',
+    #     'prev_next_buttons_location': 'both',
+    #     # 'style_external_links': False,
+    #     'style_external_links': True,
+    #     # 'vcs_pageview_mode': '',
+    #     # 'style_nav_header_background': 'white',
+    #     'style_nav_header_background': '#2980B9',
+    #     # Toc options
+    #     'collapse_navigation': False,
+    #     'sticky_navigation': True,
+    #     'navigation_depth': 4,
+    #     # 'navigation_depth': -1,
+    #     'includehidden': True,
+    #     'titles_only': False
+    # }
     html_theme_options = {
-        'canonical_url': '',
-        'logo_only': False,
-        'display_version': True,
-        # 'prev_next_buttons_location': 'bottom',
-        'prev_next_buttons_location': 'both',
-        # 'style_external_links': False,
-        'style_external_links': True,
-        # 'vcs_pageview_mode': '',
-        # 'style_nav_header_background': 'white',
-        'style_nav_header_background': '#2980B9',
-        # Toc options
-        'collapse_navigation': False,
-        'sticky_navigation': True,
-        'navigation_depth': 4,
-        # 'navigation_depth': -1,
-        'includehidden': True,
-        'titles_only': False
+        'logo': 'CLVsol_logo.png',
+        'description': 'creative open source solutions',
+        'github_user': 'cvercelino',
+        # 'github_repo': 'CLVsol',
+        'github_button': True,
+        'github_banner': True,
+        'show_powered_by': True,
+        # 'page_width': 'auto',
+        'page_width': '1220px',
+        'sidebar_width': '220px',
+        'fixed_sidebar': False,
+        'show_related': True,
     }
 
 # else:
@@ -152,7 +167,8 @@ else:
     # html_theme = 'pyramid'
     # html_theme = 'traditional'
     # html_theme = 'bizstyle'
-    html_theme = 'sphinx_rtd_theme'
+    # html_theme = 'sphinx_rtd_theme'
+    html_theme = 'alabaster'
 
     # html_sidebars = {
     #     '**': [
@@ -171,25 +187,39 @@ else:
     # documentation.
     #
     # html_theme_options = {}
+    # html_theme_options = {
+    #     'canonical_url': '',
+    #     # 'analytics_id': 'UA-XXXXXXX-1',  # Provided by Google in your dashboard
+    #     'logo_only': False,
+    #     'display_version': True,
+    #     # 'prev_next_buttons_location': 'bottom',
+    #     'prev_next_buttons_location': 'both',
+    #     # 'style_external_links': False,
+    #     'style_external_links': True,
+    #     # 'vcs_pageview_mode': '',
+    #     # 'style_nav_header_background': 'white',
+    #     'style_nav_header_background': '#2980B9',
+    #     # Toc options
+    #     'collapse_navigation': False,
+    #     'sticky_navigation': True,
+    #     'navigation_depth': 4,
+    #     # 'navigation_depth': -1,
+    #     'includehidden': True,
+    #     'titles_only': False
+    # }
     html_theme_options = {
-        'canonical_url': '',
-        # 'analytics_id': 'UA-XXXXXXX-1',  # Provided by Google in your dashboard
-        'logo_only': False,
-        'display_version': True,
-        # 'prev_next_buttons_location': 'bottom',
-        'prev_next_buttons_location': 'both',
-        # 'style_external_links': False,
-        'style_external_links': True,
-        # 'vcs_pageview_mode': '',
-        # 'style_nav_header_background': 'white',
-        'style_nav_header_background': '#2980B9',
-        # Toc options
-        'collapse_navigation': False,
-        'sticky_navigation': True,
-        'navigation_depth': 4,
-        # 'navigation_depth': -1,
-        'includehidden': True,
-        'titles_only': False
+        'logo': 'CLVsol_logo.png',
+        'description': 'creative open source solutions',
+        'github_user': 'cvercelino',
+        # 'github_repo': 'CLVsol',
+        'github_button': True,
+        'github_banner': True,
+        'show_powered_by': True,
+        # 'page_width': 'auto',
+        'page_width': '1220px',
+        'sidebar_width': '220px',
+        'fixed_sidebar': False,
+        'show_related': True,
     }
 
 master_doc = 'index'
