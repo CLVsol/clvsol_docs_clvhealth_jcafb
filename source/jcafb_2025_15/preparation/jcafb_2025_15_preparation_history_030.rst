@@ -20,7 +20,7 @@
 JCAFB-2025-15 (Preparação pré Jornada II [1])
 =============================================
 
-[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-08-12b)
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-09-24a)
 -----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
@@ -44,22 +44,22 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025_15_2024-08-12b.sql.gz
+            # gzip -d clvhealth_jcafb_2025_15_2024-09-24a.sql.gz
 
             dropdb -i clvhealth_jcafb_2025_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
-            psql -f clvhealth_jcafb_2025_15_2024-08-12b.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2025_15_2024-09-24a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2025_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-08-12b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-24a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-08-12b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-24a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
 
@@ -97,8 +97,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
         #. Salvar o registro editado.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Sets**
-------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Sets**
+-------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -130,8 +130,41 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todas as **Participations**
-----------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Events**
+---------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Event Attendees**:
+
+        #. Acessar a *view* **Event Attendees**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Configuration` » :bi:`Event`» :bi:`Attendees`
+
+        #. Selecionar todos os :bi:`Event Attendees` (**326**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+    #. :red:`(Não Executado)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Events**:
+
+        #. Acessar a *view* **Events**:
+
+            * Menu de acesso:
+
+                * :bi:`Base` » :bi:`Base` » :bi:`Events`
+
+        #. Selecionar todos os :bi:`Events` (**11**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Excluir todas as **Participations**
+-----------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -149,8 +182,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Document Code Pools**
----------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Document Code Pools**
+----------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -182,8 +215,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Documents**
------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Documents**
+------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -201,8 +234,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Result Code Pools**
-----------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Result Code Pools**
+-----------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -234,8 +267,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Results**
-------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Lab Test Results**
+-------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -253,14 +286,14 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os arquivos de **Resultados de Exames**
-----------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os arquivos de **Resultados de Exames**
+-----------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
-    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os arquivos presentes no diretório "**/opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/results**" do Servidor.
+    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os arquivos presentes no diretório "**/opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/results**" do Servidor (**289**).
 
-    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os :bi:`File System Files` do :bi:`File System Directory` "**Lab Test Result Files**":
+    #. :red:`(Não Necessário)` [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os :bi:`File System Files` do :bi:`File System Directory` "**Lab Test Result Files**":
 
         * Menu de acesso:
 
@@ -274,14 +307,14 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os arquivos de **Laudos de Exames**
-------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os arquivos de **Laudos de Exames**
+-------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
-    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os arquivos presentes no diretório "**/opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/reports**" do Servidor.
+    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os arquivos presentes no diretório "**/opt/odoo/clvsol_filestore/clvhealth_jcafb/lab_test_files/reports**" do Servidor (**290**).
 
-    #. [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os :bi:`File System Files` do :bi:`File System Directory` "**Lab Test Report Files**":
+    #. :red:`(Não Necessário)` [tkl-odoo15-jcafb25-vm] Escluir manualmente todos os :bi:`File System Files` do :bi:`File System Directory` "**Lab Test Report Files**":
 
         * Menu de acesso:
 
@@ -295,8 +328,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Pattern Matches**
--------------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Pattern Matches**
+--------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -314,8 +347,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Patterns**
-------------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Contact Information Patterns**
+-------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -333,8 +366,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Street Pattern Matches**
-------------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Street Pattern Matches**
+-------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -352,8 +385,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Street Patterns**
------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Street Patterns**
+------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -371,8 +404,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Histories**
----------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Histories**
+----------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -390,8 +423,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Histories**
----------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Histories**
+----------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -409,8 +442,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Code Pools**
-----------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Residence Code Pools**
+-----------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -442,8 +475,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todas as **Residences**
-------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todas as **Residences**
+-------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -479,8 +512,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Code Pools**
---------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Patient Code Pools**
+---------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -512,8 +545,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes**
------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes**
+------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -549,8 +582,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes (Rec)**
------------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Pacientes (Rec)**
+------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -586,8 +619,8 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
 
-:bmaroon:`(Not Implemented)` [tkl-odoo15-jcafb25-vm] Excluir todos os **Global Logs**
--------------------------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Global Logs**
+--------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
@@ -606,5 +639,147 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
         #. Executar a Ação **Excluir**:
 
             #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-09-27a)
+-------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-09-27a.sql
+
+            gzip clvhealth_jcafb_2025_15_2024-09-27a.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-09-27a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-27a.tar.gz clvhealth_jcafb_2025_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-27a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-09-27a.sql
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-09-27a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-27a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-27a.tar.gz
+
+.. index:: clvhealth_jcafb_2025_15_2024-09-27a.sql
+.. index:: clvhealth_jcafb_2025_15_2024-09-27a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025_15_2024-09-27a
+.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-27a
+
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-09-27a)
+-----------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2025_15_2024-09-27a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-09-27a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-27a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-27a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb25-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb25-vm**".
+
+        #. Salvar o registro editado.
 
 .. toctree::   :maxdepth: 2
