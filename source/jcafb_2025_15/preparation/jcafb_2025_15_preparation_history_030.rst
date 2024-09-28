@@ -782,4 +782,458 @@ JCAFB-2025-15 (Preparação pré Jornada II [1])
 
         #. Salvar o registro editado.
 
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Undefined Document Items**
+---------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Undefined Document Items**:
+
+        #. Acessar a *view* **Document Items**:
+
+            * Menu de acesso:
+
+                * **Base** » **Configuration** » **Document** » **Items**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Document Type` caso já não esteja ativado.
+
+        :bmaroon:`IMPORTANTE:` **Excluir somente 5.000 registros de cada vez! Repetir essa ação até que todos os registros (Document Type não definidos) tenham sido excluídos.**
+
+        #. Selecionar  (**5000**) :bi:`Indefinido` (de um total de **55364**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Excluir todos os **Undefined Lab Test Criteria**
+------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Excluir todos os **Undefined Lab Test Criteria**:
+
+        #. Acessar a *view* **Lab Test Criteria**:
+
+            * Menu de acesso:
+
+                * **Health** » **Configuration** » **Lab Test** » **Criteria**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Lab Test Type` caso já não esteja ativado.
+
+        :bmaroon:`IMPORTANTE:` **Excluir somente 5.000 registros de cada vez! Repetir essa ação até que todos os registros (Lab Test Type não definidos) tenham sido excluídos.**
+
+        #. Selecionar  (**5000**) :bi:`Indefinido` (de um total de **23937**)
+
+        #. Executar a Ação **Excluir**:
+
+            #. Utilize o botão :bi:`Ok` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-09-28a)
+-------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-09-28a.sql
+
+            gzip clvhealth_jcafb_2025_15_2024-09-28a.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-09-28a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-28a.tar.gz clvhealth_jcafb_2025_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-09-28a.sql
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-09-28a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-28a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28a.tar.gz
+
+.. index:: clvhealth_jcafb_2025_15_2024-09-28a.sql
+.. index:: clvhealth_jcafb_2025_15_2024-09-28a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025_15_2024-09-28a
+.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28a
+
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-09-28a)
+-----------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2025_15_2024-09-28a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-09-28a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-28a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb25-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb25-vm**".
+
+        #. Salvar o registro editado.
+
+[tkl-odoo15-jcafb25-vm] Atualisar **Patient Markers**
+-----------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Patient Markers**:
+
+        * Menu de acesso:
+            * **Health** » **Configuration** » **Patient** » **Markers**
+
+    #. Executar as atualizações necessárias dos **Patient Markers** para a JCAFB-2025:
+
+        * Campanha Anemia (2025);
+
+        * Campanha DHC (2025);
+
+        * Familiar (2025);
+
+        * Projeto (2025).
+
+[tkl-odoo15-jcafb25-vm] Atualisar **Patient Tags**
+--------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Patient Tags**:
+
+        * Menu de acesso:
+            * **Health** » **Configuration** » **Patient** » **Tags**
+
+    #. Executar as atualizações necessárias dos **Patient Tags** para a JCAFB-2025:
+
+        * Excluir Registro;
+
+        * Paciente Duplicado;
+
+        * Questionário QAN25 Ausente;
+
+        * Questionário QDH25 Ausente;
+
+        * Questionário QMD25 Ausente;
+
+        * Questionário QSC25 Ausente;
+
+        * Questionário QSF25 Ausente;
+
+        * Questionário QSI25 Ausente;
+
+        * Resultado de Exame EAN25 Ausente;
+
+        * Resultado de Exame ECP25 Ausente;
+
+        * Resultado de Exame EDH25 Ausente;
+
+        * Resultado de Exame EEV25 Ausente;
+
+        * Resultado de Exame EUR25 Ausente;
+
+        * Verificado Ok;
+
+        * Verificado com Alertas.
+
+[tkl-odoo15-jcafb25-vm] Atualisar **Residence Categories**
+----------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Residence Categories**:
+
+        * Menu de acesso:
+            * **Health** » **Configuration** » **Residence** » **Categories**
+
+    #. Executar as atualizações necessárias dos **Residence Categories** para a JCAFB-2025:
+
+        * Aldeia Indígena;
+
+        * Centro;
+
+        * Zona Rural;
+
+        * Zona Urbana.
+
+[tkl-odoo15-jcafb25-vm] Atualisar **Phases**
+--------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Phases**:
+
+        * Menu de acesso:
+            * **Base** » **Configuration** » **Phases**
+
+    #. Executar as atualizações necessárias dos **Phases** para a JCAFB-2025:
+
+        * JCAFB-2025 (Primeiro ano do ciclo de Avaí).
+
+[tkl-odoo15-jcafb25-vm] Atualisar **Events**
+--------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Events**:
+
+        * Menu de acesso:
+            * **Base** » **Base** » **Events**
+
+    #. Executar as atualizações necessárias dos **Events** para a JCAFB-2025:
+
+        * Campanha Anemia (1) - 2025 (JCAFB-2025 - 13/01/2025 - 14:00h às 17:00h);
+
+        * Campanha Anemia (2) - 2025 (JCAFB-2025 - 20/01/2025 - 14:00h às 17:00h);
+
+        * Campanha DHC (1) - 2025 (JCAFB-2025 - 12/01/2025 - 07:30h às 11:30h);
+
+        * Campanha DHC (2) - 2025 (JCAFB-2025 - 19/01/2025 - 07:30h às 11:30h;
+
+        * Força Tarefa Anemia (1) - 2025 (JCAFB-2025 - 12/01/2025 - 14:00h às 18:00h);
+
+        * Força Tarefa Anemia (2) - 2025 (JCAFB-2025 - 19/01/2025 - 14:00h às 18:00h);
+
+        * Força Tarefa DHC (1) - 2025 (JCAFB-2025 - 13/01/2025 - 07:30h às 11:30h);.
+
+        * Força Tarefa DHC (2) - 2025 (JCAFB-2025 - 12/01/2025 - 07:30h às 11:30h).
+
+[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-09-28b)
+-------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-09-28b.sql
+
+            gzip clvhealth_jcafb_2025_15_2024-09-28b.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-09-28b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-28b.tar.gz clvhealth_jcafb_2025_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-09-28b.sql
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-09-28b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-28b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28b.tar.gz
+
+.. index:: clvhealth_jcafb_2025_15_2024-09-28b.sql
+.. index:: clvhealth_jcafb_2025_15_2024-09-28b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025_15_2024-09-28b
+.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28b
+
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-09-28b)
+-----------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2025_15_2024-09-28b.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-09-28b.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-09-28b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-09-28b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb25-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb25-vm**".
+
+        #. Salvar o registro editado.
+
 .. toctree::   :maxdepth: 2
