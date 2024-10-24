@@ -20,7 +20,7 @@
 Criação do Servidor Local "tkl-odoo16-vm-18"
 ============================================
 
-    This project will help you create a server to host the **Odoo 12 (CLVhealth-JCAFB)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
+    This project will help you create a server to host the **Odoo 16**, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
 
         * Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
