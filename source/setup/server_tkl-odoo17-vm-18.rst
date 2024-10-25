@@ -420,6 +420,216 @@ Development (2)
 
 :bmaroon:`Backup:` :blue:`tkl-odoo17-vm-18_2024-10-24a.rar`
 
+Replace the Odoo installation (Odoo 17.0)
+-----------------------------------------
+
+    #. To replace the Odoo installation (Odoo 17.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+        ::
+
+            apt install gnupg2
+
+            wget https://nightly.odoo.com/odoo.key
+
+            cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
+
+            echo "deb http://nightly.odoo.com/17.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
+
+            apt-get update
+
+            apt-get install odoo
+
+        ::
+
+            apt-get install odoo
+            Reading package lists... Done
+            Building dependency tree... Done
+            Reading state information... Done
+            The following packages were automatically installed and are no longer required:
+              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form
+            Use 'apt autoremove' to remove them.
+            The following additional packages will be installed:
+              python3-geoip2 python3-maxminddb python3-rjsmin
+            Suggested packages:
+              python-maxmindb-doc
+            Recommended packages:
+              python3-ldap
+            The following packages will be REMOVED:
+              odoo-16
+            The following NEW packages will be installed:
+              odoo python3-geoip2 python3-maxminddb python3-rjsmin
+            0 upgraded, 4 newly installed, 1 to remove and 0 not upgraded.
+            Need to get 211 MB of archives.
+            After this operation, 157 MB of additional disk space will be used.
+            Do you want to continue? [Y/n] Y
+            Get:1 http://deb.debian.org/debian bookworm/main amd64 python3-maxminddb amd64 2.2.0-1+b1 [27.6 kB]
+            Get:2 http://deb.debian.org/debian bookworm/main amd64 python3-geoip2 all 2.9.0+dfsg1-5 [22.8 kB]
+            Get:3 http://deb.debian.org/debian bookworm/main amd64 python3-rjsmin amd64 1.2.0+dfsg1-2+b3 [17.5 kB]
+            Get:4 http://nightly.odoo.com/17.0/nightly/deb ./ odoo 17.0.20241024 [211 MB]
+            Fetched 211 MB in 17s (12.7 MB/s)                                                                                                                                                            
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 233b8b0] saving uncommitted changes in /etc prior to apt run
+             3 files changed, 3 insertions(+)
+             create mode 100644 apt/sources.list.d/odoo.list
+             create mode 100644 apt/trusted.gpg.d/odoo.gpg
+            debconf: delaying package configuration, since apt-utils is not installed
+            (Reading database ... 89641 files and directories currently installed.)
+            Removing odoo-16 (16.0.0+dfsg.2-2~bpo12+1) ...
+            Selecting previously unselected package python3-maxminddb.
+            (Reading database ... 49056 files and directories currently installed.)
+            Preparing to unpack .../python3-maxminddb_2.2.0-1+b1_amd64.deb ...
+            Unpacking python3-maxminddb (2.2.0-1+b1) ...
+            Selecting previously unselected package python3-geoip2.
+            Preparing to unpack .../python3-geoip2_2.9.0+dfsg1-5_all.deb ...
+            Unpacking python3-geoip2 (2.9.0+dfsg1-5) ...
+            Selecting previously unselected package python3-rjsmin.
+            Preparing to unpack .../python3-rjsmin_1.2.0+dfsg1-2+b3_amd64.deb ...
+            Unpacking python3-rjsmin (1.2.0+dfsg1-2+b3) ...
+            Selecting previously unselected package odoo.
+            Preparing to unpack .../odoo_17.0.20241024_all.deb ...
+            Unpacking odoo (17.0.20241024) ...
+            Setting up python3-rjsmin (1.2.0+dfsg1-2+b3) ...
+            Setting up python3-maxminddb (2.2.0-1+b1) ...
+            Setting up python3-geoip2 (2.9.0+dfsg1-5) ...
+            Setting up odoo (17.0.20241024) ...
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 97d5099] committing changes in /etc made by "apt-get install odoo"
+             7 files changed, 10 insertions(+), 6 deletions(-)
+             mode change 100755 => 100644 init.d/odoo
+             create mode 100644 logrotate.d/odoo
+            Enumerating objects: 1921, done.
+            Counting objects: 100% (1921/1921), done.
+            Delta compression using up to 8 threads
+            Compressing objects: 100% (1209/1209), done.
+            Writing objects: 100% (1921/1921), done.
+            Total 1921 (delta 100), reused 1898 (delta 89), pack-reused 0
+
+        ::
+
+            # apt-get remove odoo
+
+    #. Set the **odoo** user password (Linux):
+
+        #. To set the **odoo** user password (Linux), use the following commands (as root):
+
+            ::
+
+                ssh tkl-odoo17-vm-18 -l root
+
+            ::
+
+                passwd odoo
+
+
+        #. Edit the file "**/etc/password**" (as root):
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/bin/bash
+
+    #. Set "**/etc/init.d/odoo**" file Permitions:
+
+        * Allow executing file as program: **marked**.
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+:bmaroon:`Backup:` :blue:`tkl-odoo17-vm-18_2024-10-24b.rar`
+
 Remote access to the server
 ---------------------------
 
@@ -695,214 +905,6 @@ Development (3)
                 Not uninstalling jinja2 at /usr/lib/python3/dist-packages, outside environment /usr
                 Can't uninstall 'Jinja2'. No files were found to uninstall.
             Successfully installed Jinja2-2.11.2
-
-Replace the Odoo installation (Odoo 17.0)
------------------------------------------
-
-    #. To replace the Odoo installation (Odoo 17.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
-
-        ::
-
-            ssh tkl-odoo15-jcafb25-vm -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-        ::
-
-            apt install gnupg2
-
-            wget https://nightly.odoo.com/odoo.key
-
-            cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
-
-            echo "deb http://nightly.odoo.com/17.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
-
-            apt-get update
-
-            apt-get install odoo
-
-        ::
-
-            apt-get install odoo
-            Reading package lists... Done
-            Building dependency tree... Done
-            Reading state information... Done
-            The following packages were automatically installed and are no longer required:
-              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form
-            Use 'apt autoremove' to remove them.
-            The following additional packages will be installed:
-              python3-geoip2 python3-maxminddb python3-rjsmin
-            Suggested packages:
-              python-maxmindb-doc
-            Recommended packages:
-              python3-ldap
-            The following packages will be REMOVED:
-              odoo-16
-            The following NEW packages will be installed:
-              odoo python3-geoip2 python3-maxminddb python3-rjsmin
-            0 upgraded, 4 newly installed, 1 to remove and 0 not upgraded.
-            Need to get 210 MB of archives.
-            After this operation, 199 MB of additional disk space will be used.
-            Do you want to continue? [Y/n] Y
-            Get:1 http://deb.debian.org/debian bookworm/main amd64 python3-maxminddb amd64 2.2.0-1+b1 [27.6 kB]
-            Get:2 http://nightly.odoo.com/17.0/nightly/deb ./ odoo 17.0.20240512 [210 MB]
-            Get:3 http://deb.debian.org/debian bookworm/main amd64 python3-geoip2 all 2.9.0+dfsg1-5 [22.8 kB]
-            Get:4 http://deb.debian.org/debian bookworm/main amd64 python3-rjsmin amd64 1.2.0+dfsg1-2+b3 [17.5 kB]
-            Fetched 210 MB in 48s (4373 kB/s)                                                                                                                                                            
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_CTYPE = "C",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_CTYPE = "C",
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            [master f3bd3b7] saving uncommitted changes in /etc prior to apt run
-             3 files changed, 3 insertions(+)
-             create mode 100644 apt/sources.list.d/odoo.list
-             create mode 100644 apt/trusted.gpg.d/odoo.gpg
-            debconf: delaying package configuration, since apt-utils is not installed
-            (Reading database ... 90696 files and directories currently installed.)
-            Removing odoo-16 (16.0.0+dfsg.2-2~bpo12+1) ...
-            Selecting previously unselected package python3-maxminddb.
-            (Reading database ... 50111 files and directories currently installed.)
-            Preparing to unpack .../python3-maxminddb_2.2.0-1+b1_amd64.deb ...
-            Unpacking python3-maxminddb (2.2.0-1+b1) ...
-            Selecting previously unselected package python3-geoip2.
-            Preparing to unpack .../python3-geoip2_2.9.0+dfsg1-5_all.deb ...
-            Unpacking python3-geoip2 (2.9.0+dfsg1-5) ...
-            Selecting previously unselected package python3-rjsmin.
-            Preparing to unpack .../python3-rjsmin_1.2.0+dfsg1-2+b3_amd64.deb ...
-            Unpacking python3-rjsmin (1.2.0+dfsg1-2+b3) ...
-            Selecting previously unselected package odoo.
-            Preparing to unpack .../odoo_17.0.20240512_all.deb ...
-            Unpacking odoo (17.0.20240512) ...
-            Setting up python3-rjsmin (1.2.0+dfsg1-2+b3) ...
-            Setting up python3-maxminddb (2.2.0-1+b1) ...
-            Setting up python3-geoip2 (2.9.0+dfsg1-5) ...
-            Setting up odoo (17.0.20240512) ...
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_CTYPE = "C",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_CTYPE = "C",
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            [master 73f3f73] committing changes in /etc made by "apt-get install odoo"
-             7 files changed, 10 insertions(+), 6 deletions(-)
-             mode change 100755 => 100644 init.d/odoo
-             create mode 100644 logrotate.d/odoo
-            Enumerating objects: 1910, done.
-            Counting objects: 100% (1910/1910), done.
-            Delta compression using up to 8 threads
-            Compressing objects: 100% (1207/1207), done.
-            Writing objects: 100% (1910/1910), done.
-            Total 1910 (delta 93), reused 1887 (delta 82), pack-reused 0
-
-        ::
-
-            # apt-get remove odoo
-
-    #. Set the **odoo** user password (Linux):
-
-        #. To set the **odoo** user password (Linux), use the following commands (as root):
-
-            ::
-
-                ssh tkl-odoo15-jcafb25-vm -l root
-
-            ::
-
-                passwd odoo
-
-
-        #. Edit the file "**/etc/password**" (as root):
-
-            ::
-
-                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
-
-            ::
-
-                odoo:x:105:114::/var/lib/odoo:/bin/bash
-
-    #. Set "**/etc/init.d/odoo**" file Permitions:
-
-        * Allow executing file as program: **marked**.
-
-    #. To stop and start the Odoo server, use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo15-jcafb25-vm -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            /etc/init.d/odoo start
-
-        ::
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
 Repositories Installation
 -------------------------
