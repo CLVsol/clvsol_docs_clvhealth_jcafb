@@ -418,7 +418,7 @@ Development (2)
                 # server_wide_modules = base,web
                 server_wide_modules = None
 
-:bmaroon:`Backup:` :blue:`tkl-odoo17-vm-18_2024-10-24a.rar`
+:bmaroon:`Backup:` :blue:`tkl-odoo17-vm-18_2024-10-25a.rar`
 
 Replace the Odoo installation (Odoo 17.0)
 -----------------------------------------
@@ -628,7 +628,7 @@ Replace the Odoo installation (Odoo 17.0)
             cd /opt/odoo
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-:bmaroon:`Backup:` :blue:`tkl-odoo17-vm-18_2024-10-24b.rar`
+:bmaroon:`Backup:` :blue:`tkl-odoo17-vm-18_2024-10-25b.rar`
 
 Remote access to the server
 ---------------------------
