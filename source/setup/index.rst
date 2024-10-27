@@ -37,3 +37,4 @@ Administração do *CLVhealth-JCAFB*
    server_tkl-odoo17-vm-18
    server_tkl-odoo18-vm-18
    server_tkl-odoo14-vm-17
+   server_tkl-odoo17-vm-17
