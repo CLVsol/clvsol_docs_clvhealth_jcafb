@@ -748,6 +748,7 @@ Repositories Installation
         ::
 
             cd /opt/odoo
+            git clone https://github.com/CLVsol/erppeek --branch master
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
 
