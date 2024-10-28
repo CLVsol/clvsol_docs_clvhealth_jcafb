@@ -26,4 +26,5 @@ Migração de Dados [CLVhealth-JCAFB-17]
    :maxdepth: 3
    :caption: Conteúdo:
 
+   clvsol_filestore_clvhealth_jcafb_init
    clvhealth_jcafb_17_migration_history_001
