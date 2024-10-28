@@ -630,41 +630,6 @@ Replace the Odoo installation (Odoo 17.0)
 
 :bmaroon:`Backup:` :blue:`tkl-odoo17-vm-18_2024-10-25b.rar`
 
-Remote access to the server
----------------------------
-
-    #. To access remotly the server, use the following commands (as **root**):
-
-        ::
-
-            ssh tkl-odoo17-vm-18 -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            /etc/init.d/odoo start
-
-        ::
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. :bmaroon:`(Not Implemented)` To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
-
-        ::
-
-            ssh tkl-odoo17-vm-18 -l odoo
-
-        ::
-
-            cd /opt/odoo/clvsol_clvhealth_jcafb/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025_16"
-
-            dropdb -i clvhealth_jcafb_2025_16
-
 Development (3)
 ---------------
 
@@ -770,6 +735,83 @@ Development (3)
             Installing collected packages: erppeek
             Successfully installed erppeek-1.7.1
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+Repositories Installation
+-------------------------
+
+    #. To install all "**modules**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
+            git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
+
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as root):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons
+
+        ::
+
+            # addons_path = /usr/lib/python3/dist-packages/odoo/addons
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons
+            
+Remote access to the server
+---------------------------
+
+    #. To access remotly the server, use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --db "clvhealth_jcafb"
+
+            # dropdb -i clvhealth_jcafb
+
+Development (4)
+---------------
 
     #. :red:`(Failed - Not Used)` To install xlutils, execute the following commands (as root):
 
