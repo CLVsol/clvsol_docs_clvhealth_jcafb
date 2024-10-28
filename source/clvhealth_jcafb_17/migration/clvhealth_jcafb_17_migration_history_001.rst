@@ -78,7 +78,48 @@ Migração do Banco de Dados [CLVhealth-JCAFB-17]
             
             python3 create_db.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_17"
 
-        * **Execution time: 0:12:03.715**
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo17-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo17-vm-18 (session 1)
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+[tkl-odoo17-vm-18] Instalação do(s) módulo(s) [ver lista] (2024-10-28a)
+-----------------------------------------------------------------------
+
+    #. Lista de Módulos:
+
+        * contacts
+        * base_address_extended
+
+    #. Estabelecer uma sessão ssh com o servidor **tkl-odoo17-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo17-vm-18
+            #
+
+            ssh tkl-odoo17-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. Usando a sessão ssh com o servidor **tkl-odoo17-vm-18** e executar o **/usr/bin/odoo**:
+
+        ::
+
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf -d clvhealth_jcafb_17 -i contacts,base_address_extended --stop-after-init
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo17-vm-18** ao modo desejado:
 
@@ -95,6 +136,17 @@ Migração do Banco de Dados [CLVhealth-JCAFB-17]
             exit
 
             /etc/init.d/odoo start
+
+    #. Lista de Aplicativos instalados a partir da instalação de "**contacts**":
+
+        * project
+        * mass_mailing
+        * hr
+        * mail
+        * contacts
+        * survey
+        * project_todo
+        * hr_skills
 
 [tkl-odoo17-vm-18] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-10-28a)
 --------------------------------------------------------------------------------------------
@@ -122,16 +174,16 @@ Migração do Banco de Dados [CLVhealth-JCAFB-17]
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-10-28a.sql
+            pg_dump clvhealth_jcafb_17 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_17_2024-10-28a.sql
 
-            gzip clvhealth_jcafb_2025n_15_2024-10-28a.sql
-            pg_dump clvhealth_jcafb_2025n_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025n_15_2024-10-28a.sql
+            gzip clvhealth_jcafb_17_2024-10-28a.sql
+            pg_dump clvhealth_jcafb_17 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_17_2024-10-28a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-10-28a.tar.gz clvhealth_jcafb_2025n_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_17_2024-10-28a.tar.gz clvhealth_jcafb_17
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-10-28a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_17_2024-10-28a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo17-vm-18** ao modo desejado:
 
@@ -151,15 +203,15 @@ Migração do Banco de Dados [CLVhealth-JCAFB-17]
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-10-28a.sql
-        * /opt/odoo/clvhealth_jcafb_2025n_15_2024-10-28a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-10-28a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-10-28a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_17_2024-10-28a.sql
+        * /opt/odoo/clvhealth_jcafb_17_2024-10-28a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_17_2024-10-28a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_17_2024-10-28a.tar.gz
 
-.. index:: clvhealth_jcafb_2025n_15_2024-10-28a.sql
-.. index:: clvhealth_jcafb_2025n_15_2024-10-28a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2025n_15_2024-10-28a
-.. index:: clvsol_filestore_clvhealth_jcafb_2025n_15_2024-10-28a
+.. index:: clvhealth_jcafb_17_2024-10-28a.sql
+.. index:: clvhealth_jcafb_17_2024-10-28a.sql.gz
+.. index:: filestore_clvhealth_jcafb_17_2024-10-28a
+.. index:: clvsol_filestore_clvhealth_jcafb_17_2024-10-28a
 
 [tkl-odoo17-vm-18] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-10-28a)
 ------------------------------------------------------------------------------------------------
@@ -185,22 +237,22 @@ Migração do Banco de Dados [CLVhealth-JCAFB-17]
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025n_15_2024-10-28a.sql.gz
+            # gzip -d clvhealth_jcafb_17_2024-10-28a.sql.gz
 
-            dropdb -i clvhealth_jcafb_2025n_15
+            dropdb -i clvhealth_jcafb_17
 
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025n_15
-            psql -f clvhealth_jcafb_2025n_15_2024-10-28a.sql -d clvhealth_jcafb_2025n_15 -U postgres -h localhost -p 5432 -q
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_17
+            psql -f clvhealth_jcafb_17_2024-10-28a.sql -d clvhealth_jcafb_17 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_2025n_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025n_15_2024-10-28a.tar.gz
+            rm -rf clvhealth_jcafb_17
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_17_2024-10-28a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025n_15_2024-10-28a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_17_2024-10-28a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo17-vm-18** ao modo desejado:
 
