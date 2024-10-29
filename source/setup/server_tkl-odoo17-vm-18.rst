@@ -749,8 +749,11 @@ Repositories Installation
 
             cd /opt/odoo
             git clone https://github.com/CLVsol/erppeek --branch master
-            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-            git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
+            git clone https://github.com/CLVsol/OCA_l10n-brazil --branch 16.0
+            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 17.0
+            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 17.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 17.0
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 17.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
@@ -774,7 +777,7 @@ Repositories Installation
         ::
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            addons_path = /usr/lib/python3/dist-packages/odoo/addons
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons
             
 Remote access to the server
 ---------------------------
