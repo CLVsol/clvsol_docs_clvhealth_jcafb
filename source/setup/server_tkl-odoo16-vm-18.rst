@@ -420,41 +420,6 @@ Development (2)
 
 :bmaroon:`Backup:` :blue:`tkl-odoo16-vm-18_2024-10-24c.rar`
 
-Remote access to the server
----------------------------
-
-    #. To access remotly the server, use the following commands (as **root**):
-
-        ::
-
-            ssh tkl-odoo16-vm-18 -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            /etc/init.d/odoo start
-
-        ::
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. :bmaroon:`(Not Implemented)` To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
-
-        ::
-
-            ssh tkl-odoo16-vm-18 -l odoo
-
-        ::
-
-            cd /opt/odoo/clvsol_clvhealth_jcafb/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025_16"
-
-            dropdb -i clvhealth_jcafb_2025_16
-
 Development (3)
 ---------------
 
@@ -560,6 +525,172 @@ Development (3)
             Installing collected packages: erppeek
             Successfully installed erppeek-1.7.1
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+Repositories Installation
+-------------------------
+
+    #. To install all "**modules**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/erppeek --branch master
+            git clone https://github.com/OCA/l10n-brazil --branch 16.0
+            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 17.0
+            # git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 17.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 17.0
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 17.0
+
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as root):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons
+
+        ::
+
+            # addons_path = /usr/lib/python3/dist-packages/odoo/addons
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/l10n-brazil,/opt/odoo/clvsol_odoo_addons
+            
+    #. To install erpbrasil.base, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install erpbrasil.base --break-system-packages
+
+            pip3 install erpbrasil.base --break-system-packages
+            Collecting erpbrasil.base
+              Downloading erpbrasil.base-2.3.1-py2.py3-none-any.whl (21 kB)
+            Installing collected packages: erpbrasil.base
+            Successfully installed erpbrasil.base-2.3.1
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+    #. To install phonenumbers, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install phonenumbers --break-system-packages
+
+            pip3 install phonenumbers --break-system-packages
+            Collecting phonenumbers
+              Downloading phonenumbers-8.13.48-py2.py3-none-any.whl (2.6 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 18.2 MB/s eta 0:00:00
+            Installing collected packages: phonenumbers
+            Successfully installed phonenumbers-8.13.48
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+    #. To install email-validator, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install email-validator --break-system-packages
+
+            pip3 install email-validator --break-system-packages
+            Collecting email-validator
+              Downloading email_validator-2.2.0-py3-none-any.whl (33 kB)
+            Collecting dnspython>=2.0.0
+              Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.6/313.6 kB 7.2 MB/s eta 0:00:00
+            Requirement already satisfied: idna>=2.0.0 in /usr/lib/python3/dist-packages (from email-validator) (3.3)
+            Installing collected packages: dnspython, email-validator
+            Successfully installed dnspython-2.7.0 email-validator-2.2.0
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+    #. To install brazilcep, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install brazilcep --break-system-packages
+
+            pip3 install brazilcep --break-system-packages
+            Collecting brazilcep
+              Downloading brazilcep-6.5.0-py3-none-any.whl (9.6 kB)
+            Requirement already satisfied: zeep>=4.2.1 in /usr/lib/python3/dist-packages (from brazilcep) (4.2.1)
+            Collecting requests>=2.28.2
+              Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 1.7 MB/s eta 0:00:00
+            Requirement already satisfied: charset-normalizer<4,>=2 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (3.0.1)
+            Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (3.3)
+            Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (1.26.12)
+            Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (2022.9.24)
+            Installing collected packages: requests, brazilcep
+              Attempting uninstall: requests
+                Found existing installation: requests 2.28.1
+                Not uninstalling requests at /usr/lib/python3/dist-packages, outside environment /usr
+                Can't uninstall 'requests'. No files were found to uninstall.
+            Successfully installed brazilcep-6.5.0 requests-2.32.3
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+Remote access to the server
+---------------------------
+
+    #. To access remotly the server, use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo16-vm-18 -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
+
+        ::
+
+            ssh tkl-odoo16-vm-18 -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025_16"
+
+            dropdb -i clvhealth_jcafb_2025_16
+
+Development (4)
+---------------
 
     #. :red:`(Failed - Not Used)` To install xlutils, execute the following commands (as root):
 
@@ -696,214 +827,6 @@ Development (3)
                 Can't uninstall 'Jinja2'. No files were found to uninstall.
             Successfully installed Jinja2-2.11.2
 
-Replace the Odoo installation (Odoo 17.0)
------------------------------------------
-
-    #. To replace the Odoo installation (Odoo 17.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
-
-        ::
-
-            ssh tkl-odoo15-jcafb25-vm -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-        ::
-
-            apt install gnupg2
-
-            wget https://nightly.odoo.com/odoo.key
-
-            cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
-
-            echo "deb http://nightly.odoo.com/17.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
-
-            apt-get update
-
-            apt-get install odoo
-
-        ::
-
-            apt-get install odoo
-            Reading package lists... Done
-            Building dependency tree... Done
-            Reading state information... Done
-            The following packages were automatically installed and are no longer required:
-              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form
-            Use 'apt autoremove' to remove them.
-            The following additional packages will be installed:
-              python3-geoip2 python3-maxminddb python3-rjsmin
-            Suggested packages:
-              python-maxmindb-doc
-            Recommended packages:
-              python3-ldap
-            The following packages will be REMOVED:
-              odoo-16
-            The following NEW packages will be installed:
-              odoo python3-geoip2 python3-maxminddb python3-rjsmin
-            0 upgraded, 4 newly installed, 1 to remove and 0 not upgraded.
-            Need to get 210 MB of archives.
-            After this operation, 199 MB of additional disk space will be used.
-            Do you want to continue? [Y/n] Y
-            Get:1 http://deb.debian.org/debian bookworm/main amd64 python3-maxminddb amd64 2.2.0-1+b1 [27.6 kB]
-            Get:2 http://nightly.odoo.com/17.0/nightly/deb ./ odoo 17.0.20240512 [210 MB]
-            Get:3 http://deb.debian.org/debian bookworm/main amd64 python3-geoip2 all 2.9.0+dfsg1-5 [22.8 kB]
-            Get:4 http://deb.debian.org/debian bookworm/main amd64 python3-rjsmin amd64 1.2.0+dfsg1-2+b3 [17.5 kB]
-            Fetched 210 MB in 48s (4373 kB/s)                                                                                                                                                            
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_CTYPE = "C",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_CTYPE = "C",
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            [master f3bd3b7] saving uncommitted changes in /etc prior to apt run
-             3 files changed, 3 insertions(+)
-             create mode 100644 apt/sources.list.d/odoo.list
-             create mode 100644 apt/trusted.gpg.d/odoo.gpg
-            debconf: delaying package configuration, since apt-utils is not installed
-            (Reading database ... 90696 files and directories currently installed.)
-            Removing odoo-16 (16.0.0+dfsg.2-2~bpo12+1) ...
-            Selecting previously unselected package python3-maxminddb.
-            (Reading database ... 50111 files and directories currently installed.)
-            Preparing to unpack .../python3-maxminddb_2.2.0-1+b1_amd64.deb ...
-            Unpacking python3-maxminddb (2.2.0-1+b1) ...
-            Selecting previously unselected package python3-geoip2.
-            Preparing to unpack .../python3-geoip2_2.9.0+dfsg1-5_all.deb ...
-            Unpacking python3-geoip2 (2.9.0+dfsg1-5) ...
-            Selecting previously unselected package python3-rjsmin.
-            Preparing to unpack .../python3-rjsmin_1.2.0+dfsg1-2+b3_amd64.deb ...
-            Unpacking python3-rjsmin (1.2.0+dfsg1-2+b3) ...
-            Selecting previously unselected package odoo.
-            Preparing to unpack .../odoo_17.0.20240512_all.deb ...
-            Unpacking odoo (17.0.20240512) ...
-            Setting up python3-rjsmin (1.2.0+dfsg1-2+b3) ...
-            Setting up python3-maxminddb (2.2.0-1+b1) ...
-            Setting up python3-geoip2 (2.9.0+dfsg1-5) ...
-            Setting up odoo (17.0.20240512) ...
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_CTYPE = "C",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            perl: warning: Setting locale failed.
-            perl: warning: Please check that your locale settings:
-                LANGUAGE = "en_US.UTF-8",
-                LC_ALL = (unset),
-                LC_CTYPE = "C",
-                LC_MONETARY = "pt_BR.UTF-8",
-                LC_COLLATE = "C",
-                LC_ADDRESS = "pt_BR.UTF-8",
-                LC_TELEPHONE = "pt_BR.UTF-8",
-                LC_NAME = "pt_BR.UTF-8",
-                LC_MEASUREMENT = "pt_BR.UTF-8",
-                LC_IDENTIFICATION = "pt_BR.UTF-8",
-                LC_NUMERIC = "pt_BR.UTF-8",
-                LC_PAPER = "pt_BR.UTF-8",
-                LANG = "en_US.UTF-8"
-                are supported and installed on your system.
-            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-            [master 73f3f73] committing changes in /etc made by "apt-get install odoo"
-             7 files changed, 10 insertions(+), 6 deletions(-)
-             mode change 100755 => 100644 init.d/odoo
-             create mode 100644 logrotate.d/odoo
-            Enumerating objects: 1910, done.
-            Counting objects: 100% (1910/1910), done.
-            Delta compression using up to 8 threads
-            Compressing objects: 100% (1207/1207), done.
-            Writing objects: 100% (1910/1910), done.
-            Total 1910 (delta 93), reused 1887 (delta 82), pack-reused 0
-
-        ::
-
-            # apt-get remove odoo
-
-    #. Set the **odoo** user password (Linux):
-
-        #. To set the **odoo** user password (Linux), use the following commands (as root):
-
-            ::
-
-                ssh tkl-odoo15-jcafb25-vm -l root
-
-            ::
-
-                passwd odoo
-
-
-        #. Edit the file "**/etc/password**" (as root):
-
-            ::
-
-                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
-
-            ::
-
-                odoo:x:105:114::/var/lib/odoo:/bin/bash
-
-    #. Set "**/etc/init.d/odoo**" file Permitions:
-
-        * Allow executing file as program: **marked**.
-
-    #. To stop and start the Odoo server, use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo15-jcafb25-vm -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            /etc/init.d/odoo start
-
-        ::
-
-            su odoo
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
 Repositories Installation
 -------------------------
 
@@ -959,109 +882,6 @@ Repositories Installation
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
             addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb
             
-    #. :red:`(Failed - Not Used)` To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo16-vm-18 -l root
-
-        ::
-
-            pip3 install erpbrasil.base
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-
-    #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo16-vm-18 -l root
-
-        ::
-
-            pip3 install erpbrasil.base --break-system-packages
-            Collecting erpbrasil.base
-              Downloading erpbrasil.base-2.3.0-py2.py3-none-any.whl (13 kB)
-            Installing collected packages: erpbrasil.base
-            Successfully installed erpbrasil.base-2.3.0
-            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-
-    #. :red:`(Failed - Not Used)` To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo16-vm-18 -l root
-
-        ::
-
-            # pip3 install pycep-correios
-            # Não utilizar versões > 5.1.0
-            #   'pycep-correios' is now 'brazilcep' 
-            #   (This package has been renamed. Use pip install brazilcep instead.)
-            #   https://pypi.org/project/pycep-correios/
-            #   (New package: https://pypi.org/project/brazilcep/)
-            pip3 install pycep-correios==5.1.0
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
-
-    #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo16-vm-18 -l root
-
-        ::
-
-            # pip3 install pycep-correios --break-system-packages
-            # Não utilizar versões > 5.1.0
-            #   'pycep-correios' is now 'brazilcep' 
-            #   (This package has been renamed. Use pip install brazilcep instead.)
-            #   https://pypi.org/project/pycep-correios/
-            #   (New package: https://pypi.org/project/brazilcep/)
-            pip3 install pycep-correios==5.1.0 --break-system-packages
-            Collecting pycep-correios==5.1.0
-              Downloading pycep_correios-5.1.0-py2.py3-none-any.whl (7.1 kB)
-            Requirement already satisfied: requests>=2.7.0 in /usr/lib/python3/dist-packages (from pycep-correios==5.1.0) (2.28.1)
-            Requirement already satisfied: zeep>=2.0.0 in /usr/lib/python3/dist-packages (from pycep-correios==5.1.0) (4.2.1)
-            Installing collected packages: pycep-correios
-            Successfully installed pycep-correios-5.1.0
-            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-
 :bmaroon:`(Not Implemented)` Upgrade the odoo software
 ------------------------------------------------------
 
