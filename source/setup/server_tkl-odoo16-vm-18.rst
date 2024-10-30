@@ -654,6 +654,8 @@ Repositories Installation
             Successfully installed brazilcep-6.5.0 requests-2.32.3
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
+:bmaroon:`Backup:` :blue:`tkl-odoo16-vm-18_2024-10-30a.rar`
+
 Remote access to the server
 ---------------------------
 
