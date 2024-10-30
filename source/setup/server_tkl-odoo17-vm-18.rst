@@ -779,6 +779,91 @@ Repositories Installation
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
             addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons
             
+    #. To install erpbrasil.base, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install erpbrasil.base --break-system-packages
+
+            pip3 install erpbrasil.base --break-system-packages
+            Collecting erpbrasil.base
+              Downloading erpbrasil.base-2.3.1-py2.py3-none-any.whl (21 kB)
+            Installing collected packages: erpbrasil.base
+            Successfully installed erpbrasil.base-2.3.1
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+    #. To install phonenumbers, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install phonenumbers --break-system-packages
+
+            pip3 install phonenumbers --break-system-packages
+            Collecting phonenumbers
+              Downloading phonenumbers-8.13.48-py2.py3-none-any.whl (2.6 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 18.2 MB/s eta 0:00:00
+            Installing collected packages: phonenumbers
+            Successfully installed phonenumbers-8.13.48
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+    #. To install email-validator, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install email-validator --break-system-packages
+
+            pip3 install email-validator --break-system-packages
+            Collecting email-validator
+              Downloading email_validator-2.2.0-py3-none-any.whl (33 kB)
+            Collecting dnspython>=2.0.0
+              Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.6/313.6 kB 7.2 MB/s eta 0:00:00
+            Requirement already satisfied: idna>=2.0.0 in /usr/lib/python3/dist-packages (from email-validator) (3.3)
+            Installing collected packages: dnspython, email-validator
+            Successfully installed dnspython-2.7.0 email-validator-2.2.0
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+    #. To install brazilcep, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo17-vm-18 -l root
+
+        ::
+
+            pip3 install brazilcep --break-system-packages
+
+            pip3 install brazilcep --break-system-packages
+            Collecting brazilcep
+              Downloading brazilcep-6.5.0-py3-none-any.whl (9.6 kB)
+            Requirement already satisfied: zeep>=4.2.1 in /usr/lib/python3/dist-packages (from brazilcep) (4.2.1)
+            Collecting requests>=2.28.2
+              Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 1.7 MB/s eta 0:00:00
+            Requirement already satisfied: charset-normalizer<4,>=2 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (3.0.1)
+            Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (3.3)
+            Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (1.26.12)
+            Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (2022.9.24)
+            Installing collected packages: requests, brazilcep
+              Attempting uninstall: requests
+                Found existing installation: requests 2.28.1
+                Not uninstalling requests at /usr/lib/python3/dist-packages, outside environment /usr
+                Can't uninstall 'requests'. No files were found to uninstall.
+            Successfully installed brazilcep-6.5.0 requests-2.32.3
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
 Remote access to the server
 ---------------------------
 
@@ -1007,50 +1092,6 @@ Repositories Installation
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
             addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb
             
-    #. :red:`(Failed - Not Used)` To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo17-vm-18 -l root
-
-        ::
-
-            pip3 install erpbrasil.base
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-
-    #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo17-vm-18 -l root
-
-        ::
-
-            pip3 install erpbrasil.base --break-system-packages
-            Collecting erpbrasil.base
-              Downloading erpbrasil.base-2.3.0-py2.py3-none-any.whl (13 kB)
-            Installing collected packages: erpbrasil.base
-            Successfully installed erpbrasil.base-2.3.0
-            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-
     #. :red:`(Failed - Not Used)` To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
 
         ::
