@@ -290,4 +290,59 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16]
 
         #. Salvar o registro editado.
 
+[tkl-odoo16-vm-18] Instalar o(s) módulo(s) [ver lista]
+------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Editar o arquivo **/opt/odoo/clvsol_clvhealth_jcafb/project/install.py**, **adicionando/habilitando** o(s) Módulo(s):
+
+        * l10n_br_base
+        * l10n_br_zip
+
+    #. [tkl-odoo16-vm-18] **Executar** a instalação do(s) Módulo(s) adicionado(s)/habilitado(s):
+
+        #. Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo16-vm-18** e executar o *Odoo* no modo manual:
+
+            ::
+
+                # ***** tkl-odoo16-vm-18 (session 1)
+                #
+
+                ssh tkl-odoo16-vm-18 -l root
+
+                /etc/init.d/odoo stop
+
+                su odoo
+                
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        #. Estabelecer uma sessão ssh (session 2) com o servidor **tkl-odoo16-vm-18** e executar o **install.py**:
+
+            ::
+
+                # ***** tkl-odoo16-vm-18 (session 2)
+                #
+
+                ssh tkl-odoo16-vm-18 -l odoo
+
+                cd /opt/odoo/clvsol_clvhealth_jcafb/project
+                
+                python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_16"
+
+        #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+            ::
+
+                # ***** tkl-odoo16-vm-18 (session 1)
+                #
+
+                cd /opt/odoo
+                /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+                ^C
+
+                exit
+
+                /etc/init.d/odoo start
+
 .. toctree::   :maxdepth: 2
