@@ -542,9 +542,12 @@ Repositories Installation
             git clone https://github.com/OCA/l10n-brazil --branch 16.0
             # git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 16.0
-            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
+            # git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 16.0
+            # git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 16.0
+            # git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 16.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
