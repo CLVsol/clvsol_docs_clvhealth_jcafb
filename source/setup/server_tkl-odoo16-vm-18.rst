@@ -539,7 +539,8 @@ Repositories Installation
 
             cd /opt/odoo
             git clone https://github.com/CLVsol/erppeek --branch master
-            git clone https://github.com/OCA/l10n-brazil --branch 16.0
+            # git clone https://github.com/OCA/l10n-brazil --branch 16.0
+            git clone https://github.com/CLVsol/OCA_l10n-brazil --branch 16.0
             # git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 16.0
             # git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
