@@ -119,7 +119,7 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
 
         #. Utilize o botão :bi:`Importar` para executar a Ação.
 
-:bmaroon:`Repetir duas vezes o procedimento:` [tkl-odoo15-jcafb25-vm] Importar o Cadastro de Paciente incial de Avaí (**843**)
+:borange:`Repetir duas vezes o procedimento:` [tkl-odoo15-jcafb25-vm] Importar o Cadastro de Paciente incial de Avaí (**843**)
 ------------------------------------------------------------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
@@ -140,27 +140,103 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
 
         #. Utilize o botão :bi:`Importar` para executar a Ação.
 
-[tkl-odoo15-jcafb25-vm] Executar a Verificação de todos os Pacientes
---------------------------------------------------------------------
+[tkl-odoo15-jcafb25-vm] Marcar *Contact Information is unavailable* dos Pacientes sem Logradouro definido
+---------------------------------------------------------------------------------------------------------
 
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+    #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Patient Mass Edit` para os Pacientes sem Logradouro definido`:
 
-    #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Patient Verification Execute` para todos os Pacientes:
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
 
         #. Acessar a *View* *Patients*:
 
             * Menu de acesso:
+
                 * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
 
-        #. Selecionar todos os Pacientes (**843**)
+        #. Ativar o filtro **Agrupar por** » :bi:`Street`
 
-        #. Executar a Ação ":bi:`Patient Verification Execute`":
+        #. Selecionar os :bi:`Patients` com: :bi:`Street` = "**Indefinido**" (**2**)
+
+        #. Marcar o ":bi:`Contact Information is unavailable`" para os Pacientes selecionados.
+
+[tkl-odoo15-jcafb25-vm] Atualizar o *State* dos Pacientes sem Logradouro definido
+---------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Patient Mass Edit` para os Pacientes sem Logradouro definido`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Street`
+
+        #. Selecionar os :bi:`Patients` com: :bi:`Street` = "**Indefinido**" (**2**)
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
 
             * Parâmetros utilizados:
 
-            #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
+                * *State*: **Set** **Unvailable**
 
-[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-02b)
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Atualizar o *State* dos Pacientes com formato de Endereço inválido
+------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Patient Mass Edit` para os Pacientes com formato de Endereço inválido`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Patient State`
+
+        #. Pesquisar pelos registros com :bi:`Address Name` = "**.**"
+
+        #. Selecionar os :bi:`Patients` com: :bi:`Patient State` = "**New**" (**12**)
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *State*: **Set** **Unvailable**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Atualizar o *State* dos Pacientes com Logradouro definido
+---------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Patient Mass Edit` para os Pacientes com Logradouro definido`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Patient State`
+
+        #. Selecionar os :bi:`Patients` com: :bi:`Patient State` = "**New**" (**829**)
+
+        #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *State*: **Set** **Available**
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-03a)
 -------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
@@ -186,16 +262,16 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-11-02b.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-11-03a.sql
 
-            gzip clvhealth_jcafb_2025_15_2024-11-02b.sql
-            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-11-02b.sql
+            gzip clvhealth_jcafb_2025_15_2024-11-03a.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-11-03a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-02b.tar.gz clvhealth_jcafb_2025_15
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-03a.tar.gz clvhealth_jcafb_2025_15
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-02b.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-03a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
 
@@ -215,17 +291,17 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2025_15_2024-11-02b.sql
-        * /opt/odoo/clvhealth_jcafb_2025_15_2024-11-02b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-02b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-02b.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-11-03a.sql
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-11-03a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-03a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-03a.tar.gz
 
-.. index:: clvhealth_jcafb_2025_15_2024-11-02b.sql
-.. index:: clvhealth_jcafb_2025_15_2024-11-02b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2025_15_2024-11-02b
-.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-02b
+.. index:: clvhealth_jcafb_2025_15_2024-11-03a.sql
+.. index:: clvhealth_jcafb_2025_15_2024-11-03a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025_15_2024-11-03a
+.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-03a
 
-[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-02b)
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-03a)
 -----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
@@ -249,22 +325,22 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2025_15_2024-11-02b.sql.gz
+            # gzip -d clvhealth_jcafb_2025_15_2024-11-03a.sql.gz
 
             dropdb -i clvhealth_jcafb_2025_15
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
-            psql -f clvhealth_jcafb_2025_15_2024-11-02b.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2025_15_2024-11-03a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2025_15
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-02b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-03a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-02b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-03a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
 
@@ -301,5 +377,25 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
             * "**http://tkl-odoo15-jcafb25-vm**".
 
         #. Salvar o registro editado.
+
+[tkl-odoo15-jcafb25-vm] Executar a Verificação de todos os Pacientes
+--------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Patient Verification Execute` para todos os Pacientes:
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Selecionar todos os Pacientes (**843**)
+
+        #. Executar a Ação ":bi:`Patient Verification Execute`":
+
+            * Parâmetros utilizados:
+
+            #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
 
 .. toctree::   :maxdepth: 2
