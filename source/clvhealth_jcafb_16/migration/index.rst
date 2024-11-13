@@ -28,3 +28,4 @@ Migração de Dados [CLVhealth-JCAFB-16]
 
    clvsol_filestore_clvhealth_jcafb_init
    clvhealth_jcafb_16_migration_history_001
+   clvhealth_jcafb_16_migration_history_002
