@@ -526,6 +526,30 @@ Development (3)
             Successfully installed erppeek-1.7.1
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
+    #. To install pandas, use the following commands (as root):
+
+        ::
+
+            pip3 install pandas --break-system-packages
+
+        ::
+
+            pip3 install pandas --break-system-packages
+            Collecting pandas
+              Downloading pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 38.4 MB/s eta 0:00:00
+            Collecting numpy>=1.23.2
+              Downloading numpy-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.3 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.3/16.3 MB 41.5 MB/s eta 0:00:00
+            Requirement already satisfied: python-dateutil>=2.8.2 in /usr/lib/python3/dist-packages (from pandas) (2.8.2)
+            Requirement already satisfied: pytz>=2020.1 in /usr/lib/python3/dist-packages (from pandas) (2022.7.1)
+            Collecting tzdata>=2022.7
+              Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 46.7 MB/s eta 0:00:00
+            Installing collected packages: tzdata, numpy, pandas
+            Successfully installed numpy-2.1.3 pandas-2.2.3 tzdata-2024.2
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
 Repositories Installation
 -------------------------
 
