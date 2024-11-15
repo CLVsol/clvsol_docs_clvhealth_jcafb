@@ -97,7 +97,6 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
 
         #. Salvar o registro editado.
 
-
 [tkl-odoo15-jcafb25-vm] Importar *Patient Markers*  (**14**)
 ------------------------------------------------------------
 
