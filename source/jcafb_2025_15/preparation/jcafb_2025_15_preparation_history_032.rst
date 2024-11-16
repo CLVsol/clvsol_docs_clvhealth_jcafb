@@ -97,6 +97,146 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
 
         #. Salvar o registro editado.
 
+[tkl-odoo15-jcafb25-vm] Importar *Usuários*  (**39**)
+-----------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Usuários**:
+
+        * Menu de acesso:
+            * **Configurações** » **Usuários & Empresas** » **Usuários**
+
+    #. Executar a importação do arquivo "**/opt/clvsol/jupyter/jcafb_2025/cadastro/data/res.users.xlsx**":
+
+        * Menu de acesso:
+            * **Favoritos** » **Importar registros**
+
+        #. Utilizar o botão :bi:`Upload File`.
+
+        #. Selecionar o arquivo "**/opt/clvsol/jupyter/jcafb_2025/cadastro/data/res.users.xlsx**".
+
+        #. Utilize o botão :bi:`Importar` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Importar *Departamentos*  (**14**)
+----------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Departamentos**:
+
+        * Menu de acesso:
+            * **Funcionários** » **Departamentos**
+
+    #. Executar a importação do arquivo "**/opt/clvsol/jupyter/jcafb_2025/cadastro/data/hr.department.xlsx**":
+
+        * Menu de acesso:
+            * **Favoritos** » **Importar registros**
+
+        #. Utilizar o botão :bi:`Upload File`.
+
+        #. Selecionar o arquivo "**/opt/clvsol/jupyter/jcafb_2025/cadastro/data/hr.department.xlsx**".
+
+        #. Utilize o botão :bi:`Importar` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Importar *Funcionários*  (**54**)
+---------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Acessar a *View* **Funcionários**:
+
+        * Menu de acesso:
+            * **Funcionários** » **Funcionários** » **Funcionários**
+
+    #. Executar a importação do arquivo "**/opt/clvsol/jupyter/jcafb_2025/cadastro/data/hr.employee.xlsx**":
+
+        * Menu de acesso:
+            * **Favoritos** » **Importar registros**
+
+        #. Utilizar o botão :bi:`Upload File`.
+
+        #. Selecionar o arquivo "**/opt/clvsol/jupyter/jcafb_2025/cadastro/data/hr.employee.xlsx**".
+
+        #. Utilize o botão :bi:`Importar` para executar a Ação.
+
+[tkl-odoo15-jcafb25-vm] Criar as Faixas de Idades de Pacientes para a JCAFB-2025
+--------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+    #. Criar as Faixas de Idades de Pacientes para a **JCAFB-2025**:
+
+        * Menu de acesso:
+            
+            * :bi:`Health` » :bi:`Configuration` » :bi:`Patient` » :bi:`Age Ranges`
+
+        * Faixas de Idades criadas:
+            
+            * **0-1 anos**
+
+                * *Name*: **0-1 anos**
+
+                * *From*: **0**
+
+                * *To*: **1**
+
+            * **2 anos**
+
+                * *Name*: **2 anos**
+
+                * *From*: **2**
+
+                * *To*: **2**
+
+            * **3-5 anos**
+
+                * *Name*: **3-5 anoss**
+
+                * *From*: **3**
+
+                * *To*: **5**
+
+            * **6 anos**
+
+                * *Name*: **6 anos**
+
+                * *From*: **6**
+
+                * *To*: **6**
+
+            * **7-8 anos**
+
+                * *Name*: **7-8 anos**
+
+                * *From*: **7**
+
+                * *To*: **8**
+
+            * **9-17 anos**
+
+                * *Name*: **9-17 anos**
+
+                * *From*: **19**
+
+                * *To*: **17**
+
+            * **18-59 anos**
+
+                * *Name*: **18-59 anos**
+
+                * *From*: **18**
+
+                * *To*: **59**
+
+            * **60+ anos**
+
+                * *Name*: **60+ anos**
+
+                * *From*: **60**
+
+                * *To*: **120**
+
 [tkl-odoo15-jcafb25-vm] Importar *Patient Markers*  (**14**)
 ------------------------------------------------------------
 
@@ -118,7 +258,149 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
 
         #. Utilize o botão :bi:`Importar` para executar a Ação.
 
-[tkl-odoo15-jcafb25-vm] Importar *Street Patterns*  (**61**)
+[tkl-odoo15-jcafb25-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-15a)
+-------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-11-15a.sql
+
+            gzip clvhealth_jcafb_2025_15_2024-11-15a.sql
+            pg_dump clvhealth_jcafb_2025_15 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2025_15_2024-11-15a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-15a.tar.gz clvhealth_jcafb_2025_15
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-15a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-11-15a.sql
+        * /opt/odoo/clvhealth_jcafb_2025_15_2024-11-15a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-15a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-15a.tar.gz
+
+.. index:: clvhealth_jcafb_2025_15_2024-11-15a.sql
+.. index:: clvhealth_jcafb_2025_15_2024-11-15a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2025_15_2024-11-15a
+.. index:: clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-15a
+
+[tkl-odoo15-jcafb25-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-15a)
+-----------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo15-jcafb25-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo15-jcafb25-vm** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            ssh tkl-odoo15-jcafb25-vm -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo15-jcafb25-vm] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_2025_15_2024-11-15a.sql.gz
+
+            dropdb -i clvhealth_jcafb_2025_15
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2025_15
+            psql -f clvhealth_jcafb_2025_15_2024-11-15a.sql -d clvhealth_jcafb_2025_15 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2025_15
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2025_15_2024-11-15a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2025_15_2024-11-15a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo15-jcafb25-vm** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo15-jcafb25-vm
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. [tkl-odoo15-jcafb25-vm] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo15-jcafb25-vm**".
+
+        #. Salvar o registro editado.
+
+[tkl-odoo15-jcafb25-vm] Importar *Street Patterns*  (**56**)
 ------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
@@ -139,7 +421,7 @@ JCAFB-2025-15 (Preparação pré Jornada II [3])
 
         #. Utilize o botão :bi:`Importar` para executar a Ação.
 
-[tkl-odoo15-jcafb25-vm] Importar *Contact Information Patterns*  (**624**)
+[tkl-odoo15-jcafb25-vm] Importar *Contact Information Patterns*  (**631**)
 --------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
