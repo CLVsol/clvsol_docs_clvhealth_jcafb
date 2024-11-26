@@ -254,12 +254,12 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. Salvar o registro editado.
 
-:borange:`(**)` Criar o *External Sync Host* "https://192.168.25.203"
----------------------------------------------------------------------
+:borange:`(**)` Criar o *External Sync Host* "http://192.168.25.210:8069"
+-------------------------------------------------------------------------
 
     #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
 
-    #. Criar o *External Sync Host* **https://192.168.25.203**:
+    #. Criar o *External Sync Host* **http://192.168.25.210:8069**:
 
         * Menu de acesso:
             
@@ -267,8 +267,8 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         * Parâmetros utilizados:
             
-            * External Host Name: "**https://192.168.25.203**"
-            * External Database Name: "**clvhealth_jcafb_2021v_14n**"
+            * External Host Name: "**http://192.168.25.210:8069**"
+            * External Database Name: "**clvhealth_jcafb_2025_15**"
             * External User: "**admin**"
             * External User Password: "*******"
 
@@ -289,7 +289,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         * Parâmetros alterados:
             
-            * *External Host*: "**https://192.168.25.203**"
+            * *External Host*: "**http://192.168.25.210:8069**"
             * *Max Task Registers*: "**300.000**"
 
 :borange:`(**)` Lista de *Schedules* instalados (00-16-18)
