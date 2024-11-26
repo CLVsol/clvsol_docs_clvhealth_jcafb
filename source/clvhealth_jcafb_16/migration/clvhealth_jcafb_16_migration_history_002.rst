@@ -26,8 +26,8 @@
 Migração do Banco de Dados [CLVhealth-JCAFB-16] (2)
 ===================================================
 
-[tkl-odoo16-vm-18] Preparação do conrteúdo do arquivo "host.csv" (2024-11-12a)
-------------------------------------------------------------------------------
+[tkl-odoo16-vm-18] Preparação do conteúdo do arquivo "host.csv" (2024-11-12a)
+-----------------------------------------------------------------------------
 
     #. [tkl-odoo16-vm-18] Editar manualmente um registro (*row*) do arquivo "/opt/odoo/clvsol_clvhealth_jcafb/project/host.csv", informando as credenciais:
 
@@ -42,7 +42,6 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (2)
         * master_pw: "*******"
         * notes: "**vazio**"
  
-
 [tkl-odoo16-vm-18] Criar uma nova instância do *CLVhealth-JCAFB-16* (2024-11-13a)
 ---------------------------------------------------------------------------------
 
