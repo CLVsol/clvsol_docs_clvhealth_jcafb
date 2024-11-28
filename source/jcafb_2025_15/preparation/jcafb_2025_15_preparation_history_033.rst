@@ -353,4 +353,75 @@ JCAFB-2025-15 (Preparação pré Jornada II [4])
 
         #. Salvar o registro editado.
 
+[tkl-odoo15-jcafb25-vm] Definir a Lista de Pacientes Selecionados para a JCAFB-2025
+-----------------------------------------------------------------------------------
+
+    Critérios utilizados:
+
+        * **88**: Pacientes na faixa etária "**60+ anos**", distrribuidos pelos Bairros:
+
+            * Baixada: **17**
+            * Centro: **35**
+            * Cohabs: **19**
+            * Vila Oliveira: **19**
+
+        * **72**: Pacientes na faixa etária "**3-5 anos**", distrribuidos pelos Bairros:
+
+            * Baixada: **17**
+            * Centro: **24**
+            * Cohabs: **17**
+            * Vila Oliveira: **14**
+
+    #. [tkl-odoo15-jcafb25-vm] Executar a Ação :bi:`Patient Mass Edit`:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb25-vm <https://tkl-odoo15-jcafb25-vm>`_
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Ordenar os Pacientesa pelo campo :bi:`Random ID`.
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Patient State`  » :bi:`Age Ranges` » :bi:`District`
+
+        #. **Idosos** (**88**):
+
+            #. Selecionar os primeiros **17** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**60+ anos**" » :bi:`District` = "**Baixada**"
+
+            #. Selecionar os primeiros **35** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**60+ anos**" » :bi:`District` = "**Centro**"
+
+            #. Selecionar os primeiros **19** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**60+ anos**" » :bi:`District` = "**Cohabs**"
+
+            #. Selecionar os primeiros **17** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**60+ anos**" » :bi:`District` = "**Vila Oliveira**"
+
+            #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Patient State*: **Set** » **Selected**
+                    * *Patient Verification Execute*: **marcado**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+        #. **Crianças** (**72**):
+
+            #. Selecionar os primeiros **17** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**3-5 anos**" » :bi:`District` = "**Baixada**"
+
+            #. Selecionar os primeiros **24** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**3-5 anos**" » :bi:`District` = "**Centro**"
+
+            #. Selecionar os primeiros **17** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**3-5 anos**" » :bi:`District` = "**Cohabs**"
+
+            #. Selecionar os primeiros **14** Pacientes com: :bi:`Patient State` = "**Available**" » :bi:`Age Range` = "**3-5 anos**" » :bi:`District` = "**Vila Oliveira**"
+
+            #. Executar a Ação ":bi:`Patient Mass Edit`":
+
+                * Parâmetros utilizados:
+
+                    * *Patient State*: **Set** » **Selected**
+                    * *Patient Verification Execute*: **marcado**
+
+                #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
