@@ -309,7 +309,6 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
         #. :blue:`(Enabled)` clv.file_system.directory (clv.file_system.directory) [Sync]
 
         #. :blue:`(Enabled)` clv.global_tag (clv.global_tag) [Sync]
-
         #. :blue:`(Enabled)` clv.set (clv.set) [Sync]
         #. :blue:`(Enabled)` clv.set.element (clv.set.element) [1] [Inc]
 
@@ -321,11 +320,11 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. :blue:`(Enabled)` hr.employee.history (hr.employee.history) [Sync]
 
-        #. :blue:`(Enabled)` survey.survey (survey.survey) [Sync]
-        #. :blue:`(Enabled)` survey.question (survey.question) [1] [Sync]
-        #. :blue:`(Enabled)` survey.question (survey.question) [2] [Sync]
-        #. :blue:`(Enabled)` survey.question.answer (survey.question.answer) [Sync]
-        #. :blue:`(Enabled)` survey.user_input (survey.user_input) [1] [Inc]
+        #. :red:`(Enabled)` survey.survey (survey.survey) [Sync]
+        #. :red:`(Enabled)` survey.question (survey.question) [1] [Sync]
+        #. :red:`(Enabled)` survey.question (survey.question) [2] [Sync]
+        #. :red:`(Enabled)` survey.question.answer (survey.question.answer) [Sync]
+        #. :red:`(Enabled)` survey.user_input (survey.user_input) [1] [Inc]
 
         #. :blue:`(Enabled)` clv.event (clv.event) [Sync]
         #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [1] [Inc]
@@ -339,9 +338,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [1] [Inc]
         #. :blue:`(Enabled)` clv.lab_test.type.parameter (clv.lab_test.type.parameter) [Sync]
-        #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [1] [Inc]
         #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [1] [Inc]
-        #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [1] [Inc]
 
         #. :blue:`(Enabled)` res.country (res.country)
         #. :blue:`(Enabled)` res.country.state (res.country.state)
@@ -351,7 +348,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
         #. :blue:`(Enabled)` clv.residence.marker (clv.residence.marker)
         #. :blue:`(Enabled)` clv.residence (clv.residence) [1] [Inc]
 
-        #. :blue:`(Enabled)` clv.residence.history (clv.residence.history) [1] [Inc]
+        #. :red:`(Enabled)` clv.residence.history (clv.residence.history) [1] [Inc]
 
         #. :blue:`(Enabled)` clv.patient.age_range (clv.patient.age_range)
         #. :blue:`(Enabled)` clv.patient.category (clv.patient.category)
@@ -360,48 +357,21 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. :blue:`(Enabled)` clv.patient.history (clv.patient.history) [1] [Inc]
 
-        #. :blue:`(Enabled)` clv.patient_aux (clv.patient_aux)
+        #. :red:`(Enabled)` clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)
 
-        #. :blue:`(Enabled)` clv.address.category (clv.address.category)
-        #. :blue:`(Enabled)` clv.address.marker (clv.address.marker)
-        #. :blue:`(Enabled)` clv.address (clv.address)
+        #. :red:`(Enabled)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
+        #. :red:`(Enabled)` clv.partner_entity.contact_information_pattern (clv.partner_entity.contact_information_pattern)
 
-        #. :blue:`(Enabled)` clv.address.history (clv.address.history)
-
-        #. :blue:`(Enabled)` clv.family.category (clv.family.category)
-        #. :blue:`(Enabled)` clv.family (clv.family)
-
-        #. :blue:`(Enabled)` clv.family.history (clv.family.history)
-
-        #. :blue:`(Enabled)` clv.person.age_range (clv.person.age_range)
-        #. :blue:`(Enabled)` clv.person.category (clv.person.category)
-        #. :blue:`(Enabled)` clv.person.marker (clv.person.marker)
-        #. :blue:`(Enabled)` clv.person (clv.person)
-
-        #. :blue:`(Enabled)` clv.person.relation.type (clv.person.relation.type)
-        #. :blue:`(Enabled)` clv.person.relation (clv.person.relation)
-
-        #. :blue:`(Enabled)` clv.person.history (clv.person.history)
-
-        #. :blue:`(Enabled)` clv.address_aux (clv.address_aux)
-
-        #. :blue:`(Enabled)` clv.person_aux (clv.person_aux)
-
-        #. :blue:`(Enabled)` clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)
-
-        #. :blue:`(Enabled)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
-        #. :blue:`(Enabled)` clv.partner_entity.contact_information_pattern (clv.partner_entity.contact_information_pattern)
-
-        #. :blue:`(Enabled)` clv.verification.marker (clv.verification.marker)
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [1]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [2]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [3]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [4]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [5]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [6]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [7]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [8]
-        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [9]
+        #. :red:`(Enabled)` clv.verification.marker (clv.verification.marker)
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [1]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [2]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [3]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [4]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [5]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [6]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [7]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [8]
+        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [9]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [00]*"
 -----------------------------------------------------------------------
@@ -423,27 +393,25 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled)` clv.set.element (clv.set.element) [2] [Sync]
+        #. :green:`(Enabled)` clv.set.element (clv.set.element) [2] [Sync]
 
-        #. :blue:`(Enabled)` survey.user_input (survey.user_input) [2] [Sync]
+        #. :red:`(Enabled)` survey.user_input (survey.user_input) [2] [Sync]
 
-        #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [2] [Sync]
+        #. :green:`(Enabled)` clv.event.attendee (clv.event.attendee) [2] [Sync]
 
-        #. :blue:`(Enabled)` clv.document.type (clv.document.type) [2]
-        #. :blue:`(Enabled)` clv.document (clv.document) [3] [Sync]
+        #. :green:`(Enabled)` clv.document.type (clv.document.type) [2]
+        #. :green:`(Enabled)` clv.document (clv.document) [3] [Sync]
 
-        #. :blue:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
-        #. :blue:`(Enabled)` clv.lab_test.request (clv.lab_test.request) [2] [Sync]
-        #. :blue:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
-        #. :blue:`(Enabled)` clv.lab_test.report (clv.lab_test.report) [2] [Sync]
+        #. :green:`(Enabled)` clv.lab_test.type (clv.lab_test.type) [2] [Sync]
+        #. :green:`(Enabled)` clv.lab_test.result (clv.lab_test.result) [2] [Sync]
 
-        #. :blue:`(Enabled)` clv.residence (clv.residence) [2] [Sync]
+        #. :green:`(Enabled)` clv.residence (clv.residence) [2] [Sync]
 
-        #. :blue:`(Enabled)` clv.residence.history (clv.residence.history) [2] [Sync]
+        #. :red:`(Enabled)` clv.residence.history (clv.residence.history) [2] [Sync]
 
-        #. :blue:`(Enabled)` clv.patient (clv.patient) [2] [Sync]
+        #. :green:`(Enabled)` clv.patient (clv.patient) [2] [Sync]
 
-        #. :blue:`(Enabled)` clv.patient.history (clv.patient.history) [2] [Sync]
+        #. :green:`(Enabled)` clv.patient.history (clv.patient.history) [2] [Sync]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [02]*"
 -----------------------------------------------------------------------
@@ -485,14 +453,14 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [1] [Sync]
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [2] [Sync]
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [3] [Sync]
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [4] [Sync]
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [5] [Sync]
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [6] [Sync]
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [7] [Sync]
-        #. :blue:`(Enabled)` survey.user_input.line (survey.user_input.line) [8] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [1] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [2] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [3] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [4] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [5] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [6] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [7] [Sync]
+        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [8] [Sync]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [10]*"
 -----------------------------------------------------------------------
@@ -514,11 +482,11 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [1]
-        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [2]
-        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [3]
-        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [4]
-        #. :blue:`(Enabled)` clv.document.item (clv.document.item) [5]
+        #. :green:`(Enabled)` clv.document.item (clv.document.item) [1]
+        #. :green:`(Enabled)` clv.document.item (clv.document.item) [2]
+        #. :green:`(Enabled)` clv.document.item (clv.document.item) [3]
+        #. :green:`(Enabled)` clv.document.item (clv.document.item) [4]
+        #. :green:`(Enabled)` clv.document.item (clv.document.item) [5]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [20]*"
 -----------------------------------------------------------------------
@@ -540,8 +508,8 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
     * Lista de *Schedules* instalados:
 
-        #. :blue:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [1] [Sync]
-        #. :blue:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [2] [Sync]
+        #. :green:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [1] [Sync]
+        #. :green:`(Enabled)` clv.lab_test.criterion (clv.lab_test.criterion) [2] [Sync]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [30]*"
 -----------------------------------------------------------------------
