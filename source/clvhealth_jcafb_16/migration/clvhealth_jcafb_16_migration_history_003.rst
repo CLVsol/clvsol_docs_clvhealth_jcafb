@@ -320,11 +320,11 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. :blue:`(Enabled)` hr.employee.history (hr.employee.history) [Sync]
 
-        #. :red:`(Enabled)` survey.survey (survey.survey) [Sync]
-        #. :red:`(Enabled)` survey.question (survey.question) [1] [Sync]
-        #. :red:`(Enabled)` survey.question (survey.question) [2] [Sync]
-        #. :red:`(Enabled)` survey.question.answer (survey.question.answer) [Sync]
-        #. :red:`(Enabled)` survey.user_input (survey.user_input) [1] [Inc]
+        #. :blue:`(Enabled)` survey.survey (survey.survey) [Sync]
+        #. :borange:`(Disabled)` survey.question (survey.question) [1] [Sync]
+        #. :borange:`(Disabled)` survey.question (survey.question) [2] [Sync]
+        #. :borange:`(Disabled)` survey.question.answer (survey.question.answer) [Sync]
+        #. :borange:`(Disabled)` survey.user_input (survey.user_input) [1] [Inc]
 
         #. :blue:`(Enabled)` clv.event (clv.event) [Sync]
         #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [1] [Inc]
@@ -356,6 +356,8 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
         #. :blue:`(Enabled)` clv.patient (clv.patient) [1] [Inc]
 
         #. :blue:`(Enabled)` clv.patient.history (clv.patient.history) [1] [Inc]
+
+        #. :blue:`(Enabled)` clv.patient_rec (clv.patient_rec) [1] [Inc]
 
         #. :red:`(Enabled)` clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)
 
@@ -395,7 +397,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. :green:`(Enabled)` clv.set.element (clv.set.element) [2] [Sync]
 
-        #. :red:`(Enabled)` survey.user_input (survey.user_input) [2] [Sync]
+        #. :green:`(Enabled)` survey.user_input (survey.user_input) [2] [Sync]
 
         #. :green:`(Enabled)` clv.event.attendee (clv.event.attendee) [2] [Sync]
 
@@ -412,6 +414,8 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
         #. :green:`(Enabled)` clv.patient (clv.patient) [2] [Sync]
 
         #. :green:`(Enabled)` clv.patient.history (clv.patient.history) [2] [Sync]
+
+        #. :green:`(Enabled)` clv.patient_rec (clv.patient_rec) [2] [Sync]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [02]*"
 -----------------------------------------------------------------------
@@ -453,14 +457,14 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
     * Lista de *Schedules* instalados:
 
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [1] [Sync]
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [2] [Sync]
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [3] [Sync]
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [4] [Sync]
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [5] [Sync]
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [6] [Sync]
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [7] [Sync]
-        #. :red:`(Enabled)` survey.user_input.line (survey.user_input.line) [8] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [1] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [2] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [3] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [4] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [5] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [6] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [7] [Sync]
+        #. :green:`(Enabled)` survey.user_input.line (survey.user_input.line) [8] [Sync]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [10]*"
 -----------------------------------------------------------------------
