@@ -321,10 +321,10 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
         #. :blue:`(Enabled)` hr.employee.history (hr.employee.history) [Sync]
 
         #. :blue:`(Enabled)` survey.survey (survey.survey) [Sync]
-        #. :borange:`(Disabled)` survey.question (survey.question) [1] [Sync]
-        #. :borange:`(Disabled)` survey.question (survey.question) [2] [Sync]
-        #. :borange:`(Disabled)` survey.question.answer (survey.question.answer) [Sync]
-        #. :borange:`(Disabled)` survey.user_input (survey.user_input) [1] [Inc]
+        #. :blue:`(Enabled)` survey.question (survey.question) [1] [Sync]
+        #. :blue:`(Enabled)` survey.question (survey.question) [2] [Sync]
+        #. :blue:`(Enabled)` survey.question.answer (survey.question.answer) [Sync]
+        #. :blue:`(Enabled)` survey.user_input (survey.user_input) [1] [Inc]
 
         #. :blue:`(Enabled)` clv.event (clv.event) [Sync]
         #. :blue:`(Enabled)` clv.event.attendee (clv.event.attendee) [1] [Inc]
