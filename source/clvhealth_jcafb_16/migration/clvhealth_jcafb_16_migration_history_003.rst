@@ -388,7 +388,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 1:16:37.644`
+            * :bi:`Execution time: 0:39:39.300`
             
 :borange:`(**)` Lista de *Schedules* instalados (02-16-18)
 ----------------------------------------------------------
@@ -430,7 +430,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:40:10.726`
+            * :bi:`Execution time: 0:14:21.984`
 
 :borange:`(**)` Lista de *Schedules* instalados (04-16-18)
 ----------------------------------------------------------
