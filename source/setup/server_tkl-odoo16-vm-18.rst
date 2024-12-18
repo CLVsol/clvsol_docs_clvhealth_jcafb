@@ -550,6 +550,54 @@ Development (3)
             Successfully installed numpy-2.1.3 pandas-2.2.3 tzdata-2024.2
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
+    #. :red:`(Failed - Not Used)` To install xlutils, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlutils
+
+        ::
+
+            pip3 install xlutils
+            error: externally-managed-environment
+
+            × This environment is externally managed
+            ╰─> To install Python packages system-wide, try apt install
+                python3-xyz, where xyz is the package you are trying to
+                install.
+                
+                If you wish to install a non-Debian-packaged Python package,
+                create a virtual environment using python3 -m venv path/to/venv.
+                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+                sure you have python3-full installed.
+                
+                If you wish to install a non-Debian packaged Python application,
+                it may be easiest to use pipx install xyz, which will manage a
+                virtual environment for you. Make sure you have pipx installed.
+                
+                See /usr/share/doc/python3.11/README.venv for more information.
+
+            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+            hint: See PEP 668 for the detailed specification.
+
+    #. To install xlutils, execute the following commands (as root):
+
+        ::
+
+            pip3 install xlutils --break-system-packages
+
+        ::
+
+            pip3 install xlutils --break-system-packages
+            Collecting xlutils
+              Downloading xlutils-2.0.0-py2.py3-none-any.whl (55 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 kB 2.0 MB/s eta 0:00:00
+            Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.2.0)
+            Requirement already satisfied: xlwt>=0.7.4 in /usr/lib/python3/dist-packages (from xlutils) (1.3.0)
+            Installing collected packages: xlutils
+            Successfully installed xlutils-2.0.0
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
 Repositories Installation
 -------------------------
 
@@ -722,54 +770,6 @@ Remote access to the server
 
 Development (4)
 ---------------
-
-    #. :red:`(Failed - Not Used)` To install xlutils, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlutils
-
-        ::
-
-            pip3 install xlutils
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
-
-    #. To install xlutils, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlutils --break-system-packages
-
-        ::
-
-            pip3 install xlutils --break-system-packages
-            Collecting xlutils
-              Downloading xlutils-2.0.0-py2.py3-none-any.whl (55 kB)
-                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 kB 2.0 MB/s eta 0:00:00
-            Requirement already satisfied: xlrd>=0.7.2 in /usr/lib/python3/dist-packages (from xlutils) (1.2.0)
-            Requirement already satisfied: xlwt>=0.7.4 in /usr/lib/python3/dist-packages (from xlutils) (1.3.0)
-            Installing collected packages: xlutils
-            Successfully installed xlutils-2.0.0
-            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
     #. :red:`(Failed - Not Used)` To install yaml, use the following commands (as root):
 
