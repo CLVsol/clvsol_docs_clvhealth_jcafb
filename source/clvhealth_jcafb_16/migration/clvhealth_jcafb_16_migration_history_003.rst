@@ -42,7 +42,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
         * master_pw: "*******"
         * notes: "**vazio**"
  
-[tkl-odoo16-vm-18] Criar uma nova instância do *CLVhealth-JCAFB-16* (2024-11-13a)
+[tkl-odoo16-vm-18] Criar uma nova instância do *CLVhealth-JCAFB-16* (2024-12-27a)
 ---------------------------------------------------------------------------------
 
     #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh (session 1) com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
@@ -94,7 +94,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
             
             python3 install.py
 
-        * **Execution time: 0:01:45.255**
+        * **Execution time: 0:15:03.863550**
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
 
@@ -359,21 +359,16 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. :blue:`(Enabled)` clv.patient_rec (clv.patient_rec) [1] [Inc]
 
-        #. :red:`(Enabled)` clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)
+        #. :blue:`(Enabled)` clv.lab_test.export_xls.param (clv.lab_test.export_xls.param)
 
-        #. :red:`(Enabled)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
-        #. :red:`(Enabled)` clv.partner_entity.contact_information_pattern (clv.partner_entity.contact_information_pattern)
+        #. :blue:`(Enabled)` clv.partner_entity.street_pattern (clv.partner_entity.street_pattern)
+        #. :blue:`(Enabled)` clv.partner_entity.contact_information_pattern (clv.partner_entity.contact_information_pattern)
 
-        #. :red:`(Enabled)` clv.verification.marker (clv.verification.marker)
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [1]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [2]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [3]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [4]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [5]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [6]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [7]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [8]
-        #. :red:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [9]
+        #. :blue:`(Enabled)` clv.verification.marker (clv.verification.marker)
+        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [1]
+        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [2]
+        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [3]
+        #. :blue:`(Enabled)` clv.verification.outcome (clv.verification.outcome) [4]
 
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [00]*"
 -----------------------------------------------------------------------
