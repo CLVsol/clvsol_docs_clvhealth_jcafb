@@ -733,6 +733,56 @@ Repositories Installation
 
 :bmaroon:`Backup:` :blue:`tkl-odoo16-vm-18_2024-10-30a.rar`
 
+Development (4)
+---------------
+
+    #. :red:`(Failed - Not Used)` To install yaml, use the following commands (as root):
+
+        ::
+
+            pip3 install pyyaml
+
+        ::
+
+            pip3 install pyyaml
+            error: externally-managed-environment
+
+            × This environment is externally managed
+            ╰─> To install Python packages system-wide, try apt install
+                python3-xyz, where xyz is the package you are trying to
+                install.
+                
+                If you wish to install a non-Debian-packaged Python package,
+                create a virtual environment using python3 -m venv path/to/venv.
+                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+                sure you have python3-full installed.
+                
+                If you wish to install a non-Debian packaged Python application,
+                it may be easiest to use pipx install xyz, which will manage a
+                virtual environment for you. Make sure you have pipx installed.
+                
+                See /usr/share/doc/python3.11/README.venv for more information.
+
+            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+            hint: See PEP 668 for the detailed specification.
+
+    #. :red:`(Failed - Not Used)` To install yaml, use the following commands (as root):
+
+        ::
+
+            pip3 install pyyaml --break-system-packages
+
+        ::
+
+            pip3 install pyyaml --break-system-packages
+            WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7feeb5d26950>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/pyyaml/
+            WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7feeb4610450>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/pyyaml/
+            WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7feeb4610950>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/pyyaml/
+            WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7feeb4611310>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/pyyaml/
+            WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x7feeb4611d50>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/pyyaml/
+            ERROR: Could not find a version that satisfies the requirement pyyaml (from versions: none)
+            ERROR: No matching distribution found for pyyaml
+
 Remote access to the server
 ---------------------------
 
@@ -768,54 +818,8 @@ Remote access to the server
 
             dropdb -i clvhealth_jcafb_2025_16
 
-Development (4)
+Development (5)
 ---------------
-
-    #. :red:`(Failed - Not Used)` To install yaml, use the following commands (as root):
-
-        ::
-
-            pip3 install pyyaml
-
-        ::
-
-            pip3 install pyyaml
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
-
-    #. To install yaml, use the following commands (as root):
-
-        ::
-
-            pip3 install pyyaml --break-system-packages
-
-        ::
-
-            pip3 install pyyaml --break-system-packages
-            Collecting pyyaml
-              Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
-                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.7/757.7 kB 4.5 MB/s eta 0:00:00
-            Installing collected packages: pyyaml
-            Successfully installed pyyaml-6.0.1
-            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
     #. :red:`(Not Used)` Configure "osv_memory_age_limit"
 
