@@ -293,4 +293,27 @@ Manutenção do Banco de Dados - JCAFB-2025-15 [3]
 
         #. Salvar o registro editado.
 
+[clvheatlh-jcafb-2025n-aws-pro] Exportar as URLs (links) para acesso às Surveys
+-------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2025n-aws-pro] Exportar as URLs (links) para acesso às Surveys:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `clvheatlh-jcafb-2025n-aws-pro <https://clvheatlh-jcafb-2025n-aws-pro>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+                * **Pesquisas** » :**Pesquisas**
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase`
+
+        #. Selecionar as Pesquisas com: :bi:`Phase` = "**JCAFB-2025**"
+
+        #. Executar a Ação ":bi:`Exportar`" (**11**):
+
+            * Parâmetros utilizados:
+                * *Campos para exportar*: » **Modelo**: "**JCAFB-2025 - Survey Public links**"
+
+            #. Utilize o botão :bi:`Exportar` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
