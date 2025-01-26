@@ -1708,4 +1708,180 @@ Manutenção do Banco de Dados - JCAFB-2025-15 [3]
 
         #. Salvar o registro editado.
 
+[clvheatlh-jcafb-2025-aws-tst] Atualizar os fontes do projeto (2025-01-26a)
+---------------------------------------------------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh clvheatlh-jcafb-2025-aws-tst -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_client
+            git pull
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_log
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_process
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons_jcafb
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_log_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
+
+            cd /opt/odoo/clvsol_l10n_brazil
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+[clvheatlh-jcafb-2025n-aws-pro] Atualizar os fontes do projeto (2025-01-26a)
+----------------------------------------------------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh clvheatlh-jcafb-2025n-aws-pro -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_client
+            git pull
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_log
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_process
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+            # cd /opt/odoo
+            # rm -r  /opt/odoo/clvsol_odoo_addons_jcafb
+            # git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0
+
+            cd /opt/odoo/clvsol_odoo_addons_log_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
+
+            cd /opt/odoo/clvsol_l10n_brazil
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
 .. toctree::   :maxdepth: 2
