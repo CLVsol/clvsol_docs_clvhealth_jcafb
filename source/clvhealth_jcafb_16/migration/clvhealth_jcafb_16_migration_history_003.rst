@@ -112,148 +112,6 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
             /etc/init.d/odoo start
 
-[tkl-odoo16-vm-18] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-13a)
---------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo16-vm-18
-            #
-
-            ssh tkl-odoo16-vm-18 -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo16-vm-18] Executar os comandos de criação dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo16-vm-18
-            #
-            # data_dir = /var/lib/odoo/.local/share/Odoo
-            #
-
-            cd /opt/odoo
-            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2024-11-13a.sql
-
-            gzip clvhealth_jcafb_16_2024-11-13a.sql
-            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2024-11-13a.sql
-
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_16_2024-11-13a.tar.gz clvhealth_jcafb_16
-
-            cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2024-11-13a.tar.gz clvhealth_jcafb
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo16-vm-18
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    Criados os seguintes arquivos:
-
-        * /opt/odoo/clvhealth_jcafb_16_2024-11-13a.sql
-        * /opt/odoo/clvhealth_jcafb_16_2024-11-13a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_16_2024-11-13a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2024-11-13a.tar.gz
-
-.. index:: clvhealth_jcafb_16_2024-11-13a.sql
-.. index:: clvhealth_jcafb_16_2024-11-13a.sql.gz
-.. index:: filestore_clvhealth_jcafb_16_2024-11-13a
-.. index:: clvsol_filestore_clvhealth_jcafb_16_2024-11-13a
-
-[tkl-odoo16-vm-18] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2024-11-13a)
-------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
-
-        ::
-
-            # ***** tkl-odoo16-vm-18
-            #
-
-            ssh tkl-odoo16-vm-18 -l root
-
-            /etc/init.d/odoo stop
-
-            su odoo
-
-    #. [tkl-odoo16-vm-18] Executar os comandos de restauração dos arquivos de backup:
-
-        ::
-
-            # ***** tkl-odoo16-vm-18
-            #
-
-            cd /opt/odoo
-            # gzip -d clvhealth_jcafb_16_2024-11-13a.sql.gz
-
-            dropdb -i clvhealth_jcafb_16
-
-            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_16
-            psql -f clvhealth_jcafb_16_2024-11-13a.sql -d clvhealth_jcafb_16 -U postgres -h localhost -p 5432 -q
-
-            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
-            cd /var/lib/odoo/.local/share/Odoo/filestore
-            rm -rf clvhealth_jcafb_16
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_16_2024-11-13a.tar.gz
-
-            # mkdir /opt/odoo/clvsol_filestore
-            cd /opt/odoo/clvsol_filestore
-            rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2024-11-13a.tar.gz
-
-    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
-
-        ::
-
-            # ***** tkl-odoo16-vm-18
-            #
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-            ^C
-
-            exit
-
-            /etc/init.d/odoo start
-
-    #. :red:`(Not Used)` [tkl-odoo16-vm-18] Configurar o parâmetro "**web.base.url**":
-
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
-
-        #. Acessar a *View* **Parâmetros do Sistema**:
-
-            * Menu de acesso:
-                
-                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
-
-        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
-
-        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
-
-        #. Alterar o campo **Valor** para:
-
-            * "**http://tkl-odoo16-vm-18**".
-
-        #. Salvar o registro editado.
-
 :borange:`(**)` Criar o *External Sync Host* "http://192.168.25.210:8069"
 -------------------------------------------------------------------------
 
@@ -291,6 +149,148 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
             
             * *External Host*: "**http://192.168.25.210:8069**"
             * *Max Task Registers*: "**300.000**"
+
+[tkl-odoo16-vm-18] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28a)
+--------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28a.sql
+
+            gzip clvhealth_jcafb_16_2025-01-28a.sql
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28a.tar.gz clvhealth_jcafb_16
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28a.sql
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28a.tar.gz
+
+.. index:: clvhealth_jcafb_16_2025-01-28a.sql
+.. index:: clvhealth_jcafb_16_2025-01-28a.sql.gz
+.. index:: filestore_clvhealth_jcafb_16_2025-01-28a
+.. index:: clvsol_filestore_clvhealth_jcafb_16_2025-01-28a
+
+[tkl-odoo16-vm-18] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28a)
+------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_16_2025-01-28a.sql.gz
+
+            dropdb -i clvhealth_jcafb_16
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_16
+            psql -f clvhealth_jcafb_16_2025-01-28a.sql -d clvhealth_jcafb_16 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_16
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28a.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28a.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. :red:`(Not Used)` [tkl-odoo16-vm-18] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo16-vm-18**".
+
+        #. Salvar o registro editado.
 
 :borange:`(**)` Lista de *Schedules* instalados (00-16-18)
 ----------------------------------------------------------
@@ -383,8 +383,150 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:39:39.300`
+            * :bi:`Execution time: 0:24:55.645`
             
+[tkl-odoo16-vm-18] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28b)
+--------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28b.sql
+
+            gzip clvhealth_jcafb_16_2025-01-28b.sql
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28b.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28b.tar.gz clvhealth_jcafb_16
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28b.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28b.sql
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28b.tar.gz
+
+.. index:: clvhealth_jcafb_16_2025-01-28b.sql
+.. index:: clvhealth_jcafb_16_2025-01-28b.sql.gz
+.. index:: filestore_clvhealth_jcafb_16_2025-01-28b
+.. index:: clvsol_filestore_clvhealth_jcafb_16_2025-01-28b
+
+[tkl-odoo16-vm-18] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28b)
+------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_16_2025-01-28b.sql.gz
+
+            dropdb -i clvhealth_jcafb_16
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_16
+            psql -f clvhealth_jcafb_16_2025-01-28b.sql -d clvhealth_jcafb_16 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_16
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28b.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28b.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. :red:`(Not Used)` [tkl-odoo16-vm-18] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo16-vm-18**".
+
+        #. Salvar o registro editado.
+
 :borange:`(**)` Lista de *Schedules* instalados (02-16-18)
 ----------------------------------------------------------
 
@@ -425,7 +567,149 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:14:21.984`
+            * :bi:`Execution time: 0:09:45.205`
+
+[tkl-odoo16-vm-18] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28c)
+--------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28c.sql
+
+            gzip clvhealth_jcafb_16_2025-01-28c.sql
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28c.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28c.tar.gz clvhealth_jcafb_16
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28c.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28c.sql
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28c.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28c.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28c.tar.gz
+
+.. index:: clvhealth_jcafb_16_2025-01-28c.sql
+.. index:: clvhealth_jcafb_16_2025-01-28c.sql.gz
+.. index:: filestore_clvhealth_jcafb_16_2025-01-28c
+.. index:: clvsol_filestore_clvhealth_jcafb_16_2025-01-28c
+
+[tkl-odoo16-vm-18] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28c)
+------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_16_2025-01-28c.sql.gz
+
+            dropdb -i clvhealth_jcafb_16
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_16
+            psql -f clvhealth_jcafb_16_2025-01-28c.sql -d clvhealth_jcafb_16 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_16
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28c.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28c.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. :red:`(Not Used)` [tkl-odoo16-vm-18] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo16-vm-18**".
+
+        #. Salvar o registro editado.
 
 :borange:`(**)` Lista de *Schedules* instalados (04-16-18)
 ----------------------------------------------------------
@@ -500,7 +784,149 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 1:54:18.051`
+            * :bi:`Execution time: 0:07:20.289`
+
+[tkl-odoo16-vm-18] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28e)
+--------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28e.sql
+
+            gzip clvhealth_jcafb_16_2025-01-28e.sql
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28e.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28e.tar.gz clvhealth_jcafb_16
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28e.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28e.sql
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28e.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28e.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28e.tar.gz
+
+.. index:: clvhealth_jcafb_16_2025-01-28e.sql
+.. index:: clvhealth_jcafb_16_2025-01-28e.sql.gz
+.. index:: filestore_clvhealth_jcafb_16_2025-01-28e
+.. index:: clvsol_filestore_clvhealth_jcafb_16_2025-01-28e
+
+[tkl-odoo16-vm-18] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28e)
+------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_16_2025-01-28e.sql.gz
+
+            dropdb -i clvhealth_jcafb_16
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_16
+            psql -f clvhealth_jcafb_16_2025-01-28e.sql -d clvhealth_jcafb_16 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_16
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28e.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28e.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. :red:`(Not Used)` [tkl-odoo16-vm-18] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo16-vm-18**".
+
+        #. Salvar o registro editado.
 
 :borange:`(**)` Lista de *Schedules* instalados (30-16-18)
 ----------------------------------------------------------
@@ -523,6 +949,148 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:45:31.102`
+            * :bi:`Execution time: 0:02:30.123`
+
+[tkl-odoo16-vm-18] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28d)
+--------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28d.sql
+
+            gzip clvhealth_jcafb_16_2025-01-28d.sql
+            pg_dump clvhealth_jcafb_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_16_2025-01-28d.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28d.tar.gz clvhealth_jcafb_16
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28d.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28d.sql
+        * /opt/odoo/clvhealth_jcafb_16_2025-01-28d.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28d.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28d.tar.gz
+
+.. index:: clvhealth_jcafb_16_2025-01-28d.sql
+.. index:: clvhealth_jcafb_16_2025-01-28d.sql.gz
+.. index:: filestore_clvhealth_jcafb_16_2025-01-28d
+.. index:: clvsol_filestore_clvhealth_jcafb_16_2025-01-28d
+
+[tkl-odoo16-vm-18] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-01-28d)
+------------------------------------------------------------------------------------------------
+
+    #. [tkl-odoo16-vm-18] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-vm-18** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            ssh tkl-odoo16-vm-18 -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [tkl-odoo16-vm-18] Executar os comandos de restauração dos arquivos de backup:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            # gzip -d clvhealth_jcafb_16_2025-01-28d.sql.gz
+
+            dropdb -i clvhealth_jcafb_16
+
+            createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_16
+            psql -f clvhealth_jcafb_16_2025-01-28d.sql -d clvhealth_jcafb_16 -U postgres -h localhost -p 5432 -q
+
+            # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_16
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_16_2025-01-28d.tar.gz
+
+            # mkdir /opt/odoo/clvsol_filestore
+            cd /opt/odoo/clvsol_filestore
+            rm -rf clvhealth_jcafb
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_16_2025-01-28d.tar.gz
+
+    #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-vm-18** ao modo desejado:
+
+        ::
+
+            # ***** tkl-odoo16-vm-18
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    #. :red:`(Not Used)` [tkl-odoo16-vm-18] Configurar o parâmetro "**web.base.url**":
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+        #. Acessar a *View* **Parâmetros do Sistema**:
+
+            * Menu de acesso:
+                
+                * **Definições** » **Técnico** » **Parâmetros** » **Parâmetros do Sistema**
+
+        #. Pesquisar pelo registro com a **Chave** "**web.base.url**"
+
+        #. Editar o registro apresentado (**Chave**: "**web.base.url**")
+
+        #. Alterar o campo **Valor** para:
+
+            * "**http://tkl-odoo16-vm-18**".
+
+        #. Salvar o registro editado.
 
 .. toctree::   :maxdepth: 2
