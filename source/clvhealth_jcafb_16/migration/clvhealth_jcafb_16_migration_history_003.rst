@@ -515,4 +515,83 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
 
         #. Salvar o registro editado.
 
+:borange:`(Não Executado)` [tkl-odoo16-vm-18] Atualizar *street2* e *street_number2* da tabela *res_partner*
+------------------------------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao :bi:`Adminer` do servidor `tkl-odoo16-vm-18:12322 <https://tkl-odoo16-vm-18:12322>`_.
+
+    #. [tkl-odoo16-vm-18] Limpar :bi:`street_number2` da tabela :bi:`res_partner`:
+
+        * :bi:`SQL command`:
+            ::
+
+                UPDATE res_partner SET
+                    street2 = street_number2;
+
+        * :bi:`SQL command`:
+            ::
+
+                UPDATE res_partner SET
+                    street_number2 = NULL;
+
+:borange:`(**)` [tkl-odoo16-vm-18] Executar a Verificação de todos os Pacientes (Rec)
+-------------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+    #. [tkl-odoo16-vm-18] Executar a Ação :bi:`Patient (Rec) Verification Execute` para todos os Pacientes (Rec):
+
+        #. Acessar a *View* *Patients (Rec)*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Configuration` » :bi:`Patient` » :bi:`Patients (Rec)`
+
+        #. Selecionar todos os Pacientes (Rec) (**843**)
+
+        #. Executar a Ação ":bi:`Patient (Rec) Verification Execute`":
+
+            * Parâmetros utilizados:
+
+            #. Utilize o botão :bi:`Patient (Rec) Verification Execute` para executar a Ação.
+
+:borange:`(**)` [tkl-odoo16-vm-18] Executar a Verificação de todas as Residências
+---------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+    #. [tkl-odoo16-vm-18] Executar a Ação :bi:`Residence Verification Execute` para todas as Residências:
+
+        #. Acessar a *View* *Residences*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Residence` » :bi:`Residences`
+
+        #. Selecionar todas as Residências (**366**)
+
+        #. Executar a Ação ":bi:`Residence Verification Execute`":
+
+            * Parâmetros utilizados:
+
+            #. Utilize o botão :bi:`Residence Verification Execute` para executar a Ação.
+
+:borange:`(**)` [tkl-odoo16-vm-18] Executar a Verificação de todos os Pacientes
+-------------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-vm-18 <https://tkl-odoo16-vm-18>`_
+
+    #. [tkl-odoo16-vm-18] Executar a Ação :bi:`Patient Verification Execute` para todos os Pacientes:
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Selecionar todos os Pacientes (**905**)
+
+        #. Executar a Ação ":bi:`Patient Verification Execute`":
+
+            * Parâmetros utilizados:
+
+            #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
+
 .. toctree::   :maxdepth: 2
