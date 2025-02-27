@@ -206,6 +206,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-16] (3)
         #. :blue:`(Enabled)` clv.residence.marker (clv.residence.marker)
         #. :blue:`(Enabled)` clv.residence (clv.residence) [1] [Inc]
 
+        #. :blue:`(Enabled)` clv.global_settings (current_date_reference) [Sync]
         #. :blue:`(Enabled)` clv.patient.age_range (clv.patient.age_range)
         #. :blue:`(Enabled)` clv.patient.category (clv.patient.category)
         #. :blue:`(Enabled)` clv.patient.marker (clv.patient.marker)
