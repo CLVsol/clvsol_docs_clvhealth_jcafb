@@ -31,6 +31,12 @@ Documentação do *CLVhealth-JCAFB*
 
 .. toctree::
    :maxdepth: 2
+   :caption: JCAFB-2026:
+
+   jcafb_2026_15/index
+
+.. toctree::
+   :maxdepth: 2
    :caption: JCAFB-2025:
 
    jcafb_2025_15/index
