@@ -45,9 +45,9 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2026-16] (1)
 [tkl-odoo16-jcafb26-vm] Criar uma nova instância do *CLVhealth-JCAFB-2026-16*
 -----------------------------------------------------------------------------
 
-    #. Criar uma nova instância do :bi:`CLVhealth-JCAFB-2026-16` executando o *Workbook* "**Criação/Manutenção do Banco de Dados "clvsol_jcafb_odoo16**" (/opt/clvsol/clvsol_jcafb_odoo16/project/clvsol_jcafb_odoo16.ipynb).
+    #. Criar uma nova instância do :bi:`CLVhealth-JCAFB-2026-16` executando o *Workbook* "**Criação/Manutenção do Banco de Dados "clvsol_jcafb_2026_16"**" (/opt/clvsol/clvsol_jcafb_odoo16/project/clvsol_jcafb_odoo16.ipynb).
 
-        * **Execution time: 0:10:17.226611**
+        * **Execution time: 0:10:41.379475**
 
 
 Criar o *External Sync Host* "http://192.168.25.210:8069"
