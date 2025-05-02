@@ -16,14 +16,12 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2026-16
+.. index:: Preparação de Dados  [CLVhealth-JCAFB_2026-15]
 
-=======================
-CLVhealth-JCAFB_2026-16
-=======================
+==============================================
+Preparação de Dados  [CLVhealth-JCAFB_2026-15]
+==============================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
-
-   preparation/index
