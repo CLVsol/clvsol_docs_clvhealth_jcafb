@@ -16,16 +16,12 @@
 .. role:: borange
 .. role:: bi
 
-.. index:: CLVhealth-JCAFB_2026-16
+.. index:: Migração de Dados [CLVhealth-JCAFB_2026-16]
 
-=======================
-CLVhealth-JCAFB_2026-16
-=======================
+===========================================
+Migração de Dados [CLVhealth-JCAFB_2026-16]
+===========================================
 
 .. toctree::
    :maxdepth: 3
    :caption: Conteúdo:
-
-   db_maintenance/index
-   migration/index
-   preparation/index
