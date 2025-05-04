@@ -47,15 +47,15 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2026-16] (1)
 
     #. Criar uma nova instância do :bi:`CLVhealth-JCAFB-2026-16` executando o *Workbook* "**Criação/Manutenção do Banco de Dados "clvsol_jcafb_2026_16"**" (/opt/clvsol/clvsol_jcafb_odoo16/project/clvsol_jcafb_odoo16.ipynb).
 
-        * **Execution time: 0:10:41.379475**
+        * **Execution time: 0:09:32.532952**
 
 
-Criar o *External Sync Host* "http://192.168.25.210:8069"
+Criar o *External Sync Host* "http://192.168.25.220:8069"
 ---------------------------------------------------------
 
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
-    #. Criar o *External Sync Host* **http://192.168.25.210:8069**:
+    #. Criar o *External Sync Host* **http://192.168.25.220:8069**:
 
         * Menu de acesso:
             
@@ -64,14 +64,14 @@ Criar o *External Sync Host* "http://192.168.25.210:8069"
         * Parâmetros utilizados:
             
             * External Host Name: "**http://192.168.25.210:8069**"
-            * External Database Name: "**clvhealth_jcafb_2025_15**"
+            * External Database Name: "**clvhealth_jcafb_2026_15**"
             * External User: "**admin**"
             * External User Password: "*******"
 
 Configurar todos os "*External Sync Schedules*"
 -----------------------------------------------
 
-    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
     #. Configurar, com a ajuda da ação :bi:`External Sync Schedule Mass Edit (2)`, todos os :bi:`External Sync Schedules`:
 
@@ -165,9 +165,9 @@ Lista de *Schedules* instalados (00-16-18)
 Executar o *External Sync Batch* "*Default Batch [00]*"
 -------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb21-vm] Executar o :bi:`External Sync Batch` "**Default Batch [00]**":
+    #. [tkl-odoo16-jcafb26-vm] Executar o :bi:`External Sync Batch` "**Default Batch [00]**":
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
         #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [00]**":
 
@@ -205,9 +205,9 @@ Lista de *Schedules* instalados (02-16-18)
 Executar o *External Sync Batch* "*Default Batch [02]*"
 -------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb21-vm] Executar o :bi:`External Sync Batch` "**Default Batch [02]**":
+    #. [tkl-odoo16-jcafb26-vm] Executar o :bi:`External Sync Batch` "**Default Batch [02]**":
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
         #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [02]**":
 
@@ -225,9 +225,9 @@ Executar o *External Sync Batch* "*Default Batch [02]*"
 :borange:`(**)` Executar o *External Sync Batch* "*Default Batch [04]*"
 -----------------------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb21-vm] Executar o :bi:`External Sync Batch` "**Default Batch [04]**":
+    #. [tkl-odoo16-jcafb26-vm] Executar o :bi:`External Sync Batch` "**Default Batch [04]**":
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
         #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [04]**":
 
@@ -250,9 +250,9 @@ Lista de *Schedules* instalados (10-16-18)
 Executar o *External Sync Batch* "*Default Batch [10]*"
 -------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb21-vm] Executar o :bi:`External Sync Batch` "**Default Batch [10]**":
+    #. [tkl-odoo16-jcafb26-vm] Executar o :bi:`External Sync Batch` "**Default Batch [10]**":
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
         #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [10]**":
 
@@ -415,9 +415,9 @@ Lista de *Schedules* instalados (20-16-18)
 Executar o *External Sync Batch* "*Default Batch [20]*"
 -------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb21-vm] Executar o :bi:`External Sync Batch` "**Default Batch [20]**":
+    #. [tkl-odoo16-jcafb26-vm] Executar o :bi:`External Sync Batch` "**Default Batch [20]**":
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
         #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [20]**":
 
@@ -439,9 +439,9 @@ Lista de *Schedules* instalados (30-16-18)
 Executar o *External Sync Batch* "*Default Batch [30]*"
 -------------------------------------------------------
 
-    #. [tkl-odoo15-jcafb21-vm] Executar o :bi:`External Sync Batch` "**Default Batch [30]**":
+    #. [tkl-odoo16-jcafb26-vm] Executar o :bi:`External Sync Batch` "**Default Batch [30]**":
 
-        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo15-jcafb21-vm <https://tkl-odoo15-jcafb21-vm>`_
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
         #. Executar a ação :bi:`External Sync Batch Exec` para o "**Default Batch [30]**":
 
