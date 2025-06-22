@@ -72,6 +72,15 @@ Server preparation (1)
             * Configure Security Alerts: **Enabled**
             * Auto-associate Elastic IP: **None**
 
+
+:red:`Oops! An error occured`
+
+Sorry about this, the error has been logged and we will look into it.
+
+If you repeatedly receive this error, please drop us a line and we will help you work around the issue until its fixed.
+
+support@turnkeylinux.org
+
         * Security Group: **turnkey-odoo-4a73** (Inbound)::
 
             Port (Service)   Source
