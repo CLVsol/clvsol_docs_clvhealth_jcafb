@@ -33,12 +33,6 @@ Server preparation (1)
         * Label: **clvheatlh-jcafb-2026-aws-tst**
         * Private Key File: **clvheatlh-jcafb-2026-aws-tst.pem**
 
-    #. Create, via AWS Console, a new Elastic IP:
-
-        * Region: **Virginia (East USA)**
-        * Label: **clvheatlh-jcafb-2026-aws-tst**
-        * IP address: **xxx**
-
     #. Create, via TrunKey Hub, the Amazon EC2 instance clvheatlh-jcafb-2026-aws-tst-aws:
 
         * Launch to Amazon EC2: **18.0**
@@ -72,7 +66,7 @@ Server preparation (1)
             * Configure Security Alerts: **Enabled**
             * Auto-associate Elastic IP: **None**
 
-        * Security Group: **turnkey-odoo-4a73** (Inbound)::
+        * Security Group: **turnkey-odoo-2aba** (Inbound)::
 
             Port (Service)   Source
             -------------------------------------
@@ -82,6 +76,12 @@ Server preparation (1)
             443(HTTPS)       0.0.0.0/0
             12321(Webmin)    0.0.0.0/0  (enabled)
             12322(Adminer)   0.0.0.0/0  (enabled)
+
+    #. Create, via AWS Console, a new Elastic IP:
+
+        * Region: **Virginia (East USA)**
+        * Label: **clvheatlh-jcafb-2026-aws-tst**
+        * IP address: **xxx**
 
     #. Prepare the **private key** "**clvheatlh-jcafb-2026-aws-tst.pem**" for use:
 
@@ -221,6 +221,7 @@ Development (1)
         ::
 
             su odoo
+            
             /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
     #. Delete the 'Turnkeylinux Example ' database, using the following procedure:
@@ -359,82 +360,6 @@ Development (2)
 
             apt-get install python3-pip
 
-            apt-get install python3-pip
-            Reading package lists... Done
-            Building dependency tree... Done
-            Reading state information... Done
-            The following additional packages will be installed:
-              python3-distutils python3-lib2to3 python3-setuptools python3-wheel
-            Suggested packages:
-              python-setuptools-doc
-            Recommended packages:
-              build-essential python3-dev
-            The following NEW packages will be installed:
-              python3-distutils python3-lib2to3 python3-pip python3-setuptools python3-wheel
-            0 upgraded, 5 newly installed, 0 to remove and 1 not upgraded.
-            Need to get 2084 kB of archives.
-            After this operation, 10.6 MB of additional disk space will be used.
-            Do you want to continue? [Y/n] 
-            Get:1 http://deb.debian.org/debian bookworm/main amd64 python3-lib2to3 all 3.11.2-3 [76.3 kB]
-            Get:2 http://deb.debian.org/debian bookworm/main amd64 python3-distutils all 3.11.2-3 [131 kB]
-            Get:3 http://deb.debian.org/debian bookworm/main amd64 python3-setuptools all 66.1.1-1 [521 kB]
-            Get:4 http://deb.debian.org/debian bookworm/main amd64 python3-wheel all 0.38.4-2 [30.8 kB]
-            Get:5 http://deb.debian.org/debian bookworm/main amd64 python3-pip all 23.0.1+dfsg-1 [1325 kB]
-            Fetched 2084 kB in 0s (45.7 MB/s) 
-            debconf: delaying package configuration, since apt-utils is not installed
-            Selecting previously unselected package python3-lib2to3.
-            (Reading database ... 90350 files and directories currently installed.)
-            Preparing to unpack .../python3-lib2to3_3.11.2-3_all.deb ...
-            Unpacking python3-lib2to3 (3.11.2-3) ...
-            Selecting previously unselected package python3-distutils.
-            Preparing to unpack .../python3-distutils_3.11.2-3_all.deb ...
-            Unpacking python3-distutils (3.11.2-3) ...
-            Selecting previously unselected package python3-setuptools.
-            Preparing to unpack .../python3-setuptools_66.1.1-1_all.deb ...
-            Unpacking python3-setuptools (66.1.1-1) ...
-            Selecting previously unselected package python3-wheel.
-            Preparing to unpack .../python3-wheel_0.38.4-2_all.deb ...
-            Unpacking python3-wheel (0.38.4-2) ...
-            Selecting previously unselected package python3-pip.
-            Preparing to unpack .../python3-pip_23.0.1+dfsg-1_all.deb ...
-            Unpacking python3-pip (23.0.1+dfsg-1) ...
-            Setting up python3-lib2to3 (3.11.2-3) ...
-            Setting up python3-distutils (3.11.2-3) ...
-            Setting up python3-setuptools (66.1.1-1) ...
-            Setting up python3-wheel (0.38.4-2) ...
-            Setting up python3-pip (23.0.1+dfsg-1) ...
-            Processing triggers for man-db (2.11.2-2) ...
-
-    #. :red:`(Failed - Not Used)` To install erppeek (for python 3.5), use the following commands (as root):
-
-        ::
-
-            pip3 install erppeek
-
-        ::
-
-            pip3 install erppeek
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
-
     #. To install erppeek (for python 3.5, Debian 12), use the following commands (as root):
 
         ::
@@ -449,36 +374,6 @@ Development (2)
             Installing collected packages: erppeek
             Successfully installed erppeek-1.7.1
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-
-    #. :red:`(Failed - Not Used)` To install xlutils, execute the following commands (as root):
-
-        ::
-
-            pip3 install xlutils
-
-        ::
-
-            pip3 install xlutils
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
 
     #. To install xlutils, execute the following commands (as root):
 
@@ -498,36 +393,6 @@ Development (2)
             Successfully installed xlutils-2.0.0
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
-    #. :red:`(Failed - Not Used)` To install yaml, use the following commands (as root):
-
-        ::
-
-            pip3 install pyyaml
-
-        ::
-
-            pip3 install pyyaml
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
-
     #. To install yaml, use the following commands (as root):
 
         ::
@@ -538,10 +403,10 @@ Development (2)
 
             pip3 install pyyaml --break-system-packages
             Collecting pyyaml
-              Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
-                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.7/757.7 kB 4.5 MB/s eta 0:00:00
+              Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (762 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 763.0/763.0 kB 17.6 MB/s eta 0:00:00
             Installing collected packages: pyyaml
-            Successfully installed pyyaml-6.0.1
+            Successfully installed pyyaml-6.0.2
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
 Development (3)
@@ -582,7 +447,6 @@ Development (3)
             ::
 
                 # workers = 0
-                # workers = 3
                 workers = 2
 
         #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
@@ -616,165 +480,29 @@ Development (3)
                 # server_wide_modules = base,web
                 server_wide_modules = None
 
-Replace the Odoo installation (Odoo 15.0)
------------------------------------------
-
-    #. To replace the Odoo installation (Odoo 15.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
+    #. To install pandas, use the following commands (as root):
 
         ::
 
-            ssh clvheatlh-jcafb-2026-aws-tst -l root
+            pip3 install pandas --break-system-packages
 
         ::
 
-            /etc/init.d/odoo stop
-
-        ::
-
-            apt install gnupg2
-
-            wget https://nightly.odoo.com/odoo.key
-
-            cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
-
-            echo "deb http://nightly.odoo.com/15.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
-
-            apt-get update
-
-            apt-get install odoo
-
-        ::
-
-            apt-get install odoo
-            Reading package lists... Done
-            Building dependency tree... Done
-            Reading state information... Done
-            The following packages were automatically installed and are no longer required:
-              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form
-            Use 'apt autoremove' to remove them.
-            The following additional packages will be installed:
-              python3-mock python3-pbr
-            Suggested packages:
-              python-mock-doc
-            Recommended packages:
-              python3-ldap
-            The following packages will be REMOVED:
-              odoo-16
-            The following NEW packages will be installed:
-              odoo python3-mock python3-pbr
-            0 upgraded, 3 newly installed, 1 to remove and 1 not upgraded.
-            Need to get 198 MB of archives.
-            After this operation, 3087 kB disk space will be freed.
-            Do you want to continue? [Y/n] Y
-            Get:1 http://deb.debian.org/debian bookworm/main amd64 python3-pbr all 5.10.0-2 [61.4 kB]
-            Get:2 http://deb.debian.org/debian bookworm/main amd64 python3-mock all 4.0.3-4 [64.0 kB]
-            Get:3 http://nightly.odoo.com/15.0/nightly/deb ./ odoo 15.0.20240714 [198 MB]      
-            Fetched 198 MB in 11s (17.9 MB/s)                                                                                                                                     
-            debconf: delaying package configuration, since apt-utils is not installed
-            (Reading database ... 91415 files and directories currently installed.)
-            Removing odoo-16 (16.0.0+dfsg.2-3~bpo12+1) ...
-            Selecting previously unselected package python3-pbr.
-            (Reading database ... 50831 files and directories currently installed.)
-            Preparing to unpack .../python3-pbr_5.10.0-2_all.deb ...
-            Unpacking python3-pbr (5.10.0-2) ...
-            Selecting previously unselected package python3-mock.
-            Preparing to unpack .../python3-mock_4.0.3-4_all.deb ...
-            Unpacking python3-mock (4.0.3-4) ...
-            Selecting previously unselected package odoo.
-            Preparing to unpack .../odoo_15.0.20240714_all.deb ...
-            Unpacking odoo (15.0.20240714) ...
-            Setting up python3-pbr (5.10.0-2) ...
-            Setting up python3-mock (4.0.3-4) ...
-            Setting up odoo (15.0.20240714) ...
-
-            Configuration file '/etc/odoo/odoo.conf'
-             ==> Modified (by you or by a script) since installation.
-             ==> Package distributor has shipped an updated version.
-               What would you like to do about it ?  Your options are:
-                Y or I  : install the package maintainer's version
-                N or O  : keep your currently-installed version
-                  D     : show the differences between the versions
-                  Z     : start a shell to examine the situation
-             The default action is to keep your current version.
-            *** odoo.conf (Y/I/N/O/D/Z) [default=N] ? N
-
-        ::
-
-            # apt-get remove odoo
-
-    #. Set the **odoo** user password (Linux):
-
-        #. To set the **odoo** user password (Linux), use the following commands (as root):
-
-            ::
-
-                ssh tkl-odoo15-jcafb24-vm -l root
-
-            ::
-
-                passwd odoo
-
-
-        #. Edit the file "**/etc/password**" (as root):
-
-            ::
-
-                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
-
-            ::
-
-                odoo:x:105:114::/var/lib/odoo:/bin/bash
-
-    #. Set the **postgres** user password (PostgreSQL Database Server) using Webmin.
-
-    #. Set "**/etc/init.d/odoo**" file Permitions:
-
-        * Allow executing file as program: **marked**.
-
-    #. To stop and start the Odoo server, use the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2026-aws-tst -l root
-
-        ::
-
-            /etc/init.d/odoo stop
-
-            /etc/init.d/odoo start
-
-        ::
-
-            su odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-    #. :red:`(Not Used)` Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
-
-        #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2026-aws-tst -l root
-
-            ::
-
-                pip3 install erpbrasil.base
-
-        #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2026-aws-tst -l root
-
-            ::
-
-                # pip3 install pycep-correios
-                # Não utilizar versões > 5.1.0
-                #   'pycep-correios' is now 'brazilcep' 
-                #   (This package has been renamed. Use pip install brazilcep instead.)
-                #   https://pypi.org/project/pycep-correios/
-                #   (New package: https://pypi.org/project/brazilcep/)
-                pip3 install pycep-correios==5.1.0
+            pip3 install pandas --break-system-packages
+            Collecting pandas
+              Downloading pandas-2.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 70.2 MB/s eta 0:00:00
+            Collecting numpy>=1.23.2
+              Downloading numpy-2.3.1-cp311-cp311-manylinux_2_28_x86_64.whl (16.9 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 61.0 MB/s eta 0:00:00
+            Requirement already satisfied: python-dateutil>=2.8.2 in /usr/lib/python3/dist-packages (from pandas) (2.8.2)
+            Requirement already satisfied: pytz>=2020.1 in /usr/lib/python3/dist-packages (from pandas) (2022.7.1)
+            Collecting tzdata>=2022.7
+              Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 47.4 MB/s eta 0:00:00
+            Installing collected packages: tzdata, numpy, pandas
+            Successfully installed numpy-2.3.1 pandas-2.3.0 tzdata-2025.2
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
 Repositories Installation
 -------------------------
@@ -788,24 +516,17 @@ Repositories Installation
         ::
 
             cd /opt/odoo
-            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-            git clone https://github.com/MostlyOpen/clvsol_clvhealth_jcafb --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_process_jcafb --branch 15.0
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_jcafb --branch 15.0
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_log_jcafb --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_summary_jcafb --branch 15.0
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_verification_jcafb --branch 15.0
-            git clone https://github.com/MostlyOpen/clvsol_l10n_brazil --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_l10n_br --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_sync_jcafb --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export --branch 15.0_dev
-            git clone https://github.com/MostlyOpen/clvsol_odoo_addons_export_jcafb --branch 15.0_dev
+            git clone https://github.com/CLVsol/erppeek --branch master
+            # git clone https://github.com/OCA/l10n-brazil --branch 16.0
+            git clone https://github.com/CLVsol/OCA_l10n-brazil --branch 16.0
+            # git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
+            git clone https://github.com/CLVsol/clvsol_odoo_client --branch 16.0
+            # git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 16.0
+            # git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 16.0
+            # git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 14.0
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 16.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
@@ -829,38 +550,9 @@ Repositories Installation
         ::
 
             # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_log,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_log_jcafb,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_sync_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb
+            addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons
             
-    #. :red:`(Failed - Not Used)` To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
-
-        ::
-
-            ssh clvheatlh-jcafb-2026-aws-tst -l root
-
-        ::
-
-            pip3 install erpbrasil.base
-            error: externally-managed-environment
-
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
-
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-
-    #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
+    #. To install erpbrasil.base, use the following commands (as root):
 
         ::
 
@@ -869,13 +561,15 @@ Repositories Installation
         ::
 
             pip3 install erpbrasil.base --break-system-packages
+
+            pip3 install erpbrasil.base --break-system-packages
             Collecting erpbrasil.base
-              Downloading erpbrasil.base-2.3.0-py2.py3-none-any.whl (13 kB)
+              Downloading erpbrasil.base-2.3.2-py2.py3-none-any.whl (21 kB)
             Installing collected packages: erpbrasil.base
-            Successfully installed erpbrasil.base-2.3.0
+            Successfully installed erpbrasil.base-2.3.2
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
-    #. :red:`(Failed - Not Used)` To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+    #. To install phonenumbers, use the following commands (as root):
 
         ::
 
@@ -883,35 +577,17 @@ Repositories Installation
 
         ::
 
-            # pip3 install pycep-correios
-            # Não utilizar versões > 5.1.0
-            #   'pycep-correios' is now 'brazilcep' 
-            #   (This package has been renamed. Use pip install brazilcep instead.)
-            #   https://pypi.org/project/pycep-correios/
-            #   (New package: https://pypi.org/project/brazilcep/)
-            pip3 install pycep-correios==5.1.0
-            error: externally-managed-environment
+            pip3 install phonenumbers --break-system-packages
 
-            × This environment is externally managed
-            ╰─> To install Python packages system-wide, try apt install
-                python3-xyz, where xyz is the package you are trying to
-                install.
-                
-                If you wish to install a non-Debian-packaged Python package,
-                create a virtual environment using python3 -m venv path/to/venv.
-                Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
-                sure you have python3-full installed.
-                
-                If you wish to install a non-Debian packaged Python application,
-                it may be easiest to use pipx install xyz, which will manage a
-                virtual environment for you. Make sure you have pipx installed.
-                
-                See /usr/share/doc/python3.11/README.venv for more information.
+            pip3 install phonenumbers --break-system-packages
+            Collecting phonenumbers
+              Downloading phonenumbers-9.0.8-py2.py3-none-any.whl (2.6 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 36.1 MB/s eta 0:00:00
+            Installing collected packages: phonenumbers
+            Successfully installed phonenumbers-9.0.8
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
-            note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-            hint: See PEP 668 for the detailed specification.
-
-    #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+    #. To install email-validator, use the following commands (as root):
 
         ::
 
@@ -919,19 +595,65 @@ Repositories Installation
 
         ::
 
-            # pip3 install pycep-correios --break-system-packages
-            # Não utilizar versões > 5.1.0
-            #   'pycep-correios' is now 'brazilcep' 
-            #   (This package has been renamed. Use pip install brazilcep instead.)
-            #   https://pypi.org/project/pycep-correios/
-            #   (New package: https://pypi.org/project/brazilcep/)
-            pip3 install pycep-correios==5.1.0 --break-system-packages
-            Collecting pycep-correios==5.1.0
-              Downloading pycep_correios-5.1.0-py2.py3-none-any.whl (7.1 kB)
-            Requirement already satisfied: requests>=2.7.0 in /usr/lib/python3/dist-packages (from pycep-correios==5.1.0) (2.28.1)
-            Requirement already satisfied: zeep>=2.0.0 in /usr/lib/python3/dist-packages (from pycep-correios==5.1.0) (4.2.1)
-            Installing collected packages: pycep-correios
-            Successfully installed pycep-correios-5.1.0
+            pip3 install email-validator --break-system-packages
+
+            pip3 install email-validator --break-system-packages
+            Collecting email-validator
+              Downloading email_validator-2.2.0-py3-none-any.whl (33 kB)
+            Collecting dnspython>=2.0.0
+              Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.6/313.6 kB 7.2 MB/s eta 0:00:00
+            Requirement already satisfied: idna>=2.0.0 in /usr/lib/python3/dist-packages (from email-validator) (3.3)
+            Installing collected packages: dnspython, email-validator
+            Successfully installed dnspython-2.7.0 email-validator-2.2.0
+            WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+    #. To install brazilcep, use the following commands (as root):
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-tst -l root
+
+        ::
+
+            pip3 install brazilcep --break-system-packages
+
+            pip3 install brazilcep --break-system-packages
+            Collecting brazilcep
+              Downloading brazilcep-7.0.0-py3-none-any.whl (15 kB)
+            Collecting requests>=2.28.2
+              Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.8/64.8 kB 3.4 MB/s eta 0:00:00
+            Collecting aiohttp>=3.8.1
+              Downloading aiohttp-3.12.13-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 47.4 MB/s eta 0:00:00
+            Collecting aiohappyeyeballs>=2.5.0
+              Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+            Collecting aiosignal>=1.1.2
+              Downloading aiosignal-1.3.2-py2.py3-none-any.whl (7.6 kB)
+            Requirement already satisfied: attrs>=17.3.0 in /usr/lib/python3/dist-packages (from aiohttp>=3.8.1->brazilcep) (22.2.0)
+            Collecting frozenlist>=1.1.1
+              Downloading frozenlist-1.7.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (235 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.3/235.3 kB 38.4 MB/s eta 0:00:00
+            Collecting multidict<7.0,>=4.5
+              Downloading multidict-6.6.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.6/246.6 kB 41.6 MB/s eta 0:00:00
+            Collecting propcache>=0.2.0
+              Downloading propcache-0.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (213 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 213.5/213.5 kB 32.8 MB/s eta 0:00:00
+            Collecting yarl<2.0,>=1.17.0
+              Downloading yarl-1.20.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (348 kB)
+                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.0/349.0 kB 46.7 MB/s eta 0:00:00
+            Requirement already satisfied: charset_normalizer<4,>=2 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (3.0.1)
+            Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (3.3)
+            Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (1.26.12)
+            Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python3/dist-packages (from requests>=2.28.2->brazilcep) (2022.9.24)
+            Installing collected packages: requests, propcache, multidict, frozenlist, aiohappyeyeballs, yarl, aiosignal, aiohttp, brazilcep
+              Attempting uninstall: requests
+                Found existing installation: requests 2.28.1
+                Not uninstalling requests at /usr/lib/python3/dist-packages, outside environment /usr
+                Can't uninstall 'requests'. No files were found to uninstall.
+            Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.12.13 aiosignal-1.3.2 brazilcep-7.0.0 frozenlist-1.7.0 multidict-6.6.3 propcache-0.3.2 requests-2.32.4 yarl-1.20.1
             WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
 Remote access to the server
