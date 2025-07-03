@@ -447,7 +447,8 @@ Development (3)
             ::
 
                 # workers = 0
-                workers = 2
+                # workers = 2
+                workers = 0
 
         #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
@@ -463,7 +464,8 @@ Development (3)
             ::
 
                 # max_cron_threads = 2
-                max_cron_threads = 1
+                # max_cron_threads = 1
+                max_cron_threads = 2
 
     #. Configure "server_wide_modules"
 
@@ -690,148 +692,3 @@ Remote access to the server
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb"
 
             dropdb -i clvhealth_jcafb
-
-Upgrade the odoo software
--------------------------
-
-    #. Upgrade the odoo software:
-
-        ::
-
-            ssh clvheatlh-jcafb-2026-aws-tst -l root
-
-            /etc/init.d/odoo stop
-
-        ::
-
-            apt-get update
-            apt-get -y upgrade
-
-            # apt-get install odoo
-
-Atualizar os fontes do projeto
-------------------------------
-
-    #. **Atualizar** os fontes do projeto
-
-        ::
-
-            ssh clvheatlh-jcafb-2026-aws-tst -l odoo
-
-        ::
-
-            /etc/init.d/odoo stop
-
-        ::
-
-            # ***** clvheatlh-jcafb-2020-aws-pro
-            #
-
-            su odoo
-
-            cd /opt/odoo/clvsol_odoo_client
-            git pull
-
-            cd /opt/odoo/clvsol_clvhealth_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_l10n_brazil
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_l10n_br
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_l10n_br_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_history
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_history_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_verification
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_summary
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_export
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_report
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_report_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_process
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_sync
-            git pull
-
-            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
-            git pull
-
-        ::
-
-            cd /opt/odoo
-            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
-
-References
-----------
-
-    #. Installing Odoo (15)
-
-     * `Odoo Nightly builds <https://nightly.odoo.com/>`_ 
-     * `Installing Odoo (15) <https://www.odoo.com/documentation/15.0/setup/install.html>`_ 
-
-:red:`Não Executado`
---------------------
-
-    #. :red:`(Not Used)` To install odoolib (for python 3.5), use the following commands (as root):
-
-        ::
-
-            pip3 install odoo-client-lib
-
-    #. Install **basic dependencies** needed by Brazilian Localization, using the following commands (as root):
-
-        #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2026-aws-tst -l root
-
-            ::
-
-                apt-get install node-less
-
-        #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
-
-            ::
-
-                ssh clvheatlh-jcafb-2026-aws-tst -l root
-
-            ::
-
-                pip3 install suds-py3
