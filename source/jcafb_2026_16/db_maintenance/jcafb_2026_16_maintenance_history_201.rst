@@ -94,7 +94,7 @@ Manutenção do Banco de Dados - JCAFB-2026-16 [1]
 
         #. Alterar o campo **Valor** para:
 
-            * "**https://44.215.174.44**".
+            * "**https://100.26.91.51**".
 
         #. Salvar o registro editado.
 
