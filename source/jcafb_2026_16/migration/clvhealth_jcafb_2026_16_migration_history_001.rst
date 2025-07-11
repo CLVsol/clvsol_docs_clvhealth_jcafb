@@ -42,12 +42,12 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2026-16] (1)
         * master_pw: "*******"
         * notes: "**vazio**"
  
-[tkl-odoo16-jcafb26-vm] Criar uma nova instância do *CLVhealth-JCAFB-2026-16*
------------------------------------------------------------------------------
+[tkl-odoo16-jcafb26-vm] Criar uma nova instância do *CLVhealth-JCAFB-2026-16* (2025-07-10a)
+-------------------------------------------------------------------------------------------
 
     #. Criar uma nova instância do :bi:`CLVhealth-JCAFB-2026-16` executando o *Workbook* "**Criação/Manutenção do Banco de Dados "clvhealth_jcafb_2026_16"**" (/opt/clvsol/clvsol_jcafb_odoo16/project/clvsol_jcafb_odoo16.ipynb).
 
-        * **Execution time: 0:09:32.532952**
+        * **Execution time: 0:11:03.522272**
 
 Criar o *External Sync Host* "http://192.168.25.220:8069"
 ---------------------------------------------------------
@@ -174,7 +174,7 @@ Executar o *External Sync Batch* "*Default Batch [00]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:28:41.449`
+            * :bi:`Execution time: 0:41:00.328`
             
 Lista de *Schedules* instalados (02-16-16-18)
 ---------------------------------------------
@@ -214,7 +214,7 @@ Executar o *External Sync Batch* "*Default Batch [02]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:13:37.873`
+            * :bi:`Execution time: 0:13:11.538`
 
 :borange:`(**)` Lista de *Schedules* instalados (04-16-16-18)
 -------------------------------------------------------------
@@ -259,7 +259,7 @@ Executar o *External Sync Batch* "*Default Batch [10]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:28:09.050`
+            * :bi:`Execution time: 0:32:13.413`
 
 :red:`(*Não utilizado*)` [tkl-odoo16-jcafb26-vm] Executar a Ação *Document Type Items Set Up* para os *Document Types*
 ----------------------------------------------------------------------------------------------------------------------
@@ -358,9 +358,7 @@ Executar o *External Sync Batch* "*Default Batch [10]*"
             #. Utilize o botão :bi:`Criteria Set Up` para executar a Ação.
 
 :red:`(*Não utilizado*)` [tkl-odoo16-jcafb26-vm] Executar a Ação *Lab Test Result Criteria Refresh* para Resultados de Exames
------------------------------------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo16-jcafb26-vm] Executar a Ação :bi:`Lab Test Result Criteria Refresh` para os :bi:`Lab Test Results` do Projeto JCAFB-2021v:
+----------------------------------------------------------------------------------------------------------------------------6:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
@@ -379,9 +377,7 @@ Executar o *External Sync Batch* "*Default Batch [10]*"
             #. Utilize o botão :bi:`Criteria Refresh` para executar a Ação.
 
 :red:`(*Não utilizado*)` [tkl-odoo16-jcafb26-vm] Executar a Ação *Lab Test Result Items Update from Survey* para Resultados de Exames
--------------------------------------------------------------------------------------------------------------------------------------
-
-    #. [tkl-odoo16-jcafb26-vm] Executar a Ação :bi:`Lab Test Result Criteria Refresh` para os :bi:`Lab Test Results` do Projeto JCAFB-2021v:
+------------------------------------------------------------------------------------------------------------------------------------6:
 
         #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
 
@@ -424,7 +420,7 @@ Executar o *External Sync Batch* "*Default Batch [20]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:15:17.410`
+            * :bi:`Execution time: 0:22:31.803`
 
 Lista de *Schedules* instalados (30-16-16-18)
 ---------------------------------------------
@@ -448,9 +444,9 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
                 
                 * :bi:`External Sync` » :bi:`External Sync` » :bi:`External Sync` » :bi:`Batches` » **Ação** » :bi:`External Sync Batch Exec`
 
-            * :bi:`Execution time: 0:05:55.040`
+            * :bi:`Execution time: 0:08:06.632`
 
-[tkl-odoo16-jcafb26-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-05-04a)
+[tkl-odoo16-jcafb26-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2026-15* (2025-07-10a)
 -------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo16-jcafb26-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-jcafb26-vm** e paralizar o *Odoo*:
@@ -476,16 +472,16 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-05-04a.sql
+            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-07-10a.sql
 
-            gzip clvhealth_jcafb_2026_16_2025-05-04a.sql
-            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-05-04a.sql
+            gzip clvhealth_jcafb_2026_16_2025-07-10a.sql
+            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-07-10a.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-05-04a.tar.gz clvhealth_jcafb_2026_16
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-07-10a.tar.gz clvhealth_jcafb_2026_16
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04a.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10a.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-jcafb26-vm** ao modo desejado:
 
@@ -505,17 +501,17 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2026_16_2025-05-04a.sql
-        * /opt/odoo/clvhealth_jcafb_2026_16_2025-05-04a.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-05-04a.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04a.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2026_16_2025-07-10a.sql
+        * /opt/odoo/clvhealth_jcafb_2026_16_2025-07-10a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-07-10a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10a.tar.gz
 
-.. index:: clvhealth_jcafb_2026_16_2025-05-04a.sql
-.. index:: clvhealth_jcafb_2026_16_2025-05-04a.sql.gz
-.. index:: filestore_clvhealth_jcafb_2026_16_2025-05-04a
-.. index:: clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04a
+.. index:: clvhealth_jcafb_2026_16_2025-07-10a.sql
+.. index:: clvhealth_jcafb_2026_16_2025-07-10a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2026_16_2025-07-10a
+.. index:: clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10a
 
-[tkl-odoo16-jcafb26-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-05-04a)
+[tkl-odoo16-jcafb26-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2026-15* (2025-07-10a)
 -----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo16-jcafb26-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-jcafb26-vm** e paralizar o *Odoo*:
@@ -539,22 +535,22 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2026_16_2025-05-04a.sql.gz
+            # gzip -d clvhealth_jcafb_2026_16_2025-07-10a.sql.gz
 
             dropdb -i clvhealth_jcafb_2026_16
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2026_16
-            psql -f clvhealth_jcafb_2026_16_2025-05-04a.sql -d clvhealth_jcafb_2026_16 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2026_16_2025-07-10a.sql -d clvhealth_jcafb_2026_16 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2026_16
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-05-04a.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-07-10a.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04a.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10a.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-jcafb26-vm** ao modo desejado:
 
@@ -623,7 +619,7 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
             * Menu de acesso:
                 * :bi:`Health` » :bi:`Configuration` » :bi:`Patient` » :bi:`Patients (Rec)`
 
-        #. Selecionar todos os Pacientes (Rec) (**843**)
+        #. Selecionar todos os Pacientes (Rec) (**905**)
 
         #. Executar a Ação ":bi:`Patient (Rec) Verification Execute`":
 
@@ -671,7 +667,148 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
 
             #. Utilize o botão :bi:`Patient Verification Execute` para executar a Ação.
 
-[tkl-odoo16-jcafb26-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-05-04b)
+[tkl-odoo16-jcafb26-vm] Executar a Atualização de todos os Pacientes (Rec)
+--------------------------------------------------------------------------
+
+    #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
+
+    #. Executar a Ação :bi:`Patient Related Patient (Rec) Update` para todos os Pacientes:
+
+        #. Acessar a *View* *Patients*:
+
+            * Menu de acesso:
+                * :bi:`Health` » :bi:`Health` » :bi:`Patient` » :bi:`Patients`
+
+        #. Selecionar todos os Pacientes (**905**)
+
+        #. Executar a Ação ":bi:`Patient Related Patient (Rec) Update`":
+
+            * Parâmetros utilizados:
+                * *Update Contact Information Data*: **desmarcado**
+                * *Related Patient (Rec) Verification Execute*: **marcado**
+                * *Patient Verification Execute*: **marcado**
+
+            #. Utilize o botão :bi:`Patient Related Patient (Rec) Update` para executar a Ação.
+
+[tkl-odoo16-jcafb26-vm] Redefinir a **Senha** de todos os Funcionários da **JCAFB-2026**
+----------------------------------------------------------------------------------------
+
+    #. Executar a Ação :bi:`Employee Mass Edit` para todas os Funcionários da **JCAFB-2026**:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
+
+        #. Acessar a *View* *Funcionários*:
+
+            * Menu de acesso:
+
+                * :bi:`Funcionários` » :bi:`Funcionários`
+
+        #. Selecionar todos os Funcionários da **JCAFB-2026**
+
+        #. Executar a Ação ":bi:`Employee Mass Edit`":
+
+            * Parâmetros utilizados:
+
+                * *Reset User Password*: :bi:`marcado`
+
+            #. Utilize o botão :bi:`Mass Edit` para executar a Ação.
+
+[tkl-odoo16-jcafb26-vm] Redefinir a senha do usuário de referência da JCAFB-2026
+--------------------------------------------------------------------------------
+
+    #. Redefinir a senha do usuário de referência:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
+
+        #. Acessar a *View* *Users*:
+
+            * Menu de acesso:
+
+                * :bi:`Definições` » :bi:`Utilizadores e Empresas` » :bi:`Usuários`
+
+        #. Selecionar o usuário de referência.
+
+        #. Executar a Ação "**Alterar Senha**":
+
+            * Parâmetros:
+                * Nova Senha: *******
+            
+            #. Utilize o botão "**Alterar Senha**" para executar a ação.
+
+[tkl-odoo16-jcafb26-vm] Configurar as permissões do usuário de referência da JCAFB-2026
+---------------------------------------------------------------------------------------
+
+    #. Configurar as permissões do usuário de referência:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
+
+        #. Acessar a *View* *Users*:
+
+            * Menu de acesso:
+
+                * :bi:`Definições` » :bi:`Usuários e Empresas` » :bi:`Usuários`
+
+        #. Selecionar o usuário de referência.
+
+        #. Configurar as permissões necessárias.
+
+[tkl-odoo16-jcafb26-vm] Atualizar as permissões de todos os Usuários da JCAFB-2026
+----------------------------------------------------------------------------------
+
+    #. Executar a Ação *Employee User Groups Update* para os *Employees* da JCAFB-2026:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+
+                * *Funcionários* » *Employees* » *Employees*
+
+        #. Selecionar os *Employees* da JCAFB-2026
+
+        #. Executar a Ação "**Employee User Groups Update**":
+
+            #. Selecionar o :bi:`Reference Employee`: Usuário de referência (selecionado no ítem anterior).
+
+            #. Selecionar o parâmetro :bi:`Access Rights:` » :bi:`Set`.
+
+            #. Precionar o botão :bi:`Get Reference Employee Access Rights`.
+
+            #. Utilize o botão :bi:`Update` para executar a Ação.
+
+[tkl-odoo16-jcafb26-vm] Exportar as credenciais de logiln dos Coordenadoresda da JCAFB-2026
+-------------------------------------------------------------------------------------------
+
+    #. Exportar as credenciais de logiln dos dos Coordenadoresda da JCAFB-2026:
+
+        #. Conectar-se, via *browser*, ao *Odoo* do servidor `tkl-odoo16-jcafb26-vm <https://tkl-odoo16-jcafb26-vm>`_
+
+        #. Acessar a *View* *Employees*:
+
+            * Menu de acesso:
+                * **Funcionários** » :bi:`Employees` » :bi:`Employees`
+
+        #. Ativar o filtro **Agrupar por** » :bi:`Phase` » :bi:`Trabalho`
+
+        #. Selecionar as Funcionários com: :bi:`Phase` = "**JCAFB-2026**" » ***Trabalho*** = "***Coordenador de Campo***".
+
+        #. Selecionar as Funcionários com: :bi:`Phase` = "**JCAFB-2026**" » ***Trabalho*** = "***Coordenador Geral***".
+
+        #. Selecionar as Funcionários com: :bi:`Phase` = "**JCAFB-2026**" » ***Trabalho*** = "***Coordenador de Campanha***".
+
+        #. Selecionar as Funcionários com: :bi:`Phase` = "**JCAFB-2026**" » ***Trabalho*** = "***Coordenador de Análises***".
+
+        #. Selecionar as Funcionários com: :bi:`Phase` = "**JCAFB-2026**" » ***Trabalho*** = "***Coordenador de Comunicação***".
+
+        #. Executar a Ação ":bi:`Exportar`" (**9**):
+
+            * Parâmetros utilizados:
+                * *Campos para exportar*: » **Modelo**: "**JCAFB-2026 - Login Jornadeiros**"
+
+            #. Utilize o botão :bi:`Exportar` para executar a Ação.
+
+[tkl-odoo16-jcafb26-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2026-15* (2025-07-10b)
 -------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo16-jcafb26-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-jcafb26-vm** e paralizar o *Odoo*:
@@ -697,16 +834,16 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
             #
 
             cd /opt/odoo
-            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-05-04b.sql
+            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-07-10b.sql
 
-            gzip clvhealth_jcafb_2026_16_2025-05-04b.sql
-            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-05-04b.sql
+            gzip clvhealth_jcafb_2026_16_2025-07-10b.sql
+            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-07-10b.sql
 
             cd /var/lib/odoo/.local/share/Odoo/filestore
-            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-05-04b.tar.gz clvhealth_jcafb_2026_16
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-07-10b.tar.gz clvhealth_jcafb_2026_16
 
             cd /opt/odoo/clvsol_filestore
-            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04b.tar.gz clvhealth_jcafb
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10b.tar.gz clvhealth_jcafb
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-jcafb26-vm** ao modo desejado:
 
@@ -726,17 +863,17 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
 
     Criados os seguintes arquivos:
 
-        * /opt/odoo/clvhealth_jcafb_2026_16_2025-05-04b.sql
-        * /opt/odoo/clvhealth_jcafb_2026_16_2025-05-04b.sql.gz
-        * /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-05-04b.tar.gz
-        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04b.tar.gz
+        * /opt/odoo/clvhealth_jcafb_2026_16_2025-07-10b.sql
+        * /opt/odoo/clvhealth_jcafb_2026_16_2025-07-10b.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-07-10b.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10b.tar.gz
 
-.. index:: clvhealth_jcafb_2026_16_2025-05-04b.sql
-.. index:: clvhealth_jcafb_2026_16_2025-05-04b.sql.gz
-.. index:: filestore_clvhealth_jcafb_2026_16_2025-05-04b
-.. index:: clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04b
+.. index:: clvhealth_jcafb_2026_16_2025-07-10b.sql
+.. index:: clvhealth_jcafb_2026_16_2025-07-10b.sql.gz
+.. index:: filestore_clvhealth_jcafb_2026_16_2025-07-10b
+.. index:: clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10b
 
-[tkl-odoo16-jcafb26-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2025-15* (2025-05-04b)
+[tkl-odoo16-jcafb26-vm] Restaurar um backup do banco de dados *CLVhealth-JCAFB-2026-15* (2025-07-10b)
 -----------------------------------------------------------------------------------------------------
 
     #. [tkl-odoo16-jcafb26-vm] Estabelecer uma sessão ssh com o servidor **tkl-odoo16-jcafb26-vm** e paralizar o *Odoo*:
@@ -760,22 +897,22 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
             #
 
             cd /opt/odoo
-            # gzip -d clvhealth_jcafb_2026_16_2025-05-04b.sql.gz
+            # gzip -d clvhealth_jcafb_2026_16_2025-07-10b.sql.gz
 
             dropdb -i clvhealth_jcafb_2026_16
 
             createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb_2026_16
-            psql -f clvhealth_jcafb_2026_16_2025-05-04b.sql -d clvhealth_jcafb_2026_16 -U postgres -h localhost -p 5432 -q
+            psql -f clvhealth_jcafb_2026_16_2025-07-10b.sql -d clvhealth_jcafb_2026_16 -U postgres -h localhost -p 5432 -q
 
             # mkdir /var/lib/odoo/.local/share/Odoo/filestore
             cd /var/lib/odoo/.local/share/Odoo/filestore
             rm -rf clvhealth_jcafb_2026_16
-            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-05-04b.tar.gz
+            tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-07-10b.tar.gz
 
             # mkdir /opt/odoo/clvsol_filestore
             cd /opt/odoo/clvsol_filestore
             rm -rf clvhealth_jcafb
-            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-05-04b.tar.gz
+            tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-07-10b.tar.gz
 
     #. Retornar a execução do *Odoo* do servidor **tkl-odoo16-jcafb26-vm** ao modo desejado:
 
