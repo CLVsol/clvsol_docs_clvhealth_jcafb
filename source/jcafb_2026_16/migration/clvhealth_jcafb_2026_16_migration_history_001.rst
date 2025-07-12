@@ -47,7 +47,7 @@ Migração do Banco de Dados [CLVhealth-JCAFB-2026-16] (1)
 
     #. Criar uma nova instância do :bi:`CLVhealth-JCAFB-2026-16` executando o *Workbook* "**Criação/Manutenção do Banco de Dados "clvhealth_jcafb_2026_16"**" (/opt/clvsol/clvsol_jcafb_odoo16/project/clvsol_jcafb_odoo16.ipynb).
 
-        * **Execution time: 0:12:05.336546**
+        * **Execution time: 0:12:21.030267**
 
 [tkl-odoo16-jcafb26-vm] Criar um backup do banco de dados *CLVhealth-JCAFB-2026-15* (2025-07-11a)
 -------------------------------------------------------------------------------------------------
