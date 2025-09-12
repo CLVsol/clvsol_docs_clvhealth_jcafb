@@ -1534,8 +1534,8 @@ Executar o *External Sync Batch* "*Default Batch [30]*"
 
             #. Utilize o botão :bi:`Update` para executar a Ação.
 
-[tkl-odoo16-jcafb26-vm] Exportar as credenciais de login dos Coordenadoresda da JCAFB-2026
-------------------------------------------------------------------------------------------
+[tkl-odoo16-jcafb26-vm] Exportar as credenciais de login dos Coordenadores da da JCAFB-2026
+-------------------------------------------------------------------------------------------
 
     #. Exportar as credenciais de logiln dos dos Coordenadoresda da JCAFB-2026:
 
