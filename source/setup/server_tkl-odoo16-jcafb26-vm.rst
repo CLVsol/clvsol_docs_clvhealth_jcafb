@@ -820,6 +820,252 @@ Remote access to the server
 
             dropdb -i clvhealth_jcafb_2025_16
 
+Replace the Odoo installation (Odoo 16.0)
+-----------------------------------------
+
+    #. Remover o banco de dados *CLVhealth-JCAFB-2026-16*:
+
+        ::
+
+            # ***** tkl-odoo16-jcafb26-vm
+            #
+
+        ::
+
+            ssh tkl-odoo16-jcafb26-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            cd /opt/odoo
+
+            dropdb -i clvhealth_jcafb_2026_16
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2026_16
+
+    #. To replace the Odoo installation (Odoo 16.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
+
+        ::
+
+            ssh tkl-odoo16-jcafb26-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+        ::
+
+            apt install gnupg2
+
+            wget https://nightly.odoo.com/odoo.key
+
+            cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
+
+            echo "deb http://nightly.odoo.com/16.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
+
+            apt-get update
+
+            apt-get install odoo
+
+        ::
+
+            apt-get install odoo
+            Reading package lists... Done
+            Building dependency tree... Done
+            Reading state information... Done
+            The following packages were automatically installed and are no longer required:
+              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form
+            Use 'apt autoremove' to remove them.
+            Recommended packages:
+              python3-ldap
+            The following packages will be REMOVED:
+              odoo-16
+            The following NEW packages will be installed:
+              odoo
+            0 upgraded, 1 newly installed, 1 to remove and 138 not upgraded.
+            Need to get 208 MB of archives.
+            After this operation, 194 MB of additional disk space will be used.
+            Do you want to continue? [Y/n] Y
+            Get:1 http://nightly.odoo.com/16.0/nightly/deb ./ odoo 16.0.20250913 [208 MB]
+            Fetched 208 MB in 16s (12.9 MB/s)                                                                                                                                                            
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master cde2b7d] saving uncommitted changes in /etc prior to apt run
+             3 files changed, 3 insertions(+)
+             create mode 100644 apt/sources.list.d/odoo.list
+             create mode 100644 apt/trusted.gpg.d/odoo.gpg
+            debconf: delaying package configuration, since apt-utils is not installed
+            (Reading database ... 95631 files and directories currently installed.)
+            Removing odoo-16 (16.0.0+dfsg.2-2~bpo12+1) ...
+            Selecting previously unselected package odoo.
+            (Reading database ... 55046 files and directories currently installed.)
+            Preparing to unpack .../odoo_16.0.20250913_all.deb ...
+            Unpacking odoo (16.0.20250913) ...
+            Setting up odoo (16.0.20250913) ...
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_CTYPE = "C",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            perl: warning: Setting locale failed.
+            perl: warning: Please check that your locale settings:
+                LANGUAGE = "en_US.UTF-8",
+                LC_ALL = (unset),
+                LC_CTYPE = "C",
+                LC_MONETARY = "pt_BR.UTF-8",
+                LC_COLLATE = "C",
+                LC_ADDRESS = "pt_BR.UTF-8",
+                LC_TELEPHONE = "pt_BR.UTF-8",
+                LC_NAME = "pt_BR.UTF-8",
+                LC_MEASUREMENT = "pt_BR.UTF-8",
+                LC_IDENTIFICATION = "pt_BR.UTF-8",
+                LC_NUMERIC = "pt_BR.UTF-8",
+                LC_PAPER = "pt_BR.UTF-8",
+                LANG = "en_US.UTF-8"
+                are supported and installed on your system.
+            perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+            [master 6587757] committing changes in /etc made by "apt-get install odoo"
+             7 files changed, 10 insertions(+), 6 deletions(-)
+             mode change 100755 => 100644 init.d/odoo
+             create mode 100644 logrotate.d/odoo
+            Enumerating objects: 1937, done.
+            Counting objects: 100% (1937/1937), done.
+            Delta compression using up to 8 threads
+            Compressing objects: 100% (1217/1217), done.
+            Writing objects: 100% (1937/1937), done.
+            Total 1937 (delta 108), reused 1914 (delta 97), pack-reused 0
+
+        ::
+
+            # apt-get remove odoo
+
+    #. Set the **odoo** user password (Linux):
+
+        #. To set the **odoo** user password (Linux), use the following commands (as root):
+
+            ::
+
+                ssh tkl-odoo16-jcafb26-vm -l root
+
+            ::
+
+                passwd odoo
+
+
+        #. Edit the file "**/etc/password**" (as root):
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/bin/bash
+
+    #. Set "**/etc/init.d/odoo**" file Permitions:
+
+        * Allow executing file as program: **marked**.
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo16-jcafb26-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+Remote access to the server (2)
+-------------------------------
+
+    #. To access remotly the server, use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo16-jcafb26-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
+
+        ::
+
+            ssh tkl-odoo16-jcafb26-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025_16"
+
+            dropdb -i clvhealth_jcafb_2025_16
+
 Development (5)
 ---------------
 
