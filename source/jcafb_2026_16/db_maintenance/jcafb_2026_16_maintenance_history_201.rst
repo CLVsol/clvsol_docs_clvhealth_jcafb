@@ -481,4 +481,69 @@ Manutenção do Banco de Dados - JCAFB-2026-16 [1]
 
         #. Salvar o registro editado.
 
+[clvheatlh-jcafb-2026-aws-pro] Criar um backup do banco de dados *CLVhealth-JCAFB-2026-16* (2025-11-20a)
+--------------------------------------------------------------------------------------------------------
+
+    #. [clvheatlh-jcafb-2026-aws-pro] Estabelecer uma sessão ssh com o servidor **clvheatlh-jcafb-2026-aws-pro** e paralizar o *Odoo*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2026-aws-pro
+            #
+
+            ssh clvheatlh-jcafb-2026-aws-pro -l root
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+    #. [clvheatlh-jcafb-2026-aws-pro] Executar os comandos de criação dos arquivos de backup:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2026-aws-pro
+            #
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            #
+
+            cd /opt/odoo
+            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-11-20a.sql
+
+            gzip clvhealth_jcafb_2026_16_2025-11-20a.sql
+            pg_dump clvhealth_jcafb_2026_16 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2026_16_2025-11-20a.sql
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-11-20a.tar.gz clvhealth_jcafb_2026_16
+
+            cd /opt/odoo/clvsol_filestore
+            tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-11-20a.tar.gz clvhealth_jcafb
+
+    #. Retornar a execução do *Odoo* do servidor **clvheatlh-jcafb-2026-aws-pro** ao modo desejado:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2026-aws-pro
+            #
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+            ^C
+
+            exit
+
+            /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+
+        * /opt/odoo/clvhealth_jcafb_2026_16_2025-11-20a.sql
+        * /opt/odoo/clvhealth_jcafb_2026_16_2025-11-20a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2026_16_2025-11-20a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2026_16_2025-11-20a.tar.gz
+
+.. index:: clvhealth_jcafb_2026_16_2025-11-20a.sql
+.. index:: clvhealth_jcafb_2026_16_2025-11-20a.sql.gz
+.. index:: filestore_clvhealth_jcafb_2026_16_2025-11-20a
+.. index:: clvsol_filestore_clvhealth_jcafb_2026_16_2025-11-20a
+
 .. toctree::   :maxdepth: 2
