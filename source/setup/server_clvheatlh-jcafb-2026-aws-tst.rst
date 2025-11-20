@@ -692,3 +692,172 @@ Remote access to the server
             python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb"
 
             dropdb -i clvhealth_jcafb
+
+Replace the Odoo installation (Odoo 16.0)
+-----------------------------------------
+
+    #. :red:`(Not Used)` Remover o banco de dados *CLVhealth-JCAFB-2026-16*:
+
+        ::
+
+            # ***** clvheatlh-jcafb-2026-aws-tst
+            #
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-tst -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            cd /opt/odoo
+
+            dropdb -i clvhealth_jcafb_2026_16
+
+            cd /var/lib/odoo/.local/share/Odoo/filestore
+            rm -rf clvhealth_jcafb_2026_16
+
+    #. To replace the Odoo installation (Odoo 16.0), use the following commands (as root) "`Install Odoo 15 on Debian 10 / Debian 11 <https://computingforgeeks.com/how-to-install-odoo-on-debian-linux/>`_":
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-tst -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+        ::
+
+            apt install gnupg2
+
+            wget https://nightly.odoo.com/odoo.key
+
+            cat odoo.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/odoo.gpg  >/dev/null
+
+            echo "deb http://nightly.odoo.com/16.0/nightly/deb/ ./" | tee /etc/apt/sources.list.d/odoo.list
+
+            apt-get update
+
+            apt-get install odoo
+
+        ::
+
+            apt-get install odoo
+            Reading package lists... Done
+            Building dependency tree... Done
+            Reading state information... Done
+            The following packages were automatically installed and are no longer required:
+              fonts-glyphicons-halflings fonts-ocr-b libjs-jquery-form linux-image-6.1.0-37-amd64 linux-image-6.1.0-38-amd64
+            Use 'apt autoremove' to remove them.
+            Recommended packages:
+              python3-ldap
+            The following packages will be REMOVED:
+              odoo-16
+            The following NEW packages will be installed:
+              odoo
+            0 upgraded, 1 newly installed, 1 to remove and 61 not upgraded.
+            Need to get 208 MB of archives.
+            After this operation, 194 MB of additional disk space will be used.
+            Do you want to continue? [Y/n] Y
+            Get:1 http://nightly.odoo.com/16.0/nightly/deb ./ odoo 16.0.20251120 [208 MB]
+            Fetched 208 MB in 12s (17.3 MB/s)                                                                                                                                                            
+            debconf: delaying package configuration, since apt-utils is not installed
+            (Reading database ... 106213 files and directories currently installed.)
+            Removing odoo-16 (16.0.0+dfsg.2-2~bpo12+1) ...
+            userdel: user odoo is currently used by process 713777
+            deluser: `/usr/sbin/userdel odoo' returned error code 8. Exiting.
+            groupdel: cannot remove the primary group of user 'odoo'
+            delgroup: `/sbin/groupdel odoo' returned error code 8. Exiting.
+            Selecting previously unselected package odoo.
+            (Reading database ... 65629 files and directories currently installed.)
+            Preparing to unpack .../odoo_16.0.20251120_all.deb ...
+            Unpacking odoo (16.0.20251120) ...
+            Setting up odoo (16.0.20251120) ...
+
+        ::
+
+            # apt-get remove odoo
+
+    #. Set the **odoo** user password (Linux):
+
+        #. To set the **odoo** user password (Linux), use the following commands (as root):
+
+            ::
+
+                ssh clvheatlh-jcafb-2026-aws-tst -l root
+
+            ::
+
+                passwd odoo
+
+
+        #. :red:`(Not Used)` Edit the file "**/etc/password**" (as root):
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/usr/sbin/nologin
+
+            ::
+
+                odoo:x:105:114::/var/lib/odoo:/bin/bash
+
+    #. Set "**/etc/init.d/odoo**" file Permitions:
+
+        * Allow executing file as program: **marked**.
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-tst -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+Remote access to the server (2)
+-------------------------------
+
+    #. To access remotly the server, use the following commands (as **root**):
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-tst -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-tst -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb_2025_16"
+
+            dropdb -i clvhealth_jcafb_2025_16
+
