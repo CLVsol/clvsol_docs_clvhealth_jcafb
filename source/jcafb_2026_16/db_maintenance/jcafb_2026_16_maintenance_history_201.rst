@@ -1705,4 +1705,54 @@ Manutenção do Banco de Dados - JCAFB-2026-16 [1]
 
         #. Salvar o registro editado.
 
+[clvheatlh-jcafb-2026-aws-tst] Atualizar os fontes do projeto (2025-12-09a)
+---------------------------------------------------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-tst -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+[clvheatlh-jcafb-2026-aws-pro] Atualizar os fontes do projeto (2025-12-09a)
+---------------------------------------------------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh clvheatlh-jcafb-2026-aws-pro -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            su odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
 .. toctree::   :maxdepth: 2
